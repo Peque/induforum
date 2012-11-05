@@ -1,0 +1,110 @@
+<header>
+	The header element contains introductory information to a section
+	or page. This can involve anything from our normal documents
+	headers (branding information) to an entire table of contents.
+
+<nav>
+	The nav element is reserved for a section of a document that
+	contains links to other pages or links to sections of the same
+	page. Not all link groups need to be contained within the <nav>
+	element, just primary navigation.
+
+<section>
+	The section element represents a generic document or application
+	section. A section, in this context, is a thematic grouping of
+	content, typically with a heading, possibly with a footer.
+	(It acts much the same way a <div> does by separating off a
+	portion of the document)
+
+<article>
+	The article element represents a portion of a page which can
+	stand alone such as: a blog post, a forum entry, user submitted
+	comments or any independent item of content.
+
+<aside>
+	Aside, represents content related to the main area of the
+	document. This is usually expressed in sidebars that contain
+	elements like related posts, tag clouds, etc. They can also be
+	used for pull quotes.
+
+<footer>
+	The footer element is for marking up the footer of, not only the
+	current page, but each section contained in the page. So, it’s
+	very likely that you’ll be using the <footer> element multiple
+	times within one page.
+
+=====================================================================
+
+The header element represents the header of a section. Headers may
+contain more than just the section’s heading—for example it would be
+reasonable for the header to include sub headings, version history
+information or bylines.
+
+<header>
+  <h1>A Preview of HTML 5</h1>
+  <p class="byline">By Lachlan Hunt</p>
+</header>
+
+<header>
+  <h1>Example Blog</h1>
+  <h2>Insert tag line here.</h2>
+</header>
+
+The footer element represents the footer for the section it applies
+to. A footer typically contains information about its section such as
+who wrote it, links to related documents, copyright data, and the
+like.
+
+<footer>© 2007 Example Inc.</footer>
+
+The nav element represents a section of navigation links. It is
+suitable for either site navigation or a table of contents.
+
+<nav>
+  <ul>
+    <li><a href="/">Home</a></li>
+    <li><a href="/products">Products</a></li>
+    <li><a href="/services">Services</a></li>
+    <li><a href="/about">About</a></li>
+  </ul>
+</nav>
+
+The aside element is for content that is tangentially related to the
+content around it, and is typically useful for marking up sidebars.
+
+<aside>
+  <h1>Archives</h1>
+  <ul>
+    <li><a href="/2007/09/">September 2007</a></li>
+    <li><a href="/2007/08/">August 2007</a></li>
+    <li><a href="/2007/07/">July 2007</a></li>
+  </ul>
+
+</aside>
+
+The section element represents a generic section of a document or
+application, such as a chapter, for example.
+
+<section>
+  <h1>Chapter 1: The Period</h1>
+  <p>It was the best of times, it was the worst of times,
+     it was the age of wisdom, it was the age of foolishness,
+     it was the epoch of belief, it was the epoch of incredulity,
+     it was the season of Light, it was the season of Darkness,
+     ...</p>
+</section>
+
+(Excerpt from A Tale of Two Cities)
+
+The article element represents an independent section of a document,
+page or site. It is suitable for content like news or blog articles,
+forum posts or individual comments.
+
+<article id="comment-2">
+  <header>
+    <h4><a href="#comment-2" rel="bookmark">Comment #2</a>
+        by <a href="http://example.com/">Jack O'Niell</a></h4>
+    <p><time datetime="2007-08-29T13:58Z">August 29th, 2007 at 13:58</time>
+  </header>
+  <p>That's another great article!</p>
+</article>

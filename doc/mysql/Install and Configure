@@ -1,0 +1,17 @@
+##########################
+# Ubuntu
+##########################
+
+INSTALL
+---------------------------------------------------------------------
+$ sudo apt-get install mysql-server mysql-client php5-mysql
+
+$ sudo service mysql restart
+
+
+FORUM DATABASE
+---------------------------------------------------------------------
+
+mysql -u reset -p
+
+mysql> create database forum;

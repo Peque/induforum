@@ -1,0 +1,64 @@
+##########################################################
+# Installation
+##########################################################
+
+# Apache & PHP:
+    $ sudo yum install httpd php php-gettext php-xml git gitk
+    $ sudo chown -R <username> /var/www/
+    $ cd /var/www
+    $ git clone git://git.code.sf.net/p/reset-website/code reset
+    $ sudo service httpd start
+    $ sudo systemctl enable httpd.service
+
+##########################################################
+# Configuration
+##########################################################
+
+STEP 1
+---------------------------------------------------------------------
+$ su - -c 'gedit /etc/hosts'
+
+Add this line:
+
+	127.0.0.1 local.reset.etsii.upm.es
+	
+STEP 2
+---------------------------------------------------------------------
+$ su - -c 'gedit /etc/httpd/conf/httpd.conf'
+
+Go to 'Virtual Hosts' section and add the following lines:
+(write the first line only if it is not written or uncommented yet)
+
+	NameVirtualHost *:80
+	<VirtualHost local.reset.etsii.upm.es:80>
+		<Directory "/var/www/html/reset/www/build">
+			Options Indexes FollowSymLinks MultiViews
+			SetEnvIf Request_URI ^/en/ prefer-language=en
+			SetEnvIf Request_URI ^/es/ prefer-language=es
+			AllowOverride None
+			Order allow,deny
+			Allow from all
+		</Directory>
+		DirectoryIndex index
+		AddLanguage en .en
+		AddLanguage es .es
+		LanguagePriority en
+		ForceLanguagePriority Prefer Fallback
+		AddDefaultCharset utf-8
+		RewriteEngine on
+		RewriteCond %{QUERY_STRING} ^lang=(en|es)$
+		RewriteRule ^(?:/(?:en|es))?(/.*)$ /%1$1? [R=301]
+		AliasMatch ^(?:/(?:en|es))(/.*)?$ /var/www/html/reset/www/build/$1
+		ServerAdmin ***********@*****.***
+		DocumentRoot /var/www/html/reset/www/build
+		ServerName local.reset.etsii.upm.es
+		ErrorLog /var/www/html/reset/www/local.reset.etsii.upm.es-error_log
+		CustomLog /var/www/html/reset/www/local.reset.etsii.upm.es-access_log common
+	</VirtualHost>
+
+STEP 3
+---------------------------------------------------------------------
+Restart Apache:
+
+$ su -c 'service httpd restart'
+

@@ -1,0 +1,105 @@
+#!/bin/bash
+
+#
+#  generate
+#
+#  Copyright 2012 Miguel Sánchez de León Peque <msdeleonpeque@gmail.com>
+#
+#  This program is free software; you can redistribute it and/or modify
+#  it under the terms of the GNU General Public License as published by
+#  the Free Software Foundation; either version 3 of the License, or
+#  (at your option) any later version.
+#
+#  This program is distributed in the hope that it will be useful,
+#  but WITHOUT ANY WARRANTY; without even the implied warranty of
+#  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#  GNU General Public License for more details.
+#
+#  You should have received a copy of the GNU General Public License
+#  along with this program; if not, write to the Free Software
+#  Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston,
+#  MA 02110-1301, USA.
+#
+
+
+function parse_parameters {
+	while read file_data_line; do
+		token=$(echo $file_data_line | sed 's/=.*//')
+		value=$(echo $file_data_line | sed 's/.*=//')
+		case $token in
+			"TITLE") local file_title=$value;;
+			"SUBTITLE") local file_subtitle=$value;;
+			"DESCRIPTION") local file_description=$value;;
+			"KEYWORDS") local file_keywords=$value;;
+		esac
+	done
+	echo "$file_title"
+	echo "$file_subtitle"
+	echo "$file_description"
+	echo "$file_keywords"
+}
+
+function build_file {
+
+	while read pipe_line; do
+
+		# Prepare file and directory
+		dirname=$(dirname $pipe_line)
+		filename=$(basename $pipe_line | cut -d. -f1)
+		language=$(basename $pipe_line | cut -d. -f2)
+		extension=$(basename $pipe_line | cut -d. -f3)
+		mkdir -p $build_dir$dirname
+
+		# Get content information
+		file_data=$(cat $content_dir$pipe_line | grep -e "^%[[:space:]]*[A-Z]*=.*$" | sed 's/%\s*//g' | parse_parameters)
+		IFS=$'\n'
+		i=0
+		for parsed_data in ${file_data[@]}; do
+			file_data_array[$i]=$parsed_data
+			((i++))
+		done
+		echo "${file_data_array[0]}" # Title
+		echo "${file_data_array[1]}" # Subtitle
+		echo "${file_data_array[2]}" # Description
+		echo "${file_data_array[3]}" # Keywords
+
+		# Add header and navigation sections
+		cat ${templates_dir}header.$language.html           | \
+			sed "s/%%title%%/${file_data_array[0]}/g"       | \
+			sed "s/%%keywords%%/${file_data_array[3]}/g"    | \
+			sed "s/%%description%%/${file_data_array[2]}/g" >  $build_dir$filename.$language.html
+		cat ${templates_dir}nav.$language.html              >> $build_dir$filename.$language.html
+
+		# Parse content
+		if [ "$extension" == "reset" ]; then
+			echo "<section id=\"content\"><header><hgroup><h1>${file_data_array[0]}</h1><h2>${file_data_array[1]}</h2></hgroup></header>" >> $build_dir$filename.$language.html
+			echo "$(cat $content_dir$pipe_line | $nodejs ./gen/parse_file.js)" >> $build_dir$filename.$language.html
+			echo "<footer><p class=\"section_title\">${file_data_array[0]}</p></footer></section>" >> $build_dir$filename.$language.html
+		else
+			cat $content_dir$pipe_line >> $build_dir$filename.$language.$extension
+		fi
+
+		# Add aside and footer sections
+		cat ${templates_dir}aside.$language.html  >> $build_dir$filename.$language.html
+		cat ${templates_dir}footer.$language.html >> $build_dir$filename.$language.html
+
+	done
+
+}
+
+
+content_dir="data/content/"
+templates_dir="data/templates/"
+build_dir="build/"
+nodejs="nodejs"
+if [ "$(cat /proc/version | grep 'Ubuntu')" != "" ]; then
+	nodejs="node"
+fi
+
+rm -rf build
+mkdir build
+cp -r css build
+cp -r js build
+cp -r images build
+
+find $content_dir -type f | sed "s@^$content_dir@@" | build_file

@@ -1,0 +1,52 @@
+##########################
+# Ubuntu
+##########################
+
+STEP 1
+---------------------------------------------------------------------
+
+Install MySQL and create the forum data base.
+
+STEP 2
+---------------------------------------------------------------------
+
+Download phpBB-3.X.zip
+
+$ unzip phpBB-3.X.zip /var/www
+
+$ mv phpBB-3.X.zip forum
+
+STEP 3
+---------------------------------------------------------------------
+
+$ cd forum
+
+$ sudo chmod 666 config.php
+$ sudo chmod 777 store
+$ sudo chmod 777 cache
+$ sudo chmod 777 files
+$ sudo chmod 777 images/avatars/upload
+
+STEP 4
+---------------------------------------------------------------------
+
+Configure apache2/sites-available/default forum.reset.etsii.upm.es virtualhost.
+
+STEP 5
+---------------------------------------------------------------------
+
+Access forum.reset.etsii.upm.es/install/install.php and follow the steps.
+
+STEP 6
+---------------------------------------------------------------------
+
+$ sudo chmod 644 config.php
+
+$ sudo rm -rf install
+$ sudo rm -rf docs
+$ sudo rm ../phpBB-3.X.zip
+
+
+
+
+

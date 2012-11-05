@@ -1,0 +1,9 @@
+In Poedit, add a new parser (Edit > Preferences) with the following
+properties:
+
+	Language: XML
+	List of extensions separated by semicolons (e.g. .cpp;.h): *.xml
+	Parser command: xgettext --force-po -o %o %C %K %F -L glade
+	An item in keywords list: -k%k
+	An item in input files list: %f
+	Source code charset: --from-code=%c

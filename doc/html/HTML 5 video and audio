@@ -1,0 +1,65 @@
+The simplest way to embed a video is to use a video element and
+allow the browser to provide a default user interface. The controls
+attribute is a boolean attribute that indicates whether or not the
+author wants this UI  on or off by default.
+
+<video src="video.ogv" controls poster="poster.jpg" 
+width="320" height="240">
+    <a href="video.ogv">Download movie</a>
+</video>
+
+The optional poster attribute can be used to specify an image which
+will be displayed in place of the video before the video has begun
+playing. Although there are some video formats that support their own
+poster frame feature, such as MPEG-4, this provides an alternative
+solution that can work independently of the video format.
+
+It is just as simple to embed audio into a page using the audio
+element. Most of the attributes are common between the video and
+audio elements, although for obvious reasons, the audio element lacks
+the width, height, and poster attributes.
+
+<audio src="music.oga" controls>
+    <a href="music.oga">Download song</a>
+</audio>
+
+HTML 5 provides the source element for specifying alternative video
+and audio files which the browser may choose from based on its media
+type or codec support. The media attribute can be used to specify a
+media query for selection based on the device limitations and the
+type attribute for specifying the media type and codecs. Note that
+when using the source elements, the src attribute needs to be omitted
+from their parent video or audio element or the alternatives given by
+the source elements will be ignored.
+
+<video poster="poster.jpg">
+    <source src="video.3gp" type="video/3gpp" 
+    media="handheld">
+    <source src="video.ogv" type="video/ogg;
+    codecs=theora, vorbis">
+    <source src="video.mp4" type="video/mp4">
+</video>
+<audio>
+  <source src="music.oga" type="audio/ogg">
+  <source src="music.mp3" type="audio/mpeg">
+</audio>
+
+For authors who want a little more control over the user interface so
+that they can make it fit the overall design of the web page, the
+extensive API provides several methods and events to let scripts
+control the playback of the media. The simplest methods to use are
+the play(), pause(), and setting currentTime to rewind to the
+beginning. The following example illustrates the use of these.
+
+<video src="video.ogg" id="video"></video>
+<script>
+  var video = document.getElementById("video");
+</script>
+<p><button type="button" onclick="video.play();">Play</button>
+   <button type="button" onclick="video.pause();">Pause</button>
+   <button type="button" onclick="video.currentTime = 0;">
+   << Rewind</button>
+
+There are many other attributes and APIs available for the video and
+audio elements that have not been discussed here. For more
+information, you should consult the current draft specification.

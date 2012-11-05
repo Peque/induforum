@@ -1,0 +1,10 @@
+gource --seconds-per-day 0.1 --auto-skip-seconds 0.1 --multi-sampling -1920x1080 --stop-on-idle --disable-progress --output-ppm-stream - | ffmpeg -y -r 60 -f image2pipe -vcodec ppm -i - -vcodec libvpx -b 10000K gource.webm
+
+
+
+Other options:
+		--hide-dirnames
+		--hide-usernames
+		--hide-filenames
+		--disable-bloom
+		--hide-date
