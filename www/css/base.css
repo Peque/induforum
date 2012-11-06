@@ -75,11 +75,8 @@ a:hover {
 body {
 	width: 100%;
 	color: #585858;
-	background: url('/images/svg/bg_layer1.svg'), linear-gradient(left, #267cad 0%, #091440 100%);
-	background: url('/images/svg/bg_layer1.svg'), -o-linear-gradient(left, #267cad 0%, #091440 100%);
-	background: url('/images/svg/bg_layer1.svg'), -moz-linear-gradient(left, #267cad 0%, #091440 100%);
-	background: url('/images/svg/bg_layer1.svg'), -webkit-linear-gradient(left, #267cad 0%, #091440 100%);
-	background: url('/images/svg/bg_layer1.svg'), -ms-linear-gradient(left, #267cad 0%, #091440 100%);
+	background: #000000 url('ftp://reset.etsii.upm.es/.pool/images/induforum/background_blur3.jpg') no-repeat scroll;
+	background-size: 100%;
 }
 form input {
 	background: #ffffff;
