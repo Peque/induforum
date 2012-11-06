@@ -13,6 +13,10 @@ You [http://google.es/ can insert] an image
 
 make your text '''bold''' or ''italic'', or '''''both!'''''.
 
+This is a big link, with title and description:
+
+[[@:http://reset.etsii.upm.es/|This is a wide link for a section|With a mandatory subtitle!]]
+
 You can create an ordered list
 
 # and this is the first item
