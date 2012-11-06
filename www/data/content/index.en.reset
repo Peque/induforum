@@ -3,7 +3,7 @@
 % DESCRIPTION=This is a test page!
 % KEYWORDS=test,page
 
-= Some styling =
+=Some styling=
 ==Let's see how it looks==
 ----
 
@@ -67,4 +67,12 @@ that contains an unordered list
 
 [Youtube:lthRmB2ew9k]
 
+=New title=
+==With subtitle==
+----
 
+This is an ordered list:
+
+# First item
+# Second item
+# ...

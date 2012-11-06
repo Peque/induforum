@@ -38,6 +38,7 @@ exports.wiki2html = function (wikicode)
 
 		wikicode = deleteCR(wikicode);
 		wikicode = comments(wikicode);
+		wikicode = section_nav(wikicode);
 		wikicode = headers(wikicode);
 		wikicode = horizontalRule(wikicode);
 		wikicode = inlineElement(wikicode);
@@ -72,28 +73,38 @@ function comments(wikicode)
 		return wikicode;
 	}
 
+function section_nav(wikicode)
+	{
+		var heading_1_regex = /^={1}([^\[=]*)={1}$/gm;
+		var heading_1_matches = wikicode.match(heading_1_regex);
+		var section_nav_list;
+
+		section_nav_list = '<nav id="section_nav"><ul>';
+
+		for (i=0; i<heading_1_matches.length; i++) {
+			section_nav_list += '<li><a href="#' + heading_1_matches[i].replace(heading_1_regex, "$1") + '">'  + i + ' - ' + heading_1_matches[i].replace(heading_1_regex, "$1") +  '</a></li>';
+		}
+
+		section_nav_list += '</ul></nav><article>\n';
+
+		wikicode = section_nav_list + wikicode;
+
+		return wikicode;
+	}
+
 /*******************************************************************************
  *                                    HEADER                                   *
 *******************************************************************************/
 function headers(wikicode)
 	{
-		var heading_1_regEx = /^={1}[\s]*?([^\[]*)[\s]*?={1}/gm;
-		var heading_2_regEx = /^={2}[\s]*?([^\[]*)[\s]*?={2}/gm;
-		var heading_3_regEx = /^={3}[\s]*?([^\[]*)[\s]*?={3}/gm;
-		var heading_4_regEx = /^={4}[\s]*?([^\[]*)[\s]*?={4}/gm;
-		var heading_5_regEx = /^={5}[\s]*?([^\[]*)[\s]*?={5}/gm;
-		var heading_6_regEx = /^={6}[\s]*?([^\[]*)[\s]*?={6}/gm;
-		var empty_article = /<article>[\s]*?<\/article>/gm;
-
-		wikicode = '<article>\n' + wikicode;
-		wikicode = wikicode.replace(heading_6_regEx, '<h6>$1</h6>');
-		wikicode = wikicode.replace(heading_5_regEx, '<h5>$1</h5>');
-		wikicode = wikicode.replace(heading_4_regEx, '<h4>$1</h4>');
-		wikicode = wikicode.replace(heading_3_regEx, '<h3>$1</h3>');
-		wikicode = wikicode.replace(heading_2_regEx, '<h2>$1</h2>');
-		wikicode = wikicode.replace(heading_1_regEx, '</article><article><h1>$1</h1>');
+		wikicode = wikicode.replace(/^={6}([^\[=]*)={6}$/gm, '<h6>$1</h6>');
+		wikicode = wikicode.replace(/^={5}([^\[=]*)={5}$/gm, '<h5>$1</h5>');
+		wikicode = wikicode.replace(/^={4}([^\[=]*)={4}$/gm, '<h4>$1</h4>');
+		wikicode = wikicode.replace(/^={3}([^\[=]*)={3}$/gm, '<h3>$1</h3>');
+		wikicode = wikicode.replace(/^={2}([^\[=]*)={2}$/gm, '<h2>$1</h2>');
+		wikicode = wikicode.replace(/^={1}([^\[=]*)={1}$/gm, '</article><article><h1 id="$1">$1</h1>');
 		wikicode = wikicode + '\n</article>'
-		wikicode = wikicode.replace(empty_article, '');
+		wikicode = wikicode.replace(/<article>[\s]*?<\/article>/gm, ''); // First article is usually empty
 
 		return wikicode;
 	}
