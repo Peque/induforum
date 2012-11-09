@@ -9,7 +9,7 @@
     $ sudo locale-gen en_US
     $ sudo chown -R <username> /var/www/
     $ cd /var/www
-    $ git clone git://git.code.sf.net/p/reset-website/code reset
+    $ git clone git@github.com:Peque/induforum.git induforum
     $ cd /etc/apache2/mods-available/
     $ sudo a2enmod expires
     $ sudo a2enmod rewrite
@@ -27,7 +27,7 @@ $ sudo gedit /etc/hosts
 
 Add this line:
 
-	127.0.0.1 local.reset.etsii.upm.es
+	127.0.0.1 local.induforum.es
 
 STEP 2
 ---------------------------------------------------------------------
@@ -36,8 +36,8 @@ $ sudo gedit /etc/apache2/sites-available/default
 Go to 'Virtual Hosts' section and add the following lines:
 (write the first line only if it is not written or uncommented yet)
 
-	<VirtualHost local.reset.etsii.upm.es:80>
-		<Directory "/var/www/reset/www/build">
+	<VirtualHost local.induforum.es:80>
+		<Directory "/var/www/induforum/www/build">
 			Options Indexes FollowSymLinks MultiViews
 			SetEnvIf Request_URI ^/en/ prefer-language=en
 			SetEnvIf Request_URI ^/es/ prefer-language=es
@@ -54,12 +54,11 @@ Go to 'Virtual Hosts' section and add the following lines:
 		RewriteEngine on
 		RewriteCond %{QUERY_STRING} ^lang=(en|es)$
 		RewriteRule ^(?:/(?:en|es))?(/.*)$ /%1$1? [R=301]
-		AliasMatch ^(?:/(?:en|es))(/.*)?$ /var/www/reset/www/build/$1
-		ServerAdmin ***********@*****.***
-		DocumentRoot /var/www/reset/www/build
-		ServerName local.reset.etsii.upm.es
-		ErrorLog /var/www/reset/www/local.reset.etsii.upm.es-error_log
-		CustomLog /var/www/reset/www/local.reset.etsii.upm.es-access_log common
+		AliasMatch ^(?:/(?:en|es))(/.*)?$ /var/www/induforum/www/build/$1
+		DocumentRoot /var/www/induforum/www/build
+		ServerName local.induforum.es
+		ErrorLog /var/www/induforum/www/local.induforum.es-error_log
+		CustomLog /var/www/induforum/www/local.induforum.es-access_log common
 	</VirtualHost>
 
 STEP 3
