@@ -75,7 +75,8 @@ a:hover {
 body {
 	width: 100%;
 	color: #585858;
-	background: #000000 url('ftp://reset.etsii.upm.es/.pool/images/induforum/background_blur3.jpg') no-repeat fixed;
+	background-image: url("/images/back.jpg"), url("/images/gradient.jpg");
+	background-repeat: no-repeat, repeat;
 	background-size: 100%;
 }
 form input {
