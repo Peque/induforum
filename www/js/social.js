@@ -6,16 +6,11 @@ function add_social_links() {
 	content = '<div id="social_networks" style="z-index:-1;float:right;margin:5px 0.5em 0 0;">';
 
 	// Facebook
-	content += '<a href="http://es-es.facebook.com/pages/Reset-ETSII/143717755727174" onmouseover=\'document.facebook.src="ftp://reset.etsii.upm.es/.pool/images/other_topics/icon_facebook_on.png"\' onmouseout=\'document.facebook.src="ftp://reset.etsii.upm.es/.pool/images/other_topics/icon_facebook_off.png"\' ><img src="ftp://reset.etsii.upm.es/.pool/images/other_topics/icon_facebook_off.png" name="facebook" alt="facebook_icon_image" /></a>';
+	content += '<a href="https://www.facebook.com/induforum.etsii.5?ref=ts&fref=ts" onmouseover=\'document.facebook.src="ftp://reset.etsii.upm.es/.pool/images/other_topics/icon_facebook_on.png"\' onmouseout=\'document.facebook.src="ftp://reset.etsii.upm.es/.pool/images/other_topics/icon_facebook_off.png"\' ><img src="ftp://reset.etsii.upm.es/.pool/images/other_topics/icon_facebook_off.png" name="facebook" alt="facebook_icon_image" /></a>';
 
 	// Twitter
-	content += '<a href="http://twitter.com/#!/Reset_ETSII" onmouseover=\'document.twitter.src="ftp://reset.etsii.upm.es/.pool/images/other_topics/icon_twitter_on.png"\' onmouseout=\'document.twitter.src="ftp://reset.etsii.upm.es/.pool/images/other_topics/icon_twitter_off.png"\' ><img src="ftp://reset.etsii.upm.es/.pool/images/other_topics/icon_twitter_off.png" name="twitter" alt="twitter_icon_image" /></a>';
+	content += '<a href="https://twitter.com/Induforum2013" onmouseover=\'document.twitter.src="ftp://reset.etsii.upm.es/.pool/images/other_topics/icon_twitter_on.png"\' onmouseout=\'document.twitter.src="ftp://reset.etsii.upm.es/.pool/images/other_topics/icon_twitter_off.png"\' ><img src="ftp://reset.etsii.upm.es/.pool/images/other_topics/icon_twitter_off.png" name="twitter" alt="twitter_icon_image" /></a>';
 
-	// Youtube
-	content += '<a href="http://www.youtube.com/user/AEReset" onmouseover=\'document.youtube.src="ftp://reset.etsii.upm.es/.pool/images/other_topics/icon_youtube_on.png"\' onmouseout=\'document.youtube.src="ftp://reset.etsii.upm.es/.pool/images/other_topics/icon_youtube_off.png"\' ><img src="ftp://reset.etsii.upm.es/.pool/images/other_topics/icon_youtube_off.png" name="youtube" alt="youtube_icon_image" /></a>';
-
-	// Flickr
-	content += '<a href="http://www.flickr.com/photos/aereset/" onmouseover=\'document.flickr.src="ftp://reset.etsii.upm.es/.pool/images/other_topics/icon_flickr_on.png"\' onmouseout=\'document.flickr.src="ftp://reset.etsii.upm.es/.pool/images/other_topics/icon_flickr_off.png"\' "><img src="ftp://reset.etsii.upm.es/.pool/images/other_topics/icon_flickr_off.png" name="flickr" alt="flickr_icon_image" /></a>';
 
 	content += '</div>';
 
