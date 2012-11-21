@@ -14,10 +14,10 @@
 /******************************* Website's Header ******************************/
 #w_header hgroup {
 	float: left;
-	margin: 1em 0 1em 2em;
-	padding: 1.5em 0 1.5em 15em;
+	margin: 0.9em 1em 1.5em 0em;
+	padding: 1.5em 0em 1.5em 17em;
 	background: url('/images/logo.png') no-repeat scroll center left;
-	background-size: 12em;
+	background-size: 16em auto;
 }
 
 /*********************************** Main Nav **********************************/

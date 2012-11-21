@@ -167,7 +167,7 @@ time.news_pubdate {
 	text-decoration: none;
 }
 #w_header hgroup {
-	text-shadow: 0 0 5px white, 0 0 10px white;
+	text-shadow: 0 0 5px #F3FA2A, 0 0 10px #F3FA2A;
 	color: #000000;
 }
 #w_header h1 {
