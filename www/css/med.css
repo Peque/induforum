@@ -44,7 +44,7 @@
 	font-size: 1.1em;
 	text-align: center;
 	display: block;
-	color: #ccff00;
+	color: #F3FA2A;
 }
 #main_nav a.nav_section:hover {
 	text-decoration: none;
@@ -73,8 +73,8 @@
 	float: right;
 	margin: 0 0 1em 0;
 	width: 18%;
-	background: rgba(0, 0, 0, 0.7);
-	border: 1px solid #707070;
+	background: rgba(0, 0, 0, 0.3);
+	border: 2px solid #FFFFFF;
 	border-right: none;
 	border-radius: 1em 0 0 1em;
 }
@@ -83,7 +83,7 @@
 	font-size: 1.1em;
 	font-weight: bold;
 	text-align: center;
-	color: #ffbc00;
+	color: #F3FA2A;
 }
 #r_aside div.block {
 	padding: .8em;
