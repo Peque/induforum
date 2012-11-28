@@ -74,9 +74,10 @@
 	margin: 0 0 1em 0;
 	width: 18%;
 	background: rgba(0, 0, 0, 0.3);
-	border: 2px solid #FFFFFF;
+	border: 2px solid #E8E8E8;
 	border-right: none;
-	border-radius: 1em 0 0 1em;
+	border-radius: 0em 0 0 0em;
+	box-shadow: 0em 0em 0.5em 0.5em #F0F0F0
 }
 #r_aside h3 {
 	padding: .5em 1em .5em 1em;

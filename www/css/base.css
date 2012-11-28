@@ -182,8 +182,9 @@ time.news_pubdate {
 /*********************************** Main Nav **********************************/
 #main_nav {
 	background: rgba(0, 0, 0, 0.3);
-	border: 2px solid #FFFFFF;
-	border-radius: 0 1em 1em 0;
+	border-radius: 0 0em 0em 0;
+	box-shadow: 0 0 0.5em 0.5em #F0F0F0;
+
 }
 #main_nav a {
 	color: #006699;
@@ -214,18 +215,19 @@ time.news_pubdate {
 
 /************************************ Crumbs ***********************************/
 #crumbs_nav {
-	margin-bottom: 1.5%;
+	margin-bottom: 1%;
 	height: 2em;
 	font-size: .8em;
+
+
 
 }
 #crumbs_nav li {
 	float: left;
 	display: block;
 	line-height: 2em;
-	color: #383838;
-	border: 1px solid #383838;
-	border-radius: .5em;
+	color: #609098;
+	border-radius: 0em;
 }
 #crumbs_nav li.current {
 	font-weight: bold;
@@ -234,12 +236,13 @@ time.news_pubdate {
 }
 #crumbs_nav a {
 	display: block;
-	color: #807d74;
+	color: #609098;
 	line-height: 2em;
 	padding: 0 1em 0 1em;
 	text-decoration: none;
-	background: rgba(0, 0, 0, 0.7);
+	background: rgba(0, 0, 0, 0.6);
 	border-radius: inherit;
+	font-weight: bold;
 }
 #crumbs_nav a:hover,
 #crumbs_nav a:focus {
@@ -251,8 +254,8 @@ time.news_pubdate {
 #content {
 	clear: both;
 	background: #ffffff;
-	border: 1px solid #707070;
-	border-radius: 2em;
+	border-radius: 0em;
+	box-shadow:0em 0em 0.5em 0.5em #F0F0F0
 }
 #content aside.workshop_rating {
 	margin-right: 1.5em;
@@ -260,7 +263,7 @@ time.news_pubdate {
 }
 #content > header,
 #content > footer {
-	background: #e8e8e8;
+	background: #FFFFFF;
 }
 #content > header {
 	border-radius: 2em 2em 0 0;
@@ -269,7 +272,7 @@ time.news_pubdate {
 	padding: 1em;
 }
 #content > header h1 {
-	color: #383838;
+	color: #000000;
 	font-size: 200%;
 	font-weight: bold;
 }
@@ -288,6 +291,7 @@ time.news_pubdate {
 	background: #f7f8ff;
 	max-width: 40%;
 }
+
 #content nav#section_nav ul {
 	margin: 0em;
 	padding: 0em;
