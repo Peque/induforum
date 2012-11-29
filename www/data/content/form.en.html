@@ -1,0 +1,90 @@
+<section id="content">
+	<form action="./form.php" method="post">
+		<fieldset>
+			<legend>Personal data</legend>
+				<div class="form_wrapper">
+					<p class="title">
+						General data:
+					</p>
+					<div class="generaldata">
+						<label for="form_name">Name:</label>
+						<input type="text" maxlength="60" name="name" id="form_name"/>
+						<label for="form_firstlastname">First Last name:</label>
+						<input type="text" maxlength="60" name="firstname" id="form_firstlastname"/>
+						<label for="form_secondlastname">Second Last name:</label>
+						<input type="text" maxlength="60" name="secondname" id="form_secondlastname"/>
+						<label for="form_birthdate">Birthdate:</label>
+			 			<select name="birthdate" id="form_birthdate">
+			 				<option value="85">85</option>
+			 				<option value="86">86</option>
+			 				<option value="87">87</option>
+			 				<option value="88">88</option>
+			 				<option value="89">89</option>
+			 				<option value="90">90</option>
+			 				<option value="91">91</option>
+			 				<option value="92">92</option>
+			 				<option value="93">93</option>
+			 			</select>
+			 			<label for="form_enrollmentnumber">Enrollment number:</label>
+			 			<input type="text" maxlength="60" name="enrollmentnumber" id="form_enrollmentnumber"/>
+			 			<p>
+			 			Are you Erasmus?
+			 			</p>
+			 			<label for="form_erasmusyes">Yes</label>
+  					<input type="radio" name="erasmus" id="form_erasmusyes" value="yes">
+  					<label for="form_erasmusno">No</label>
+  					<input type="radio" name="erasmus" id="form_erasmusno" value="no">
+					</div>
+					<p class="title">
+						Place of residence and contact info:
+					</p>
+					<div class="contactinfo">
+						<label for="form_address">Address:</label>
+						<input type="text" maxlength="60" name="address" id="form_address"/>
+						<label for="form_province">Province:</label>
+						<select name="province" id="form_province">
+							<option value="Madrid">Madrid</option>
+						</select>
+						<label for="form_locality">Locality:</label>
+						<input type="text" maxlength="60" name="locality" id="form_locality"/>
+						<label for="form_zipcode">Zip code:</label>
+						<input type="text" maxlength="60" name="zipcode" id="form_zipcode"/>
+						<label for="form_telephone">Telephone number:</label>
+						<input type="text" maxlength="60" name="telephone" id="form_telephone"/>
+						<label for="form_mobile">Mobile number:</label>
+						<input type="text" maxlength="60" name="mobile" id="form_mobile"/>
+						<label for="form_email">Email:</label>
+						<input type="email" maxlength="60" name="email" id="form_email"/>
+					</div>
+					<p class="title">
+						Mobility and availability:
+					</p>
+					<div class="availability">
+						<p>
+			 			Driving license:
+			 			</p>
+			 			<label for="form_licenseyes">Yes</label>
+  					<input type="radio" name="license" id="form_licenseyes" value="yes">
+  					<label for="form_licenseno">No</label>
+  					<input type="radio" name="license" id="form_licenseno" value="no">
+  					<p>
+			 			Availability for traveling:
+			 			</p>
+						<label for="form_travelyes">Yes</label>
+  					<input type="radio" name="travel" id="form_travelyes" value="yes">
+  					<label for="form_travelno">No</label>
+  					<input type="radio" name="travel" id="form_travelno" value="no">
+  					<p>
+			 			Schedule preference:
+			 			</p>
+			 			<label for="form_morning">Morning</label>
+  					<input type="radio" name="schedule" id="form_morning" value="morning">
+  					<label for="form_afternoon">Afternoon</label>
+  					<input type="radio" name="schedule" id="form_afternoon" value="afternoon">
+						<label for="form_indiferent">Indiferent</label>
+  					<input type="radio" name="schedule" id="form_indiferent" value="indiferent">
+  				</div>
+				</div>
+			</fieldset>
+		</form>
+</section>
