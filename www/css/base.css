@@ -652,6 +652,26 @@ time.news_pubdate {
 	height: 50em;
 	overflow: auto;
 }
+#content form div.application {
+	float: left;
+	width: 40%;
+}
+#content form div.nonexistent {
+	float: left;
+	width: 12%;
+}
+#content form div.basic {
+	float: left;
+	width: 12%;
+}
+#content form div.intermidiate {
+	float: left;
+	width: 12%;
+}
+#content form div.advance {
+	float:right;
+	width: 12%;
+}
 
 /************************************ Footer ***********************************/
 #w_footer {
