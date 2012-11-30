@@ -235,7 +235,7 @@ time.news_pubdate {
 #crumbs_nav li.current {
 	font-weight: bold;
 	padding: 0 1em 0 1em;
-	background: #CAC9C9;
+	background: #E8E8E8;
 }
 #crumbs_nav a {
 	display: block;
@@ -249,7 +249,7 @@ time.news_pubdate {
 #crumbs_nav a:hover,
 #crumbs_nav a:focus {
 	color: #383838;
-	background: #e8e8e8;
+	background: #CAC9C9;
 }
 
 /*********************************** Section ***********************************/
