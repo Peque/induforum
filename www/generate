@@ -48,7 +48,7 @@ function build_file {
 		filename=$(basename $pipe_line | cut -d. -f1)
 		language=$(basename $pipe_line | cut -d. -f2)
 		extension=$(basename $pipe_line | cut -d. -f3)
-		gen_file=$build_dir$dirname/$filename.$language.html
+		gen_file=$build_dir$dirname/$filename.$language
 		echo Generating $gen_file
 		mkdir -p $build_dir$dirname
 
