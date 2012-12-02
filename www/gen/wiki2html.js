@@ -78,7 +78,7 @@ function section_nav(wikicode)
 	var section_nav_list = '';
 
 	// Abort in case no matches found
-	if (!heading_1_matches) return wikicode;
+	if (!heading_1_matches) return '<article>\n' + wikicode;
 
 	// Generate navigation menu only if more than one header found
 	if (heading_1_matches.length > 1) {
