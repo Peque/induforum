@@ -77,6 +77,8 @@ function section_nav(wikicode)
 	var heading_1_matches = wikicode.match(heading_1_regex);
 	var section_nav_list;
 
+	if (!heading_1_matches) return wikicode;
+
 	section_nav_list = '<nav id="section_nav"><ul>';
 
 	for (i=0; i<heading_1_matches.length; i++) {
