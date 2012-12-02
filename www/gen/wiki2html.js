@@ -75,17 +75,23 @@ function section_nav(wikicode)
 {
 	var heading_1_regex = /^={1}([^\[=]*)={1}$/gm;
 	var heading_1_matches = wikicode.match(heading_1_regex);
-	var section_nav_list;
+	var section_nav_list = '';
 
+	// Abort in case no matches found
 	if (!heading_1_matches) return wikicode;
 
-	section_nav_list = '<nav id="section_nav"><ul>';
+	// Generate navigation menu only if more than one header found
+	if (heading_1_matches.length > 1) {
+		section_nav_list = '<nav id="section_nav"><ul>';
 
-	for (i=0; i<heading_1_matches.length; i++) {
-		section_nav_list += '<li><a href="#' + heading_1_matches[i].replace(heading_1_regex, "$1") + '">'  + i + ' - ' + heading_1_matches[i].replace(heading_1_regex, "$1") +  '</a></li>';
+		for (i=0; i<heading_1_matches.length; i++) {
+			section_nav_list += '<li><a href="#' + heading_1_matches[i].replace(heading_1_regex, "$1") + '">'  + i + ' - ' + heading_1_matches[i].replace(heading_1_regex, "$1") +  '</a></li>';
+		}
+
+		section_nav_list += '</ul></nav>';
 	}
 
-	section_nav_list += '</ul></nav><article>\n';
+	section_nav_list += '<article>\n';
 
 	wikicode = section_nav_list + wikicode;
 
