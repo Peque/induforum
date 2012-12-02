@@ -125,11 +125,12 @@ time.news_pubdate {
 	position: relative;
 	color: #ffffff;
 	border-bottom: 1px solid #F0F0F0;
+	background: none repeat scroll 0 0 rgba(0, 0, 0, 0.3);
 }
 #top form {
 	display: inline;
 	margin-right: 1em;
-	
+
 }
 #top form input,
 #top form select {
@@ -147,7 +148,7 @@ time.news_pubdate {
 }
 #top ul {
 	float: right;
-	
+
 }
 #top ul li {
 	margin-left: 1.2em;
