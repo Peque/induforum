@@ -595,7 +595,7 @@ time.news_pubdate {
 	margin-top: .3em;
 	font-size: .8em;
 	font-weight: bold;
-	font-style: italic;
+	font-style: normal;
 }
 #content form div.i_data {
 	margin-top: 2em;
@@ -652,26 +652,54 @@ time.news_pubdate {
 	height: 50em;
 	overflow: auto;
 }
-#content form div.application {
-	float: left;
-	width: 40%;
+
+label.singleline {
+		 clear:left;
+	    float: left;
+	    padding:1px
+	    text-align: left;
+	    width: 50%;
+	    vertical-align:middle;
+	    margin:3px;
+	
 }
-#content form div.nonexistent {
-	float: left;
-	width: 12%;
+label.singlelinetitle{
+		 color:#000000;
+	    float: left;
+	    padding:1px;
+	    text-align: left;
+	    width: 50%;
+	    margin:3px;
+	    vertical-align:middle;
+	    
 }
-#content form div.basic {
-	float: left;
-	width: 12%;
+select.singleline {
+		float:left;
+		vertical-align:middle;
+		margin:3px;
+		padding:1px;		
+		
 }
-#content form div.intermidiate {
-	float: left;
-	width: 12%;
+input.singleline {
+		clear:left;
+		float:left;
+		padding:1px;
+		margin:3px;
+		vertical-align:middle;
 }
-#content form div.advance {
-	float:right;
-	width: 12%;
+p.title {
+		
+		float:left;
+		clear:left;
+		
+		padding:1px;
+		margin:3px;
+		vertical-align:middle;
+		font-weight: bold;
+		
 }
+
+
 
 /************************************ Footer ***********************************/
 #w_footer {
