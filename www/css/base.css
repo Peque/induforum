@@ -269,7 +269,7 @@ time.news_pubdate {
 	background: #FFFFFF;
 }
 #content > header {
-	border-radius: 2em 2em 0 0;
+	background: #F0F0F0;
 }
 #content > header hgroup {
 	padding: 1em;
@@ -321,7 +321,7 @@ time.news_pubdate {
 }
 #content > footer {
 	clear: both;
-	border-radius: 0 0 2em 2em;
+	background: #F0F0F0;
 }
 #content > footer p.section_title {
 	padding: .5em 1.5em .5em 1.5em;
@@ -442,7 +442,7 @@ time.news_pubdate {
 #content dl.app dt,
 #content dl.usr dt {
 	float: left;
-	font-family: serif;
+	font-family: helvetica;
 	font-size: 200%;
 	font-weight: bold;
 }
