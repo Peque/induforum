@@ -78,7 +78,7 @@ body {
 	background: #000000 url('ftp://reset.etsii.upm.es/.pool/images/induforum/background_blur3.jpg') no-repeat fixed;
 	background-size: 100%;
 }
-form input {
+form  {
 	background: #ffffff;
 }
 form input[type="submit"],
@@ -653,7 +653,7 @@ time.news_pubdate {
 	overflow: auto;
 }
 
-label.singleline {
+#content form label.singleline {
 		 clear:left;
 	    float: left;
 	    padding:1px
@@ -663,7 +663,7 @@ label.singleline {
 	    margin:3px;
 	
 }
-label.singlelinetitle{
+#content form label.singlelinetitle{
 		 color:#000000;
 	    float: left;
 	    padding:1px;
@@ -673,30 +673,38 @@ label.singlelinetitle{
 	    vertical-align:middle;
 	    
 }
-select.singleline {
+#content form select.singleline {
 		float:left;
 		vertical-align:middle;
 		margin:3px;
 		padding:1px;		
 		
 }
-input.singleline {
+#content form input.singleline {
 		clear:left;
 		float:left;
 		padding:1px;
 		margin:3px;
 		vertical-align:middle;
 }
-p.title {
+#content form p.title {
 		
 		float:left;
 		clear:left;
-		
 		padding:1px;
 		margin:3px;
 		vertical-align:middle;
 		font-weight: bold;
 		
+}
+
+#content form .singlelinedate{
+		clear:left;
+		float:left;
+		padding:1px;
+		margin:3px;
+		vertical-align:middle;
+		width:15%;
 }
 
 
