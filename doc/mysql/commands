@@ -1,0 +1,73 @@
+$ mysql -u root -p
+mysql> create database induforum;
+mysql> grant select,insert,delete,update on induforum.* to induforum identified by '****';
+mysql> use induforum;
+mysql> create table students(
+         student_number int unsigned not null auto_increment primary key,
+         registration_number char(10) not null,
+         password char(30) not null,
+         induforum_year year not null
+       );
+mysql> create table personal_data(
+         student_number int unsigned not null primary key,
+         name char(30) not null,
+         surname char(60) not null,
+         birth date not null,
+         country_region char(20) not null,
+         province_state char(20) not null,
+         city char(20) not null,
+         street char(50) not null,
+         zip char(20) not null,
+         phone char(20) not null,
+         email char(50) not null
+       );
+mysql> create table academic_data(
+         student_number int unsigned not null primary key,
+         studies char(50) not null,
+         higher_course tinyint not null,
+         speciality char(50) not null,
+         begin_year year not null,
+         additional_information text(500)
+       );
+mysql> create table work_experience(
+         student_number int unsigned not null primary key,
+         initial_date date not null,
+         final_date date not null,
+         company char(30) not null,
+         job char(60) not null,
+         description_experience text(500)
+       );
+mysql> create table languages(
+         student_number int unsigned not null primary key,
+         language char(20) not null,
+         listening char(2) not null,
+         reading char(2) not null,
+         spoken_interaction char(2) not null,
+         spoken_production char(2) not null,
+         writing char(2) not null
+       );
+mysql> create table computing_experience(
+         windows tinyint unsigned not null,
+         mac tinyint unsigned not null,
+         linux tinyint unsigned not null,
+         data_bases tinyint unsigned not null,
+         finances_accounting tinyint unsigned not null,
+         cad tinyint unsigned not null,
+         graphic_design tinyint unsigned not null,
+         spreadsheet tinyint unsigned not null,
+         email tinyint unsigned not null,
+         maths_statistics tinyint unsigned not null,
+         presentations tinyint unsigned not null,
+         word_processors tinyint unsigned not null,
+         programming_languages tinyint unsigned not null,
+         simulation tinyint unsigned not null,
+         communications_networks tinyint unsigned not null
+       );
+mysql> create table other_information(
+         student_number int unsigned not null primary key,
+         driving_license bit not null,
+         traveling bit not null,
+         schedule tinyint not null,
+         resume_pdf char(50)
+       );
+         
