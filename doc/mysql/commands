@@ -71,4 +71,7 @@ mysql> create table other_information(
          schedule tinyint not null,
          resume_pdf char(50)
        );
-
+mysql> load data
+         local infile "~/students.csv"
+         into table students (registration_number,password,induforum_year)
+       ;
