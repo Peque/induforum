@@ -47,6 +47,7 @@ mysql> create table languages(
          writing char(2) not null
        );
 mysql> create table computing_experience(
+         student_number int unsigned not null primary key,
          windows tinyint unsigned not null,
          mac tinyint unsigned not null,
          linux tinyint unsigned not null,
@@ -70,4 +71,4 @@ mysql> create table other_information(
          schedule tinyint not null,
          resume_pdf char(50)
        );
-         
+
