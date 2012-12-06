@@ -1,82 +1,10 @@
-% TITLE=Test page
-%SUBTITLE=Test page
-% DESCRIPTION=This is a test page!
-% KEYWORDS=test,page
+% TITLE=The job fair
+% SUBTITLE=
+% DESCRIPTION=
+% KEYWORDS=
 
-=Some styling=
-==Let's see how it looks==
-----
+Induforum is a job fair, which was created in 2005 in the ETSII and has been held annually for the past seven years. Since its conception and due to the great success of previous editions, the event returns in 2013 with the same objective as always: to serve as a link between companies and future professionals.
 
-You [http://google.es/ can insert] an image
-
-[[Image:induforum/marketing.jpg|picture|alt=text|text]]
-
-make your text '''bold''' or ''italic'', or '''''both!'''''.
-
-This is a big link, with title and description:
-
-[[@:http://reset.etsii.upm.es/|This is a wide link for a section|With a mandatory subtitle!]]
-
-You can create an ordered list
-
-# and this is the first item
-# followed by the second one
-
-[Youtube:-hgpfZo0CwE]
-
-You can divide text [http://reset.etsii.upm.es/ using an] horizontal rule
-
-----
-
-create a table
-
-{|
-! Header 1
-! Header 2
-! Header 3
-|-
-| row 1, cell 1
-| row 1, cell 2
-| row 1, cell 3
-|-
-| row 2, cell 1
-| row 2, cell 2
-| row 2, cell 3
-|-
-| row 3, cell 1
-| row 3, cell 2
-| row 3, cell 3
-|}
-
-or create
-
-==A subsection==
-
-that contains an unordered list
-
-* with an item
-* followed by the second one
-
-[http://reset.etsii.upm.es Reset Website]
-
-? This is an information label
-
-?? This is a warning label
-
-?? This is a warning label, again
-
-??? This is an error label
-
-? This is an information label, again
-
-[Youtube:lthRmB2ew9k]
-
-=New title=
-==With subtitle==
-----
-
-This is an ordered list:
-
-# First item
-# Second item
-# ...
+Every year, many national and international companies participate in Induforum, moved by the desire to recruit the best professionals in the field of industrial engineering.
+In addition, our fair is an important event in the student world, due to the fact that all future engineers show interest in learning about the projects of the leading companies of the field.
+In conclusion, whether you are a student or a company, you have many reasons to take part in the fair.

@@ -1,82 +1,12 @@
-% TITLE=Test page
-%SUBTITLE=Test page
-% DESCRIPTION=This is a test page!
-% KEYWORDS=test,page
+% TITLE=Companies
+% SUBTITLE=Participation
+% DESCRIPTION=
+% KEYWORDS=
 
-=Some styling=
-==Let's see how it looks==
-----
+Over the last years, Induforum has emerged as a reference in the field of job fairs.
+Worldwide leading companies attend this event with the purpose of contacting future engineers backed by the excellence of the ETSII.  (poner un link que lleve a La Escuela)
+This is so true that these last years the number of participating companies, as well as the number of students, have increased considerably.
+During the past editions of Induforum, a large number of companies have benefited from their participation, either by hiring new engineers, by publicizing their projects in the academic world or by getting acknowledgment within the engineering sector.
+To achieve these goals, companies have access to a large database containing students’ CVs, and to a wide range of activities offered by the School, all of them available in the COMPANIES DOSSIER
 
-You [http://google.es/ can insert] an image
-
-[[Image:induforum/marketing.jpg|picture|alt=text|text]]
-
-make your text '''bold''' or ''italic'', or '''''both!'''''.
-
-This is a big link, with title and description:
-
-[[@:http://reset.etsii.upm.es/|This is a wide link for a section|With a mandatory subtitle!]]
-
-You can create an ordered list
-
-# and this is the first item
-# followed by the second one
-
-[Youtube:-hgpfZo0CwE]
-
-You can divide text [http://reset.etsii.upm.es/ using an] horizontal rule
-
-----
-
-create a table
-
-{|
-! Header 1
-! Header 2
-! Header 3
-|-
-| row 1, cell 1
-| row 1, cell 2
-| row 1, cell 3
-|-
-| row 2, cell 1
-| row 2, cell 2
-| row 2, cell 3
-|-
-| row 3, cell 1
-| row 3, cell 2
-| row 3, cell 3
-|}
-
-or create
-
-==A subsection==
-
-that contains an unordered list
-
-* with an item
-* followed by the second one
-
-[http://reset.etsii.upm.es Reset Website]
-
-? This is an information label
-
-?? This is a warning label
-
-?? This is a warning label, again
-
-??? This is an error label
-
-? This is an information label, again
-
-[Youtube:lthRmB2ew9k]
-
-=New title=
-==With subtitle==
-----
-
-This is an ordered list:
-
-# First item
-# Second item
-# ...
+You [http://google.es/ can see] the companies dossier).
