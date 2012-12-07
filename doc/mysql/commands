@@ -1,3 +1,4 @@
+$ git update-index --assume-unchanged www/config.php
 $ mysql -u root -p
 mysql> create database induforum;
 mysql> grant select,insert,delete,update on induforum.* to induforum identified by '****';
