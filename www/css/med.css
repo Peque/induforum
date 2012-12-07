@@ -13,12 +13,26 @@
 
 /******************************* Website's Header ******************************/
 #w_header hgroup {
-	float: left;
-	margin: 0.9em 1em 1.5em 0em;
-	padding: 1.5em 0em 1.5em 17em;
+	padding: 2em 0em;
 	background: url('/images/logo.png') no-repeat scroll center left;
 	background-size: 16em auto;
 }
+#w_header h1,
+#w_header h2 {
+	margin: 0 18%;
+	text-align: center;
+}
+/*
+ * For lower resolutions (lower than 1200px), we align the website title
+ * to the content:
+ * --------------------------------------------------------------------- */
+@media all and (max-width: 1200px) {
+	#w_header h1,
+	#w_header h2 {
+		margin: 0 0 0 23%;
+	}
+}
+/* --------------------------------------------------------------------- */
 
 /*********************************** Main Nav **********************************/
 #main_nav {

@@ -15,8 +15,8 @@
 
 /******************************* Website's Header ******************************/
 #w_header hgroup {
-	float: left;
-	margin: 1em 0 1em 1em;
+	margin-left: 2%;
+	padding: 1em 0em;
 }
 
 /*********************************** Main Nav **********************************/
