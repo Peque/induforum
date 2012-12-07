@@ -665,22 +665,6 @@ time.news_pubdate {
 	color: #ffffff;
 	clear: both;
 }
-#w_footer #info_nav h3,
-#w_footer #info_nav li {
-	text-align: right;
-}
-#w_footer h3 {
-	margin-bottom: .5em;
-	padding-bottom: .1em;
-	border-bottom: 1px solid #787878;
-	text-transform: uppercase;
-	font-size: 0.9em;
-	font-weight: bold;
-}
-#w_footer a {
-	font-size: 90%;
-	color: #ffffff;
-}
 #w_footer p.copyright {
 	clear: both;
 	padding: .5em 0 .5em 0;

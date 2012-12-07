@@ -80,36 +80,3 @@
 	box-shadow: 0.5em 0.5em 0.5em 0.5em;
 	border-top: 1px solid #585858;
 }
-#w_footer #footer_lists {
-	max-width: 28em;
-	margin: 0 auto;
-}
-#w_footer div.footer_nav {
-	float: left;
-	width: 10em;
-	margin: 2em;
-}
-/*
- * For lower resolutions (lower than 600px), we shrink the footer lists:
- * --------------------------------------------------------------------- */
-@media all and (max-width: 600px) {
-	#w_footer #footer_lists {
-		max-width: 100em;
-		margin: 0;
-	}
-	#w_footer #footer_lists h3 {
-		display: inline;
-		border: none;
-	}
-	#w_footer #footer_lists li { display: inline; }
-	#w_footer #footer_lists li:after,
-	#w_footer #footer_lists li:before {
-		content: ' | ';
-	}
-	#w_footer div.footer_nav {
-		float: none;
-		width: auto;
-		margin: 1em 1em;
-	}
-}
-/* --------------------------------------------------------------------- */

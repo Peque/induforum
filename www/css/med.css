@@ -133,14 +133,4 @@
 #w_footer {
 	padding-top: 0em;
 	background: rgba(0, 0, 0, 0.3);
-
-}
-#w_footer #footer_lists {
-	max-width: 42em;
-	margin: 0 auto;
-}
-#w_footer div.footer_nav {
-	float: left;
-	width: 17em;
-	margin: 2em;
 }
