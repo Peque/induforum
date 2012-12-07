@@ -75,7 +75,8 @@ a:hover {
 body {
 	width: 100%;
 	color: #585858;
-	background: #000000 url('ftp://reset.etsii.upm.es/.pool/images/induforum/background_blur3.jpg') no-repeat fixed;
+	background-image: url("/images/back.jpg"), url("/images/gradient.jpg");
+	background-repeat: no-repeat, repeat;
 	background-size: 100%;
 }
 form input {
@@ -123,13 +124,13 @@ time.news_pubdate {
 #top {
 	position: relative;
 	color: #ffffff;
-	background: #000000;
-	border-bottom: 1px solid #585858;
+	border-bottom: 1px solid #F0F0F0;
+	background: none repeat scroll 0 0 rgba(0, 0, 0, 0.3);
 }
 #top form {
 	display: inline;
 	margin-right: 1em;
-	background: #000000;
+
 }
 #top form input,
 #top form select {
@@ -147,7 +148,7 @@ time.news_pubdate {
 }
 #top ul {
 	float: right;
-	background: #000000;
+
 }
 #top ul li {
 	margin-left: 1.2em;
@@ -166,12 +167,15 @@ time.news_pubdate {
 	text-decoration: none;
 }
 #w_header hgroup {
-	text-shadow: 0 0 5px white, 0 0 10px white;
+	margin: .5em 0;
+	text-shadow: 0 0 5px #F0F0F0, 0 0 10px #F0F0F0;
 	color: #000000;
 }
 #w_header h1 {
-	font-size: 350%;
+	font-size: 300%;
 	font-weight: bold;
+	font-family: helvetica;
+	text-transform: uppercase;
 }
 #w_header h2 {
 	font-size: 200%;
@@ -180,9 +184,10 @@ time.news_pubdate {
 
 /*********************************** Main Nav **********************************/
 #main_nav {
-	background: rgba(0, 0, 0, 0.7);
-	border: 1px solid #707070;
-	border-radius: 0 1em 1em 0;
+	background: rgba(0, 0, 0, 0.3);
+	border-radius: 0 0em 0em 0;
+	box-shadow: 0 0 1em 0em #F0F0F0;
+
 }
 #main_nav a {
 	color: #006699;
@@ -213,45 +218,46 @@ time.news_pubdate {
 
 /************************************ Crumbs ***********************************/
 #crumbs_nav {
-	margin-bottom: 1.5%;
+	margin-bottom: 1%;
 	height: 2em;
 	font-size: .8em;
+
+
 
 }
 #crumbs_nav li {
 	float: left;
 	display: block;
 	line-height: 2em;
-	color: #383838;
-	border: 1px solid #383838;
-	border-radius: .5em;
+	color: #609098;
+	border-radius: 0em;
 }
 #crumbs_nav li.current {
 	font-weight: bold;
 	padding: 0 1em 0 1em;
-	background: #e8e8e8;
+	background: #E8E8E8;
 }
 #crumbs_nav a {
 	display: block;
-	color: #807d74;
+	color: #FFFFFF;
 	line-height: 2em;
 	padding: 0 1em 0 1em;
 	text-decoration: none;
-	background: rgba(0, 0, 0, 0.7);
-	border-radius: inherit;
+	background: none repeat scroll 0 0 rgba(2, 30, 25, 0.3);
+	font-weight: bold;
 }
 #crumbs_nav a:hover,
 #crumbs_nav a:focus {
 	color: #383838;
-	background: #e8e8e8;
+	background: #CAC9C9;
 }
 
 /*********************************** Section ***********************************/
 #content {
 	clear: both;
 	background: #ffffff;
-	border: 1px solid #707070;
-	border-radius: 2em;
+	border-radius: 0em;
+	box-shadow: 0em 0em 1em 0em #F0F0F0;
 }
 #content aside.workshop_rating {
 	margin-right: 1.5em;
@@ -259,16 +265,16 @@ time.news_pubdate {
 }
 #content > header,
 #content > footer {
-	background: #e8e8e8;
+	background: #FFFFFF;
 }
 #content > header {
-	border-radius: 2em 2em 0 0;
+	background: #F0F0F0;
 }
 #content > header hgroup {
 	padding: 1em;
 }
 #content > header h1 {
-	color: #383838;
+	color: #000000;
 	font-size: 200%;
 	font-weight: bold;
 }
@@ -287,6 +293,7 @@ time.news_pubdate {
 	background: #f7f8ff;
 	max-width: 40%;
 }
+
 #content nav#section_nav ul {
 	margin: 0em;
 	padding: 0em;
@@ -313,7 +320,7 @@ time.news_pubdate {
 }
 #content > footer {
 	clear: both;
-	border-radius: 0 0 2em 2em;
+	background: #F0F0F0;
 }
 #content > footer p.section_title {
 	padding: .5em 1.5em .5em 1.5em;
@@ -416,11 +423,11 @@ time.news_pubdate {
 #content dl.usr {
 	margin: 1em 0 1em 0;
 	padding: 1em;
-	border-radius: .5em;
+
 }
 #content dl.cat {
-	border: 1px solid #ffefb6;
-	background-color: #fffff5; /* hover: #fdffba*/
+	border: 1px solid #F3FA2A;
+	background-color: #F0F0F0; /* hover: #fdffba*/
 }
 #content dl.app {
 	border: 1px solid #92b4d5;
@@ -434,7 +441,7 @@ time.news_pubdate {
 #content dl.app dt,
 #content dl.usr dt {
 	float: left;
-	font-family: serif;
+	font-family: helvetica;
 	font-size: 200%;
 	font-weight: bold;
 }
@@ -658,28 +665,13 @@ time.news_pubdate {
 	color: #ffffff;
 	clear: both;
 }
-#w_footer #info_nav h3,
-#w_footer #info_nav li {
-	text-align: right;
-}
-#w_footer h3 {
-	margin-bottom: .5em;
-	padding-bottom: .1em;
-	border-bottom: 1px solid #787878;
-	text-transform: uppercase;
-	font-size: 0.9em;
-	font-weight: bold;
-}
-#w_footer a {
-	font-size: 90%;
-	color: #ffffff;
-}
 #w_footer p.copyright {
 	clear: both;
 	padding: .5em 0 .5em 0;
 	font-size: 80%;
 	text-align: center;
-	border-top: 1px solid #585858;
-	color: #787878;
-	background: #000000;
+	color: #FFFFFF;
+	box-shadow: 0 0 1em 0 #F0F0F0;
+	background: rgba(0, 20, 5, 0.3);
+	box-shadow: 0.5em 0.5em 0.5em 0.5em;
 }

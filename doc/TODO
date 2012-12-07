@@ -4,6 +4,8 @@
 
  * Projects XML database for better organization
  * phpBB forum integration
+ * Change page style: css3
+ * Generate news: basch
 
 =====================================================================
 1.x
@@ -20,3 +22,6 @@ Future ideas (for the long term)
  * Local search engine instead of Google's
  * Make the most beautiful design and use JavaScript for eye candy
  * Paypal donations for the association and/or proyects
+
+
+
