@@ -3,7 +3,7 @@ function add_social_links() {
 
 	var content;
 
-	content = '<div id="social_networks" style="z-index:-1;float:right;margin:8px 1.8em 0 0;">';
+	content = '<div id="social_networks" style="z-index:1;position:absolute;right:1em;margin-top:8px;">';
 
 	// Facebook
 	content += '<a href="https://www.facebook.com/induforum.etsii.5?ref=ts&fref=ts" onmouseover=\'document.facebook.src="ftp://reset.etsii.upm.es/.pool/images/other_topics/icon_facebook_on.png"\' onmouseout=\'document.facebook.src="ftp://reset.etsii.upm.es/.pool/images/other_topics/icon_facebook_off.png"\' ><img src="ftp://reset.etsii.upm.es/.pool/images/other_topics/icon_facebook_off.png" name="facebook" alt="facebook_icon_image" /></a>';
@@ -14,7 +14,7 @@ function add_social_links() {
 
 	content += '</div>';
 
-	document.getElementById('w_header').insertAdjacentHTML("afterBegin", content);
+	document.getElementById('w_header').insertAdjacentHTML("beforeBegin", content);
 
 	var parent_element = document.getElementById('social_networks');
 	var child_elements = parent_element.getElementsByTagName('a');
