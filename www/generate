@@ -43,11 +43,20 @@ function build_file {
 
 	while read pipe_line; do
 
+		# Variable reset
+		file_data_array=('','','','');
+
 		# Prepare file and directory
 		dirname=$(dirname $pipe_line)
 		filename=$(basename $pipe_line | cut -d. -f1)
 		language=$(basename $pipe_line | cut -d. -f2)
 		extension=$(basename $pipe_line | cut -d. -f3)
+		if [ "$extension" == "reset" ]; then
+			gen_file=$build_dir$dirname/$filename.$language.html
+		else
+			gen_file=$build_dir$dirname/$filename.$language.$extension
+		fi
+		echo Generating $gen_file
 		mkdir -p $build_dir$dirname
 
 		# Get content information
@@ -63,21 +72,21 @@ function build_file {
 		cat ${templates_dir}header.$language.html           | \
 			sed "s/%%title%%/${file_data_array[0]}/g"       | \
 			sed "s/%%keywords%%/${file_data_array[3]}/g"    | \
-			sed "s/%%description%%/${file_data_array[2]}/g" >  $build_dir$filename.$language.html
-		cat ${templates_dir}nav.$language.html              >> $build_dir$filename.$language.html
+			sed "s/%%description%%/${file_data_array[2]}/g" >  $gen_file
+		cat ${templates_dir}nav.$language.html              >> $gen_file
 
 		# Parse content
 		if [ "$extension" == "reset" ]; then
-			echo "<section id=\"content\"><header><hgroup><h1>${file_data_array[0]}</h1><h2>${file_data_array[1]}</h2></hgroup></header>" >> $build_dir$filename.$language.html
-			echo "$(cat $content_dir$pipe_line | $nodejs ./gen/parse_file.js)" >> $build_dir$filename.$language.html
-			echo "<footer><p class=\"section_title\">${file_data_array[0]}</p></footer></section>" >> $build_dir$filename.$language.html
+			echo "<section id=\"content\"><header><hgroup><h1>${file_data_array[0]}</h1><h2>${file_data_array[1]}</h2></hgroup></header>" >> $gen_file
+			echo "$(cat $content_dir$pipe_line | $nodejs ./gen/parse_file.js)" >> $gen_file
+			echo "<footer><p class=\"section_title\">${file_data_array[0]}</p></footer></section>" >> $gen_file
 		else
-			cat $content_dir$pipe_line >> $build_dir$filename.$language.$extension
+			cat $content_dir$pipe_line >> $gen_file
 		fi
 
 		# Add aside and footer sections
-		cat ${templates_dir}aside.$language.html  >> $build_dir$filename.$language.html
-		cat ${templates_dir}footer.$language.html >> $build_dir$filename.$language.html
+		cat ${templates_dir}aside.$language.html  >> $gen_file
+		cat ${templates_dir}footer.$language.html >> $gen_file
 
 	done
 

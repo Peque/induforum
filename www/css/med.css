@@ -13,12 +13,26 @@
 
 /******************************* Website's Header ******************************/
 #w_header hgroup {
-	float: left;
-	margin: 1em 0 1em 2em;
-	padding: 1.5em 0 1.5em 15em;
+	padding: 2em 0em;
 	background: url('/images/logo.png') no-repeat scroll center left;
-	background-size: 12em;
+	background-size: 16em auto;
 }
+#w_header h1,
+#w_header h2 {
+	margin: 0 18%;
+	text-align: center;
+}
+/*
+ * For lower resolutions (lower than 1200px), we align the website title
+ * to the content:
+ * --------------------------------------------------------------------- */
+@media all and (max-width: 1200px) {
+	#w_header h1,
+	#w_header h2 {
+		margin: 0 0 0 23%;
+	}
+}
+/* --------------------------------------------------------------------- */
 
 /*********************************** Main Nav **********************************/
 #main_nav {
@@ -44,7 +58,7 @@
 	font-size: 1.1em;
 	text-align: center;
 	display: block;
-	color: #ccff00;
+	color: #F3FA2A;
 }
 #main_nav a.nav_section:hover {
 	text-decoration: none;
@@ -73,17 +87,17 @@
 	float: right;
 	margin: 0 0 1em 0;
 	width: 18%;
-	background: rgba(0, 0, 0, 0.7);
-	border: 1px solid #707070;
+	background: rgba(0, 0, 0, 0.3);
 	border-right: none;
-	border-radius: 1em 0 0 1em;
+	border-radius: 0;
+	box-shadow: 0em 0em 1em 0em #F0F0F0;
 }
 #r_aside h3 {
 	padding: .5em 1em .5em 1em;
 	font-size: 1.1em;
 	font-weight: bold;
 	text-align: center;
-	color: #ffbc00;
+	color: #F3FA2A;
 }
 #r_aside div.block {
 	padding: .8em;
@@ -117,19 +131,6 @@
 
 /************************************ Footer ***********************************/
 #w_footer {
-	padding-top: 2em;
-	background-image: linear-gradient(bottom, rgba(0,0,0,100) 80%, rgba(0,0,0,0) 100%);
-	background-image: -o-linear-gradient(bottom, rgba(0,0,0,100) 80%, rgba(0,0,0,0) 100%);
-	background-image: -moz-linear-gradient(bottom, rgba(0,0,0,100) 80%, rgba(0,0,0,0) 100%);
-	background-image: -webkit-linear-gradient(bottom, rgba(0,0,0,100) 80%, rgba(0,0,0,0) 100%);
-	background-image: -ms-linear-gradient(bottom, rgba(0,0,0,100) 80%, rgba(0,0,0,0) 100%);
-}
-#w_footer #footer_lists {
-	max-width: 42em;
-	margin: 0 auto;
-}
-#w_footer div.footer_nav {
-	float: left;
-	width: 17em;
-	margin: 2em;
+	padding-top: 0em;
+	background: rgba(0, 0, 0, 0.3);
 }

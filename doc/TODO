@@ -2,14 +2,13 @@
 0.x
 =====================================================================
 
- *Update forms
+ * Generate news: bash
 
 =====================================================================
 1.x
 =====================================================================
 
  * Users database
- * Workshops online rating
  * Online content edition for registered users
 
 =====================================================================
@@ -19,3 +18,6 @@ Future ideas (for the long term)
  * Local search engine instead of Google's
  * Make the most beautiful design and use JavaScript for eye candy
  * Paypal donations for the association and/or proyects
+
+
+
