@@ -43,6 +43,9 @@ function build_file {
 
 	while read pipe_line; do
 
+		# Variable reset
+		file_data_array=('','','','');
+
 		# Prepare file and directory
 		dirname=$(dirname $pipe_line)
 		filename=$(basename $pipe_line | cut -d. -f1)
