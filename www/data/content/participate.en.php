@@ -10,7 +10,7 @@
 
 	// Check user privileges
 	if ($_SESSION['type'] != 'student_session') {
-		header('Location: /no_privileges');
+		header('Location: /restricted_area');
 		exit;
 	}
 
