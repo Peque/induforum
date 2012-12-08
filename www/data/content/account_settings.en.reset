@@ -1,0 +1,16 @@
+% TITLE=Account settings
+% SUBTITLE=
+% DESCRIPTION=
+% KEYWORDS=
+
+=Change your password=
+----
+
+You can not change your password... yet!
+
+But you can close your session!
+
+% TODO: this is not currently supported in the parser
+<form action="/logout" method="post">
+	<input type="submit" value="Log out" accesskey="x" />
+</form>
