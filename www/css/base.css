@@ -79,7 +79,7 @@ body {
 	background-repeat: no-repeat, repeat;
 	background-size: 100%;
 }
-form  {
+form input {
 	background: #ffffff;
 }
 form input[type="submit"],
@@ -668,7 +668,7 @@ time.news_pubdate {
 	    width: 50%;
 	    vertical-align:middle;
 	    margin:3px;
-	
+
 }
 #content form label.singlelinetitle{
 		 color:#000000;
@@ -678,14 +678,14 @@ time.news_pubdate {
 	    width: 50%;
 	    margin:3px;
 	    vertical-align:middle;
-	    
+
 }
 #content form select.singleline {
 		float:left;
 		vertical-align:middle;
 		margin:3px;
-		padding:1px;		
-		
+		padding:1px;
+
 }
 #content form input.singleline {
 		clear:left;
@@ -695,14 +695,14 @@ time.news_pubdate {
 		vertical-align:middle;
 }
 #content form p.title {
-		
+
 		float:left;
 		clear:left;
 		padding:1px;
 		margin:3px;
 		vertical-align:middle;
 		font-weight: bold;
-		
+
 }
 
 #content form .singlelinedate{
