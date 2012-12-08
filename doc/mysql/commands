@@ -38,21 +38,23 @@ mysql> create table academic_data(
          additional_information text(500)
        );
 mysql> create table work_experience(
-         student_number int unsigned not null primary key,
+         student_number int unsigned not null,
          initial_date date not null,
          final_date date not null,
          company char(30) not null,
          job char(60) not null,
-         description_experience text(500)
+         description_experience text(500),
+         primary key (student_number,initial_date,final_date,company)
        );
 mysql> create table languages(
-         student_number int unsigned not null primary key,
+         student_number int unsigned not null,
          language char(20) not null,
          listening char(2) not null,
          reading char(2) not null,
          spoken_interaction char(2) not null,
          spoken_production char(2) not null,
-         writing char(2) not null
+         writing char(2) not null,
+         primary key (student_number,language)
        );
 mysql> create table computing_experience(
          student_number int unsigned not null primary key,
