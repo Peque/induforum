@@ -7,7 +7,7 @@ mysql> use induforum;
 mysql> create table students(
          student_number int unsigned not null auto_increment primary key,
          registration_number char(10) not null,
-         password char(30) not null,
+         password char(128) not null,
          induforum_year year not null
        );
 mysql> create table personal_data(
