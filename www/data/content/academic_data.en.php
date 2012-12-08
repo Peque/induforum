@@ -129,7 +129,7 @@
 						<option value="4" <?php if (isset($spd['higher_course'])&&$spd['higher_course']=="4") echo 'selected="selected"'?>>4</option>
 						<option value="5" <?php if (isset($spd['higher_course'])&&$spd['higher_course']=="5") echo 'selected="selected"'?>>5</option>
 					</select>
-					<label for="form_speciality">Speciality:<span class="form_required" title="This field is required">*</span></label>
+					<label for="form_speciality" class="singleline">Speciality:<span class="form_required" title="This field is required">*</span></label>
 						<select name="speciality" id="form_speciality" required="required" class="singleline">
 							<option value=""></option>
 							<option value="Electric" <?php if (isset($spd['speciality'])&&$spd['speciality']=="Electric") echo 'selected="selected"'?>>Electric</option>
@@ -147,7 +147,7 @@
 								<option value="2010" <?php if (isset($spd['begin_year'])&&$spd['begin_year']=="2010") echo 'selected="selected"'?>>2010</option>
 							</select>
 					<label for="form_additionalinfo" class="singleline">Additional info:</label>
-					<textarea name="additional_information" id="form_additionalinfo" cols="50" rows="10"><?php if (isset($spd['additional_information'])) echo $spd['additional_information']; ?></textarea>
+					<textarea name="additional_information" id="form_additionalinfo" cols="50" rows="10" class="singleline"><?php if (isset($spd['additional_information'])) echo $spd['additional_information']; ?></textarea>
 				</div>
 			</div>
 		</fieldset>

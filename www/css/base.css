@@ -713,7 +713,15 @@ time.news_pubdate {
 		vertical-align:middle;
 		width:15%;
 }
+#content form textarea.singleline {
+		 clear:left;
+	    float: left;
+	    padding:1px
+	    text-align: left;
+	    vertical-align:middle;
+	    margin:3px;
 
+}
 
 
 /************************************ Footer ***********************************/
