@@ -14,6 +14,8 @@
 
 <?php
 
+	session_start();
+
 	require_once('../config.php');
 
 	// Connect to the database
@@ -50,7 +52,9 @@
 
 				if ($spd['user'] == $row['registration_number'] &&
 				    hash('sha512', $db_salt.$spd['pass']) == $row['password']) {
-					echo '<p class="info">Successful login.</p>';
+					$_SESSION['user_id'] = $row['student_number'];
+					header('Location: /participate');
+					exit;
 				} else {
 					echo '<p class="error"><strong>Error: </strong>Wrong user name or password. Please, try again.</p>';
 				}
@@ -85,7 +89,7 @@
 			</div>
 		</fieldset>
 		<input type="hidden" name="type" value="login_form" />
-		<input type="submit" value="Save" accesskey="x" />
+		<input type="submit" value="Log in" accesskey="x" />
 	</form>
 </article>
 <footer>

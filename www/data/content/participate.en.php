@@ -1,3 +1,14 @@
+<?php
+
+	session_start();
+
+	if (!isset($_SESSION['user_id'])) {
+		header('Location: /login');
+		exit;
+	}
+
+?>
+
 <section id="content">
 <header>
 	<hgroup>
@@ -15,8 +26,7 @@
 <?php
 
 	// TODO: student_number should be session dependant...
-	$student_number = 1;
-	$form_processed = 0;
+	$student_number = $_SESSION['user_id'];
 
 	require_once('../config.php');
 
