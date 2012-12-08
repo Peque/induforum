@@ -38,14 +38,13 @@
 		$spd['higher_course'] = mysqli_real_escape_string($db, trim($_POST['higher_course']));
 		$spd['speciality'] = mysqli_real_escape_string($db, trim($_POST['speciality']));
 		$spd['begin_year'] = mysqli_real_escape_string($db, trim($_POST['begin_year']));
-		$spd['additional_information'] = mysqli_real_escape_string($db, trim($_POST['addtional_information']));
+		$spd['additional_information'] = mysqli_real_escape_string($db, trim($_POST['additional_information']));
 
 		// Check if all fields have a non-empty value
 		if ($spd['studies'] != "" &&
 			$spd['higher_course'] != "" &&
 			$spd['speciality'] != "" &&
-			$spd['begin_year'] != "" &&
-			$spd['additional_information'] != "" &&) {
+			$spd['begin_year'] != "") {
 
 			// Try to add a new row
 			$query = "insert into academic_data values
@@ -118,36 +117,36 @@
 			<div class="form_wrapper">
 				<div class="form_warp">
 					<label for="form_degree" class="singleline">Degree: <span class="form_required" title="This field is required">*</span></label>
-					<select name="degree" id="form_degree" value="<?php if (isset($spd['studies'])) echo $spd['studies']; ?>" required="required">
+					<select name="studies" id="form_degree" required="required" class="singleline">
 						<option value=""></option>
-						<option value="industrialengineering">Industrial Engineering</option>
-						<option value="chemicalengineering">Chemical Engineering</option>
+						<option value="industrialengineering" <?php if (isset($spd['studies'])&&$spd['studies']=="industrialengineering") echo 'selected="selected"'?>>Industrial Engineering</option>
+						<option value="chemicalengineering"<?php if (isset($spd['studies'])&&$spd['studies']=="chemicalengineering") echo 'selected="selected"'?>>Chemical Engineering</option>
 					</select>
 					<label for="form_course" class="singleline">Higher course: <span class="form_required" title="This field is required">*</span></label>
-					<select name="higher_course" id="form_course" value="<?php if (isset($spd['higher_course'])) echo $spd['higher_course']; ?>" required="required">
+					<select name="higher_course" id="form_course"  required="required" class="singleline">
 						<option value=""></option>
-						<option value="3">3</option>
-						<option value="3">4</option>
-						<option value="3">5</option>
+						<option value="3" <?php if (isset($spd['higher_course'])&&$spd['higher_course']=="3") echo 'selected="selected"'?>>3</option>
+						<option value="4" <?php if (isset($spd['higher_course'])&&$spd['higher_course']=="4") echo 'selected="selected"'?>>4</option>
+						<option value="5" <?php if (isset($spd['higher_course'])&&$spd['higher_course']=="5") echo 'selected="selected"'?>>5</option>
 					</select>
 					<label for="form_speciality">Speciality:<span class="form_required" title="This field is required">*</span></label>
-						<select name="speciality" id="form_speciality" value="<?php if (isset($spd['speciality'])) echo $spd['speciality']; ?>" required="required">
+						<select name="speciality" id="form_speciality" required="required" class="singleline">
 							<option value=""></option>
-							<option value="Electric">Electric</option>
-							<option value="Mechanic">Mechanic</option>
-							<option value="Electronic">Electronic</option>
+							<option value="Electric" <?php if (isset($spd['speciality'])&&$spd['speciality']=="Electric") echo 'selected="selected"'?>>Electric</option>
+							<option value="Mechanic" <?php if (isset($spd['speciality'])&&$spd['speciality']=="Mechanic") echo 'selected="selected"'?>>Mechanic</option>
+							<option value="Electronic"<?php if (isset($spd['speciality'])&&$spd['speciality']=="Electronic") echo 'selected="selected"'?>>Electronic</option>
 						</select>
-					<label for="form_startingyear">Starting year:<span class="form_required" title="This field is required">*</span></label>
-							<select name="begin_year" id="form_startingyear" value="<?php if (isset($spd['begin_year'])) echo $spd['begin_year']; ?>" required="required">
+					<label for="form_startingyear" class="singleline">Starting year:<span class="form_required" title="This field is required">*</span></label>
+							<select name="begin_year" id="form_startingyear" value="<?php if (isset($spd['begin_year'])) echo $spd['begin_year']; ?>" required="required" class="singleline">
 								<option value=""></option>
-								<option value="2005">2005</option>
-								<option value="2006">2006</option>
-								<option value="2007">2007</option>
-								<option value="2008">2008</option>
-								<option value="2009">2009</option>
-								<option value="2010">2010</option>
+								<option value="2005" <?php if (isset($spd['begin_year'])&&$spd['begin_year']=="2005") echo 'selected="selected"'?>>2005</option>
+								<option value="2006" <?php if (isset($spd['begin_year'])&&$spd['begin_year']=="2006") echo 'selected="selected"'?>>2006</option>
+								<option value="2007" <?php if (isset($spd['begin_year'])&&$spd['begin_year']=="2007") echo 'selected="selected"'?>>2007</option>
+								<option value="2008" <?php if (isset($spd['begin_year'])&&$spd['begin_year']=="2008") echo 'selected="selected"'?>>2008</option>
+								<option value="2009" <?php if (isset($spd['begin_year'])&&$spd['begin_year']=="2009") echo 'selected="selected"'?>>2009</option>
+								<option value="2010" <?php if (isset($spd['begin_year'])&&$spd['begin_year']=="2010") echo 'selected="selected"'?>>2010</option>
 							</select>
-					<label for="form_additionalinfo">Additional info:</label>
+					<label for="form_additionalinfo" class="singleline">Additional info:</label>
 					<textarea name="additional_information" id="form_additionalinfo" cols="50" rows="10"><?php if (isset($spd['additional_information'])) echo $spd['additional_information']; ?></textarea>
 				</div>
 			</div>
