@@ -1,0 +1,44 @@
+#!/bin/bash
+
+#
+#  hash_csv
+#
+#  Copyright 2012 Miguel Sánchez de León Peque <msdeleonpeque@gmail.com>
+#
+#  This program is free software; you can redistribute it and/or modify
+#  it under the terms of the GNU General Public License as published by
+#  the Free Software Foundation; either version 3 of the License, or
+#  (at your option) any later version.
+#
+#  This program is distributed in the hope that it will be useful,
+#  but WITHOUT ANY WARRANTY; without even the implied warranty of
+#  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#  GNU General Public License for more details.
+#
+#  You should have received a copy of the GNU General Public License
+#  along with this program; if not, write to the Free Software
+#  Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston,
+#  MA 02110-1301, USA.
+#
+
+#
+# Assuming the CSV columns are 'registration_number', 'password' and
+# 'induforum_year', respectively.
+#
+
+
+salt=$(cat $(dirname ${BASH_SOURCE[0]})/../config.php | grep -e salt | tr "\t" "_" | tr "'" "\t" | cut -f2)
+
+while read pipe_line; do
+
+	reg_num=$(echo $pipe_line | awk '{ print $1 }')
+	pass=$(echo $pipe_line | awk '{ print $2 }')
+	year=$(echo $pipe_line | awk '{ print $3 }')
+
+	hashed_pass=$(echo "${salt}${pass}" | sha512sum - | sed 's/ .*$//')
+
+	echo -ne "$reg_num\t"
+	echo -ne "$hashed_pass\t"
+	echo -e "$year"
+
+done
