@@ -35,7 +35,7 @@ while read pipe_line; do
 	pass=$(echo $pipe_line | awk '{ print $2 }')
 	year=$(echo $pipe_line | awk '{ print $3 }')
 
-	hashed_pass=$(echo "${salt}${pass}" | sha512sum - | sed 's/ .*$//')
+	hashed_pass=$(echo -n "${salt}${pass}" | sha512sum - | sed 's/ .*$//')
 
 	echo -ne "$reg_num\t"
 	echo -ne "$hashed_pass\t"
