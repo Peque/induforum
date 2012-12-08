@@ -28,6 +28,12 @@
 
 	}
 
+	if (!mysqli_set_charset($db, 'utf8')) {
+
+		echo '<p class="error"><strong>Error: </strong>could not set charset to UTF8. Please, try again later.</p>';
+
+	}
+
 	if (isset($_POST['type']) && $_POST['type'] == 'login_form') {
 
 		// Form data overrides any other data

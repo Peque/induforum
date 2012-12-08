@@ -1,7 +1,7 @@
 $ git update-index --assume-unchanged www/config.php
 $ mysql -u root -p
 mysql> create user 'induforum'@'localhost' identified by '****';
-mysql> create database induforum;
+mysql> create database induforum character set utf8 collate utf8_general_ci;
 mysql> grant select,insert,delete,update on induforum.* to induforum identified by '****';
 mysql> use induforum;
 mysql> create table students(
