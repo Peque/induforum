@@ -1,3 +1,15 @@
+<?php
+
+	session_start();
+
+	// Check user logged in
+	if (isset($_SESSION['user_id'])) {
+		header('Location: /account_settings');
+		exit;
+	}
+
+?>
+
 <section id="content">
 <header>
 	<hgroup>
@@ -13,8 +25,6 @@
 	</header>
 
 <?php
-
-	session_start();
 
 	require_once('../config.php');
 
@@ -45,21 +55,43 @@
 		if ($spd['user'] != "" &&
 			$spd['pass'] != "") {
 
-			// Try to get data from the database
+			// Try to get data from the students database
 			$query = "select * from students where registration_number='".$spd['user']."'";
-			$result = mysqli_query($db, $query);
-			$num_results = mysqli_num_rows($result);
+			$students_result = mysqli_query($db, $query);
+			$students_num_results = mysqli_num_rows($students_result);
 
-			if ($num_results) {
+			// Try to get data from the students database
+			$query = "select * from companies where user='".$spd['user']."'";
+			$companies_result = mysqli_query($db, $query);
+			$companies_num_results = mysqli_num_rows($companies_result);
+
+			if ($students_num_results) {
 
 				// $num_results should be 1 in this case
 
-				$row = mysqli_fetch_assoc($result);
+				$row = mysqli_fetch_assoc($students_result);
 
 				if ($spd['user'] == $row['registration_number'] &&
 				    hash('sha512', $db_salt.$spd['pass']) == $row['password']) {
 					$_SESSION['user_id'] = $row['student_number'];
+					$_SESSION['type'] = 'student_session';
 					header('Location: /participate');
+					exit;
+				} else {
+					echo '<p class="error"><strong>Error: </strong>Wrong user name or password. Please, try again.</p>';
+				}
+
+			} else if ($companies_num_results) {
+
+				// $num_results should be 1 in this case
+
+				$row = mysqli_fetch_assoc($companies_result);
+
+				if ($spd['user'] == $row['user'] &&
+				    hash('sha512', $db_salt.$spd['pass']) == $row['password']) {
+					$_SESSION['user_id'] = $row['company_number'];
+					$_SESSION['type'] = 'company_session';
+					header('Location: /companies/database');
 					exit;
 				} else {
 					echo '<p class="error"><strong>Error: </strong>Wrong user name or password. Please, try again.</p>';
@@ -79,7 +111,8 @@
 	}
 
 	// Close database connection
-	mysqli_free_result($result);
+	mysqli_free_result($students_result);
+	mysqli_free_result($companies_result);
 	mysqli_close($db);
 
 ?>

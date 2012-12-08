@@ -2,8 +2,15 @@
 
 	session_start();
 
+	// Check user logged in
 	if (!isset($_SESSION['user_id'])) {
 		header('Location: /login');
+		exit;
+	}
+
+	// Check user privileges
+	if ($_SESSION['type'] != 'student_session') {
+		header('Location: /no_privileges');
 		exit;
 	}
 
