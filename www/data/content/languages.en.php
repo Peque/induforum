@@ -30,7 +30,7 @@
 
 	}
 
-	if (isset($_POST['type']) && $_POST['type'] == 'student_languages	') {
+	if (isset($_POST['type']) && $_POST['type'] == 'student_languages') {
 
 		// Form data overrides any other data
 
@@ -121,29 +121,30 @@
 		<fieldset>
 				<legend>Languages</legend>
 					<div class="form_wrapper">
-						<p class="p_language">
-							Check the languages you know.You can add more languages.
-						</p>
-							<input type="checkbox" name="language" value="english" id="english" 			  	class="singleline"/>
-							<label for="english" class="singlelinetitle">English</label>
-							<input type="checkbox" name="language" value="french" id="french" 			  	class="singleline"/>
-							<label for="french" class="singlelinetitle">French</label>
-							<input type="checkbox" name="language" value="german" id="german" 			  	class="singleline"/>
-							<label for="german" class="singlelinetitle">German</label>
-							<input type="checkbox" name="language" value="italian" id="italian" 			  	class="singleline"/>
-							<label for="italian" class="singlelinetitle">Italian</label>
-							<label for="other" class="singlelinetitle">Other</label>
-							<select name="other" id="other" class="singleline">
-								<option value="noreply">  </option>
-								<option value="0">0</option>
-								<option value="1">1</option>
-								<option value="2">2</option>
-								<option value="3">3</option>
-								<option value="4">4</option>
+						<label for="form_languages" class="singleline">Number of languages:<span class="form_required" title="This field is required">*</span></label>
+							<select name="languages" id="form_languages" class="singleline" required="required">
+								<option value=""></option>
+								<option value="1">1 </option>
+								<option value="2">2 </option>
+								<option value="3">3 </option>
+								<option value="4">4 </option>
+								<option value="5">5 </option>
 							</select>
-							<label for="english" class="singlelinetitle">English</label>
-							<label for="englishspoken_interaction" class="singleline">Spoken Interaction</label>
-							<select name="spoken_interaction" id="englishspoken_interaction" class="singleline">
+							<label for="form_language1" class="singleline">Language<span class="form_required" title="This field is required">*</span></label>
+							<select name="language1" id="form_language1" class="singleline" required="required">
+								<option value=""></option>
+								<option value="english">English</option>
+								<option value="french">French</option>
+								<option value="german">German</option>
+								<option value="italian">Italian</option>
+								<option value="portuguese">Portuguese</option>
+								<option value="russian">Russian</option>
+								<option value="swedish">Swedish</option>
+								<option value="dutch">Dutch</option>
+								<option value="chinese">Chinese</option>
+							</select>
+							<label for="spoken_interaction1" class="singleline">Spoken Interaction</label>
+							<select name="spoken_interaction1" id="spoken_interaction1" class="singleline">
 								<option value="">No reply</option>
 								<option value="A1">A1</option>
 								<option value="A2">A2</option>
@@ -152,8 +153,8 @@
 								<option value="C1">C1</option>
 								<option value="C2">C2</option>
 							</select>
-							<label for="englishspoken_production" class="singleline">Spoken Production</label>
-							<select name="spoken_production" id="englishspoken_production" class="singleline">
+							<label for="spoken_production1" class="singleline">Spoken Production</label>
+							<select name="spoken_production1" id="spoken_production1" class="singleline">
 								<option value="noreply">No reply</option>
 								<option value="A1">A1</option>
 								<option value="A2">A2</option>
@@ -162,8 +163,8 @@
 								<option value="C1">C1</option>
 								<option value="C2">C2</option>
 							</select>
-							<label for="englishreading" class="singleline">Reading</label>
-							<select name="reading" id="englishreading" class="singleline">
+							<label for="reading1" class="singleline">Reading</label>
+							<select name="reading1" id="reading1" class="singleline">
 								<option value="noreply">No reply</option>
 								<option value="A1">A1</option>
 								<option value="A2">A2</option>
@@ -172,8 +173,8 @@
 								<option value="C1">C1</option>
 								<option value="C2">C2</option>
 							</select>
-							<label for="englishwriting" class="singleline">Writing</label>
-							<select name="writing" id="englishwriting" class="singleline">
+							<label for="writing1" class="singleline">Writing</label>
+							<select name="writing1" id="writing1" class="singleline">
 								<option value="noreply">No reply</option>
 								<option value="A1">A1</option>
 								<option value="A2">A2</option>
@@ -182,8 +183,8 @@
 								<option value="C1">C1</option>
 								<option value="C2">C2</option>
 							</select>
-							<label for="englishlistening" class="singleline">Listening</label>
-							<select name="listening" id="englishlistening" class="singleline">
+							<label for="listening1" class="singleline">Listening</label>
+							<select name="listening1" id="listening1" class="singleline">
 								<option value="noreply">No reply</option>
 								<option value="A1">A1</option>
 								<option value="A2">A2</option>
@@ -192,254 +193,133 @@
 								<option value="C1">C1</option>
 								<option value="C2">C2</option>
 							</select>
-							
-<!--
-							<label for="french" class="singlelinetitle">French</label>
-							<label for="frenchspeaking" class="singleline">Speaking</label>
-							<select name="frenchspeaking" id="frenchspeaking" class="singleline">
-								<option value="noreply">  </option>
-								<option value="0">0</option>
-								<option value="1">1</option>
-								<option value="2">2</option>
-								<option value="3">3</option>
-								<option value="4">4</option>
-								<option value="5">5</option>
-								<option value="6">6</option>
-								<option value="7">7</option>
-								<option value="8">8</option>
-								<option value="9">9</option>
-								<option value="10">10</option>
+							<label for="form_language2" class="singleline">Language</label>
+							<select name="language2" id="form_language2" class="singleline" >
+								<option value=""></option>
+								<option value="english">English</option>
+								<option value="french">French</option>
+								<option value="german">German</option>
+								<option value="italian">Italian</option>
+								<option value="portuguese">Portuguese</option>
+								<option value="russian">Russian</option>
+								<option value="swedish">Swedish</option>
+								<option value="dutch">Dutch</option>
+								<option value="chinese">Chinese</option>
 							</select>
-							<label for="frenchwriting" class="singleline">Writing</label>
-							<select name="frenchwriting" id="frenchwriting" class="singleline">
-								<option value="noreply">  </option>
-								<option value="0">0</option>
-								<option value="1">1</option>
-								<option value="2">2</option>
-								<option value="3">3</option>
-								<option value="4">4</option>
-								<option value="5">5</option>
-								<option value="6">6</option>
-								<option value="7">7</option>
-								<option value="8">8</option>
-								<option value="9">9</option>
-								<option value="10">10</option>
+							<label for="spoken_interaction2" class="singleline">Spoken Interaction</label>
+							<select name="spoken_interaction2" id="spoken_interaction2" class="singleline">
+								<option value="">No reply</option>
+								<option value="A1">A1</option>
+								<option value="A2">A2</option>
+								<option value="B1">B1</option>
+								<option value="B2">B2</option>
+								<option value="C1">C1</option>
+								<option value="C2">C2</option>
 							</select>
-							<label for="frenchtranslation" class="singleline">Translation</label>
-							<select name="frenchtranslation" id="frenchtranslation" class="singleline">
-								<option value="noreply">  </option>
-								<option value="0">0</option>
-								<option value="1">1</option>
-								<option value="2">2</option>
-								<option value="3">3</option>
-								<option value="4">4</option>
-								<option value="5">5</option>
-								<option value="6">6</option>
-								<option value="7">7</option>
-								<option value="8">8</option>
-								<option value="9">9</option>
-								<option value="10">10</option>
+							<label for="spoken_production2" class="singleline">Spoken Production</label>
+							<select name="spoken_production2" id="spoken_production2" class="singleline">
+								<option value="noreply">No reply</option>
+								<option value="A1">A1</option>
+								<option value="A2">A2</option>
+								<option value="B1">B1</option>
+								<option value="B2">B2</option>
+								<option value="C1">C1</option>
+								<option value="C2">C2</option>
 							</select>
-							<label for="frenchtechnical" class="singleline">Technical</label>
-							<select name="frenchtechnical" id="frenchtechnical" class="singleline">
-								<option value="noreply">  </option>
-								<option value="0">0</option>
-								<option value="1">1</option>
-								<option value="2">2</option>
-								<option value="3">3</option>
-								<option value="4">4</option>
-								<option value="5">5</option>
-								<option value="6">6</option>
-								<option value="7">7</option>
-								<option value="8">8</option>
-								<option value="9">9</option>
-								<option value="10">10</option>
+							<label for="reading2" class="singleline">Reading</label>
+							<select name="reading2" id="reading2" class="singleline">
+								<option value="noreply">No reply</option>
+								<option value="A1">A1</option>
+								<option value="A2">A2</option>
+								<option value="B1">B1</option>
+								<option value="B2">B2</option>
+								<option value="C1">C1</option>
+								<option value="C2">C2</option>
 							</select>
-							<label for="german" class="singlelinetitle">German</label>
-							<label for="germanspeaking" class="singleline">Speaking</label>
-							<select name="germanspeaking" id="germanspeaking" class="singleline">
-								<option value="noreply">  </option>
-								<option value="0">0</option>
-								<option value="1">1</option>
-								<option value="2">2</option>
-								<option value="3">3</option>
-								<option value="4">4</option>
-								<option value="5">5</option>
-								<option value="6">6</option>
-								<option value="7">7</option>
-								<option value="8">8</option>
-								<option value="9">9</option>
-								<option value="10">10</option>
+							<label for="writing2" class="singleline">Writing</label>
+							<select name="writing2" id="writing2" class="singleline">
+								<option value="noreply">No reply</option>
+								<option value="A1">A1</option>
+								<option value="A2">A2</option>
+								<option value="B1">B1</option>
+								<option value="B2">B2</option>
+								<option value="C1">C1</option>
+								<option value="C2">C2</option>
 							</select>
-							<label for="germanwriting" class="singleline">Writing</label>
-							<select name="germanwriting" id="germanwriting" class="singleline">
-								<option value="noreply">  </option>
-								<option value="0">0</option>
-								<option value="1">1</option>
-								<option value="2">2</option>
-								<option value="3">3</option>
-								<option value="4">4</option>
-								<option value="5">5</option>
-								<option value="6">6</option>
-								<option value="7">7</option>
-								<option value="8">8</option>
-								<option value="9">9</option>
-								<option value="10">10</option>
+							<label for="listening2" class="singleline">Listening</label>
+							<select name="listening2" id="listening2" class="singleline">
+								<option value="noreply">No reply</option>
+								<option value="A1">A1</option>
+								<option value="A2">A2</option>
+								<option value="B1">B1</option>
+								<option value="B2">B2</option>
+								<option value="C1">C1</option>
+								<option value="C2">C2</option>
 							</select>
-							<label for="germantranslation" class="singleline">Translation</label>
-							<select name="germantranslation" id="germantranslation" class="singleline">
-								<option value="noreply">  </option>
-								<option value="0">0</option>
-								<option value="1">1</option>
-								<option value="2">2</option>
-								<option value="3">3</option>
-								<option value="4">4</option>
-								<option value="5">5</option>
-								<option value="6">6</option>
-								<option value="7">7</option>
-								<option value="8">8</option>
-								<option value="9">9</option>
-								<option value="10">10</option>
+							<label for="form_language3" class="singleline">Language</label>
+							<select name="language3" id="form_language3" class="singleline" >
+								<option value=""></option>
+								<option value="english">English</option>
+								<option value="french">French</option>
+								<option value="german">German</option>
+								<option value="italian">Italian</option>
+								<option value="portuguese">Portuguese</option>
+								<option value="russian">Russian</option>
+								<option value="swedish">Swedish</option>
+								<option value="dutch">Dutch</option>
+								<option value="chinese">Chinese</option>
 							</select>
-							<label for="germantechnical" class="singleline">Technical</label>
-							<select name="germantechnical" id="germantechnical" class="singleline">
-								<option value="noreply">  </option>
-								<option value="0">0</option>
-								<option value="1">1</option>
-								<option value="2">2</option>
-								<option value="3">3</option>
-								<option value="4">4</option>
-								<option value="5">5</option>
-								<option value="6">6</option>
-								<option value="7">7</option>
-								<option value="8">8</option>
-								<option value="9">9</option>
-								<option value="10">10</option>
+							<label for="spoken_interaction3" class="singleline">Spoken Interaction</label>
+							<select name="spoken_interaction3" id="spoken_interaction3" class="singleline">
+								<option value="">No reply</option>
+								<option value="A1">A1</option>
+								<option value="A2">A2</option>
+								<option value="B1">B1</option>
+								<option value="B2">B2</option>
+								<option value="C1">C1</option>
+								<option value="C2">C2</option>
 							</select>
-							<label for="italian" class="singlelinetitle">Italian</label>
-							<label for="italianspeaking" class="singleline">Speaking</label>
-							<select name="italianspeaking" id="italianspeaking" class="singleline">
-								<option value="noreply">  </option>
-								<option value="0">0</option>
-								<option value="1">1</option>
-								<option value="2">2</option>
-								<option value="3">3</option>
-								<option value="4">4</option>
-								<option value="5">5</option>
-								<option value="6">6</option>
-								<option value="7">7</option>
-								<option value="8">8</option>
-								<option value="9">9</option>
-								<option value="10">10</option>
+							<label for="spoken_production3" class="singleline">Spoken Production</label>
+							<select name="spoken_production3" id="spoken_production3" class="singleline">
+								<option value="noreply">No reply</option>
+								<option value="A1">A1</option>
+								<option value="A2">A2</option>
+								<option value="B1">B1</option>
+								<option value="B2">B2</option>
+								<option value="C1">C1</option>
+								<option value="C2">C2</option>
 							</select>
-							<label for="italianwriting" class="singleline">Writing</label>
-							<select name="italianwriting" id="italianwriting" class="singleline">
-								<option value="noreply">  </option>
-								<option value="0">0</option>
-								<option value="1">1</option>
-								<option value="2">2</option>
-								<option value="3">3</option>
-								<option value="4">4</option>
-								<option value="5">5</option>
-								<option value="6">6</option>
-								<option value="7">7</option>
-								<option value="8">8</option>
-								<option value="9">9</option>
-								<option value="10">10</option>
+							<label for="reading3" class="singleline">Reading</label>
+							<select name="reading3" id="reading3" class="singleline">
+								<option value="noreply">No reply</option>
+								<option value="A1">A1</option>
+								<option value="A2">A2</option>
+								<option value="B1">B1</option>
+								<option value="B2">B2</option>
+								<option value="C1">C1</option>
+								<option value="C2">C2</option>
 							</select>
-							<label for="italiantranslation" class="singleline">Translation</label>
-							<select name="italiantranslation" id="italiantranslation" class="singleline">
-								<option value="noreply">  </option>
-								<option value="0">0</option>
-								<option value="1">1</option>
-								<option value="2">2</option>
-								<option value="3">3</option>
-								<option value="4">4</option>
-								<option value="5">5</option>
-								<option value="6">6</option>
-								<option value="7">7</option>
-								<option value="8">8</option>
-								<option value="9">9</option>
-								<option value="10">10</option>
+							<label for="writing3" class="singleline">Writing</label>
+							<select name="writing3" id="writing3" class="singleline">
+								<option value="noreply">No reply</option>
+								<option value="A1">A1</option>
+								<option value="A2">A2</option>
+								<option value="B1">B1</option>
+								<option value="B2">B2</option>
+								<option value="C1">C1</option>
+								<option value="C2">C2</option>
 							</select>
-							<label for="italiantechnical" class="singleline">Technical</label>
-							<select name="italiantechnical" id="italiantechnical" class="singleline">
-								<option value="noreply">  </option>
-								<option value="0">0</option>
-								<option value="1">1</option>
-								<option value="2">2</option>
-								<option value="3">3</option>
-								<option value="4">4</option>
-								<option value="5">5</option>
-								<option value="6">6</option>
-								<option value="7">7</option>
-								<option value="8">8</option>
-								<option value="9">9</option>
-								<option value="10">10</option>
+							<label for="listening3" class="singleline">Listening</label>
+							<select name="listening3" id="listening3" class="singleline">
+								<option value="noreply">No reply</option>
+								<option value="A1">A1</option>
+								<option value="A2">A2</option>
+								<option value="B1">B1</option>
+								<option value="B2">B2</option>
+								<option value="C1">C1</option>
+								<option value="C2">C2</option>
 							</select>
-							<label for="other1" class="singlelinetitle">Other</label>
-							<input type="text" name="other1" id="other1" class="singleline"/>
-							<label for="other1speaking" class="singleline">Speaking</label>
-							<select name="other1speaking" id="other1speaking" class="singleline">
-								<option value="noreply">  </option>
-								<option value="0">0</option>
-								<option value="1">1</option>
-								<option value="2">2</option>
-								<option value="3">3</option>
-								<option value="4">4</option>
-								<option value="5">5</option>
-								<option value="6">6</option>
-								<option value="7">7</option>
-								<option value="8">8</option>
-								<option value="9">9</option>
-								<option value="10">10</option>
-							</select>
-							<label for="other1writing" class="singleline">Writing</label>
-							<select name="other1writing" id="other1writing" class="singleline">
-								<option value="noreply">  </option>
-								<option value="0">0</option>
-								<option value="1">1</option>
-								<option value="2">2</option>
-								<option value="3">3</option>
-								<option value="4">4</option>
-								<option value="5">5</option>
-								<option value="6">6</option>
-								<option value="7">7</option>
-								<option value="8">8</option>
-								<option value="9">9</option>
-								<option value="10">10</option>
-							</select>
-							<label for="other1translation" class="singleline">Translation</label>
-							<select name="other1translation" id="other1translation" class="singleline">
-								<option value="noreply">  </option>
-								<option value="0">0</option>
-								<option value="1">1</option>
-								<option value="2">2</option>
-								<option value="3">3</option>
-								<option value="4">4</option>
-								<option value="5">5</option>
-								<option value="6">6</option>
-								<option value="7">7</option>
-								<option value="8">8</option>
-								<option value="9">9</option>
-								<option value="10">10</option>
-							</select>
-							<label for="other1technical" class="singleline">Technical</label>
-							<select name="other1technical" id="other1technical" class="singleline">
-								<option value="noreply">  </option>
-								<option value="0">0</option>
-								<option value="1">1</option>
-								<option value="2">2</option>
-								<option value="3">3</option>
-								<option value="4">4</option>
-								<option value="5">5</option>
-								<option value="6">6</option>
-								<option value="7">7</option>
-								<option value="8">8</option>
-								<option value="9">9</option>
-								<option value="10">10</option>
-							</select>
--->
+
 					</div>
 			</fieldset>
 		<input  type="hidden" name="type" value="student_languages" />

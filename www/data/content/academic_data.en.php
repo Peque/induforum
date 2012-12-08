@@ -137,7 +137,7 @@
 							<option value="Electronic"<?php if (isset($spd['speciality'])&&$spd['speciality']=="Electronic") echo 'selected="selected"'?>>Electronic</option>
 						</select>
 					<label for="form_startingyear" class="singleline">Starting year:<span class="form_required" title="This field is required">*</span></label>
-							<select name="begin_year" id="form_startingyear" value="<?php if (isset($spd['begin_year'])) echo $spd['begin_year']; ?>" required="required" class="singleline">
+							<select name="begin_year" id="form_startingyear"  required="required" class="singleline">
 								<option value=""></option>
 								<option value="2005" <?php if (isset($spd['begin_year'])&&$spd['begin_year']=="2005") echo 'selected="selected"'?>>2005</option>
 								<option value="2006" <?php if (isset($spd['begin_year'])&&$spd['begin_year']=="2006") echo 'selected="selected"'?>>2006</option>
