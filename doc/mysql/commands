@@ -44,7 +44,7 @@ mysql> create table work_experience(
          company char(30) not null,
          job char(60) not null,
          description_experience text(500),
-         primary key (student_number,initial_date,final_date,company)
+         primary key (student_number,initial_date,company)
        );
 mysql> create table languages(
          student_number int unsigned not null,
