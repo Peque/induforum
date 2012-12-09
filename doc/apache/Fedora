@@ -21,7 +21,7 @@ $ su - -c 'gedit /etc/hosts'
 Add this line:
 
 	127.0.0.1 local.induforum.es
-	
+
 STEP 2
 ---------------------------------------------------------------------
 $ su - -c 'gedit /etc/httpd/conf/httpd.conf'
@@ -45,6 +45,7 @@ Go to 'Virtual Hosts' section and add the following lines:
 		LanguagePriority en
 		ForceLanguagePriority Prefer Fallback
 		AddDefaultCharset utf-8
+		AcceptPathInfo On
 		RewriteEngine on
 		RewriteCond %{QUERY_STRING} ^lang=(en|es)$
 		RewriteRule ^(?:/(?:en|es))?(/.*)$ /%1$1? [R=301]
