@@ -4,13 +4,13 @@
 
 	// Check user logged in
 	if (!isset($_SESSION['user_id'])) {
-		header('Location: /login');
+		header('Location: /en/login/');
 		exit;
 	}
 
 	// Check user privileges
 	if ($_SESSION['type'] != 'student_session') {
-		header('Location: /restricted_area');
+		header('Location: /en/restricted_area/');
 		exit;
 	}
 
