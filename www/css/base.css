@@ -423,11 +423,11 @@ time.news_pubdate {
 #content dl.usr {
 	margin: 1em 0 1em 0;
 	padding: 1em;
-	border-radius: .5em;
+
 }
 #content dl.cat {
-	border: 1px solid #ffefb6;
-	background-color: #fffff5; /* hover: #fdffba*/
+	border: 1px solid #F3FA2A;
+	background-color: #F0F0F0; /* hover: #fdffba*/
 }
 #content dl.app {
 	border: 1px solid #92b4d5;
