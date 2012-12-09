@@ -602,7 +602,7 @@ time.news_pubdate {
 	margin-top: .3em;
 	font-size: .8em;
 	font-weight: bold;
-	font-style: italic;
+	font-style: normal;
 }
 #content form div.i_data {
 	margin-top: 2em;
@@ -659,6 +659,70 @@ time.news_pubdate {
 	height: 50em;
 	overflow: auto;
 }
+
+#content form label.singleline {
+		 clear:left;
+	    float: left;
+	    padding:1px
+	    text-align: left;
+	    width: 50%;
+	    vertical-align:middle;
+	    margin:3px;
+
+}
+#content form label.singlelinetitle{
+		 color:#000000;
+	    float: left;
+	    padding:1px;
+	    text-align: left;
+	    width: 50%;
+	    margin:3px;
+	    vertical-align:middle;
+
+}
+#content form select.singleline {
+		float:left;
+		vertical-align:middle;
+		margin:3px;
+		padding:1px;
+
+}
+#content form input.singleline {
+		clear:left;
+		float:left;
+		padding:1px;
+		margin:3px;
+		vertical-align:middle;
+}
+#content form p.title {
+
+		float:left;
+		clear:left;
+		padding:1px;
+		margin:3px;
+		vertical-align:middle;
+		font-weight: bold;
+
+}
+
+#content form .singlelinedate{
+		clear:left;
+		float:left;
+		padding:1px;
+		margin:3px;
+		vertical-align:middle;
+		width:15%;
+}
+#content form textarea.singleline {
+		 clear:left;
+	    float: left;
+	    padding:1px
+	    text-align: left;
+	    vertical-align:middle;
+	    margin:3px;
+
+}
+
 
 /************************************ Footer ***********************************/
 #w_footer {

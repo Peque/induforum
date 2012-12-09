@@ -1,0 +1,593 @@
+<section id="content">
+	<form action="./form.php" method="post">
+		<fieldset>
+			<legend>Datos personales:</legend>
+				<div class="form_wrapper">
+					<p class="title">
+						Datos generales
+					</p>
+					<div class="generaldata">
+						<label for="form_name">Nombre:</label>
+						<input type="text" maxlength="60" name="name" id="form_name"/>
+						<label for="form_firstlastname">Primer apellido:</label>
+						<input type="text" maxlength="60" name="firstname" id="form_firstlastname"/>
+						<label for="form_secondlastname">Segundo apellido:</label>
+						<input type="text" maxlength="60" name="secondname" id="form_secondlastname"/>
+						<label for="form_birthdate">Año de nacimiento:</label>
+			 			<select name="birthdate" id="form_birthdate">
+			 				<option value="85">85</option>
+			 				<option value="86">86</option>
+			 				<option value="87">87</option>
+			 				<option value="88">88</option>
+			 				<option value="89">89</option>
+			 				<option value="90">90</option>
+			 				<option value="91">91</option>
+			 				<option value="92">92</option>
+			 				<option value="93">93</option>
+			 			</select>
+			 			<label for="form_enrollmentnumber">Número de matricula:</label>
+			 			<input type="text" maxlength="60" name="enrollmentnumber" id="form_enrollmentnumber"/>
+			 			<p>
+			 			¿Eres ERASMUS?
+			 			</p>
+			 			<label for="form_erasmusyes">Si</label>
+  					<input type="radio" name="erasmus" id="form_erasmusyes" value="yes">
+  					<label for="form_erasmusno">No</label>
+  					<input type="radio" name="erasmus" id="form_erasmusno" value="no">
+					</div>
+					<p class="title">
+						Lugar de residencia y contacto:
+					</p>
+					<div class="contactinfo">
+						<label for="form_address">Dirección:</label>
+						<input type="text" maxlength="60" name="address" id="form_address"/>
+						<label for="form_province">Provincia:</label>
+						<select name="province" id="form_province">
+							<option value="Alava">Álava</option>
+							<option value="Albacete">Albacete</option>
+							<option value="Alicante">Alicante</option>
+							<option value="Almeria">Almería</option>
+							<option value="Asturias">Asturias</option>
+							<option value="Avila">Ávila</option>
+							<option value="Badajoz">Badajoz</option>
+							<option value="Barcelona">Barcelona</option>
+							<option value="Burgos">Burgos</option>
+							<option value="Caceres">Cáceres</option>
+							<option value="Cadiz">Cadiz</option>
+							<option value="Cantabria">Cantabria</option>
+							<option value="Castellon">Castellon</option>
+							<option value="CiudadReal">Ciudad Real</option>
+							<option value="Cordoba">Córdoba</option>
+							<option value="LaCoruña">La Coruña</option>
+							<option value="Cuenca">Cuenca</option>
+							<option value="Gerona">Gerona</option>
+							<option value="Granada">Granada</option>
+							<option value="Guadalajara">Guadalajara</option>
+							<option value="Guipuzcoa">Guipúzcoa</option>
+							<option value="Huelva">Huelva</option>
+							<option value="Huesca">Huesca</option>
+							<option value="IslasBaleares">IslasBaleares</option>
+							<option value="Jaen">Jaén</option>
+							<option value="León">León</option>
+							<option value="Lerida">Lérida</option>
+							<option value="Lugo">Lugo</option>
+							<option value="Madrid">Madrid</option>
+							<option value="Malaga">Málaga</option>
+							<option value="Murcia">Murcia</option>
+							<option value="Navarra">Navarra</option>
+							<option value="Orense">Orense</option>
+							<option value="Palencia">Palencia</option>
+							<option value="LasPalmas">Las Palmas</option>
+							<option value="Pontevedra">Pontevedra</option>
+							<option value="LaRioja">LaRioja</option>
+							<option value="Salamanca">Salamanca</option>
+							<option value="Segovia">Segovia</option>
+							<option value="Sevilla">Sevilla</option>
+							<option value="Soria">Soria</option>
+							<option value="Tarragona">Tarragona</option>
+							<option value="SantaCruzdeTenerife">Santa Cruz de Tenerife</option>
+							<option value="Teruel">Teruel</option>
+							<option value="Toledo">Toledo</option>
+							<option value="Valencia">Valencia</option>
+							<option value="Valladolid">Valladolid</option>
+							<option value="Vizcaya">Vizcaya</option>
+							<option value="Zamora">Zamora</option>
+							<option value="Zaragoza">Zaragoza</option>
+						</select>
+						<label for="form_locality">Localidad:</label>
+						<input type="text" maxlength="60" name="locality" id="form_locality"/>
+						<label for="form_zipcode">Código postal:</label>
+						<input type="text" maxlength="60" name="zipcode" id="form_zipcode"/>
+						<label for="form_telephone">Teléfono:</label>
+						<input type="text" maxlength="60" name="telephone" id="form_telephone"/>
+						<label for="form_mobile">Móvil:</label>
+						<input type="text" maxlength="60" name="mobile" id="form_mobile"/>
+						<label for="form_email">Correo electrónico:</label>
+						<input type="email" maxlength="60" name="email" id="form_email"/>
+					</div>
+					<p class="title">
+						Mobilidad y disponibilidad:
+					</p>
+					<div class="availability">
+						<p>
+			 			Carnet de conducir:
+			 			</p>
+			 			<label for="form_licenseyes">Si</label>
+  						<input type="radio" name="license" id="form_licenseyes" value="yes">
+  						<label for="form_licenseno">No</label>
+  						<input type="radio" name="license" id="form_licenseno" value="no">
+  						<p>
+			 			Disponibilidad para viajar:
+			 			</p>
+						<label for="form_travelyes">Si</label>
+  						<input type="radio" name="travel" id="form_travelyes" value="yes">
+  						<label for="form_travelno">No</label>
+  						<input type="radio" name="travel" id="form_travelno" value="no">
+  						<p>
+			 			Preferencia de horarios:
+			 			</p>
+			 			<label for="form_morning">Mañana</label>
+  						<input type="radio" name="schedule" id="form_morning" value="morning">
+  						<label for="form_afternoon">Tarde</label>
+  						<input type="radio" name="schedule" id="form_afternoon" value="afternoon">
+						<label for="form_indiferent">Indiferente</label>
+  						<input type="radio" name="schedule" id="form_indiferent" value="indiferent">
+  					</div>
+  					<label for="cv">Introduce tu C.V. en formato pdf</label>
+  					<input type="file" name="cv" id="cv"/>
+
+				</div>
+			</fieldset>
+			<fieldset>
+				<legend>Experiencia profesional</legend>
+					<div class="form_wrapper">
+						<div class="proffessionalexperience">
+							<label for="form_timeworked">Tiempo total trabajado:</label>
+							<select name="timeworked" id="form_timeworked">
+								<option value="0">0</option>
+								<option value="1">1 mes</option>
+								<option value="2">2 meses</option>
+								<option value="3">3 meses</option>
+								<option value="4">4 meses</option>
+								<option value="5">5 meses</option>
+								<option value="6">6 meses</option>
+								<option value="7">7 meses</option>
+								<option value="8">8 meses</option>	
+								<option value="9">9 meses</option>
+								<option value="10">10 meses</option>
+								<option value="11">11 meses</option>
+								<option value="12">1 año</option>	
+								<option value="13">13 meses</option>
+								<option value="14">14 meses</option>
+								<option value="15">15 meses</option>
+								<option value="16">16 meses</option>		
+							</select>
+						</div>
+						<div class="initialdate">
+							<p>Fecha de inicio</p>
+  							<input type="date" name="initialdate1" maxlength="13"/>
+  							<input type="date" name="initialdate2" maxlength="13"/>
+  							<input type="date" name="initialdate3" maxlength="13"/>
+  							<input type="date" name="initialdate4" maxlength="13"/>
+  							<input type="date" name="initialdate5" maxlength="13"/>
+  				 		</div>
+  				 		<div class="finaldate">
+							<p>Fecha Fin</p>
+  							<input type="date" name="finaldate1" />
+  							<input type="date" name="finaldate2" />
+  							<input type="date" name="finaldate3" />
+  							<input type="date" name="finaldate4" />
+  							<input type="date" name="finaldate5" />
+  				 		</div>
+  				 		<div class="company">
+							<p">Empresa o departamento</p>
+  							<input type="text" maxlength="60" name="company1" id="form_company"/>	
+  							<input type="text" maxlength="60" name="company2" id="form_company"/>
+  							<input type="text" maxlength="60" name="company3" id="form_company"/>
+  							<input type="text" maxlength="60" name="company4" id="form_company"/>
+  							<input type="text" maxlength="60" name="company5" id="form_company"/>
+  				 		</div>
+  				 		<div class="job">
+							<p>Puesto</p>
+  							<input type="text" maxlength="60" name="job1" id="form_job"/>
+  							<input type="text" maxlength="60" name="job2" id="form_job"/>
+  							<input type="text" maxlength="60" name="job3" id="form_job"/>
+  							<input type="text" maxlength="60" name="job4" id="form_job"/>
+  							<input type="text" maxlength="60" name="job5" id="form_job"/>
+  				 		</div>
+  					</div>				
+			</fieldset>
+			<fieldset>
+				<legend>Formación</legend>
+					<div class="form_wrapper">
+						<div class="academictraining">
+							<label for="form_degree">Titulación:</label>
+							<select name="degree" id="form_degree">
+								<option value="industrialengineering">Ingeniería Industrial</option>
+							</select>
+							<label for="form_course">Año actual:</label>
+							<select name="course" id="form_course">
+								<option value="3">3</option>
+								<option value="3">4</option>
+								<option value="3">5</option>
+							</select>
+							<label for="form_speciality">Especialidad:</label>
+							<select name="speciality" id="form_speciality">
+								<option value="Electric">Eléctrica</option>
+								<option value="Mechanic">Mecanico</option>
+								<option value="Electronic">Automática y Electrónica</option>
+								<option value="EnergeticsTechnics">Técnicas energeticas</option>
+								<option value="Building">Construccion</option>
+								<option value="Machines">Máquinas</option>
+								<option value="Materials">Materiales</option>
+								<option value="Organization">Organización</option>
+								<option value="Chemistry">Química</option>
+								<option value="Manufacturing">Fabricación</option>
+							</select>
+							<label for="form_startingyear">Año de comienzo de la carrera:</label>
+							<select name="startingyear" id="form_startingyear">
+								<option value="2005">2005</option>
+								<option value="2006">2006</option>
+								<option value="2007">2007</option>
+								<option value="2008">2008</option>
+								<option value="2009">2009</option>
+								<option value="2010">2010</option>	
+							</select>
+							<label for="form_othersdegrees">Otros títulos:</label>
+							<textarea name="othersdegrees" id="form_othersdegrees" cols="30" rows="5"></textarea>
+							<label for="form_additionalinfo">Información adicional:</label>
+							<textarea name="additionalinfo" id="form_additionalinfo" cols="30" rows="5"></textarea>
+						</div>
+					</div>				
+			</fieldset>
+			<fieldset>
+				<legend>Idiomas</legend>
+					<div class="form_wrapper">
+						<p class="p_language">
+							Marca un tick en los idiomas que conozcas.Puedes añadir más idiomas.
+						</p>
+						<div class="language">
+							<p>
+							Idiomas
+							</p>
+							<label for="english">Inglés</label>
+							<input type="checkbox" name="language" value="english" id="english" />
+							<label for="french">Francés</label>
+							<input type="checkbox" name="language" value="french" id="french" />
+							<label for="german">Alemán</label>
+							<input type="checkbox" name="language" value="german" id="german" />
+							<label for="italian">Italiano</label>
+							<input type="checkbox" name="language" value="italian" id="italian" />
+							<label for="other1">Otros:</label>
+							<input type="checkbox" name="language" value="other1" id="other1" />
+							<input type="text" maxlength="60" name="other1"/>
+							<label for="other2">Otros:</label>
+							<input type="checkbox" name="language" value="other2" id="other2" />
+							<input type="text" maxlength="60" name="other2"/>
+							<label for="other3">Otros:</label>
+							<input type="checkbox" name="language" value="other3" id="other3" />
+							<input type="text" maxlength="60" name="other3"/>
+							<label for="other4">Otros:</label>
+							<input type="checkbox" name="language" value="other4" id="other4" />
+							<input type="text" maxlength="60" name="other4"/>
+						</div>
+						<div class="speaking">
+							<p>
+							Hablado
+							</p>
+							<select name="englishspeaking">
+								<option value="Low">Bajo</option>
+								<option value="Intermediate">Medio</option>
+								<option value="High">Alto</option>
+							</select>
+							<select name="frenchspeaking">
+								<option value="Low">Bajo</option>
+								<option value="Intermediate">Medio</option>
+								<option value="High">Alto</option>
+							</select>		
+							<select name="germanspeaking">
+								<option value="Low">Bajo</option>
+								<option value="Intermediate">Medio</option>
+								<option value="High">Alto</option>
+							</select>		
+							<select name="italianspeaking">
+								<option value="Low">Bajo</option>
+								<option value="Intermediate">Medio</option>
+								<option value="High">Alto</option>
+							</select>		
+							<select name="other1speaking">
+								<option value="Low">Bajo</option>
+								<option value="Intermediate">Medio</option>
+								<option value="High">Alto</option>
+							</select>		
+							<select name="other2speaking">
+								<option value="Low">Bajo</option>
+								<option value="Intermediate">Medio</option>
+								<option value="High">Alto</option>
+							</select>		
+							<select name="other3speaking">
+								<option value="Low">Bajo</option>
+								<option value="Intermediate">Medio</option>
+								<option value="High">Alto</option>
+							</select>		
+							<select name="other4speaking">
+								<option value="Low">Bajo</option>
+								<option value="Intermediate">Medio</option>
+								<option value="High">Alto</option>
+							</select>
+						</div>
+						<div class="writing">
+							<p>
+							Escrito
+							</p>
+							<select name="englishwriting">
+								<option value="Low">Bajo</option>
+								<option value="Intermediate">Medio</option>
+								<option value="High">Alto</option>
+							</select>	
+							<select name="frenchwriting">
+								<option value="Low">Bajo</option>
+								<option value="Intermediate">Medio</option>
+								<option value="High">Alto</option>
+							</select>	
+							<select name="germanwriting">
+								<option value="Low">Bajo</option>
+								<option value="Intermediate">Medio</option>
+								<option value="High">Alto</option>
+							</select>	
+							<select name="italianwriting">
+								<option value="Low">Bajo</option>
+								<option value="Intermediate">Medio</option>
+								<option value="High">Alto</option>
+							</select>	
+							<select name="other1writing">
+								<option value="Low">Bajo</option>
+								<option value="Intermediate">Medio</option>
+								<option value="High">Alto</option>
+							</select>	
+							<select name="other2writing">
+								<option value="Low">Bajo</option>
+								<option value="Intermediate">Medio</option>
+								<option value="High">Alto</option>
+							</select>	
+							<select name="other3writing">
+								<option value="Low">Bajo</option>
+								<option value="Intermediate">Medio</option>
+								<option value="High">Alto</option>
+							</select>	
+							<select name="other4writing">
+								<option value="Low">Bajo</option>
+								<option value="Intermediate">Medio</option>
+								<option value="High">Alto</option>
+							</select>	
+						</div>
+						<div class="translation">
+							<p>
+							Traducción
+							</p>
+							<select name="englishtranslation">
+								<option value="Low">Bajo</option>
+								<option value="Intermediate">Medio</option>
+								<option value="High">Alto</option>
+							</select>	
+							<select name="frenchtranslation">
+								<option value="Low">Bajo</option>
+								<option value="Intermediate">Medio</option>
+								<option value="High">Alto</option>
+							</select>
+							<select name="germantranslation">
+								<option value="Low">Bajo</option>
+								<option value="Intermediate">Medio</option>
+								<option value="High">Alto</option>
+							</select>
+							<select name="italiantranslation">
+								<option value="Low">Bajo</option>
+								<option value="Intermediate">Medio</option>
+								<option value="High">Alto</option>
+							</select>
+							<select name="other1translation">
+								<option value="Low">Bajo</option>
+								<option value="Intermediate">Medio</option>
+								<option value="High">Alto</option>
+							</select>
+							<select name="other2translation">
+								<option value="Low">Bajo</option>
+								<option value="Intermediate">Medio</option>
+								<option value="High">Alto</option>
+							</select>
+							<select name="other3translation">
+								<option value="Low">Bajo</option>
+								<option value="Intermediate">Medio</option>
+								<option value="High">Alto</option>
+							</select>
+							<select name="other4translation">
+								<option value="Low">Bajo</option>
+								<option value="Intermediate">Medio</option>
+								<option value="High">Alto</option>
+							</select>
+						</div>
+						<div class="technical">
+							<p>
+							Técnico
+							</p>
+							<select name="englishtechnical">
+								<option value="No">No</option>
+								<option value="Low">Bajo</option>
+								<option value="Intermediate">Medio</option>
+								<option value="High">Alto</option>
+							</select>
+							<select name="frenchtechnical">
+								<option value="No">No</option>
+								<option value="Low">Bajo</option>
+								<option value="Intermediate">Medio</option>
+								<option value="High">Alto</option>
+							</select>
+							<select name="germantechnical">
+								<option value="No">No</option>
+								<option value="Low">Bajo</option>
+								<option value="Intermediate">Medio</option>
+								<option value="High">Alto</option>
+							</select>
+							<select name="italiantechnical">
+								<option value="No">No</option>
+								<option value="Low">Bajo</option>
+								<option value="Intermediate">Medio</option>
+								<option value="High">Alto</option>
+							</select>
+							<select name="other1technical">
+								<option value="No">No</option>
+								<option value="Low">Bajo</option>
+								<option value="Intermediate">Medio</option>
+								<option value="High">Alto</option>
+							</select>
+							<select name="other2technical">
+								<option value="No">No</option>
+								<option value="Low">Bajo</option>
+								<option value="Intermediate">Medio</option>
+								<option value="High">Alto</option>
+							</select>
+							<select name="other3technical">
+								<option value="No">No</option>
+								<option value="Low">Bajo</option>
+								<option value="Intermediate">Medio</option>
+								<option value="High">Alto</option>
+							</select>
+							<select name="other4technical">
+								<option value="No">No</option>
+								<option value="Low">Bajo</option>
+								<option value="Intermediate">Medio</option>
+								<option value="High">Alto</option>
+							</select>	
+						</div>						
+					</div>
+			</fieldset>
+			<fieldset>
+				<legend>Informática</legend>
+					<div class="form_wrapper">
+						<div class="application">
+							<p class="p_application">
+								Aplicaciones
+							</p>
+							<p>
+							Aplicaciones MAC<br>(Uso de OS Mac)<br>
+							Aplicaciones Linux<br>(Uso de OS Linux)<br>
+							Bases de datos<br>(Access,SQL...)<br>
+							Contabilidad/Finanzas<br>(Contaplus...)<br>
+							Diseño asistido por ordenador<br>(CAD programs...)<br>
+							Diseño Gráfico/Retoque fotográfico<br>(PhotoShop,CorelDraw...)<br>
+							Hojas de cálculo<br>(Excel,Lotus...)<br>
+							Correo Electrónico<br>(Eudora,Outlook...)<br>
+							Matemáticas/Estadística<br>(Matlab,MathCAD...)<br>
+							Presentaciones<br> (PowerPoint...)<br>
+							Procesadores de texto<br> (Word...)<br>
+							Programación<br> (Java,C...)<br>
+							Simulación<br> (PSpice,Simplorer...)<br>
+							Comunicación y Redes<br>(Mozilla,Opera,Chrome...)<br>
+							Otros<br>
+							</p>
+						</div>
+						<div class="nonexistent">
+							<p class="p_nonexistent">
+								Nulos
+							</p>
+							<input type="radio" name="mac" value="none"/>
+							<input type="radio" name="linux" value="none"/>
+							<input type="radio" name="database" value="none"/>
+							<input type="radio" name="accounting" value="none"/>
+							<input type="radio" name="cad" value="none"/>
+							<input type="radio" name="graphicdesign" value="none"/>
+							<input type="radio" name="spreadsheet" value="none"/>
+							<input type="radio" name="email" value="none"/>
+							<input type="radio" name="math" value="none"/>
+							<input type="radio" name="presentation" value="none"/>
+							<input type="radio" name="wordprocessor" value="none"/>
+							<input type="radio" name="programation" value="none"/>
+							<input type="radio" name="simulation" value="none"/>
+							<input type="radio" name="communication" value="none"/>
+							<input type="radio" name="others" value="none"/>
+						</div>
+						<div class="basic">
+							<p class="p_basic">
+								Básico
+							</p>
+							<input type="radio" name="mac" value="basic"/>
+							<input type="radio" name="linux" value="basic"/>
+							<input type="radio" name="database" value="basic"/>
+							<input type="radio" name="accounting" value="basic"/>
+							<input type="radio" name="cad" value="basic"/>
+							<input type="radio" name="graphicdesign" value="basic"/>
+							<input type="radio" name="spreadsheet" value="basic"/>
+							<input type="radio" name="email" value="basic"/>
+							<input type="radio" name="math" value="basic"/>
+							<input type="radio" name="presentation" value="basic"/>
+							<input type="radio" name="wordprocessor" value="basic"/>
+							<input type="radio" name="programation" value="basic"/>
+							<input type="radio" name="simulation" value="basic"/>
+							<input type="radio" name="communication" value="basic"/>
+							<input type="radio" name="others" value="basic"/>
+						</div>
+						<div class="intermediate">
+							<p class="p_intermediate">
+								Medio
+							</p>
+							<input type="radio" name="mac" value="intermediate"/>
+							<input type="radio" name="linux" value="intermediate"/>
+							<input type="radio" name="database" value="intermediate"/>
+							<input type="radio" name="accounting" value="intermediate"/>
+							<input type="radio" name="cad" value="intermediate"/>
+							<input type="radio" name="graphicdesign" value="intermediate"/>
+							<input type="radio" name="spreadsheet" value="intermediate"/>
+							<input type="radio" name="email" value="intermediate"/>
+							<input type="radio" name="math" value="intermediate"/>
+							<input type="radio" name="presentation" value="intermediate"/>
+							<input type="radio" name="wordprocessor" value="intermediate"/>
+							<input type="radio" name="programation" value="intermediate"/>
+							<input type="radio" name="simulation" value="intermediate"/>
+							<input type="radio" name="communication" value="intermediate"/>
+							<input type="radio" name="others" value="intermediate"/>
+						</div>
+						<div class="advance">
+							<p class="p_advance">
+								Avanzado
+							</p>
+							<input type="radio" name="mac" value="advance"/>
+							<input type="radio" name="linux" value="advance"/>
+							<input type="radio" name="database" value="advance"/>
+							<input type="radio" name="accounting" value="advance"/>
+							<input type="radio" name="cad" value="advance"/>
+							<input type="radio" name="graphicdesign" value="advance"/>
+							<input type="radio" name="spreadsheet" value="advance"/>
+							<input type="radio" name="email" value="advance"/>
+							<input type="radio" name="math" value="advance"/>
+							<input type="radio" name="presentation" value="advance"/>
+							<input type="radio" name="wordprocessor" value="advance"/>
+							<input type="radio" name="programation" value="advance"/>
+							<input type="radio" name="simulation" value="advance"/>
+							<input type="radio" name="communication" value="advance"/>
+							<input type="radio" name="others" value="advance"/>
+						</div>
+						<div class="program">
+							<p class="p_program">
+								Programa/s
+							</p>
+							<input type="text" maxlength="60" name="macprogram"/>
+							<input type="text" maxlength="60" name="linuxprogram"/> 
+							<input type="text" maxlength="60" name="databaseprogram"/>
+							<input type="text" maxlength="60" name="accountingprogram"/>
+							<input type="text" maxlength="60" name="cadprogram"/>
+							<input type="text" maxlength="60" name="graphicdesignprogram"/>
+							<input type="text" maxlength="60" name="spreadsheetprogram"/>
+							<input type="text" maxlength="60" name="emailprogram"/>
+							<input type="text" maxlength="60" name="mathprogram"/>
+							<input type="text" maxlength="60" name="presentationprogram"/>
+							<input type="text" maxlength="60" name="wordprocessorprogram"/>
+							<input type="text" maxlength="60" name="programationprogram"/>
+							<input type="text" maxlength="60" name="simulationprogram"/>
+							<input type="text" maxlength="60" name="communicationprogram"/>
+							<input type="text" maxlength="60" name="othersprogram"/>
+						</div>
+					</div>
+			</fieldset>
+			<input type="submit" value="Guardar"/>
+		</form>
+</section>
