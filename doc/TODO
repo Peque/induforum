@@ -10,6 +10,7 @@
 
  * Users database
  * Online content edition for registered users
+ * Use type-maps instead of multiviews for language negociation
 
 =====================================================================
 Future ideas (for the long term)
