@@ -111,7 +111,7 @@
 				$row = mysqli_fetch_assoc($result);
 
 				$spd['studies'] = $row['studies'];
-				$spd['higher_year'] = $row['higher_year'];
+				$spd['higher_course'] = $row['higher_course'];
 				$spd['speciality'] = $row['speciality'];
 				$spd['begin_year'] = $row['begin_year'];
 				$spd['additional_information'] = $row['additional_information'];
@@ -178,7 +178,7 @@
 								<option value="2010" <?php if (isset($spd['begin_year'])&&$spd['begin_year']=="2010") echo 'selected="selected"'?>>2010</option>
 							</select>
 					<label for="form_additionalinfo" class="singleline">Additional info:</label>
-					<textarea name="additional_information" id="form_additionalinfo" cols="50" rows="10" class="singleline"><?php if (isset($spd['additional_information'])) echo $spd['additional_information']; ?></textarea>
+					<textarea name="additional_information" id="form_additionalinfo" cols="50" rows="10" class="singleline"><?php if (isset($spd['additional_information'])) echo str_replace('\r\n',"\r\n",$spd['additional_information']); ?></textarea>
 				</div>
 			</div>
 		</fieldset>

@@ -111,7 +111,7 @@
 				$row = mysqli_fetch_assoc($result);
 
 				$spd['studies'] = $row['studies'];
-				$spd['higher_year'] = $row['higher_year'];
+				$spd['higher_course'] = $row['higher_course'];
 				$spd['speciality'] = $row['speciality'];
 				$spd['begin_year'] = $row['begin_year'];
 				$spd['additional_information'] = $row['additional_information'];
@@ -149,7 +149,7 @@
 
 
 					</select>
-					<label for="form_course" class="singleline">Curso actual: <span class="form_required" title="This field is required">*</span></label>
+					<label for="form_course" class="singleline">Curso más alto: <span class="form_required" title="This field is required">*</span></label>
 					<select name="higher_course" id="form_course"  required="required" class="singleline">
 						<option value=""></option>
 						<option value="3" <?php if (isset($spd['higher_course'])&&$spd['higher_course']=="3") echo 'selected="selected"'?>>3</option>
@@ -181,7 +181,7 @@
 								<option value="2010" <?php if (isset($spd['begin_year'])&&$spd['begin_year']=="2010") echo 'selected="selected"'?>>2010</option>
 							</select>
 					<label for="form_additionalinfo" class="singleline">Información adicional:</label>
-					<textarea name="additional_information" id="form_additionalinfo" cols="50" rows="10" class="singleline"><?php if (isset($spd['additional_information'])) echo $spd['additional_information']; ?></textarea>
+					<textarea name="additional_information" id="form_additionalinfo" cols="50" rows="10" class="singleline"><?php if (isset($spd['additional_information'])) echo str_replace('\r\n',"\r\n",$spd['additional_information']); ?></textarea>
 				</div>
 			</div>
 		</fieldset>
