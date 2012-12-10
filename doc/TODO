@@ -9,7 +9,7 @@
 1.x
 =====================================================================
 
- * Users database
+ * Use make to generate the website
  * Online content edition for registered users
  * Use type-maps instead of multiviews for language negociation
 
