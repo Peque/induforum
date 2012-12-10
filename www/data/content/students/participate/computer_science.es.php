@@ -353,7 +353,7 @@
 								<option value="2" <?php if (isset($spd['communications_networks'])&&$spd['communications_networks']=="2") echo 'selected="selected"'?>>Bajo</option>
 								<option value="3" <?php if (isset($spd['communications_networks'])&&$spd['communications_networks']=="3") echo 'selected="selected"'?>>Medio</option>
 								<option value="4" <?php if (isset($spd['communications_networks'])&&$spd['communications_networks']=="4") echo 'selected="selected"'?>>Alto</option>
-								<option value="5" <?php if (isset($spd['communications_networks'])&&$spd['communications_networks']=="5") echo 'selected="selected"'?>>Expertoo</option>
+								<option value="5" <?php if (isset($spd['communications_networks'])&&$spd['communications_networks']=="5") echo 'selected="selected"'?>>Experto</option>
 							</select>
 			</fieldset>
 		<input  type="hidden" name="type" value="student_computer_science" />
