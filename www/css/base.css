@@ -608,7 +608,8 @@ time.news_pubdate {
 	margin-top: 2em;
 }
 #content form input,
-#content form textarea {
+#content form textarea,
+#content form select {
 	display: block;
 	margin: .3em 0;
 	font-size: .9em;
@@ -616,6 +617,10 @@ time.news_pubdate {
 	padding: .3em;
 	border: 1px solid #585858;
 	border-radius: .5em;
+}
+#content form select {
+	background: #f0f0f0;
+	width: auto;
 }
 #content form.code textarea {
 	display: block;
