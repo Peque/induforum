@@ -256,11 +256,11 @@
 							</label>
 							<select name="email" id="email" class="singleline">
 								<option value="0">No reply</option>
-								<option value="1" <?php if (isset($spd['spreadsheet'])&&$spd['spreadsheet']=="1") echo 'selected="selected"'?>>Null</option>
-								<option value="2" <?php if (isset($spd['spreadsheet'])&&$spd['spreadsheet']=="2") echo 'selected="selected"'?>>Low</option>
-								<option value="3" <?php if (isset($spd['spreadsheet'])&&$spd['spreadsheet']=="3") echo 'selected="selected"'?>>Intermediate</option>
-								<option value="4" <?php if (isset($spd['spreadsheet'])&&$spd['spreadsheet']=="4") echo 'selected="selected"'?>>High</option>
-								<option value="5" <?php if (isset($spd['spreadsheet'])&&$spd['spreadsheet']=="5") echo 'selected="selected"'?>>Expert</option>
+								<option value="1" <?php if (isset($spd['email'])&&$spd['email']=="1") echo 'selected="selected"'?>>Null</option>
+								<option value="2" <?php if (isset($spd['email'])&&$spd['email']=="2") echo 'selected="selected"'?>>Low</option>
+								<option value="3" <?php if (isset($spd['email'])&&$spd['email']=="3") echo 'selected="selected"'?>>Intermediate</option>
+								<option value="4" <?php if (isset($spd['email'])&&$spd['email']=="4") echo 'selected="selected"'?>>High</option>
+								<option value="5" <?php if (isset($spd['email'])&&$spd['email']=="5") echo 'selected="selected"'?>>Expert</option>
 							</select>
 							<label for="maths_statistics" class="singleline">
 							Mathematics/Statistics<br>(Matlab,MathCAD...)<br>
