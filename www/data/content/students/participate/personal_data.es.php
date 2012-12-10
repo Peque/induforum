@@ -22,10 +22,31 @@
 		<h1>Participación</h1>
 	</hgroup>
 </header>
+<nav id="section_nav">
+	<ul>
+		<li><a href="#Secciones">1 - Secciones</a></li>
+		<li><a href="#Datos_personales">2 - Datos personales</a></li>
+	</ul>
+</nav>
 <article>
 	<header>
 		<hgroup>
-			<h1 id="Resume">Curriculum</h1>
+			<h1 id="Secciones">Secciones</h1>
+		</hgroup>
+		<hr />
+	</header>
+	<ul>
+		<li><a href="/es/students/participate/personal_data/">Datos personales</a></li>
+		<li><a href="/es/students/participate/academic_data/">Datos académicos</a></li>
+		<li><a href="/es/students/participate/languages/">Idiomas</a></li>
+		<li><a href="/es/students/participate/proffessional_experience/">Experiencia profesional</a></li>
+		<li><a href="/es/students/participate/computer_science/">Informática</a></li>
+	</ul>
+</article>
+<article>
+	<header>
+		<hgroup>
+			<h1 id="Datos_personales">Datos personales</h1>
 		</hgroup>
 		<hr />
 	</header>
@@ -46,13 +67,21 @@
 
 	}
 
+	if (!mysqli_set_charset($db, 'utf8')) {
+
+		echo '<p class="error"><strong>Error: </strong>could not set charset to UTF8. Please, try again later.</p>';
+
+	}
+
 	if (isset($_POST['type']) && $_POST['type'] == 'student_personal_data') {
 
 		// Form data overrides any other data
 
 		$spd['name'] = mysqli_real_escape_string($db, trim($_POST['name']));
 		$spd['surname'] = mysqli_real_escape_string($db, trim($_POST['surname']));
-		$spd['birth'] = mysqli_real_escape_string($db, trim($_POST['birth']));
+		$spd['birthyear'] = mysqli_real_escape_string($db, trim($_POST['birthyear']));
+		$spd['birthmonth'] = mysqli_real_escape_string($db, trim($_POST['birthmonth']));
+		$spd['birthday'] = mysqli_real_escape_string($db, trim($_POST['birthday']));
 		$spd['country'] = mysqli_real_escape_string($db, trim($_POST['country']));
 		$spd['province'] = mysqli_real_escape_string($db, trim($_POST['province']));
 		$spd['city'] = mysqli_real_escape_string($db, trim($_POST['city']));
@@ -64,7 +93,9 @@
 		// Check if all fields have a non-empty value
 		if ($spd['name'] != "" &&
 			$spd['surname'] != "" &&
-			$spd['birth'] != "" &&
+			$spd['birthyear'] != "" &&
+			$spd['birthmonth'] != "" &&
+			$spd['birthday'] != "" &&
 			$spd['country'] != "" &&
 			$spd['province'] != "" &&
 			$spd['city'] != "" &&
@@ -78,7 +109,7 @@
 									('".$student_number."',
 									'".$spd['name']."',
 									'".$spd['surname']."',
-									'".$spd['birth']."',
+									'".$spd['birthyear']."-".$spd['birthmonth']."-".$spd['birthday']."',
 									'".$spd['country']."',
 									'".$spd['province']."',
 									'".$spd['city']."',
@@ -94,7 +125,7 @@
 				$query = "update personal_data set
 						   name='".$spd['name']."',
 						   surname='".$spd['surname']."',
-						   birth='".$spd['birth']."',
+						   birth='".$spd['birthyear']."-".$spd['birthmonth']."-".$spd['birthday']."',
 						   country='".$spd['country']."',
 						   province='".$spd['province']."',
 						   city='".$spd['city']."',
@@ -114,7 +145,6 @@
 
 			// Need to fill more fields in the form
 			echo '<p class="warning">Please, fill all the required fields in the form!</p>';
-
 		}
 
 	} else {
@@ -133,7 +163,10 @@
 
 				$spd['name'] = $row['name'];
 				$spd['surname'] = $row['surname'];
-				$spd['birth'] = $row['birth'];
+				$birth=	explode('-',$row['birth']);
+				$spd['birthyear'] = $birth[0];
+				$spd['birthmonth'] = $birth[1];
+				$spd['birthday'] = $birth[2];
 				$spd['country'] = $row['country'];
 				$spd['province'] = $row['province'];
 				$spd['city'] = $row['city'];
@@ -149,6 +182,7 @@
 	}
 
 	// Close database connection
+
 	mysqli_free_result($result);
 	mysqli_close($db);
 

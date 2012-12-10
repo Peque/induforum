@@ -22,10 +22,31 @@
 		<h1>Participación</h1>
 	</hgroup>
 </header>
+<nav id="section_nav">
+	<ul>
+		<li><a href="#Secciones">1 - Secciones</a></li>
+		<li><a href="#Idiomas">2 - Idiomas</a></li>
+	</ul>
+</nav>
 <article>
 	<header>
 		<hgroup>
-			<h1 id="Resume">Curriculum</h1>
+			<h1 id="Secciones">Secciones</h1>
+		</hgroup>
+		<hr />
+	</header>
+	<ul>
+		<li><a href="/es/students/participate/personal_data/">Datos personales</a></li>
+		<li><a href="/es/students/participate/academic_data/">Datos académicos</a></li>
+		<li><a href="/es/students/participate/languages/">Idiomas</a></li>
+		<li><a href="/es/students/participate/proffessional_experience/">Experiencia profesional</a></li>
+		<li><a href="/es/students/participate/computer_science/">Informática</a></li>
+	</ul>
+</article>
+<article>
+	<header>
+		<hgroup>
+			<h1 id="Idiomas">Idiomas</h1>
 		</hgroup>
 		<hr />
 	</header>
@@ -43,6 +64,12 @@
 	if (mysqli_connect_errno()) {
 
 		echo '<p class="error"><strong>Error: </strong>could not connect to the database. Please, try again later.</p>';
+
+	}
+
+	if (!mysqli_set_charset($db, 'utf8')) {
+
+		echo '<p class="error"><strong>Error: </strong>could not set charset to UTF8. Please, try again later.</p>';
 
 	}
 
