@@ -198,6 +198,7 @@
 								<option value="2010" <?php if (isset($initialyear[0])&&$initialyear[0]=="2010") echo 'selected="selected"'?>>2010</option>
 								<option value="2011" <?php if (isset($initialyear[0])&&$initialyear[0]=="2011") echo 'selected="selected"'?>>2011</option>
 								<option value="2012" <?php if (isset($initialyear[0])&&$initialyear[0]=="2012") echo 'selected="selected"'?>>2012</option>
+								<option value="2013" <?php if (isset($initialyear[0])&&$initialyear[0]=="2013") echo 'selected="selected"'?>>2013</option>
 							</select>
   							<label for="finaldate1" class="singleline">Fecha final:<span class="form_required" title="This field is required">*</span></label>
   							<select name="final_month1" id="finaldate1" class="singleline" required="required">
@@ -230,6 +231,7 @@
 								<option value="2010" <?php if (isset($finalyear[0])&&$finalyear[0]=="2010") echo 'selected="selected"'?>>2010</option>
 								<option value="2011" <?php if (isset($finalyear[0])&&$finalyear[0]=="2011") echo 'selected="selected"'?>>2011</option>
 								<option value="2012" <?php if (isset($finalyear[0])&&$finalyear[0]=="2012") echo 'selected="selected"'?>>2012</option>
+								<option value="2013" <?php if (isset($finalyear[0])&&$finalyear[0]=="2013") echo 'selected="selected"'?>>2013</option>
 							</select>
   							<label for="company1" class="singleline">Empresa o departamento:<span class="form_required" title="This field is required">*</span></label>
   							<input type="text" maxlength="30" name="company1" id="company1" class="singleline" value="<?php if (isset($company[0])) echo $company[0]; ?>" required="required"/>
@@ -270,6 +272,7 @@
 								<option value="2010" <?php if (isset($initialyear[1])&&$initialyear[1]=="2010") echo 'selected="selected"'?>>2010</option>
 								<option value="2011" <?php if (isset($initialyear[1])&&$initialyear[1]=="2011") echo 'selected="selected"'?>>2011</option>
 								<option value="2012" <?php if (isset($initialyear[1])&&$initialyear[1]=="2012") echo 'selected="selected"'?>>2012</option>
+								<option value="2013" <?php if (isset($initialyear[1])&&$initialyear[1]=="2013") echo 'selected="selected"'?>>2013</option>
 							</select>
   							<label for="finaldate2" class="singleline">Fecha final:</label>
   							<select name="final_month2" id="finaldate2" class="singleline">
@@ -302,6 +305,7 @@
 								<option value="2010" <?php if (isset($finalyear[1])&&$finalyear[1]=="2010") echo 'selected="selected"'?>>2010</option>
 								<option value="2011" <?php if (isset($finalyear[1])&&$finalyear[1]=="2011") echo 'selected="selected"'?>>2011</option>
 								<option value="2012" <?php if (isset($finalyear[1])&&$finalyear[1]=="2012") echo 'selected="selected"'?>>2012</option>
+								<option value="2013" <?php if (isset($finalyear[1])&&$finalyear[1]=="2013") echo 'selected="selected"'?>>2013</option>
 							</select>
   							<label for="company2" class="singleline">Empresa o departamento:</label>
   							<input type="text" maxlength="30" name="company2" id="company2" class="singleline" value="<?php if (isset($company[1])) echo $company[1]; ?>" />
@@ -342,6 +346,7 @@
 								<option value="2010" <?php if (isset($initialyear[2])&&$initialyear[2]=="2010") echo 'selected="selected"'?>>2010</option>
 								<option value="2011" <?php if (isset($initialyear[2])&&$initialyear[2]=="2011") echo 'selected="selected"'?>>2011</option>
 								<option value="2012" <?php if (isset($initialyear[2])&&$initialyear[2]=="2012") echo 'selected="selected"'?>>2012</option>
+								<option value="2013" <?php if (isset($initialyear[2])&&$initialyear[2]=="2013") echo 'selected="selected"'?>>2013</option>
 							</select>
   							<label for="finaldate3" class="singleline">Fecha final:</label>
   							<select name="final_month3" id="finaldate3" class="singleline">
@@ -374,6 +379,7 @@
 								<option value="2010" <?php if (isset($finalyear[2])&&$finalyear[2]=="2010") echo 'selected="selected"'?>>2010</option>
 								<option value="2011" <?php if (isset($finalyear[2])&&$finalyear[2]=="2011") echo 'selected="selected"'?>>2011</option>
 								<option value="2012" <?php if (isset($finalyear[2])&&$finalyear[2]=="2012") echo 'selected="selected"'?>>2012</option>
+								<option value="2013" <?php if (isset($finalyear[2])&&$finalyear[2]=="2013") echo 'selected="selected"'?>>2013</option>
 							</select>
   							<label for="company3" class="singleline">Empresa o departamento:</label>
   							<input type="text" maxlength="30" name="company3" id="company" class="singleline" value="<?php if (isset($company[2])) echo $company[2]; ?>" />
