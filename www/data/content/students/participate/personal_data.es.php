@@ -262,7 +262,7 @@
 						<option value="1987" <?php if (isset($spd['birthyear'])&&$spd['birthyear']=="1987") echo 'selected="selected"'?>>1987</option>
 						<option value="1988" <?php if (isset($spd['birthyear'])&&$spd['birthyear']=="1988") echo 'selected="selected"'?>>1988</option>
 						<option value="1989" <?php if (isset($spd['birthyear'])&&$spd['birthyear']=="1989") echo 'selected="selected"'?>>1989</option>
-						<option value="1990" <?php if (isset($spd['birthyear'])&&$spd['birthyear']=="1990") echo 'selected="selected"'?>>1991</option>
+						<option value="1990" <?php if (isset($spd['birthyear'])&&$spd['birthyear']=="1990") echo 'selected="selected"'?>>1990</option>
 						<option value="1991" <?php if (isset($spd['birthyear'])&&$spd['birthyear']=="1991") echo 'selected="selected"'?>>1991</option>
 						<option value="1992" <?php if (isset($spd['birthyear'])&&$spd['birthyear']=="1992") echo 'selected="selected"'?>>1992</option>
 						<option value="1993" <?php if (isset($spd['birthyear'])&&$spd['birthyear']=="1993") echo 'selected="selected"'?>>1993</option>
