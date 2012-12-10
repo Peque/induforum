@@ -1,3 +1,21 @@
+<?php
+
+	session_start();
+
+	// Check user logged in
+	if (!isset($_SESSION['user_id'])) {
+		header('Location: /en/login/');
+		exit;
+	}
+
+	// Check user privileges
+	if ($_SESSION['type'] != 'student_session') {
+		header('Location: /en/restricted_area/');
+		exit;
+	}
+
+?>
+
 <section id="content">
 <header>
 	<hgroup>
@@ -14,11 +32,9 @@
 
 <?php
 
-	// TODO: student_number should be session dependant...
-	$student_number = 1;
-	$form_processed = 0;
+	$student_number = $_SESSION['user_id'];
 
-	require_once('../config.php');
+	require_once('../../../config.php');
 
 	// Connect to the database
 	$db = mysqli_connect($db_server, $db_user, $db_pass, $db_name);

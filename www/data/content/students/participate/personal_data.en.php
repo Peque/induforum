@@ -32,10 +32,9 @@
 
 <?php
 
-	// TODO: student_number should be session dependant...
 	$student_number = $_SESSION['user_id'];
 
-	require_once('../config.php');
+	require_once('../../../config.php');
 
 	// Connect to the database
 	$db = mysqli_connect($db_server, $db_user, $db_pass, $db_name);

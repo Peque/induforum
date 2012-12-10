@@ -1,24 +1,40 @@
+<?php
+
+	session_start();
+
+	// Check user logged in
+	if (!isset($_SESSION['user_id'])) {
+		header('Location: /en/login/');
+		exit;
+	}
+
+	// Check user privileges
+	if ($_SESSION['type'] != 'student_session') {
+		header('Location: /en/restricted_area/');
+		exit;
+	}
+
+?>
+
 <section id="content">
 <header>
 	<hgroup>
-		<h1>Participation</h1>
+		<h1>Participación</h1>
 	</hgroup>
 </header>
 <article>
 	<header>
 		<hgroup>
-			<h1 id="Resume">Resume</h1>
+			<h1 id="Resume">Curriculum</h1>
 		</hgroup>
 		<hr />
 	</header>
 
 <?php
 
-	// TODO: student_number should be session dependant...
-	$student_number = 1;
-	$form_processed = 0;
+	$student_number = $_SESSION['user_id'];
 
-	require_once('../config.php');
+	require_once('../../../config.php');
 
 	// Connect to the database
 	$db = mysqli_connect($db_server, $db_user, $db_pass, $db_name);
@@ -113,45 +129,48 @@
 
 	<form action="" method="post">
 		<fieldset>
-			<legend>Academic training:</legend>
+			<legend>Formación académica:</legend>
 			<div class="form_wrapper">
 				<div class="form_warp">
-					<label for="form_degree" class="singleline">Degree: <span class="form_required" title="This field is required">*</span></label>
+					<label for="form_degree" class="singleline">Titulo: <span class="form_required" title="This field is required">*</span></label>
 					<select name="studies" id="form_degree" required="required" class="singleline">
 						<option value=""></option>
-						<option value="industrialengineering" <?php if (isset($spd['studies'])&&$spd['studies']=="industrialengineering") echo 'selected="selected"'?>>Industrial Engineering</option>
-						<option value="chemicalengineering"<?php if (isset($spd['studies'])&&$spd['studies']=="chemicalengineering") echo 'selected="selected"'?>>Chemical Engineering</option>
-						<option value="organizationengineering"<?php if (isset($spd['studies'])&&$spd['studies']=="organizationengineering") echo 'selected="selected"'?>>Industrial Organization Engineering</option>
-						<option value="electronicengineering"<?php if (isset($spd['studies'])&&$spd['studies']=="electronicengineering") echo 'selected="selected"'?>>Industrial Electronic Engineering </option>
-						<option value="industrialtechengineering"<?php if (isset($spd['studies'])&&$spd['studies']=="industrialtechengineering") echo 'selected="selected"'?>>Industrial Technologies Engineering Grade</option>
-						<option value="electricengineering"<?php if (isset($spd['studies'])&&$spd['studies']=="electricengineering") echo 'selected="selected"'?>>Electric Engineering Grade</option>
-						<option value="automaticengineering"<?php if (isset($spd['studies'])&&$spd['studies']=="chemicalengineering") echo 'selected="selected"'?>>Industrial Electronic Engineering Grade</option>
-						<option value="mechanicalengineering"<?php if (isset($spd['studies'])&&$spd['studies']=="chemicalengineering") echo 'selected="selected"'?>>Mechanical Engineering Grade</option>
-						<option value="orgnizationgradeengineering"<?php if (isset($spd['studies'])&&$spd['studies']=="chemicalengineering") echo 'selected="selected"'?>>Organization Engineering Grade</option>
-						<option value="chemicalgradeengineering"<?php if (isset($spd['studies'])&&$spd['studies']=="chemicalengineering") echo 'selected="selected"'?>>Chemical Engineering Grade</option>
-						<option value="energyengineering"<?php if (isset($spd['studies'])&&$spd['studies']=="chemicalengineering") echo 'selected="selected"'?>>Energy Engineering Grade</option>
+						<option value="industrialengineering" <?php if (isset($spd['studies'])&&$spd['studies']=="industrialengineering") echo 'selected="selected"'?>>Ingenieria Industrial</option>
+						<option value="chemicalengineering"<?php if (isset($spd['studies'])&&$spd['studies']=="chemicalengineering") echo 'selected="selected"'?>>Ingenieria Química</option>
+						<option value="organizationengineering"<?php if (isset($spd['studies'])&&$spd['studies']=="organizationengineering") echo 'selected="selected"'?>>Ingenieria Organización Industrial</option>
+						<option value="electronicengineering"<?php if (isset($spd['studies'])&&$spd['studies']=="electronicengineering") echo 'selected="selected"'?>>Ingeniero Automática y Electrónica Industrial</option>
+						<option value="industrialtechengineering"<?php if (isset($spd['studies'])&&$spd['studies']=="industrialtechengineering") echo 'selected="selected"'?>>Grado en Ingeniería en Tecnologías Industriales</option>
+						<option value="electricengineering"<?php if (isset($spd['studies'])&&$spd['studies']=="electricengineering") echo 'selected="selected"'?>>Grado en Ingeniería Eléctrica</option>
+						<option value="automaticengineering"<?php if (isset($spd['studies'])&&$spd['studies']=="chemicalengineering") echo 'selected="selected"'?>>Grado en Ingeniería Electrónica Industrial y Automática</option>
+						<option value="mechanicalengineering"<?php if (isset($spd['studies'])&&$spd['studies']=="chemicalengineering") echo 'selected="selected"'?>>Grado en Ingeniería Mecánica</option>
+						<option value="orgnizationgradeengineering"<?php if (isset($spd['studies'])&&$spd['studies']=="chemicalengineering") echo 'selected="selected"'?>>Grado en Ingeniería de Organización</option>
+						<option value="chemicalgradeengineering"<?php if (isset($spd['studies'])&&$spd['studies']=="chemicalengineering") echo 'selected="selected"'?>>Grado en Ingeniería Química</option>
+						<option value="energyengineering"<?php if (isset($spd['studies'])&&$spd['studies']=="chemicalengineering") echo 'selected="selected"'?>>Grado en Ingeniería de la Energía</option>
+
+
 					</select>
-					<label for="form_course" class="singleline">Higher course: <span class="form_required" title="This field is required">*</span></label>
+					<label for="form_course" class="singleline">Curso actual: <span class="form_required" title="This field is required">*</span></label>
 					<select name="higher_course" id="form_course"  required="required" class="singleline">
 						<option value=""></option>
 						<option value="3" <?php if (isset($spd['higher_course'])&&$spd['higher_course']=="3") echo 'selected="selected"'?>>3</option>
 						<option value="4" <?php if (isset($spd['higher_course'])&&$spd['higher_course']=="4") echo 'selected="selected"'?>>4</option>
 						<option value="5" <?php if (isset($spd['higher_course'])&&$spd['higher_course']=="5") echo 'selected="selected"'?>>5</option>
 					</select>
-					<label for="form_speciality" class="singleline">Speciality:<span class="form_required" title="This field is required">*</span></label>
+					<label for="form_speciality" class="singleline">Especialidad:<span class="form_required" title="This field is required">*</span></label>
 						<select name="speciality" id="form_speciality" required="required" class="singleline">
 							<option value=""></option>
-							<option value="Electric" <?php if (isset($spd['speciality'])&&$spd['speciality']=="Electric") echo 'selected="selected"'?>>Electric</option>
-							<option value="Mechanic" <?php if (isset($spd['speciality'])&&$spd['speciality']=="Mechanic") echo 'selected="selected"'?>>Mechanic - Machines</option>
-							<option value="Electronic"<?php if (isset($spd['speciality'])&&$spd['speciality']=="Electronic") echo 'selected="selected"'?>>Electronic</option>
-							<option value="Construction" <?php if (isset($spd['speciality'])&&$spd['speciality']=="Building") echo 'selected="selected"'?>>Mechanic - Construction</option>
-							<option value="Material" <?php if (isset($spd['speciality'])&&$spd['speciality']=="Material") echo 'selected="selected"'?>>Materials</option>
-							<option value="Organization"<?php if (isset($spd['speciality'])&&$spd['speciality']=="Organization") echo 'selected="selected"'?>>Industrial Organization</option>
-							<option value="Chemical" <?php if (isset($spd['speciality'])&&$spd['speciality']=="Chemical") echo 'selected="selected"'?>>Industrial Chemistry</option>
-							<option value="Energetic" <?php if (isset($spd['speciality'])&&$spd['speciality']=="Energetic") echo 'selected="selected"'?>>Energetic Technics</option>
-							<option value="Manufacturing"<?php if (isset($spd['speciality'])&&$spd['speciality']=="Manufacturing") echo 'selected="selected"'?>>Manufacturing</option>
+							<option value="Electric" <?php if (isset($spd['speciality'])&&$spd['speciality']=="Electric") echo 'selected="selected"'?>>Eléctrica</option>
+							<option value="Mechanic" <?php if (isset($spd['speciality'])&&$spd['speciality']=="Mechanic") echo 'selected="selected"'?>>Mecánica - Máquinas</option>
+							<option value="Electronic"<?php if (isset($spd['speciality'])&&$spd['speciality']=="Electronic") echo 'selected="selected"'?>>Electrónica - Automática</option>
+							<option value="Construction" <?php if (isset($spd['speciality'])&&$spd['speciality']=="Building") echo 'selected="selected"'?>>Mecánica - Construcción</option>
+							<option value="Material" <?php if (isset($spd['speciality'])&&$spd['speciality']=="Material") echo 'selected="selected"'?>>Materiales</option>
+							<option value="Organization"<?php if (isset($spd['speciality'])&&$spd['speciality']=="Organization") echo 'selected="selected"'?>>Organización Industrial</option>
+							<option value="Chemical" <?php if (isset($spd['speciality'])&&$spd['speciality']=="Chemical") echo 'selected="selected"'?>>Química Industrial y Medio Ambiente</option>
+							<option value="Energetic" <?php if (isset($spd['speciality'])&&$spd['speciality']=="Energetic") echo 'selected="selected"'?>>Técnicas Energéticas</option>
+							<option value="Manufacturing"<?php if (isset($spd['speciality'])&&$spd['speciality']=="Manufacturing") echo 'selected="selected"'?>>Fabricación</option>
+
 						</select>
-					<label for="form_startingyear" class="singleline">Starting year:<span class="form_required" title="This field is required">*</span></label>
+					<label for="form_startingyear" class="singleline">Año de comienzo:<span class="form_required" title="This field is required">*</span></label>
 							<select name="begin_year" id="form_startingyear"  required="required" class="singleline">
 								<option value=""></option>
 								<option value="2005" <?php if (isset($spd['begin_year'])&&$spd['begin_year']=="2005") echo 'selected="selected"'?>>2005</option>
@@ -161,7 +180,7 @@
 								<option value="2009" <?php if (isset($spd['begin_year'])&&$spd['begin_year']=="2009") echo 'selected="selected"'?>>2009</option>
 								<option value="2010" <?php if (isset($spd['begin_year'])&&$spd['begin_year']=="2010") echo 'selected="selected"'?>>2010</option>
 							</select>
-					<label for="form_additionalinfo" class="singleline">Additional info:</label>
+					<label for="form_additionalinfo" class="singleline">Información adicional:</label>
 					<textarea name="additional_information" id="form_additionalinfo" cols="50" rows="10" class="singleline"><?php if (isset($spd['additional_information'])) echo $spd['additional_information']; ?></textarea>
 				</div>
 			</div>
@@ -171,6 +190,6 @@
 	</form>
 </article>
 <footer>
-	<p class="section_title">Participation</p>
+	<p class="section_title">Participación</p>
 </footer>
 </section>

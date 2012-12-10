@@ -1,3 +1,21 @@
+<?php
+
+	session_start();
+
+	// Check user logged in
+	if (!isset($_SESSION['user_id'])) {
+		header('Location: /en/login/');
+		exit;
+	}
+
+	// Check user privileges
+	if ($_SESSION['type'] != 'student_session') {
+		header('Location: /en/restricted_area/');
+		exit;
+	}
+
+?>
+
 <section id="content">
 <header>
 	<hgroup>
@@ -14,11 +32,9 @@
 
 <?php
 
-	// TODO: student_number should be session dependant...
-	$student_number = 2;
-	$form_processed = 0;
+	$student_number = $_SESSION['user_id'];
 
-	require_once('../config.php');
+	require_once('../../../config.php');
 
 	// Connect to the database
 	$db = mysqli_connect($db_server, $db_user, $db_pass, $db_name);
@@ -51,7 +67,7 @@
 		$spd['communications_networks'] = mysqli_real_escape_string($db, trim($_POST['communications_networks']));
 
 		// Check if all fields have a non-empty value
-		
+
 
 			// Try to add a new row
 			$query = "insert into computing_experience values
@@ -155,7 +171,7 @@
 								<option value="3" <?php if (isset($spd['windows'])&&$spd['windows']=="3") echo 'selected="selected"'?>>Medio</option>
 								<option value="4" <?php if (isset($spd['windows'])&&$spd['windows']=="4") echo 'selected="selected"'?>>Alto</option>
 								<option value="5" <?php if (isset($spd['windows'])&&$spd['windows']=="5") echo 'selected="selected"'?>>Experto</option>
-								
+
 							</select>
 							<label for="mac" class="singleline">
 							Mac (Uso de Mac SO)<br>
@@ -167,7 +183,7 @@
 								<option value="3" <?php if (isset($spd['mac'])&&$spd['mac']=="3") echo 'selected="selected"'?>>Medio</option>
 								<option value="4" <?php if (isset($spd['mac'])&&$spd['mac']=="4") echo 'selected="selected"'?>>Alto</option>
 								<option value="5" <?php if (isset($spd['mac'])&&$spd['mac']=="5") echo 'selected="selected"'?>>Experto</option>
-								
+
 							</select>
 							<label for="linux" class="singleline">
 							Linux (Uso de Linux SO)<br>
@@ -300,7 +316,7 @@
 								<option value="3" <?php if (isset($spd['simulation'])&&$spd['simulation']=="3") echo 'selected="selected"'?>>Medio</option>
 								<option value="4" <?php if (isset($spd['simulation'])&&$spd['simulation']=="4") echo 'selected="selected"'?>>Alto</option>
 								<option value="5" <?php if (isset($spd['simulation'])&&$spd['simulation']=="5") echo 'selected="selected"'?>>Experto</option>
-							</select>	
+							</select>
 							<label for="communications_networks" class="singleline">
 							Redes y comunicaciones<br>(Mozilla,Opera,Chrome...)<br>
 							</label>

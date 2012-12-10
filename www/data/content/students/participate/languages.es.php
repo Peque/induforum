@@ -1,3 +1,21 @@
+<?php
+
+	session_start();
+
+	// Check user logged in
+	if (!isset($_SESSION['user_id'])) {
+		header('Location: /en/login/');
+		exit;
+	}
+
+	// Check user privileges
+	if ($_SESSION['type'] != 'student_session') {
+		header('Location: /en/restricted_area/');
+		exit;
+	}
+
+?>
+
 <section id="content">
 <header>
 	<hgroup>
@@ -14,11 +32,9 @@
 
 <?php
 
-	// TODO: student_number should be session dependant...
-	$student_number = 1;
-	$form_processed = 0;
+	$student_number = $_SESSION['user_id'];
 
-	require_once('../config.php');
+	require_once('../../../config.php');
 
 	// Connect to the database
 	$db = mysqli_connect($db_server, $db_user, $db_pass, $db_name);
@@ -60,8 +76,8 @@
 									'".$spd['spoken_interaction']."',
 									'".$spd['spoken_production']."',
 									'".$spd['writing']."')";
-			
-			
+
+
 			$result = mysqli_query($db, $query);
 			// Inform the user about the operation
 			if ($result) echo '<p class="info">Data saved successfuly.</p>';
@@ -73,7 +89,7 @@
 			echo '<p class="warning">Please, fill all the required fields in the form!</p>';
 
 		}
-	
+
 
 	}
 	} else {
@@ -86,7 +102,7 @@
 
 			$num_results = mysqli_num_rows($result);
 
-			for ($i=0; $i<$num_results; $i++) { 
+			for ($i=0; $i<$num_results; $i++) {
 
 				$row = mysqli_fetch_assoc($result);
 
@@ -96,7 +112,7 @@
 				$interaction[$i] = $row['spoken_interaction'];
 				$production[$i] = $row['spoken_production'];
 				$writing[$i] = $row['writing'];
-			
+
 			}
 
 		}

@@ -1,24 +1,40 @@
+<?php
+
+	session_start();
+
+	// Check user logged in
+	if (!isset($_SESSION['user_id'])) {
+		header('Location: /en/login/');
+		exit;
+	}
+
+	// Check user privileges
+	if ($_SESSION['type'] != 'student_session') {
+		header('Location: /en/restricted_area/');
+		exit;
+	}
+
+?>
+
 <section id="content">
 <header>
 	<hgroup>
-		<h1>Participation</h1>
+		<h1>Participación</h1>
 	</hgroup>
 </header>
 <article>
 	<header>
 		<hgroup>
-			<h1 id="Resume">Resume</h1>
+			<h1 id="Resume">Curriculum</h1>
 		</hgroup>
 		<hr />
 	</header>
 
 <?php
 
-	// TODO: student_number should be session dependant...
-	$student_number = 1;
-	$form_processed = 0;
+	$student_number = $_SESSION['user_id'];
 
-	require_once('../config.php');
+	require_once('../../../config.php');
 
 	// Connect to the database
 	$db = mysqli_connect($db_server, $db_user, $db_pass, $db_name);
@@ -52,7 +68,7 @@
 			$spd['company'] != "" &&
 			$spd['job'] != "" ) {
 
-			
+
 			// Try to add a new row
 			$query = "insert into work_experience values
 									('".$student_number."',
@@ -61,13 +77,13 @@
 									'".$spd['company']."',
 									'".$spd['job']."',
 									'".$spd['description_experience']."')";
-			
+
 			$result = mysqli_query($db, $query);
 			// Inform the user about the operation
 			if ($result) echo '<p class="info">Data saved successfuly.</p>';
 			else echo '<p class="error"><strong>Error: </strong>could not write to the database. Please, try again later.</p>';
 
-		
+
 		} else {
 
 			// Need to fill more fields in the form
@@ -85,7 +101,7 @@
 
 			$num_results = mysqli_num_rows($result);
 
-			for ($i=0; $i<$num_results; $i++) { 
+			for ($i=0; $i<$num_results; $i++) {
 
 				$row = mysqli_fetch_assoc($result);
 				$initialdate[$i]=	explode('-',$row['initial_date']);
@@ -112,10 +128,10 @@
 
 	<form action="" method="post">
 		<fieldset>
-				<legend>Proffessional experience</legend>
+				<legend>Experiencia profesional</legend>
 					<div class="form_wrapper">
 						<div class="proffessionalexperience">
-							<label for="form_jobs" class="singleline">Number of jobs:<span class="form_required" title="This field is required">*</span></label>
+							<label for="form_jobs" class="singleline">Numero de trabajos:<span class="form_required" title="This field is required">*</span></label>
 							<select name="jobs" id="form_jobs" class="singleline" required="required">
 								<option value=""></option>
 								<option value="1" <?php if (isset($num_results)&&$num_results=="1") echo 'selected="selected"'?>>1 </option>
@@ -124,7 +140,7 @@
 							</select>
 						</div>
 						<div>
-							<label for="initialdate1" class="singleline">Initial date:<span class="form_required" title="This field is required">*</span></label>
+							<label for="initialdate1" class="singleline">Fecha inicial:<span class="form_required" title="This field is required">*</span></label>
   							<select name="initial_month1" id="initialdate1" class="singleline" required="required">
   								<option value=""></option>
   								<option value="01" <?php if (isset($initialmonth[0])&&$initialmonth[0]=="01") echo 'selected="selected"'?>>01</option>
@@ -154,8 +170,8 @@
 								<option value="2009" <?php if (isset($initialyear[0])&&$initialyear[0]=="2009") echo 'selected="selected"'?>>2009</option>
 								<option value="2010" <?php if (isset($initialyear[0])&&$initialyear[0]=="2010") echo 'selected="selected"'?>>2010</option>
 							</select>
-  							<label for="finaldate1" class="singleline">Final Date:<span class="form_required" title="This field is required">*</span></label>
-  							<select name="final_month1" id="finaldate1" class="singleline" required="required">		
+  							<label for="finaldate1" class="singleline">Fecha final:<span class="form_required" title="This field is required">*</span></label>
+  							<select name="final_month1" id="finaldate1" class="singleline" required="required">
   								<option value=""></option>
   								<option value="01" <?php if (isset($finalmonth[0])&&$finalmonth[0]=="01") echo 'selected="selected"'?>>01</option>
   								<option value="02" <?php if (isset($finalmonth[0])&&$finalmonth[0]=="02") echo 'selected="selected"'?>>02</option>
@@ -184,15 +200,15 @@
 								<option value="2009" <?php if (isset($finalyear[0])&&$finalyear[0]=="2009") echo 'selected="selected"'?>>2009</option>
 								<option value="2010" <?php if (isset($finalyear[0])&&$finalyear[0]=="2010") echo 'selected="selected"'?>>2010</option>
 							</select>
-  							<label for="company1" class="singleline">Company or department:<span class="form_required" title="This field is required">*</span></label>
+  							<label for="company1" class="singleline">Empresa o departamento:<span class="form_required" title="This field is required">*</span></label>
   							<input type="text" maxlength="30" name="company1" id="company1" class="singleline" value="<?php if (isset($company[0])) echo $company[0]; ?>" required="required"/>
-  							<label for="job1" class="singleline">Job:<span class="form_required" title="This field is required">*</span></label>
+  							<label for="job1" class="singleline">Puesto:<span class="form_required" title="This field is required">*</span></label>
   							<input type="text" maxlength="60" name="job1" id="job1" class="singleline" value="<?php if (isset($job[0])) echo $job[0]; ?>" required="required"/>
-  							<label for="form_description1" class="singleline">Description:</label>
+  							<label for="form_description1" class="singleline">Descripción:</label>
 							<textarea name="description_experience1" id="form_description1" cols="50" rows="10" class="singleline"><?php if (isset($experience[0])) echo $experience[0]; ?></textarea>
 					</div>
 							<div>
-							<label for="initialdate2" class="singleline">Initial date:</label>
+							<label for="initialdate2" class="singleline">Fecha inicial:</label>
   							<select name="initial_month2" id="initialdate2" class="singleline" >
   								<option value=""></option>
   								<option value="01" <?php if (isset($initialmonth[1])&&$initialmonth[1]=="01") echo 'selected="selected"'?>>01</option>
@@ -222,8 +238,8 @@
 								<option value="2009" <?php if (isset($initialyear[1])&&$initialyear[1]=="2009") echo 'selected="selected"'?>>2009</option>
 								<option value="2010" <?php if (isset($initialyear[1])&&$initialyear[1]=="2010") echo 'selected="selected"'?>>2010</option>
 							</select>
-  							<label for="finaldate2" class="singleline">Final Date:</label>
-  							<select name="final_month2" id="finaldate2" class="singleline">		
+  							<label for="finaldate2" class="singleline">Fecha final:</label>
+  							<select name="final_month2" id="finaldate2" class="singleline">
   								<option value=""></option>
   								<option value="01" <?php if (isset($finalmonth[1])&&$finalmonth[1]=="01") echo 'selected="selected"'?>>01</option>
   								<option value="02" <?php if (isset($finalmonth[1])&&$finalmonth[1]=="02") echo 'selected="selected"'?>>02</option>
@@ -252,15 +268,15 @@
 								<option value="2009" <?php if (isset($finalyear[1])&&$finalyear[1]=="2009") echo 'selected="selected"'?>>2009</option>
 								<option value="2010" <?php if (isset($finalyear[1])&&$finalyear[1]=="2010") echo 'selected="selected"'?>>2010</option>
 							</select>
-  							<label for="company2" class="singleline">Company or department:</label>
+  							<label for="company2" class="singleline">Empresa o departamento:</label>
   							<input type="text" maxlength="30" name="company2" id="company2" class="singleline" value="<?php if (isset($company[1])) echo $company[1]; ?>" />
-  							<label for="job2" class="singleline">Job:</label>
+  							<label for="job2" class="singleline">Puesto:</label>
   							<input type="text" maxlength="60" name="job2" id="job2" class="singleline" value="<?php if (isset($job[1])) echo $job[1]; ?>" />
-  							<label for="form_description2" class="singleline">Description:</label>
+  							<label for="form_description2" class="singleline">Descripción:</label>
 							<textarea name="description_experience2" id="form_description2" cols="50" rows="10" class="singleline"><?php if (isset($experience[1])) echo $experience[1]; ?></textarea>
 					</div>
 												<div>
-							<label for="initialdate3" class="singleline">Initial date:</label>
+							<label for="initialdate3" class="singleline">Fecha inicial:</label>
   							<select name="initial_month3" id="initialdate3" class="singleline" >
   								<option value=""></option>
   								<option value="01" <?php if (isset($initialmonth[2])&&$initialmonth[2]=="01") echo 'selected="selected"'?>>01</option>
@@ -290,8 +306,8 @@
 								<option value="2009" <?php if (isset($initialyear[2])&&$initialyear[2]=="2009") echo 'selected="selected"'?>>2009</option>
 								<option value="2010" <?php if (isset($initialyear[2])&&$initialyear[2]=="2010") echo 'selected="selected"'?>>2010</option>
 							</select>
-  							<label for="finaldate3" class="singleline">Final Date:</label>
-  							<select name="final_month3" id="finaldate3" class="singleline">		
+  							<label for="finaldate3" class="singleline">Fecha final:</label>
+  							<select name="final_month3" id="finaldate3" class="singleline">
   								<option value=""></option>
   								<option value="01" <?php if (isset($finalmonth[2])&&$finalmonth[2]=="01") echo 'selected="selected"'?>>01</option>
   								<option value="02" <?php if (isset($finalmonth[2])&&$finalmonth[2]=="02") echo 'selected="selected"'?>>02</option>
@@ -320,11 +336,11 @@
 								<option value="2009" <?php if (isset($finalyear[2])&&$finalyear[2]=="2009") echo 'selected="selected"'?>>2009</option>
 								<option value="2010" <?php if (isset($finalyear[2])&&$finalyear[2]=="2010") echo 'selected="selected"'?>>2010</option>
 							</select>
-  							<label for="company3" class="singleline">Company or department:</label>
+  							<label for="company3" class="singleline">Empresa o departamento:</label>
   							<input type="text" maxlength="30" name="company3" id="company" class="singleline" value="<?php if (isset($company[2])) echo $company[2]; ?>" />
-  							<label for="job3" class="singleline">Job:</label>
+  							<label for="job3" class="singleline">Puesto:</label>
   							<input type="text" maxlength="60" name="job3" id="job3" class="singleline" value="<?php if (isset($job[2])) echo $job[2]; ?>" />
-  							<label for="form_description3" class="singleline">Description:</label>
+  							<label for="form_description3" class="singleline">Descripción:</label>
 							<textarea name="description_experience3" id="form_description3" cols="50" rows="10" class="singleline"><?php if (isset($experience[2])) echo $experience[2]; ?></textarea>
 					</div>
   					</div>
@@ -334,6 +350,6 @@
 	</form>
 </article>
 <footer>
-	<p class="section_title">Participation</p>
+	<p class="section_title">Participación</p>
 </footer>
 </section>

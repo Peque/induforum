@@ -4,7 +4,7 @@
 
 	// Check user logged in
 	if (isset($_SESSION['user_id'])) {
-		header('Location: /en/account_settings/');
+		header('Location: /es/account_settings/');
 		exit;
 	}
 
@@ -13,13 +13,13 @@
 <section id="content">
 <header>
 	<hgroup>
-		<h1>Log in</h1>
+		<h1>Iniciar sesión</h1>
 	</hgroup>
 </header>
 <article>
 	<header>
 		<hgroup>
-			<h1 id="Acess_form">Access form</h1>
+			<h1 id="Formulario_de_acceso">Formulario de acceso</h1>
 		</hgroup>
 		<hr />
 	</header>
@@ -75,7 +75,7 @@
 				    hash('sha512', $db_salt.$spd['pass']) == $row['password']) {
 					$_SESSION['user_id'] = $row['student_number'];
 					$_SESSION['type'] = 'student_session';
-					header('Location: /en/students/participate/');
+					header('Location: /es/students/participate/');
 					exit;
 				} else {
 					echo '<p class="error"><strong>Error: </strong>Wrong user name or password. Please, try again.</p>';
@@ -121,17 +121,17 @@
 		<fieldset>
 			<legend>Log in:</legend>
 			<div class="form_warp">
-				<label for="form_user" class="singleline">User: <span class="form_required" title="This field is required">*</span></label>
+				<label for="form_user" class="singleline">Usuario: <span class="form_required" title="This field is required">*</span></label>
 				<input type="text" maxlength="30" name="user" id="form_user" class="singleline" required="required" value="<?php if (isset($spd['user'])) echo $spd['user']; ?>" />
-				<label for="form_pass" class="singleline">Password: <span class="form_required" title="This field is required">*</span></label>
+				<label for="form_pass" class="singleline">Contraseña: <span class="form_required" title="This field is required">*</span></label>
 				<input type="password" maxlength="60" name="pass" id="form_pass" class="singleline" required="required" />
 			</div>
 		</fieldset>
 		<input type="hidden" name="type" value="login_form" />
-		<input type="submit" value="Log in" accesskey="x" />
+		<input type="submit" value="Entrar" accesskey="x" />
 	</form>
 </article>
 <footer>
-	<p class="section_title">Log in</p>
+	<p class="section_title">Iniciar sesión</p>
 </footer>
 </section>
