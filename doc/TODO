@@ -2,7 +2,8 @@
 0.x
 =====================================================================
 
- * Generate news: bash
+ * Improve styles for forms. Use only one <div> (form wrapper).
+ * Change the sections navigation list and use <nav> tag instead.
 
 =====================================================================
 1.x
