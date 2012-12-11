@@ -1,0 +1,12 @@
+% TITLE=Área restringida
+% SUBTITLE=
+% DESCRIPTION=
+% KEYWORDS=
+
+=Lo sentimos, tu usuario no puede acceder aquí=
+----
+
+% TODO: this is not currently supported in the parser
+<p class="centered extra_margin"><img src="/images/svg/happy_face.svg" alt="Happy Face Image" height="200" width="200"></p>
+
+Por razones de seguridad, los usuarios no pueden acceder a todos los contenidos del sitio web. Parece que tu usuario no tiene permisos para visitar esta página. Por favor, ¡continúa navegando y disfrutando del resto de la página!
