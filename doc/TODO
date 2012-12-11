@@ -2,7 +2,6 @@
 0.x
 =====================================================================
 
- * Improve styles for forms. Use only one <div> (form wrapper).
  * Change the sections navigation list and use <nav> tag instead.
 
 =====================================================================

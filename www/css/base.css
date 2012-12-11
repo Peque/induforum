@@ -584,9 +584,6 @@ time.news_pubdate {
 	padding: 0;
 	border: none;
 }
-#content form div.form_wrapper {
-	margin: 1em 0;
-}
 #content form fieldset {
 	padding: 1em;
 	border: 1px solid #585858;
@@ -596,6 +593,10 @@ time.news_pubdate {
 	margin: .3em;
 	padding: 0 .5em 0 .4em;
 	color: #585858;
+}
+#content form div.form_wrapper {
+	clear: both;
+	padding: 3em 0;
 }
 #content form label {
 	display: block;
