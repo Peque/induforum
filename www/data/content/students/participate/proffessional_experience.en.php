@@ -77,7 +77,7 @@
 		//Try to delete all rows
 			$query = "delete from work_experience where student_number='".$student_number."'";
 			mysqli_query($db, $query);
-			
+
 			$writing_success = 1;
 			$num_results = mysqli_real_escape_string($db, trim($_POST['jobs']));
 
@@ -112,6 +112,9 @@
 			// Inform the user about the operation
 			if (!$result) $writing_success = 0;
 
+			// Don't show escaped data in the form
+			$experience[$j] = trim($_POST['description_experience'.$j]);
+
 
 		} else {
 
@@ -122,8 +125,8 @@
 	}
 		if ($writing_success) echo '<p class="info">Data saved successfuly.</p>';
 		else echo '<p class="error"><strong>Error: </strong>could not write to the database. Please, try again later.</p>';
-	
-	
+
+
 	} else {
 
 		// Try to get data from the database
