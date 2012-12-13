@@ -50,6 +50,9 @@
 		</hgroup>
 		<hr />
 	</header>
+	<p>
+		<strong>Nota importante:</strong> Niveles de acuerdo con el <a href="http://es.wikipedia.org/wiki/Marco_com%C3%BAn_europeo_de_referencia_para_las_lenguas">Marco Común Europeo de Referencia para las Lenguas</a> (MCERL).
+	</p>
 
 <?php
 

@@ -50,6 +50,10 @@
 		</hgroup>
 		<hr />
 	</header>
+	<p>
+		<strong>Important note:</strong> Levels according to the <a href="http://en.wikipedia.org/wiki/Common_European_Framework_of_Reference_for_Languages">Common European Framework of Reference for Languages</a> (CEFR).
+	</p>
+
 
 <?php
 
