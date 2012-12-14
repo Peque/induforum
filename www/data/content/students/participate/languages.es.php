@@ -223,7 +223,7 @@
 				<select name="writing0" id="writing0" class="singleline">
 					<option value="noreply"></option>
 					<option value="A1" <?php if (isset($writing[0])&&$writing[0]=="A1") echo 'selected="selected"'?>>A1</option>
-					<option value="A2" <?php if (isset($writing[0])&&$writing[0]=="A1") echo 'selected="selected"'?>>A2</option>
+					<option value="A2" <?php if (isset($writing[0])&&$writing[0]=="A2") echo 'selected="selected"'?>>A2</option>
 					<option value="B1" <?php if (isset($writing[0])&&$writing[0]=="B1") echo 'selected="selected"'?>>B1</option>
 					<option value="B2" <?php if (isset($writing[0])&&$writing[0]=="B2") echo 'selected="selected"'?>>B2</option>
 					<option value="C1" <?php if (isset($writing[0])&&$writing[0]=="C1") echo 'selected="selected"'?>>C1</option>
@@ -288,7 +288,7 @@
 				<select name="writing1" id="writing1" class="singleline">
 					<option value="noreply"></option>
 					<option value="A1" <?php if (isset($writing[1])&&$writing[1]=="A1") echo 'selected="selected"'?>>A1</option>
-					<option value="A2" <?php if (isset($writing[1])&&$writing[1]=="A1") echo 'selected="selected"'?>>A2</option>
+					<option value="A2" <?php if (isset($writing[1])&&$writing[1]=="A2") echo 'selected="selected"'?>>A2</option>
 					<option value="B1" <?php if (isset($writing[1])&&$writing[1]=="B1") echo 'selected="selected"'?>>B1</option>
 					<option value="B2" <?php if (isset($writing[1])&&$writing[1]=="B2") echo 'selected="selected"'?>>B2</option>
 					<option value="C1" <?php if (isset($writing[1])&&$writing[1]=="C1") echo 'selected="selected"'?>>C1</option>
@@ -353,7 +353,7 @@
 				<select name="writing2" id="writing2" class="singleline">
 					<option value="noreply"></option>
 					<option value="A1" <?php if (isset($writing[2])&&$writing[2]=="A1") echo 'selected="selected"'?>>A1</option>
-					<option value="A2" <?php if (isset($writing[2])&&$writing[2]=="A1") echo 'selected="selected"'?>>A2</option>
+					<option value="A2" <?php if (isset($writing[2])&&$writing[2]=="A2") echo 'selected="selected"'?>>A2</option>
 					<option value="B1" <?php if (isset($writing[2])&&$writing[2]=="B1") echo 'selected="selected"'?>>B1</option>
 					<option value="B2" <?php if (isset($writing[2])&&$writing[2]=="B2") echo 'selected="selected"'?>>B2</option>
 					<option value="C1" <?php if (isset($writing[2])&&$writing[2]=="C1") echo 'selected="selected"'?>>C1</option>
