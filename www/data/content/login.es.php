@@ -23,6 +23,9 @@
 		</hgroup>
 		<hr />
 	</header>
+	<p>
+		Si eres estudiante, utiliza tu <strong>número de matrícula</strong> como <em>Usuario</em> y tu <strong>DNI</strong> como <em>Contraseña</em> (incluyendo ceros y excluyendo la letra de verificación).
+	</p>
 
 <?php
 
