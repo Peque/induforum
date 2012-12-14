@@ -104,7 +104,8 @@ fi
 rm -rf build
 mkdir build
 cp -r css build
-cp -r js build
+cp -r files build
 cp -r images build
+cp -r js build
 
 find $content_dir -type f | sed "s@^$content_dir@@" | build_file
