@@ -1,0 +1,19 @@
+% TITLE=Departamento tesorería
+%SUBTITLE=
+% DESCRIPTION=
+% KEYWORDS=
+
+
+=Tesorería=
+----
+<table>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>email</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr><td>Martínez Arauna, Luis</td><td>tesoreria<span class="display-none">@anti-spam</span>@induforum.es</td></tr>
+    </tbody>
+</table>

@@ -3,120 +3,28 @@
 % DESCRIPTION=
 % KEYWORDS
 
+We are organized in different sections:
 
 
-=Sales department=
-----
-<table>
-    <thead>
-        <tr>
-            <th>Name</th>
-            <th>email</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr><td>Portela García, Judit</td><td>info<span class="display-none">@anti-spam</span>@induforum.es</td></tr>
-        <tr><td>Duralde García, Julia</td><td>comercial1<span class="display-none">@anti-spam</span>@induforum.es</td></tr>
-        <tr><td>Dragan, Felicia-Elena</td><td>comercial1<span class="display-none">@anti-spam</span>@induforum.es</td></tr>
-        <tr><td>Carro de la Vega, Patricia</td><td>comercial2<span class="display-none">@anti-spam</span>@induforum.es</td></tr>
-        <tr><td>Larrotcha Pagés, Salustiano</td><td>comercial2<span class="display-none">@anti-spam</span>@induforum.es</td></tr>
-        <tr><td>Conci Fernández, Bruno</td><td>comercial3<span class="display-none">@anti-spam</span>@induforum.es</td></tr>
-        <tr><td>Montero García, Beatriz</td><td>comercial4<span class="display-none">@anti-spam</span>@induforum.es</td></tr>
-        <tr><td>Delgado Rodriguez, Paula</td><td>comercial4<span class="display-none">@anti-spam</span>@induforum.es</td></tr>
-        <tr><td>Lucendo Casillas, Jorge</td><td>comercial5<span class="display-none">@anti-spam</span>@induforum.es</td></tr>
-        <tr><td>Barrio Prieto, Daniel</td><td>comercial5<span class="display-none">@anti-spam</span>@induforum.es</td></tr>
-        <tr><td>Gómez-Arroyo Bernabeu de Yeste, Ignacio</td><td>comercial6<span class="display-none">@anti-spam</span>@induforum.es</td></tr>
-        <tr><td>Gonzalez Gamonal, Isabel</td><td>comercial6<span class="display-none">@anti-spam</span>@induforum.es</td></tr>
-        <tr><td>Carvajal Almendros, Celia</td><td>comercial7<span class="display-none">@anti-spam</span>@induforum.es</td></tr>
-        <tr><td>Manzanero Jiménez, Sara</td><td>comercial7<span class="display-none">@anti-spam</span>@induforum.es</td></tr>
-        <tr><td>Salas de Arribas, Guillermo</td><td>comercial8<span class="display-none">@anti-spam</span>@induforum.es</td></tr>
-        <tr><td>Álvarez Luque, Marta</td><td>comercial8<span class="display-none">@anti-spam</span>@induforum.es</td></tr>
-        <tr><td>Marcos Torregrosa, Rodrigo</td><td>comercial9<span class="display-none">@anti-spam</span>@induforum.es</td></tr>
-        <tr><td>López Cuesta, Carlos Alberto</td><td>comercial9<span class="display-none">@anti-spam</span>@induforum.es</td></tr>
+[[@:/en/companies/contacts/comercial/|Sales department|]]
+
+[[@:/en/companies/contacts/marketing/|Marketing department|]]
+
+[[@:/en/companies/contacts/technological/|Technology department|]]
+
+[[@:/en/companies/contacts/treasury/|Treasury department|]]
+
+[[@:/en/companies/contacts/solidaty/|Solidary department|]]
+
+[[@:/en/companies/contacts/resouerces/|Resources department]]
 
 
-    </tbody>
-</table>
 
-=Marketing department=
-----
-<table>
-    <thead>
-        <tr>
-            <th>Name</th>
-            <th>email</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr><td>de la Peña Gallo, Álvaro</td><td>marketing<span class="display-none">@anti-spam</span>@induforum.es</td></tr>
-    </tbody>
-</table>
 
-=Technology department=
-----
-<table>
-    <thead>
-        <tr>
-            <th>Name</th>
-            <th>email</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr><td>Gili Millán, Coloma</td><td>dep.tecnologico<span class="display-none">@anti-spam</span>@induforum.es</td></tr>
-        <tr><td>Miguel Sánchez de León Peque</td><td>msdeleonpeque<span class="display-none">@anti-spam</span>@gmail.com</td></tr>
-        <tr><td>Ciudad Gómez, Rubén </td><td>ruben.ciudad<span class="display-none">@anti-spam</span>@gmail.com</td></tr>
-    </tbody>
-</table>
 
-=Treasury department=
-----
-<table>
-    <thead>
-        <tr>
-            <th>Name</th>
-            <th>email</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr><td>Martínez Arauna, Luis</td><td>lmarauna<span class="display-none">@anti-spam</span>@gmail.com</td></tr>
-        <tr><td>Travesí Latorre, Gonzalo </td><td>gtlatorre7<span class="display-none">@anti-spam</span>@gmail.com</td></tr>
-        <tr><td>Robles Padilla, Héctor</td><td>chector2<span class="display-none">@anti-spam</span>@gmail.com</td></tr>
-    </tbody>
-</table>
 
-=Solidary department=
-----
-<table>
-    <thead>
-        <tr>
-            <th>Name</th>
-            <th>email</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr><td>Urbano Villaescusa, Pablo</td><td>pablo.urbano.villaescusa<span class="display-none">@anti-spam</span>@gmail.com</td></tr>
-        <tr><td>Velasco Ortega, Ana </td><td>ana_velasco<span class="display-none">@anti-spam</span>@live.com</td></tr>
-        <tr><td>Dominguez Marsal, Miguel</td><td>migueldominguezmarsal<span class="display-none">@anti-spam</span>@gmail.com</td></tr>
-        <tr><td>Morán Pelaez, Beatriz</td><td>mbmp_7<span class="display-none">@anti-spam</span>@hotmail.com</td></tr>
-    </tbody>
-</table>
 
-=Resources department=
-----
-<table>
-    <thead>
-        <tr>
-            <th>Name</th>
-            <th>email</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr><td>Mora Aglio, Tomás</td><td>tomas.mora.aglio<span class="display-none">@anti-spam</span>@gmail.com</td></tr>
-        <tr><td>Benito García, Oscar </td><td>oscar.bg.89<span class="display-none">@anti-spam</span>@gmail.com</td></tr>
-        <tr><td>Mediero Clemente, Cristina </td><td> medicris89<span class="display-none">@anti-spam</span>@hotmail.com</td></tr>
-        <tr><td>Bonacasa Aguinaco, Laura </td><td>laurabonacasa<span class="display-none">@anti-spam</span>@gmail.com</td></tr>
-        <tr><td>Molenat Muelas, Melisa</td><td>melisa.molenat<span class="display-none">@anti-spam</span>@gmail.com</td></tr>
-    </tbody>
-</table>
+
+
 
 

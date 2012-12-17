@@ -1,0 +1,19 @@
+% TITLE=Departamento tecnológico
+%SUBTITLE=
+% DESCRIPTION=
+% KEYWORDS=
+
+
+=Departamento tecnológico=
+----
+<table>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>email</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr><td>Gili Millán, Coloma</td><td>dep.tecnologico<span class="display-none">@anti-spam</span>@induforum.es</td></tr>
+    </tbody>
+</table>
