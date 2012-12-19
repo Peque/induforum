@@ -126,6 +126,7 @@ function wide_link(wikicode)
 	wide_link_regex = /^\[\[@:(.+?)\|([^\|]+)\|([^\|]+)?\]\]$/gm;
 
 	while (tokens = wide_link_regex.exec(wikicode)) {
+		if (typeof(tokens[3]) == 'undefined') tokens[3] = '';
 		wikicode = wikicode.replace(tokens[0], '<a class="cat" href="' + tokens[1] + '"><dl class="cat"><dt class="cat_name">' + tokens[2] + '</dt><dd class="cat_desc">' + tokens[3] + '</dd></dl></a>');
 	}
 
