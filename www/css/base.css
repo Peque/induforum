@@ -426,8 +426,8 @@ time.news_pubdate {
 
 }
 #content dl.cat {
-	border: 1px solid #F3FA2A;
-	background-color: #F0F0F0; /* hover: #fdffba*/
+	border: 1px solid #ffefb6;
+	background-color: #FFFCCB; /* hover: #fdffba.fffff5.FFF8A4*/
 }
 #content dl.app {
 	border: 1px solid #92b4d5;
