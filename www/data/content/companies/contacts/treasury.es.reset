@@ -9,11 +9,12 @@
 <table>
     <thead>
         <tr>
+        		<th>Foto</th>
             <th>Name</th>
             <th>email</th>
         </tr>
     </thead>
     <tbody>
-        <tr><td>Martínez Arauna, Luis</td><td>tesoreria<span class="display-none">@anti-spam</span>@induforum.es</td></tr>
+        <tr><td>[[Image:/staff/LuisMartinezArauna.jpg|picture|alt=text| ]]</td><td>Martínez Arauna, Luis</td><td>tesoreria<span class="display-none">@anti-spam</span>@induforum.es</td></tr>
     </tbody>
 </table>

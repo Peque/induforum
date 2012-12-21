@@ -8,29 +8,30 @@
 <table>
     <thead>
         <tr>
+        		<th>Foto</th>
             <th>Name</th>
             <th>email</th>
         </tr>
     </thead>
     <tbody>
-        <tr><td>Portela García, Judit</td><td>info<span class="display-none">@anti-spam</span>@induforum.es</td></tr>
-        <tr><td>Duralde García, Julia</td><td>comercial1<span class="display-none">@anti-spam</span>@induforum.es</td></tr>
-        <tr><td>Dragan, Felicia-Elena</td><td>comercial1<span class="display-none">@anti-spam</span>@induforum.es</td></tr>
-        <tr><td>Carro de la Vega, Patricia</td><td>comercial2<span class="display-none">@anti-spam</span>@induforum.es</td></tr>
-        <tr><td>Larrotcha Pagés, Salustiano</td><td>comercial2<span class="display-none">@anti-spam</span>@induforum.es</td></tr>
-        <tr><td>Conci Fernández, Bruno</td><td>comercial3<span class="display-none">@anti-spam</span>@induforum.es</td></tr>
-        <tr><td>Montero García, Beatriz</td><td>comercial4<span class="display-none">@anti-spam</span>@induforum.es</td></tr>
-        <tr><td>Delgado Rodriguez, Paula</td><td>comercial4<span class="display-none">@anti-spam</span>@induforum.es</td></tr>
-        <tr><td>Lucendo Casillas, Jorge</td><td>comercial5<span class="display-none">@anti-spam</span>@induforum.es</td></tr>
-        <tr><td>Barrio Prieto, Daniel</td><td>comercial5<span class="display-none">@anti-spam</span>@induforum.es</td></tr>
-        <tr><td>Gómez-Arroyo Bernabeu de Yeste, Ignacio</td><td>comercial6<span class="display-none">@anti-spam</span>@induforum.es</td></tr>
-        <tr><td>Gonzalez Gamonal, Isabel</td><td>comercial6<span class="display-none">@anti-spam</span>@induforum.es</td></tr>
-        <tr><td>Carvajal Almendros, Celia</td><td>comercial7<span class="display-none">@anti-spam</span>@induforum.es</td></tr>
-        <tr><td>Manzanero Jiménez, Sara</td><td>comercial7<span class="display-none">@anti-spam</span>@induforum.es</td></tr>
-        <tr><td>Salas de Arribas, Guillermo</td><td>comercial8<span class="display-none">@anti-spam</span>@induforum.es</td></tr>
-        <tr><td>Álvarez Luque, Marta</td><td>comercial8<span class="display-none">@anti-spam</span>@induforum.es</td></tr>
-        <tr><td>Marcos Torregrosa, Rodrigo</td><td>comercial9<span class="display-none">@anti-spam</span>@induforum.es</td></tr>
-        <tr><td>López Cuesta, Carlos Alberto</td><td>comercial9<span class="display-none">@anti-spam</span>@induforum.es</td></tr>
+        <tr><td>[[Image:/logo_photo.png|picture|alt=text| ]]</td><td>Portela García, Judit</td><td>info<span class="display-none">@anti-spam</span>@induforum.es</td></tr>
+        <tr><td>[[Image:/logo_photo.png|picture|alt=text| ]]</td><td>Duralde García, Julia</td><td>comercial1<span class="display-none">@anti-spam</span>@induforum.es</td></tr>
+        <tr><td>[[Image:/logo_photo.png|picture|alt=text| ]]</td><td>Dragan, Felicia-Elena</td><td>comercial1<span class="display-none">@anti-spam</span>@induforum.es</td></tr>
+        <tr><td>[[Image:/logo_photo.png|picture|alt=text| ]]</td><td>Carro de la Vega, Patricia</td><td>comercial2<span class="display-none">@anti-spam</span>@induforum.es</td></tr>
+        <tr><td>[[Image:/logo_photo.png|picture|alt=text| ]]</td><td>Larrotcha Pagés, Salustiano</td><td>comercial2<span class="display-none">@anti-spam</span>@induforum.es</td></tr>
+        <tr><td>[[Image:/logo_photo.png|picture|alt=text| ]]</td><td>Conci Fernández, Bruno</td><td>comercial3<span class="display-none">@anti-spam</span>@induforum.es</td></tr>
+        <tr><td>[[Image:/logo_photo.png|picture|alt=text| ]]</td><td>Montero García, Beatriz</td><td>comercial4<span class="display-none">@anti-spam</span>@induforum.es</td></tr>
+        <tr><td>[[Image:/logo_photo.png|picture|alt=text| ]]</td><td>Delgado Rodriguez, Paula</td><td>comercial4<span class="display-none">@anti-spam</span>@induforum.es</td></tr>
+        <tr><td>[[Image:/logo_photo.png|picture|alt=text| ]]</td><td>Lucendo Casillas, Jorge</td><td>comercial5<span class="display-none">@anti-spam</span>@induforum.es</td></tr>
+        <tr><td>[[Image:/logo_photo.png|picture|alt=text| ]]</td><td>Barrio Prieto, Daniel</td><td>comercial5<span class="display-none">@anti-spam</span>@induforum.es</td></tr>
+        <tr><td>[[Image:/logo_photo.png|picture|alt=text| ]]</td><td>Gómez-Arroyo Bernabeu de Yeste, Ignacio</td><td>comercial6<span class="display-none">@anti-spam</span>@induforum.es</td></tr>
+        <tr><td>[[Image:/logo_photo.png|picture|alt=text| ]]</td><td>Gonzalez Gamonal, Isabel</td><td>comercial6<span class="display-none">@anti-spam</span>@induforum.es</td></tr>
+        <tr><td>[[Image:/logo_photo.png|picture|alt=text| ]]</td><td>Carvajal Almendros, Celia</td><td>comercial7<span class="display-none">@anti-spam</span>@induforum.es</td></tr>
+        <tr><td>[[Image:/logo_photo.png|picture|alt=text| ]]</td><td>Manzanero Jiménez, Sara</td><td>comercial7<span class="display-none">@anti-spam</span>@induforum.es</td></tr>
+        <tr><td>[[Image:/logo_photo.png|picture|alt=text| ]]</td><td>Salas de Arribas, Guillermo</td><td>comercial8<span class="display-none">@anti-spam</span>@induforum.es</td></tr>
+        <tr><td>[[Image:/logo_photo.png|picture|alt=text| ]]</td><td>Álvarez Luque, Marta</td><td>comercial8<span class="display-none">@anti-spam</span>@induforum.es</td></tr>
+        <tr><td>[[Image:/logo_photo.png|picture|alt=text| ]]</td><td>Marcos Torregrosa, Rodrigo</td><td>comercial9<span class="display-none">@anti-spam</span>@induforum.es</td></tr>
+        <tr><td>[[Image:/logo_photo.png|picture|alt=text| ]]</td><td>López Cuesta, Carlos Alberto</td><td>comercial9<span class="display-none">@anti-spam</span>@induforum.es</td></tr>
 
 
     </tbody>

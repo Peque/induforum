@@ -9,11 +9,12 @@
 <table>
     <thead>
         <tr>
+        		<th>Photo</th>
             <th>Name</th>
             <th>email</th>
         </tr>
     </thead>
     <tbody>
-        <tr><td>Gili Millán, Coloma</td><td>dep.tecnologico<span class="display-none">@anti-spam</span>@induforum.es</td></tr>
+        <tr><td>[[Image:/logo_photo.png|picture]]</td><td>Gili Millán, Coloma</td><td>dep.tecnologico<span class="display-none">@anti-spam</span>@induforum.es</td></tr>
     </tbody>
 </table>

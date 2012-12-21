@@ -8,15 +8,16 @@
 <table>
     <thead>
         <tr>
+        		<th>Photo</th>
             <th>Name</th>
             <th>email</th>
         </tr>
     </thead>
     <tbody>
-        <tr><td>Mora Aglio, Tomás</td><td>tomas.mora.aglio<span class="display-none">@anti-spam</span>@gmail.com</td></tr>
-        <tr><td>Benito García, Oscar </td><td>oscar.bg.89<span class="display-none">@anti-spam</span>@gmail.com</td></tr>
-        <tr><td>Mediero Clemente, Cristina </td><td> medicris89<span class="display-none">@anti-spam</span>@hotmail.com</td></tr>
-        <tr><td>Bonacasa Aguinaco, Laura </td><td>laurabonacasa<span class="display-none">@anti-spam</span>@gmail.com</td></tr>
-        <tr><td>Molenat Muelas, Melisa</td><td>melisa.molenat<span class="display-none">@anti-spam</span>@gmail.com</td></tr>
+        <tr><td>[[Image:/logo_photo.png|picture|alt=text| ]]</td><td>Mora Aglio, Tomás</td><td>tomas.mora.aglio<span class="display-none">@anti-spam</span>@gmail.com</td></tr>
+        <tr><td>[[Image:/logo_photo.png|picture|alt=text| ]]</td><td>Benito García, Oscar </td><td>oscar.bg.89<span class="display-none">@anti-spam</span>@gmail.com</td></tr>
+        <tr><td>[[Image:/logo_photo.png|picture|alt=text| ]]</td><td>Mediero Clemente, Cristina </td><td> medicris89<span class="display-none">@anti-spam</span>@hotmail.com</td></tr>
+        <tr><td>[[Image:/logo_photo.png|picture|alt=text| ]]</td><td>Bonacasa Aguinaco, Laura </td><td>laurabonacasa<span class="display-none">@anti-spam</span>@gmail.com</td></tr>
+        <tr><td>[[Image:/logo_photo.png|picture|alt=text| ]]</td><td>Molenat Muelas, Melisa</td><td>melisa.molenat<span class="display-none">@anti-spam</span>@gmail.com</td></tr>
     </tbody>
 </table>
