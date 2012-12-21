@@ -22,34 +22,18 @@
 		<h1>Participation</h1>
 	</hgroup>
 </header>
-<nav id="section_nav">
-	<ul>
-		<li><a href="#Sections">1 - Sections</a></li>
-		<li><a href="#Languages">2 - Languages</a></li>
-	</ul>
-</nav>
 <article>
-	<header>
-		<hgroup>
-			<h1 id="Sections">Sections</h1>
-		</hgroup>
-		<hr />
-	</header>
-	<ul>
-		<li><a href="/en/students/participate/personal_data/">Personal data</a></li>
-		<li><a href="/en/students/participate/academic_data/">Academic data</a></li>
-		<li><a href="/en/students/participate/languages/">Languages</a></li>
-		<li><a href="/en/students/participate/proffessional_experience/">Proffessional experience</a></li>
-		<li><a href="/en/students/participate/computer_science/">Computer science</a></li>
-	</ul>
-</article>
-<article>
-	<header>
-		<hgroup>
-			<h1 id="Languages">Languages</h1>
-		</hgroup>
-		<hr />
-	</header>
+	<nav id="participate_nav">
+		<ul>
+			<li><a href="/en/students/participate/personal_data/">Personal</a></li>
+			<li><a href="/en/students/participate/academic_data/">Academic</a></li>
+			<li class="current">Languages</li>
+			<li><a href="/en/students/participate/proffessional_experience/">Professional</a></li>
+			<li><a href="/en/students/participate/computer_science/">Computing</a></li>
+		</ul>
+	</nav>
+	<div id="participate_nav_div"></div>
+
 	<p>
 		<strong>Important note:</strong> Levels according to the <a href="http://en.wikipedia.org/wiki/Common_European_Framework_of_Reference_for_Languages">Common European Framework of Reference for Languages</a> (CEFR).
 	</p>

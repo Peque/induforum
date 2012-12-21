@@ -22,34 +22,17 @@
 		<h1>Participación</h1>
 	</hgroup>
 </header>
-<nav id="section_nav">
-	<ul>
-		<li><a href="#Secciones">1 - Secciones</a></li>
-		<li><a href="#Experiencia_profesional">2 - Experiencia profesional</a></li>
-	</ul>
-</nav>
 <article>
-	<header>
-		<hgroup>
-			<h1 id="Secciones">Secciones</h1>
-		</hgroup>
-		<hr />
-	</header>
-	<ul>
-		<li><a href="/es/students/participate/personal_data/">Datos personales</a></li>
-		<li><a href="/es/students/participate/academic_data/">Datos académicos</a></li>
-		<li><a href="/es/students/participate/languages/">Idiomas</a></li>
-		<li><a href="/es/students/participate/proffessional_experience/">Experiencia profesional</a></li>
-		<li><a href="/es/students/participate/computer_science/">Informática</a></li>
-	</ul>
-</article>
-<article>
-	<header>
-		<hgroup>
-			<h1 id="Experiencia_profesional">Experiencia profesional</h1>
-		</hgroup>
-		<hr />
-	</header>
+	<nav id="participate_nav">
+		<ul>
+			<li><a href="/es/students/participate/personal_data/">Personal</a></li>
+			<li><a href="/es/students/participate/academic_data/">Académico</a></li>
+			<li><a href="/es/students/participate/languages/">Idiomas</a></li>
+			<li class="current">Profesional</li>
+			<li><a href="/es/students/participate/computer_science/">Infomática</a></li>
+		</ul>
+	</nav>
+	<div id="participate_nav_div"></div>
 
 <?php
 
