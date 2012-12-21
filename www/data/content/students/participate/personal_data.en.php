@@ -28,7 +28,7 @@
 			<li class="current">Personal</li>
 			<li><a href="/en/students/participate/academic_data/">Academic</a></li>
 			<li><a href="/en/students/participate/languages/">Languages</a></li>
-			<li><a href="/en/students/participate/proffessional_experience/">Proffessional</a></li>
+			<li><a href="/en/students/participate/proffessional_experience/">Professional</a></li>
 			<li><a href="/en/students/participate/computer_science/">Computing</a></li>
 		</ul>
 	</nav>
