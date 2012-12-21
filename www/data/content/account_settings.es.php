@@ -30,7 +30,7 @@
 		<hr />
 	</header>
 	<p>Para cerrar la sesión, haz click en el siguiente botón:</p>
-	<form action="/en/logout/" method="post">
+	<form action="/es/logout/" method="post">
 		<input type="submit" value="Cerrar sesión" accesskey="x" />
 	</form>
 </article>
