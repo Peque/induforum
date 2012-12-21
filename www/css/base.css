@@ -103,6 +103,11 @@ video {
 img {
 	max-width: 95%;
 }
+img.profile_picture {
+	width: 150px;
+	height: 100px;
+	vertical-align:middle;
+}
 span.note {
 	color: #ff2b2b;
 }
