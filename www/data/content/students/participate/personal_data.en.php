@@ -236,18 +236,18 @@
 				</select>
 				<select name="birthmonth"  required="required" class="singleline">
 					<option value=""></option>
-					<option value="01" <?php if (isset($spd['birthmonth'])&&$spd['birthmonth']=="01") echo 'selected="selected"'?>>01</option>
-					<option value="02" <?php if (isset($spd['birthmonth'])&&$spd['birthmonth']=="02") echo 'selected="selected"'?>>02</option>
-					<option value="03" <?php if (isset($spd['birthmonth'])&&$spd['birthmonth']=="03") echo 'selected="selected"'?>>03</option>
-					<option value="04" <?php if (isset($spd['birthmonth'])&&$spd['birthmonth']=="04") echo 'selected="selected"'?>>04</option>
-					<option value="05" <?php if (isset($spd['birthmonth'])&&$spd['birthmonth']=="05") echo 'selected="selected"'?>>05</option>
-					<option value="06" <?php if (isset($spd['birthmonth'])&&$spd['birthmonth']=="06") echo 'selected="selected"'?>>06</option>
-					<option value="07" <?php if (isset($spd['birthmonth'])&&$spd['birthmonth']=="07") echo 'selected="selected"'?>>07</option>
-					<option value="08" <?php if (isset($spd['birthmonth'])&&$spd['birthmonth']=="08") echo 'selected="selected"'?>>08</option>
-					<option value="09" <?php if (isset($spd['birthmonth'])&&$spd['birthmonth']=="09") echo 'selected="selected"'?>>09</option>
-					<option value="10" <?php if (isset($spd['birthmonth'])&&$spd['birthmonth']=="10") echo 'selected="selected"'?>>10</option>
-					<option value="11" <?php if (isset($spd['birthmonth'])&&$spd['birthmonth']=="11") echo 'selected="selected"'?>>11</option>
-					<option value="12" <?php if (isset($spd['birthmonth'])&&$spd['birthmonth']=="12") echo 'selected="selected"'?>>12</option>
+					<option value="01" <?php if (isset($spd['birthmonth'])&&$spd['birthmonth']=="01") echo 'selected="selected"'?>>January</option>
+					<option value="02" <?php if (isset($spd['birthmonth'])&&$spd['birthmonth']=="02") echo 'selected="selected"'?>>February</option>
+					<option value="03" <?php if (isset($spd['birthmonth'])&&$spd['birthmonth']=="03") echo 'selected="selected"'?>>March</option>
+					<option value="04" <?php if (isset($spd['birthmonth'])&&$spd['birthmonth']=="04") echo 'selected="selected"'?>>April</option>
+					<option value="05" <?php if (isset($spd['birthmonth'])&&$spd['birthmonth']=="05") echo 'selected="selected"'?>>May</option>
+					<option value="06" <?php if (isset($spd['birthmonth'])&&$spd['birthmonth']=="06") echo 'selected="selected"'?>>June</option>
+					<option value="07" <?php if (isset($spd['birthmonth'])&&$spd['birthmonth']=="07") echo 'selected="selected"'?>>July</option>
+					<option value="08" <?php if (isset($spd['birthmonth'])&&$spd['birthmonth']=="08") echo 'selected="selected"'?>>August</option>
+					<option value="09" <?php if (isset($spd['birthmonth'])&&$spd['birthmonth']=="09") echo 'selected="selected"'?>>September</option>
+					<option value="10" <?php if (isset($spd['birthmonth'])&&$spd['birthmonth']=="10") echo 'selected="selected"'?>>October</option>
+					<option value="11" <?php if (isset($spd['birthmonth'])&&$spd['birthmonth']=="11") echo 'selected="selected"'?>>November</option>
+					<option value="12" <?php if (isset($spd['birthmonth'])&&$spd['birthmonth']=="12") echo 'selected="selected"'?>>December</option>
 				</select>
 				<select name="birthyear"  required="required" class="singleline">
 					<option value=""></option>
