@@ -178,18 +178,18 @@
 				<label for="initialdate0" class="singleline">Initial date:<span class="form_required" title="This field is required">*</span></label>
 				<select name="initial_month0" id="initialdate0" class="singleline" required="required">
 					<option value=""></option>
-					<option value="01" <?php if (isset($initialmonth[0])&&$initialmonth[0]=="01") echo 'selected="selected"'?>>01</option>
-					<option value="02" <?php if (isset($initialmonth[0])&&$initialmonth[0]=="02") echo 'selected="selected"'?>>02</option>
-					<option value="03" <?php if (isset($initialmonth[0])&&$initialmonth[0]=="03") echo 'selected="selected"'?>>03</option>
-					<option value="04" <?php if (isset($initialmonth[0])&&$initialmonth[0]=="04") echo 'selected="selected"'?>>04</option>
-					<option value="05" <?php if (isset($initialmonth[0])&&$initialmonth[0]=="05") echo 'selected="selected"'?>>05</option>
-					<option value="06" <?php if (isset($initialmonth[0])&&$initialmonth[0]=="06") echo 'selected="selected"'?>>06</option>
-					<option value="07" <?php if (isset($initialmonth[0])&&$initialmonth[0]=="07") echo 'selected="selected"'?>>07</option>
-					<option value="08" <?php if (isset($initialmonth[0])&&$initialmonth[0]=="08") echo 'selected="selected"'?>>08</option>
-					<option value="09" <?php if (isset($initialmonth[0])&&$initialmonth[0]=="09") echo 'selected="selected"'?>>09</option>
-					<option value="10" <?php if (isset($initialmonth[0])&&$initialmonth[0]=="10") echo 'selected="selected"'?>>10</option>
-					<option value="11" <?php if (isset($initialmonth[0])&&$initialmonth[0]=="11") echo 'selected="selected"'?>>11</option>
-					<option value="12" <?php if (isset($initialmonth[0])&&$initialmonth[0]=="12") echo 'selected="selected"'?>>12</option>
+					<option value="01" <?php if (isset($initialmonth[0])&&$initialmonth[0]=="01") echo 'selected="selected"'?>>January</option>
+					<option value="02" <?php if (isset($initialmonth[0])&&$initialmonth[0]=="02") echo 'selected="selected"'?>>February</option>
+					<option value="03" <?php if (isset($initialmonth[0])&&$initialmonth[0]=="03") echo 'selected="selected"'?>>March</option>
+					<option value="04" <?php if (isset($initialmonth[0])&&$initialmonth[0]=="04") echo 'selected="selected"'?>>April</option>
+					<option value="05" <?php if (isset($initialmonth[0])&&$initialmonth[0]=="05") echo 'selected="selected"'?>>May</option>
+					<option value="06" <?php if (isset($initialmonth[0])&&$initialmonth[0]=="06") echo 'selected="selected"'?>>June</option>
+					<option value="07" <?php if (isset($initialmonth[0])&&$initialmonth[0]=="07") echo 'selected="selected"'?>>July</option>
+					<option value="08" <?php if (isset($initialmonth[0])&&$initialmonth[0]=="08") echo 'selected="selected"'?>>August</option>
+					<option value="09" <?php if (isset($initialmonth[0])&&$initialmonth[0]=="09") echo 'selected="selected"'?>>September</option>
+					<option value="10" <?php if (isset($initialmonth[0])&&$initialmonth[0]=="10") echo 'selected="selected"'?>>October</option>
+					<option value="11" <?php if (isset($initialmonth[0])&&$initialmonth[0]=="11") echo 'selected="selected"'?>>November</option>
+					<option value="12" <?php if (isset($initialmonth[0])&&$initialmonth[0]=="12") echo 'selected="selected"'?>>December</option>
 				</select>
 				<select name="initial_year0" id="initialyear0" class="singleline" required="required" >
 					<option value=""></option>
@@ -211,18 +211,18 @@
 				<label for="finaldate0" class="singleline">Final Date:<span class="form_required" title="This field is required">*</span></label>
 				<select name="final_month0" id="finaldate0" class="singleline" required="required">
 					<option value=""></option>
-					<option value="01" <?php if (isset($finalmonth[0])&&$finalmonth[0]=="01") echo 'selected="selected"'?>>01</option>
-					<option value="02" <?php if (isset($finalmonth[0])&&$finalmonth[0]=="02") echo 'selected="selected"'?>>02</option>
-					<option value="03" <?php if (isset($finalmonth[0])&&$finalmonth[0]=="03") echo 'selected="selected"'?>>03</option>
-					<option value="04" <?php if (isset($finalmonth[0])&&$finalmonth[0]=="04") echo 'selected="selected"'?>>04</option>
-					<option value="05" <?php if (isset($finalmonth[0])&&$finalmonth[0]=="05") echo 'selected="selected"'?>>05</option>
-					<option value="06" <?php if (isset($finalmonth[0])&&$finalmonth[0]=="06") echo 'selected="selected"'?>>06</option>
-					<option value="07" <?php if (isset($finalmonth[0])&&$finalmonth[0]=="07") echo 'selected="selected"'?>>07</option>
-					<option value="08" <?php if (isset($finalmonth[0])&&$finalmonth[0]=="08") echo 'selected="selected"'?>>08</option>
-					<option value="09" <?php if (isset($finalmonth[0])&&$finalmonth[0]=="09") echo 'selected="selected"'?>>09</option>
-					<option value="10" <?php if (isset($finalmonth[0])&&$finalmonth[0]=="10") echo 'selected="selected"'?>>10</option>
-					<option value="11" <?php if (isset($finalmonth[0])&&$finalmonth[0]=="11") echo 'selected="selected"'?>>11</option>
-					<option value="12" <?php if (isset($finalmonth[0])&&$finalmonth[0]=="12") echo 'selected="selected"'?>>12</option>
+					<option value="01" <?php if (isset($finalmonth[0])&&$finalmonth[0]=="01") echo 'selected="selected"'?>>January</option>
+					<option value="02" <?php if (isset($finalmonth[0])&&$finalmonth[0]=="02") echo 'selected="selected"'?>>February</option>
+					<option value="03" <?php if (isset($finalmonth[0])&&$finalmonth[0]=="03") echo 'selected="selected"'?>>March</option>
+					<option value="04" <?php if (isset($finalmonth[0])&&$finalmonth[0]=="04") echo 'selected="selected"'?>>April</option>
+					<option value="05" <?php if (isset($finalmonth[0])&&$finalmonth[0]=="05") echo 'selected="selected"'?>>May</option>
+					<option value="06" <?php if (isset($finalmonth[0])&&$finalmonth[0]=="06") echo 'selected="selected"'?>>June</option>
+					<option value="07" <?php if (isset($finalmonth[0])&&$finalmonth[0]=="07") echo 'selected="selected"'?>>July</option>
+					<option value="08" <?php if (isset($finalmonth[0])&&$finalmonth[0]=="08") echo 'selected="selected"'?>>August</option>
+					<option value="09" <?php if (isset($finalmonth[0])&&$finalmonth[0]=="09") echo 'selected="selected"'?>>September</option>
+					<option value="10" <?php if (isset($finalmonth[0])&&$finalmonth[0]=="10") echo 'selected="selected"'?>>October</option>
+					<option value="11" <?php if (isset($finalmonth[0])&&$finalmonth[0]=="11") echo 'selected="selected"'?>>November</option>
+					<option value="12" <?php if (isset($finalmonth[0])&&$finalmonth[0]=="12") echo 'selected="selected"'?>>December</option>
 				</select>
 				<select name="final_year0" id="finalyear0" class="singleline" required="required">
 					<option value=""></option>
@@ -252,18 +252,18 @@
 				<label for="initialdate1" class="singleline">Initial date:</label>
 				<select name="initial_month1" id="initialdate1" class="singleline" >
 					<option value=""></option>
-					<option value="01" <?php if (isset($initialmonth[1])&&$initialmonth[1]=="01") echo 'selected="selected"'?>>01</option>
-					<option value="02" <?php if (isset($initialmonth[1])&&$initialmonth[1]=="02") echo 'selected="selected"'?>>02</option>
-					<option value="03" <?php if (isset($initialmonth[1])&&$initialmonth[1]=="03") echo 'selected="selected"'?>>03</option>
-					<option value="04" <?php if (isset($initialmonth[1])&&$initialmonth[1]=="04") echo 'selected="selected"'?>>04</option>
-					<option value="05" <?php if (isset($initialmonth[1])&&$initialmonth[1]=="05") echo 'selected="selected"'?>>05</option>
-					<option value="06" <?php if (isset($initialmonth[1])&&$initialmonth[1]=="06") echo 'selected="selected"'?>>06</option>
-					<option value="07" <?php if (isset($initialmonth[1])&&$initialmonth[1]=="07") echo 'selected="selected"'?>>07</option>
-					<option value="08" <?php if (isset($initialmonth[1])&&$initialmonth[1]=="08") echo 'selected="selected"'?>>08</option>
-					<option value="09" <?php if (isset($initialmonth[1])&&$initialmonth[1]=="09") echo 'selected="selected"'?>>09</option>
-					<option value="10" <?php if (isset($initialmonth[1])&&$initialmonth[1]=="10") echo 'selected="selected"'?>>10</option>
-					<option value="11" <?php if (isset($initialmonth[1])&&$initialmonth[1]=="11") echo 'selected="selected"'?>>11</option>
-					<option value="12" <?php if (isset($initialmonth[1])&&$initialmonth[1]=="12") echo 'selected="selected"'?>>12</option>
+					<option value="01" <?php if (isset($initialmonth[1])&&$initialmonth[1]=="01") echo 'selected="selected"'?>>January</option>
+					<option value="02" <?php if (isset($initialmonth[1])&&$initialmonth[1]=="02") echo 'selected="selected"'?>>February</option>
+					<option value="03" <?php if (isset($initialmonth[1])&&$initialmonth[1]=="03") echo 'selected="selected"'?>>March</option>
+					<option value="04" <?php if (isset($initialmonth[1])&&$initialmonth[1]=="04") echo 'selected="selected"'?>>April</option>
+					<option value="05" <?php if (isset($initialmonth[1])&&$initialmonth[1]=="05") echo 'selected="selected"'?>>May</option>
+					<option value="06" <?php if (isset($initialmonth[1])&&$initialmonth[1]=="06") echo 'selected="selected"'?>>June</option>
+					<option value="07" <?php if (isset($initialmonth[1])&&$initialmonth[1]=="07") echo 'selected="selected"'?>>July</option>
+					<option value="08" <?php if (isset($initialmonth[1])&&$initialmonth[1]=="08") echo 'selected="selected"'?>>August</option>
+					<option value="09" <?php if (isset($initialmonth[1])&&$initialmonth[1]=="09") echo 'selected="selected"'?>>September</option>
+					<option value="10" <?php if (isset($initialmonth[1])&&$initialmonth[1]=="10") echo 'selected="selected"'?>>October</option>
+					<option value="11" <?php if (isset($initialmonth[1])&&$initialmonth[1]=="11") echo 'selected="selected"'?>>November</option>
+					<option value="12" <?php if (isset($initialmonth[1])&&$initialmonth[1]=="12") echo 'selected="selected"'?>>December</option>
 				</select>
 				<select name="initial_year1" id="initialyear1" class="singleline" >
 					<option value=""></option>
@@ -285,18 +285,18 @@
 				<label for="finaldate1" class="singleline">Final Date:</label>
 				<select name="final_month1" id="finaldate1" class="singleline">
 					<option value=""></option>
-					<option value="01" <?php if (isset($finalmonth[1])&&$finalmonth[1]=="01") echo 'selected="selected"'?>>01</option>
-					<option value="02" <?php if (isset($finalmonth[1])&&$finalmonth[1]=="02") echo 'selected="selected"'?>>02</option>
-					<option value="03" <?php if (isset($finalmonth[1])&&$finalmonth[1]=="03") echo 'selected="selected"'?>>03</option>
-					<option value="04" <?php if (isset($finalmonth[1])&&$finalmonth[1]=="04") echo 'selected="selected"'?>>04</option>
-					<option value="05" <?php if (isset($finalmonth[1])&&$finalmonth[1]=="05") echo 'selected="selected"'?>>05</option>
-					<option value="06" <?php if (isset($finalmonth[1])&&$finalmonth[1]=="06") echo 'selected="selected"'?>>06</option>
-					<option value="07" <?php if (isset($finalmonth[1])&&$finalmonth[1]=="07") echo 'selected="selected"'?>>07</option>
-					<option value="08" <?php if (isset($finalmonth[1])&&$finalmonth[1]=="08") echo 'selected="selected"'?>>08</option>
-					<option value="09" <?php if (isset($finalmonth[1])&&$finalmonth[1]=="09") echo 'selected="selected"'?>>09</option>
-					<option value="10" <?php if (isset($finalmonth[1])&&$finalmonth[1]=="10") echo 'selected="selected"'?>>10</option>
-					<option value="11" <?php if (isset($finalmonth[1])&&$finalmonth[1]=="11") echo 'selected="selected"'?>>11</option>
-					<option value="12" <?php if (isset($finalmonth[1])&&$finalmonth[1]=="12") echo 'selected="selected"'?>>12</option>
+					<option value="01" <?php if (isset($finalmonth[1])&&$finalmonth[1]=="01") echo 'selected="selected"'?>>January</option>
+					<option value="02" <?php if (isset($finalmonth[1])&&$finalmonth[1]=="02") echo 'selected="selected"'?>>February</option>
+					<option value="03" <?php if (isset($finalmonth[1])&&$finalmonth[1]=="03") echo 'selected="selected"'?>>March</option>
+					<option value="04" <?php if (isset($finalmonth[1])&&$finalmonth[1]=="04") echo 'selected="selected"'?>>April</option>
+					<option value="05" <?php if (isset($finalmonth[1])&&$finalmonth[1]=="05") echo 'selected="selected"'?>>May</option>
+					<option value="06" <?php if (isset($finalmonth[1])&&$finalmonth[1]=="06") echo 'selected="selected"'?>>June</option>
+					<option value="07" <?php if (isset($finalmonth[1])&&$finalmonth[1]=="07") echo 'selected="selected"'?>>July</option>
+					<option value="08" <?php if (isset($finalmonth[1])&&$finalmonth[1]=="08") echo 'selected="selected"'?>>August</option>
+					<option value="09" <?php if (isset($finalmonth[1])&&$finalmonth[1]=="09") echo 'selected="selected"'?>>September</option>
+					<option value="10" <?php if (isset($finalmonth[1])&&$finalmonth[1]=="10") echo 'selected="selected"'?>>October</option>
+					<option value="11" <?php if (isset($finalmonth[1])&&$finalmonth[1]=="11") echo 'selected="selected"'?>>November</option>
+					<option value="12" <?php if (isset($finalmonth[1])&&$finalmonth[1]=="12") echo 'selected="selected"'?>>December</option>
 				</select>
 				<select name="final_year1" id="finalyear1" class="singleline" >
 					<option value=""></option>
@@ -326,18 +326,18 @@
 				<label for="initialdate2" class="singleline">Initial date:</label>
 				<select name="initial_month2" id="initialdate2" class="singleline" >
 					<option value=""></option>
-					<option value="01" <?php if (isset($initialmonth[2])&&$initialmonth[2]=="01") echo 'selected="selected"'?>>01</option>
-					<option value="02" <?php if (isset($initialmonth[2])&&$initialmonth[2]=="02") echo 'selected="selected"'?>>02</option>
-					<option value="03" <?php if (isset($initialmonth[2])&&$initialmonth[2]=="03") echo 'selected="selected"'?>>03</option>
-					<option value="04" <?php if (isset($initialmonth[2])&&$initialmonth[2]=="04") echo 'selected="selected"'?>>04</option>
-					<option value="05" <?php if (isset($initialmonth[2])&&$initialmonth[2]=="05") echo 'selected="selected"'?>>05</option>
-					<option value="06" <?php if (isset($initialmonth[2])&&$initialmonth[2]=="06") echo 'selected="selected"'?>>06</option>
-					<option value="07" <?php if (isset($initialmonth[2])&&$initialmonth[2]=="07") echo 'selected="selected"'?>>07</option>
-					<option value="08" <?php if (isset($initialmonth[2])&&$initialmonth[2]=="08") echo 'selected="selected"'?>>08</option>
-					<option value="09" <?php if (isset($initialmonth[2])&&$initialmonth[2]=="09") echo 'selected="selected"'?>>09</option>
-					<option value="10" <?php if (isset($initialmonth[2])&&$initialmonth[2]=="10") echo 'selected="selected"'?>>10</option>
-					<option value="11" <?php if (isset($initialmonth[2])&&$initialmonth[2]=="11") echo 'selected="selected"'?>>11</option>
-					<option value="12" <?php if (isset($initialmonth[2])&&$initialmonth[2]=="12") echo 'selected="selected"'?>>12</option>
+					<option value="01" <?php if (isset($initialmonth[2])&&$initialmonth[2]=="01") echo 'selected="selected"'?>>January</option>
+					<option value="02" <?php if (isset($initialmonth[2])&&$initialmonth[2]=="02") echo 'selected="selected"'?>>February</option>
+					<option value="03" <?php if (isset($initialmonth[2])&&$initialmonth[2]=="03") echo 'selected="selected"'?>>March</option>
+					<option value="04" <?php if (isset($initialmonth[2])&&$initialmonth[2]=="04") echo 'selected="selected"'?>>April</option>
+					<option value="05" <?php if (isset($initialmonth[2])&&$initialmonth[2]=="05") echo 'selected="selected"'?>>May</option>
+					<option value="06" <?php if (isset($initialmonth[2])&&$initialmonth[2]=="06") echo 'selected="selected"'?>>June</option>
+					<option value="07" <?php if (isset($initialmonth[2])&&$initialmonth[2]=="07") echo 'selected="selected"'?>>July</option>
+					<option value="08" <?php if (isset($initialmonth[2])&&$initialmonth[2]=="08") echo 'selected="selected"'?>>August</option>
+					<option value="09" <?php if (isset($initialmonth[2])&&$initialmonth[2]=="09") echo 'selected="selected"'?>>September</option>
+					<option value="10" <?php if (isset($initialmonth[2])&&$initialmonth[2]=="10") echo 'selected="selected"'?>>October</option>
+					<option value="11" <?php if (isset($initialmonth[2])&&$initialmonth[2]=="11") echo 'selected="selected"'?>>November</option>
+					<option value="12" <?php if (isset($initialmonth[2])&&$initialmonth[2]=="12") echo 'selected="selected"'?>>December</option>
 				</select>
 				<select name="initial_year2" id="initialyear2" class="singleline" >
 					<option value=""></option>
@@ -359,18 +359,18 @@
 				<label for="finaldate2" class="singleline">Final Date:</label>
 				<select name="final_month2" id="finaldate2" class="singleline">
 					<option value=""></option>
-					<option value="01" <?php if (isset($finalmonth[2])&&$finalmonth[2]=="01") echo 'selected="selected"'?>>01</option>
-					<option value="02" <?php if (isset($finalmonth[2])&&$finalmonth[2]=="02") echo 'selected="selected"'?>>02</option>
-					<option value="03" <?php if (isset($finalmonth[2])&&$finalmonth[2]=="03") echo 'selected="selected"'?>>03</option>
-					<option value="04" <?php if (isset($finalmonth[2])&&$finalmonth[2]=="04") echo 'selected="selected"'?>>04</option>
-					<option value="05" <?php if (isset($finalmonth[2])&&$finalmonth[2]=="05") echo 'selected="selected"'?>>05</option>
-					<option value="06" <?php if (isset($finalmonth[2])&&$finalmonth[2]=="06") echo 'selected="selected"'?>>06</option>
-					<option value="07" <?php if (isset($finalmonth[2])&&$finalmonth[2]=="07") echo 'selected="selected"'?>>07</option>
-					<option value="08" <?php if (isset($finalmonth[2])&&$finalmonth[2]=="08") echo 'selected="selected"'?>>08</option>
-					<option value="09" <?php if (isset($finalmonth[2])&&$finalmonth[2]=="09") echo 'selected="selected"'?>>09</option>
-					<option value="10" <?php if (isset($finalmonth[2])&&$finalmonth[2]=="10") echo 'selected="selected"'?>>10</option>
-					<option value="11" <?php if (isset($finalmonth[2])&&$finalmonth[2]=="11") echo 'selected="selected"'?>>11</option>
-					<option value="12" <?php if (isset($finalmonth[2])&&$finalmonth[2]=="12") echo 'selected="selected"'?>>12</option>
+					<option value="01" <?php if (isset($finalmonth[2])&&$finalmonth[2]=="01") echo 'selected="selected"'?>>January</option>
+					<option value="02" <?php if (isset($finalmonth[2])&&$finalmonth[2]=="02") echo 'selected="selected"'?>>February</option>
+					<option value="03" <?php if (isset($finalmonth[2])&&$finalmonth[2]=="03") echo 'selected="selected"'?>>March</option>
+					<option value="04" <?php if (isset($finalmonth[2])&&$finalmonth[2]=="04") echo 'selected="selected"'?>>April</option>
+					<option value="05" <?php if (isset($finalmonth[2])&&$finalmonth[2]=="05") echo 'selected="selected"'?>>May</option>
+					<option value="06" <?php if (isset($finalmonth[2])&&$finalmonth[2]=="06") echo 'selected="selected"'?>>June</option>
+					<option value="07" <?php if (isset($finalmonth[2])&&$finalmonth[2]=="07") echo 'selected="selected"'?>>July</option>
+					<option value="08" <?php if (isset($finalmonth[2])&&$finalmonth[2]=="08") echo 'selected="selected"'?>>August</option>
+					<option value="09" <?php if (isset($finalmonth[2])&&$finalmonth[2]=="09") echo 'selected="selected"'?>>September</option>
+					<option value="10" <?php if (isset($finalmonth[2])&&$finalmonth[2]=="10") echo 'selected="selected"'?>>October</option>
+					<option value="11" <?php if (isset($finalmonth[2])&&$finalmonth[2]=="11") echo 'selected="selected"'?>>November</option>
+					<option value="12" <?php if (isset($finalmonth[2])&&$finalmonth[2]=="12") echo 'selected="selected"'?>>December</option>
 				</select>
 				<select name="final_year2" id="finalyear2" class="singleline" >
 					<option value=""></option>
