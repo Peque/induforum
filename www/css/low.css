@@ -61,6 +61,12 @@
 	padding-top: 1em;
 }
 
+/********************************* Participate *********************************/
+#content nav#participate_nav li.current,
+#content nav#participate_nav a {
+	padding: .5em .5em;
+}
+
 /*********************************** Section ***********************************/
 #content {
 	border-radius: 0;

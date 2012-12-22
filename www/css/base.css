@@ -255,38 +255,41 @@ time.news_pubdate {
 }
 
 /********************************* Participate *********************************/
-#participate_nav li {
+#content nav#participate_nav ul {
+	margin: 0;
+}
+#content nav#participate_nav li {
 	float: left;
 	display: block;
 	color: #609098;
 	background: #E6FAFF;
 	border: .1em solid #000099;
-	border-bottom: none;
 	border-radius: .5em .5em 0 0;
 }
-#participate_nav li.current {
+#content nav#participate_nav li.current {
 	padding: .5em 1em;
 	background: #ffffff;
+	border-bottom: none;
 }
-#participate_nav a {
+#content nav#participate_nav a {
 	display: block;
 	color: #FFFFFF;
 	padding: .5em 1em;
 	text-decoration: none;
 	border-radius: .5em .5em 0 0;
 }
-#participate_nav a:hover,
-#participate_nav a:focus {
+#content nav#participate_nav a:hover,
+#content nav#participate_nav a:focus {
 	color: #00478F;
 	background: #CCEBF5;
 }
-#participate_nav li a:visited,
-#participate_nav li a:focus {
+#content nav#participate_nav li a:visited,
+#content nav#participate_nav li a:focus {
 	color: #00478F;
 }
 #participate_nav_div {
 	clear: both;
-	border-bottom: 1px solid black;
+
 }
 
 /*********************************** Section ***********************************/
