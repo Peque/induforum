@@ -23,7 +23,7 @@ var sponsors = [
 	{
 		company: "L'Oréal",
 		website: "http://www.loreal.com/",
-		image: "l'oréal"
+		image: "loreal"
 	},
 
 	{
