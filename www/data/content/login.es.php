@@ -29,7 +29,7 @@
 
 	<p>
 		Si tienes algún problema para registrarte ponte en contacto con:
-				<tr><td>dep.tecnologico<span class="display-none">@anti-spam</span>@induforum.es</td></tr>
+				<code><em>dep.tecnologico</em><span class="display-none">@anti-spam</span><em>@induforum.es</em></code>
 	</p>
 <?php
 

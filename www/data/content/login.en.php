@@ -28,7 +28,7 @@
 	</p>
 	<p>
 		If you have a trouble to register, contact to:
-		 <tr><td>dep.tecnologico<span class="display-none">@anti-spam</span>@induforum.es</td></tr>
+		 <code><em>dep.tecnologico</em><span class="display-none">@anti-spam</span><em>@induforum.es</em></code>
 	</p>
 <?php
 
