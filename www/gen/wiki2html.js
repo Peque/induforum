@@ -151,7 +151,10 @@ function inlineElement(wikicode)
 			var params = [];
 			if (typeof(tokens[0]) != 'undefined') params[0] = tokens[0];
 			if (typeof(tokens[1]) != 'undefined') params[1] = tokens[1];
-			if (typeof(tokens[2]) != 'undefined') params[2] = ' src="/images' + tokens[2] + '" ';
+			if (typeof(tokens[2]) != 'undefined') {
+				if (tokens[2].indexOf("://") == -1) params[2] = ' src="/images' + tokens[2] + '" ';
+				else params[2] = ' src="' + tokens[2] + '" ';
+			}
 			if (typeof(tokens[3]) != 'undefined') params[3] = ' class="' + tokens[3].replace('|', '') + '" ';
 			if (typeof(tokens[4]) != 'undefined') params[4] = ' alt="' + tokens[4].replace('|alt=', '') + '" ';
 			if (typeof(tokens[5]) != 'undefined') params[5] = '<figcaption>' + tokens[5].replace('|', '') + '</figcaption>';
