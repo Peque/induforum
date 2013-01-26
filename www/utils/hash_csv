@@ -22,8 +22,7 @@
 #
 
 #
-# Assuming the CSV columns are 'registration_number', 'password' and
-# 'induforum_year', respectively.
+# Assuming the CSV columns are 'id' and 'password', respectively.
 #
 
 
@@ -33,12 +32,10 @@ while read pipe_line; do
 
 	reg_num=$(echo $pipe_line | awk '{ print $1 }')
 	pass=$(echo $pipe_line | awk '{ print $2 }')
-	year=$(echo $pipe_line | awk '{ print $3 }')
 
 	hashed_pass=$(echo -n "${salt}${pass}" | sha512sum - | sed 's/ .*$//')
 
 	echo -ne "$reg_num\t"
-	echo -ne "$hashed_pass\t"
-	echo -e "$year"
+	echo -e "$hashed_pass"
 
 done

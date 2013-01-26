@@ -4,13 +4,13 @@
 
 	// Check user logged in
 	if (!isset($_SESSION['user_id'])) {
-		header('Location: /en/login/');
+		header('Location: /es/login/');
 		exit;
 	}
 
 	// Check user privileges
 	if ($_SESSION['type'] != 'student_session') {
-		header('Location: /en/restricted_area/');
+		header('Location: /es/restricted_area/');
 		exit;
 	}
 
@@ -28,7 +28,7 @@
 			<li><a href="/es/students/participate/personal_data/">Personal</a></li>
 			<li><a href="/es/students/participate/academic_data/">Académico</a></li>
 			<li class="current">Idiomas</li>
-			<li><a href="/es/students/participate/proffessional_experience/">Profesional</a></li>
+			<li><a href="/es/students/participate/professional_experience/">Profesional</a></li>
 			<li><a href="/es/students/participate/computer_science/">Infomática</a></li>
 		</ul>
 	</nav>
@@ -38,114 +38,7 @@
 		<strong>Nota importante:</strong> Niveles de acuerdo con el <a href="http://es.wikipedia.org/wiki/Marco_com%C3%BAn_europeo_de_referencia_para_las_lenguas">Marco Común Europeo de Referencia para las Lenguas</a> (MCERL).
 	</p>
 
-<?php
-
-	$student_number = $_SESSION['user_id'];
-
-	require_once('../../../config.php');
-
-	// Connect to the database
-	$db = mysqli_connect($db_server, $db_user, $db_pass, $db_name);
-
-	// Check for database connection errors
-	if (mysqli_connect_errno()) {
-
-		echo '<p class="error"><strong>Error: </strong>could not connect to the database. Please, try again later.</p>';
-
-	}
-
-	if (!mysqli_set_charset($db, 'utf8')) {
-
-		echo '<p class="error"><strong>Error: </strong>could not set charset to UTF8. Please, try again later.</p>';
-
-	}
-
-	if (isset($_POST['type']) && $_POST['type'] == 'student_languages') {
-		//Try to delete all rows
-			$query = "delete from languages where student_number='".$student_number."'";
-			mysqli_query($db, $query);
-
-		$writing_success = 1;
-
-		$num_results = mysqli_real_escape_string($db, trim($_POST['languages']));
-
-		// Form data overrides any other data
-		for ($j=0;$j<$num_results;$j++){
-
-			$language[$j] = mysqli_real_escape_string($db, trim($_POST['language'.$j]));
-			$listening[$j] = mysqli_real_escape_string($db, trim($_POST['listening'.$j]));
-			$reading[$j] = mysqli_real_escape_string($db, trim($_POST['reading'.$j]));
-			$interaction[$j] = mysqli_real_escape_string($db, trim($_POST['spoken_interaction'.$j]));
-			$production[$j] = mysqli_real_escape_string($db, trim($_POST['spoken_production'.$j]));
-			$writing[$j] = mysqli_real_escape_string($db, trim($_POST['writing'.$j]));
-
-			// Check if all fields have a non-empty value
-			if ($language[$j] != "" &&
-				$listening[$j] != "" &&
-				$reading[$j] != "" &&
-				$interaction[$j] != "" &&
-				$production[$j] != "" &&
-				$writing[$j] != "") {
-
-				// Try to add a new row
-				$query = "insert into languages values
-										('".$student_number."',
-										'".$language[$j]."',
-										'".$listening[$j]."',
-										'".$reading[$j]."',
-										'".$interaction[$j]."',
-										'".$production[$j]."',
-										'".$writing[$j]."')";
-
-
-				$result = mysqli_query($db, $query);
-				// Inform the user about the operation
-				if (!$result) $writing_success = 0;
-
-			} else {
-
-				// Need to fill more fields in the form
-				echo '<p class="warning">Please, fill all the required fields in the form!</p>';
-
-			}
-
-		}
-
-		if ($writing_success) echo '<p class="info">Data saved successfuly.</p>';
-		else echo '<p class="error"><strong>Error: </strong>could not write to the database. Please, try again later.</p>';
-
-	} else {
-
-		// Try to get data from the database
-		$query = "select * from languages where student_number='".$student_number."'";
-		$result = mysqli_query($db, $query);
-
-		if ($result) {
-
-			$num_results = mysqli_num_rows($result);
-
-			for ($i=0; $i<$num_results; $i++) {
-
-				$row = mysqli_fetch_assoc($result);
-
-				$language[$i] = $row['language'];
-				$listening[$i] = $row['listening'];
-				$reading[$i] = $row['reading'];
-				$interaction[$i] = $row['spoken_interaction'];
-				$production[$i] = $row['spoken_production'];
-				$writing[$i] = $row['writing'];
-
-			}
-
-		}
-
-	}
-
-	// Close database connection
-	mysqli_free_result($result);
-	mysqli_close($db);
-
-?>
+<?php require_once('../../../data/languages.php'); ?>
 
 	<form action="" method="post">
 		<fieldset>

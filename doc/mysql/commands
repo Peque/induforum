@@ -1,23 +1,16 @@
 $ git update-index --assume-unchanged www/config.php
-$ mysql -u root -p
+$ mysql --default-character-set=utf8 --local-infile -u root -p
 mysql> create user 'induforum'@'localhost' identified by '****';
 mysql> create database induforum character set utf8 collate utf8_general_ci;
 mysql> grant select,insert,delete,update on induforum.* to induforum identified by '****';
 mysql> use induforum;
-mysql> create table companies(
-         company_number int unsigned not null auto_increment primary key,
-         user char(20) not null,
-         password char(128) not null,
-         induforum_year year not null
+mysql> create table users(
+         number int unsigned not null auto_increment primary key,
+         id char(20) not null unique,
+         password char(128) not null
        );
-mysql> create table students(
-         student_number int unsigned not null auto_increment primary key,
-         registration_number char(10) not null,
-         password char(128) not null,
-         induforum_year year not null
-       );
-mysql> create table personal_data(
-         student_number int unsigned not null primary key,
+mysql> create table students_personal_data(
+         user int unsigned not null primary key,
          name char(30) not null,
          surname char(60) not null,
          birth date not null,
@@ -29,35 +22,35 @@ mysql> create table personal_data(
          phone char(20) not null,
          email char(50) not null
        );
-mysql> create table academic_data(
-         student_number int unsigned not null primary key,
+mysql> create table students_academic_data(
+         user int unsigned not null primary key,
          studies char(50) not null,
          higher_course tinyint not null,
          speciality char(50) not null,
          begin_year year not null,
          additional_information text(500)
        );
-mysql> create table work_experience(
-         student_number int unsigned not null,
+mysql> create table students_work_experience(
+         user int unsigned not null,
          initial_date date not null,
          final_date date not null,
          company char(30) not null,
          job char(60) not null,
          description_experience text(500),
-         primary key (student_number,initial_date,company)
+         primary key (user,initial_date,company)
        );
-mysql> create table languages(
-         student_number int unsigned not null,
+mysql> create table students_languages(
+         user int unsigned not null,
          language char(20) not null,
          listening char(2) not null,
          reading char(2) not null,
          spoken_interaction char(2) not null,
          spoken_production char(2) not null,
          writing char(2) not null,
-         primary key (student_number,language)
+         primary key (user,language)
        );
-mysql> create table computing_experience(
-         student_number int unsigned not null primary key,
+mysql> create table students_computing_experience(
+         user int unsigned not null primary key,
          windows tinyint unsigned not null,
          mac tinyint unsigned not null,
          linux tinyint unsigned not null,
@@ -74,8 +67,8 @@ mysql> create table computing_experience(
          simulation tinyint unsigned not null,
          communications_networks tinyint unsigned not null
        );
-mysql> create table other_information(
-         student_number int unsigned not null primary key,
+mysql> create table students_other_information(
+         user int unsigned not null primary key,
          driving_license bit not null,
          traveling bit not null,
          schedule tinyint not null,
@@ -83,5 +76,5 @@ mysql> create table other_information(
        );
 mysql> load data
          local infile "~/students.csv"
-         into table students (registration_number,password,induforum_year)
+         into table students (id,password)
        ;

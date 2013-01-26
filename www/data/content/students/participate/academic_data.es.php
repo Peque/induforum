@@ -4,13 +4,13 @@
 
 	// Check user logged in
 	if (!isset($_SESSION['user_id'])) {
-		header('Location: /en/login/');
+		header('Location: /es/login/');
 		exit;
 	}
 
 	// Check user privileges
 	if ($_SESSION['type'] != 'student_session') {
-		header('Location: /en/restricted_area/');
+		header('Location: /es/restricted_area/');
 		exit;
 	}
 
@@ -28,114 +28,13 @@
 			<li><a href="/es/students/participate/personal_data/">Personal</a></li>
 			<li class="current">Académico</li>
 			<li><a href="/es/students/participate/languages/">Idiomas</a></li>
-			<li><a href="/es/students/participate/proffessional_experience/">Profesional</a></li>
+			<li><a href="/es/students/participate/professional_experience/">Profesional</a></li>
 			<li><a href="/es/students/participate/computer_science/">Infomática</a></li>
 		</ul>
 	</nav>
 	<div id="participate_nav_div"></div>
 
-<?php
-
-	$student_number = $_SESSION['user_id'];
-
-	require_once('../../../config.php');
-
-	// Connect to the database
-	$db = mysqli_connect($db_server, $db_user, $db_pass, $db_name);
-
-	// Check for database connection errors
-	if (mysqli_connect_errno()) {
-
-		echo '<p class="error"><strong>Error: </strong>could not connect to the database. Please, try again later.</p>';
-
-	}
-
-	if (!mysqli_set_charset($db, 'utf8')) {
-
-		echo '<p class="error"><strong>Error: </strong>could not set charset to UTF8. Please, try again later.</p>';
-
-	}
-
-	if (isset($_POST['type']) && $_POST['type'] == 'student_academic_data') {
-
-		// Form data overrides any other data
-
-		$spd['studies'] = mysqli_real_escape_string($db, trim($_POST['studies']));
-		$spd['higher_course'] = mysqli_real_escape_string($db, trim($_POST['higher_course']));
-		$spd['speciality'] = mysqli_real_escape_string($db, trim($_POST['speciality']));
-		$spd['begin_year'] = mysqli_real_escape_string($db, trim($_POST['begin_year']));
-		$spd['additional_information'] = mysqli_real_escape_string($db, trim($_POST['additional_information']));
-
-		// Check if all fields have a non-empty value
-		if ($spd['studies'] != "" &&
-			$spd['higher_course'] != "" &&
-			$spd['speciality'] != "" &&
-			$spd['begin_year'] != "") {
-
-			// Try to add a new row
-			$query = "insert into academic_data values
-									('".$student_number."',
-									'".$spd['studies']."',
-									'".$spd['higher_course']."',
-									'".$spd['speciality']."',
-									'".$spd['begin_year']."',
-									'".$spd['additional_information']."')";
-			// Check if we wrote the new row, otherwise, data existed for this student
-			$result = mysqli_query($db, $query);
-
-			// If data existed for this student, update it
-			if (!$result) {
-				$query = "update academic_data set
-						   studies='".$spd['studies']."',
-						   higher_course='".$spd['higher_course']."',
-						   speciality='".$spd['speciality']."',
-						   begin_year='".$spd['begin_year']."',
-						   additional_information='".$spd['additional_information']."'
-						   where student_number='".$student_number."'";
-				$result = mysqli_query($db, $query);
-			}
-
-			// Inform the user about the operation
-			if ($result) echo '<p class="info">Data saved successfuly.</p>';
-			else echo '<p class="error"><strong>Error: </strong>could not write to the database. Please, try again later.</p>';
-
-		} else {
-
-			// Need to fill more fields in the form
-			echo '<p class="warning">Please, fill all the required fields in the form!</p>';
-
-		}
-
-	} else {
-
-		// Try to get data from the database
-		$query = "select * from academic_data where student_number='".$student_number."'";
-		$result = mysqli_query($db, $query);
-
-		if ($result) {
-
-			$num_results = mysqli_num_rows($result);
-
-			for ($i=0; $i<$num_results; $i++) { // $num_results should be 1 in this case
-
-				$row = mysqli_fetch_assoc($result);
-
-				$spd['studies'] = $row['studies'];
-				$spd['higher_course'] = $row['higher_course'];
-				$spd['speciality'] = $row['speciality'];
-				$spd['begin_year'] = $row['begin_year'];
-				$spd['additional_information'] = $row['additional_information'];
-			}
-
-		}
-
-	}
-
-	// Close database connection
-	mysqli_free_result($result);
-	mysqli_close($db);
-
-?>
+<?php require_once('../../../data/academic_data.php'); ?>
 
 	<form action="" method="post">
 		<fieldset>

@@ -43,76 +43,7 @@
 	</header>
 	<p>For security reasons, we recommend you to change the default password.</p>
 
-<?php
-
-	if (isset($_POST['type']) && $_POST['type'] == 'password_change') {
-
-		require_once('../config.php');
-
-		// Connect to the database
-		$db = mysqli_connect($db_server, $db_user, $db_pass, $db_name);
-
-		// Check for database connection errors
-		if (mysqli_connect_errno()) {
-
-			echo '<p class="error"><strong>Error: </strong>could not connect to the database. Please, try again later.</p>';
-
-		}
-
-		if (!mysqli_set_charset($db, 'utf8')) {
-
-			echo '<p class="error"><strong>Error: </strong>could not set charset to UTF8. Please, try again later.</p>';
-
-		}
-
-
-		// Check if all fields have a non-empty value
-		if ($_POST['old_pass'] != "" &&
-			$_POST['new_pass'] != "" &&
-			$_POST['new_pass_verif'] != "") {
-
-			// New password verification
-			if ($_POST['new_pass'] == $_POST['new_pass_verif']) {
-
-				// Try to get data from the users database
-				$query = "select * from students where student_number='".$_SESSION['user_id']."'";
-				$result = mysqli_query($db, $query);
-				$row = mysqli_fetch_assoc($result);
-
-				if (hash('sha512', $db_salt.$_POST['old_pass']) == $row['password']) {
-
-					$query = "update students set password='".hash('sha512', $db_salt.$_POST['new_pass'])."' where student_number='".$_SESSION['user_id']."'";
-					$result = mysqli_query($db, $query);
-
-					if ($result) echo '<p class="info">Your password has been changed successfuly!</p>';
-					else echo '<p class="error"><strong>Error: </strong>could not write to the database. Please, try again later.</p>';
-
-				} else {
-
-					echo '<p class="warning">Wrong password! Please, provide your old password in order to change it.</p>';
-
-				}
-
-			} else {
-
-				echo '<p class="warning">Passwords do not match!</p>';
-
-			}
-
-		} else {
-
-			// Need to fill more fields in the form
-			echo '<p class="warning">Please, fill all the required fields in the form!</p>';
-
-		}
-
-		// Close database connection
-		mysqli_free_result($result);
-		mysqli_close($db);
-
-	}
-
-?>
+<?php require_once('../data/account_settings.php'); ?>
 
 	<form action="" method="post">
 		<fieldset>

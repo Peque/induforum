@@ -4,7 +4,7 @@
 
 	// Check user logged in
 	if (!isset($_SESSION['user_id'])) {
-		header('Location: /en/login/');
+		header('Location: /es/login/');
 		exit;
 	}
 
@@ -43,76 +43,7 @@
 	</header>
 	<p>Por razones de seguridad, te recomendamos cambiar la contraseña por defecto.</p>
 
-<?php
-
-	if (isset($_POST['type']) && $_POST['type'] == 'password_change') {
-
-		require_once('../config.php');
-
-		// Connect to the database
-		$db = mysqli_connect($db_server, $db_user, $db_pass, $db_name);
-
-		// Check for database connection errors
-		if (mysqli_connect_errno()) {
-
-			echo '<p class="error"><strong>Error: </strong>could not connect to the database. Please, try again later.</p>';
-
-		}
-
-		if (!mysqli_set_charset($db, 'utf8')) {
-
-			echo '<p class="error"><strong>Error: </strong>could not set charset to UTF8. Please, try again later.</p>';
-
-		}
-
-
-		// Check if all fields have a non-empty value
-		if ($_POST['old_pass'] != "" &&
-			$_POST['new_pass'] != "" &&
-			$_POST['new_pass_verif'] != "") {
-
-			// New password verification
-			if ($_POST['new_pass'] == $_POST['new_pass_verif']) {
-
-				// Try to get data from the users database
-				$query = "select * from students where student_number='".$_SESSION['user_id']."'";
-				$result = mysqli_query($db, $query);
-				$row = mysqli_fetch_assoc($result);
-
-				if (hash('sha512', $db_salt.$_POST['old_pass']) == $row['password']) {
-
-					$query = "update students set password='".hash('sha512', $db_salt.$_POST['new_pass'])."' where student_number='".$_SESSION['user_id']."'";
-					$result = mysqli_query($db, $query);
-
-					if ($result) echo '<p class="info">¡Tu contraseña ha sido modificada correctamente!</p>';
-					else echo '<p class="error"><strong>Error: </strong>no se pudo escribir en la base de datos. Por favor, inténtalo más tarde.</p>';
-
-				} else {
-
-					echo '<p class="warning">¡Contraseña incorrecta! Por favor, proporciona tu antigua contraseña para poder cambiarla.</p>';
-
-				}
-
-			} else {
-
-				echo '<p class="warning">¡Las contraseñas no coinciden!</p>';
-
-			}
-
-		} else {
-
-			// Need to fill more fields in the form
-			echo '<p class="warning">¡Por favor, rellena todos los campos requeridos!</p>';
-
-		}
-
-		// Close database connection
-		mysqli_free_result($result);
-		mysqli_close($db);
-
-	}
-
-?>
+<?php require_once('../data/account_settings.php'); ?>
 
 	<form action="" method="post">
 		<fieldset>
