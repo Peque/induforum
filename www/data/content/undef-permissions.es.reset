@@ -1,0 +1,14 @@
+% TITLE=Permisos no definidos
+% SUBTITLE=
+% DESCRIPTION=
+% KEYWORDS=
+
+=¡Bienvenido!=
+----
+
+Aunque tu usuario está registrado en nuestra base de datos parece que tus permisos no han sido todavía definidos. Otros usuarios pueden otorgarte a lo sumo sus mismos permisos, así que por favor, pide a otro usuario que te asigne permisos.
+
+% TODO: this is not currently supported in the parser
+<p class="centered extra_margin"><img src="/images/svg/community-grey.svg" alt="community-grey.svg" height="171" width="196" /></p>
+
+Creemos en las personas y pensamos que esta es la mejor manera de mantener seguro nuestro sistema. Para asignar permisos a otro usuario que conozcas, ve a "Mi cuenta" y "Permisos". Podrás buscar usuarios ahí y asignarles permisos.

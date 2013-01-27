@@ -1,0 +1,14 @@
+% TITLE=Undefined permissions
+% SUBTITLE=
+% DESCRIPTION=
+% KEYWORDS=
+
+=Welcome!=
+----
+
+Although your user is registered in our database, it seems that your permissions have not been defined yet. Other users can give you at most their own permissions, so please, ask somebody to assign you permissions.
+
+% TODO: this is not currently supported in the parser
+<p class="centered extra_margin"><img src="/images/svg/community-grey.svg" alt="community-grey.svg" height="171" width="196" /></p>
+
+We trust in people and we think this is the best way to keep our system secured. To give permissions to another user you know, go to "My account" and "Permissions". You can search for users there and assign them permissions.
