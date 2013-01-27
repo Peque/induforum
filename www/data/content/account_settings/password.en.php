@@ -16,34 +16,17 @@
 		<h1>Account settings</h1>
 	</hgroup>
 </header>
-<nav id="section_nav">
-	<ul>
-		<li><a href="#Log_out">1 - Log out</a></li>
-		<li><a href="#Password_change">2 - Password change</a></li>
-	</ul>
-</nav>
 <article>
-	<header>
-		<hgroup>
-			<h1 id="Log_out">Log out</h1>
-		</hgroup>
-		<hr />
-	</header>
-	<p>To log out, click the button bellow:</p>
-	<form action="/en/logout/" method="post">
-		<input type="submit" value="Log out" accesskey="x" />
-	</form>
-</article>
-<article>
-	<header>
-		<hgroup>
-			<h1 id="Password_change">Password change</h1>
-		</hgroup>
-		<hr />
-	</header>
+	<nav class="tabs_nav">
+		<ul>
+			<li><a href="/en/account_settings/session/">Session</a></li>
+			<li class="current">Password</li>
+		</ul>
+	</nav>
+	<div class="tabs_nav_div"></div>
 	<p>For security reasons, we recommend you to change the default password.</p>
 
-<?php require_once('../data/account_settings.php'); ?>
+<?php require_once('../../data/account_settings.php'); ?>
 
 	<form action="" method="post">
 		<fieldset>

@@ -23,7 +23,7 @@
 	</hgroup>
 </header>
 <article>
-	<nav id="participate_nav">
+	<nav class="tabs_nav">
 		<ul>
 			<li><a href="/en/students/participate/personal_data/">Personal</a></li>
 			<li class="current">Academic</li>
@@ -32,7 +32,7 @@
 			<li><a href="/en/students/participate/computer_science/">Computing</a></li>
 		</ul>
 	</nav>
-	<div id="participate_nav_div"></div>
+	<div class="tabs_nav_div"></div>
 
 <?php require_once('../../../data/academic_data.php'); ?>
 

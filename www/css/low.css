@@ -62,8 +62,8 @@
 }
 
 /********************************* Participate *********************************/
-#content nav#participate_nav li.current,
-#content nav#participate_nav a {
+#content nav.tabs_nav li.current,
+#content nav.tabs_nav a {
 	padding: .5em .5em;
 }
 

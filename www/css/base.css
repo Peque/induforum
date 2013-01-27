@@ -255,10 +255,10 @@ time.news_pubdate {
 }
 
 /********************************* Participate *********************************/
-#content nav#participate_nav ul {
+#content nav.tabs_nav ul {
 	margin: 0;
 }
-#content nav#participate_nav li {
+#content nav.tabs_nav li {
 	float: left;
 	display: block;
 	color: #609098;
@@ -266,28 +266,28 @@ time.news_pubdate {
 	border: .1em solid #000099;
 	border-radius: .5em .5em 0 0;
 }
-#content nav#participate_nav li.current {
+#content nav.tabs_nav li.current {
 	padding: .5em 1em;
 	background: #ffffff;
 	border-bottom: none;
 }
-#content nav#participate_nav a {
+#content nav.tabs_nav a {
 	display: block;
 
 	padding: .5em 1em;
 	text-decoration: none;
 	border-radius: .5em .5em 0 0;
 }
-#content nav#participate_nav a:hover,
-#content nav#participate_nav a:focus {
+#content nav.tabs_nav a:hover,
+#content nav.tabs_nav a:focus {
 	color: #00478F;
 	background: #CCEBF5;
 }
-#content nav#participate_nav li a:visited,
-#content nav#participate_nav li a:focus {
+#content nav.tabs_nav li a:visited,
+#content nav.tabs_nav li a:focus {
 	color: #00478F;
 }
-#participate_nav_div {
+.tabs_nav_div {
 	clear: both;
 
 }

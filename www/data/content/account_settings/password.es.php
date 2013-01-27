@@ -13,34 +13,17 @@
 <section id="content">
 <header>
 	<hgroup>
-		<h1>Configuración de cuenta</h1>
+		<h1>Account settings</h1>
 	</hgroup>
 </header>
-<nav id="section_nav">
-	<ul>
-		<li><a href="#Log_out">1 - Cerrar sesión</a></li>
-		<li><a href="#Password_change">2 - Cambiar contraseña</a></li>
-	</ul>
-</nav>
 <article>
-	<header>
-		<hgroup>
-			<h1 id="Log_out">Cerrar sesión</h1>
-		</hgroup>
-		<hr />
-	</header>
-	<p>Para cerrar la sesión, haz click en el siguiente botón:</p>
-	<form action="/es/logout/" method="post">
-		<input type="submit" value="Cerrar sesión" accesskey="x" />
-	</form>
-</article>
-<article>
-	<header>
-		<hgroup>
-			<h1 id="Password_change">Cambiar contraseña</h1>
-		</hgroup>
-		<hr />
-	</header>
+	<nav class="tabs_nav">
+		<ul>
+			<li><a href="/es/account_settings/session/">Session</a></li>
+			<li class="current">Password</li>
+		</ul>
+	</nav>
+	<div class="tabs_nav_div"></div>
 	<p>Por razones de seguridad, te recomendamos cambiar la contraseña por defecto.</p>
 
 <?php require_once('../data/account_settings.php'); ?>
@@ -61,6 +44,6 @@
 
 </article>
 <footer>
-	<p class="section_title">Configuración de cuenta</p>
+	<p class="section_title">Account settings</p>
 </footer>
 </section>
