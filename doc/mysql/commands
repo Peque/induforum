@@ -74,7 +74,18 @@ mysql> create table students_other_information(
          schedule tinyint not null,
          resume_pdf char(50)
        );
+mysql> create table permissions(
+         user int unsigned not null primary key,
+         admin bool default 0,
+         company bool default 0,
+         student bool default 0,
+         organization bool default 0,
+         marketing bool default 0,
+         sales bool default 0,
+         resources bool default 0,
+         technology bool default 0
+       );
 mysql> load data
          local infile "~/students.csv"
-         into table students (id,password)
+         into table users (id,password)
        ;

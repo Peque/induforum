@@ -32,20 +32,54 @@
 
 			// Try to get data from the users database
 			$query = "select * from users where id='".$spd['user']."'";
-			$users_result = mysqli_query($db, $query);
+			$query_result = mysqli_query($db, $query);
 
-			if (mysqli_num_rows($users_result)) {
+			if (mysqli_num_rows($query_result)) {
 
 				// $num_results should be 1 in this case
 
-				$row = mysqli_fetch_assoc($users_result);
+				$row = mysqli_fetch_assoc($query_result);
 
 				if ($spd['user'] == $row['id'] &&
 				    hash('sha512', $db_salt.$spd['pass']) == $row['password']) {
 					$_SESSION['user_id'] = $row['number'];
-					$_SESSION['type'] = 'student_session';
-					header('Location: /es/students/participate/');
-					exit;
+
+					// Get user's permissions
+					$query = "select * from permissions where user='".$_SESSION['user_id']."'";
+					$query_result = mysqli_query($db, $query);
+
+					if (mysqli_num_rows($query_result)) {
+
+						$row = mysqli_fetch_assoc($query_result);
+
+						$_SESSION['user_is_admin'] = $row['admin'];
+						$_SESSION['user_is_company'] = $row['company'];
+						$_SESSION['user_is_student'] = $row['student'];
+						$_SESSION['user_in_organization'] = $row['organization'];
+						$_SESSION['user_in_marketing'] = $row['marketing'];
+						$_SESSION['user_in_sales'] = $row['sales'];
+						$_SESSION['user_in_resources'] = $row['resources'];
+						$_SESSION['user_in_technology'] = $row['technology'];
+
+						if ($_SESSION['user_is_admin']) {
+							header('Location: /account_settings/');
+							exit;
+						} else if ($_SESSION['user_is_student']) {
+							header('Location: /students/participate/');
+							exit;
+						} else if ($_SESSION['user_is_company']) {
+							header('Location: /companies/database/');
+							exit;
+						} else {
+							header('Location: /account_settings/');
+							exit;
+						}
+
+					} else {
+						header('Location: /undef-permissions/');
+						exit;
+					}
+
 				} else {
 					echo $err_wrong_username_or_password;
 				}

@@ -26,7 +26,7 @@
 	<div class="tabs_nav_div"></div>
 	<p>For security reasons, we recommend you to change the default password.</p>
 
-<?php require_once('../../data/account_settings.php'); ?>
+<?php require_once('../../data/change_password.php'); ?>
 
 	<form action="" method="post">
 		<fieldset>

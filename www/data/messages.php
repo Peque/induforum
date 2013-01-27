@@ -10,6 +10,7 @@
 	$warn_incomplete_form='<p class="warning">Please, fill all the required fields in the form!</p>';
 	$warn_passwords_not_match='<p class="warning">Passwords do not match!</p>';
 	$warn_wrong_old_password='<p class="warning">Incorrect password! Please, provide your old password in order to change it.</p>';
+	$warn_undef_permissions='<p class="warning"><strong>Warning: </strong>you are registered in our database but your permissions are not defined yet. Please, ask somebody to give you permissions.</p>';
 
 	// Information messages
 	$info_password_changed='<p class="info">Your password has been changed successfuly!</p>';
