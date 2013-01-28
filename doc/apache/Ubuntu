@@ -45,6 +45,8 @@ Go to 'Virtual Hosts' section and add the following lines:
 			Order allow,deny
 			Allow from all
 		</Directory>
+		Alias /errorpages /var/www/html/induforum/www/build/error
+		ErrorDocument 404 /errorpages/404/
 		DirectoryIndex index
 		AddLanguage en .en
 		AddLanguage es .es
