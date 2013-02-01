@@ -7,8 +7,6 @@
     $ sudo chown -R <username> /var/www/html/
     $ cd /var/www/html
     $ git clone git@github.com:Peque/induforum.git induforum
-    $ sudo service httpd start
-    $ sudo systemctl enable httpd.service
 
 ##########################################################
 # Configuration
@@ -16,19 +14,17 @@
 
 STEP 1
 ---------------------------------------------------------------------
-$ su - -c 'gedit /etc/hosts'
-
-Add this line:
-
-	127.0.0.1 local.induforum.es
+$ su -c 'echo -e "127.0.0.1\t\tlocal.induforum.es" >> /etc/hosts'
 
 STEP 2
 ---------------------------------------------------------------------
 $ su - -c 'gedit /etc/httpd/conf/httpd.conf'
 
-Go to 'Virtual Hosts' section and add the following lines:
-(write the first line only if it is not written or uncommented yet)
+Append the following lines:
 
+	#
+	# Induforum virtual host
+	#
 	NameVirtualHost *:80
 	<VirtualHost *:80>
 		<Directory "/var/www/html/induforum/www/build">
@@ -60,7 +56,11 @@ Go to 'Virtual Hosts' section and add the following lines:
 
 STEP 3
 ---------------------------------------------------------------------
-Restart Apache:
+Start Apache:
 
-$ su -c 'service httpd restart'
+$ su -c 'systemctl start httpd.service'
+$ su -c 'systemctl enable httpd.service'
 
+If you have any problems starting Apache, try this:
+
+$ su -c 'echo -e "127.0.0.1\t\t$(cat /etc/hostname)" >> /etc/hosts'
