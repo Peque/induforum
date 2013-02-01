@@ -16,3 +16,4 @@ $ su -c 'sudo systemctl start mysqld.service'
 $ su -c 'sudo systemctl enable mysqld.service'
 $ mysqladmin -u root password '****'
 $ mysql --default-character-set=utf8 --local-infile -u root -p
+mysql> source doc/mysql/commands.sql;

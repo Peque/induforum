@@ -35,6 +35,7 @@ Append the following lines:
 			Order allow,deny
 			Allow from all
 		</Directory>
+		AddType application/x-httpd-php .php
 		Alias /errorpages /var/www/html/induforum/www/build/error
 		ErrorDocument 404 /errorpages/404/
 		DirectoryIndex index
