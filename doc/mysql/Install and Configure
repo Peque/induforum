@@ -15,4 +15,4 @@ $ su -c 'yum install mysql mysql-server php-mysql'
 $ su -c 'sudo systemctl start mysqld.service'
 $ su -c 'sudo systemctl enable mysqld.service'
 $ mysqladmin -u root password '****'
-$ mysql -u root -p
+$ mysql --default-character-set=utf8 --local-infile -u root -p
