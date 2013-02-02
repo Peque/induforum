@@ -94,7 +94,7 @@
 				echo $err_wrong_username_or_password;
 			}
 
-			mysqli_free_result($users_result);
+			mysqli_free_result($query_result);
 
 		} else {
 
