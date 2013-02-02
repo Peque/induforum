@@ -78,7 +78,7 @@ function build_file {
 		# Parse content
 		if [ "$extension" == "reset" ]; then
 			echo "<section id=\"content\"><header><hgroup><h1>${file_data_array[0]}</h1><h2>${file_data_array[1]}</h2></hgroup></header>" >> $gen_file
-			echo "$(cat $content_dir$pipe_line | $nodejs ./gen/parse_file.js)" >> $gen_file
+			echo "$(cat $content_dir$pipe_line | node ./gen/parse_file.js)" >> $gen_file
 			echo "<footer><p class=\"section_title\">${file_data_array[0]}</p></footer></section>" >> $gen_file
 		else
 			cat $content_dir$pipe_line >> $gen_file
@@ -96,10 +96,6 @@ function build_file {
 content_dir="data/content/"
 templates_dir="data/templates/"
 build_dir="build/"
-nodejs="nodejs"
-if [ "$(cat /proc/version | grep 'Ubuntu')" != "" ]; then
-	nodejs="node"
-fi
 
 rm -rf build
 mkdir build

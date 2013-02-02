@@ -27,11 +27,6 @@
 		Si eres estudiante, utiliza tu <strong>número de matrícula</strong> como <em>Usuario</em> y tu <strong>DNI</strong> como <em>Contraseña</em> (incluyendo ceros y excluyendo la letra de verificación).
 	</p>
 
-	<p>
-		Si tienes algún problema para registrarte ponte en contacto con:
-				<code><em>dep.tecnologico</em><span class="display-none">@anti-spam</span><em>@induforum.es</em></code>
-	</p>
-
 <?php require_once('../data/login.php'); ?>
 
 	<form action="" method="post">

@@ -42,8 +42,14 @@
 
 				if ($spd['user'] == $row['id'] &&
 				    hash('sha512', $db_salt.$spd['pass']) == $row['password']) {
+						
 					$_SESSION['user_id'] = $row['number'];
 
+					// Check-in
+					date_default_timezone_set('UTC');
+					$query = "insert into session_log values ('".$_SESSION['user_id']."','".date("Y-m-d H:i:s")."');";
+					$query_result = mysqli_query($db, $query);
+					
 					// Get user's permissions
 					$query = "select * from permissions where user='".$_SESSION['user_id']."'";
 					$query_result = mysqli_query($db, $query);

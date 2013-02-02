@@ -26,10 +26,6 @@
 	<p>
 		If you are a student, use your <strong>registration number</strong> as <em>User</em> and your <strong>ID</strong> as <em>Password</em> (including zeros and excluding the verification letter).
 	</p>
-	<p>
-		If you have a trouble to register, contact to:
-		 <code><em>dep.tecnologico</em><span class="display-none">@anti-spam</span><em>@induforum.es</em></code>
-	</p>
 
 <?php require_once('../data/login.php'); ?>
 

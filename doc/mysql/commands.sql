@@ -30,6 +30,15 @@ create table users(
 );
 
 --
+-- This table registers log in events and the moment when they occured.
+--
+create table session_log(
+	user int unsigned not null,
+	date datetime not null,
+	primary key (user,date)
+);
+
+--
 -- The permissions table contains the users permissions.
 --
 create table permissions(
