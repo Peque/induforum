@@ -39,7 +39,7 @@
 						date_default_timezone_set('UTC');
 
 						// Check the invitation can still be used
-						if (!$row['used_by'] && $row['expiration'] > date("Y-m-d H:i:s")) {
+						if (!$row['used_by'] && strtotime($row['expiration']) > strtotime(date("Y-m-d H:i:s"))) {
 
 							// Sanitize data
 							$sd['user'] = mysqli_real_escape_string($db, trim($_POST['user']));
@@ -92,11 +92,11 @@
 
 							if ($row['used_by']) {
 
-								$err_invitation_used;
+								echo $err_invitation_used;
 
 							} else {
 
-								$err_invitation_expired;
+								echo $err_invitation_expired;
 
 							}
 
