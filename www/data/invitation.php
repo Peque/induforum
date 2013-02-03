@@ -102,8 +102,6 @@
 
 						}
 
-						$result = mysqli_query($db, $query);
-
 					} else {
 
 						echo $err_not_invited;
