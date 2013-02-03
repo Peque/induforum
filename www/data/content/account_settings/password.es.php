@@ -19,8 +19,9 @@
 <article>
 	<nav class="tabs_nav">
 		<ul>
-			<li><a href="/es/account_settings/session/">Session</a></li>
-			<li class="current">Password</li>
+			<li><a href="/es/account_settings/session/">Sesión</a></li>
+			<li class="current">Contraseña</li>
+			<li><a href="/es/account_settings/invite/">Invitar</a></li>
 		</ul>
 	</nav>
 	<div class="tabs_nav_div"></div>

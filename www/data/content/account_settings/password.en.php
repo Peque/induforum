@@ -21,6 +21,7 @@
 		<ul>
 			<li><a href="/en/account_settings/session/">Session</a></li>
 			<li class="current">Password</li>
+			<li><a href="/en/account_settings/invite/">Invite</a></li>
 		</ul>
 	</nav>
 	<div class="tabs_nav_div"></div>
