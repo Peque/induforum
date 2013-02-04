@@ -1,34 +1,34 @@
 <?php
 
-	require_once('../config.php');
-	require_once('../data/messages.php');
-
-	// Connect to the database
-	$db = mysqli_connect($db_server, $db_user, $db_pass, $db_name);
-
-	// Check for database connection errors
-	if (mysqli_connect_errno()) {
-
-		echo $err_db_connection_error;
-
-	}
-
-	if (!mysqli_set_charset($db, 'utf8')) {
-
-		echo $err_db_charset_error;
-
-	}
-
 	if (isset($_POST['type']) && $_POST['type'] == 'login_form') {
 
-		// Form data overrides any other data
-
-		$spd['user'] = mysqli_real_escape_string($db, trim($_POST['user']));
-		$spd['pass'] = mysqli_real_escape_string($db, trim($_POST['pass']));
-
 		// Check if all fields have a non-empty value
-		if ($spd['user'] != "" &&
-			$spd['pass'] != "") {
+		if ($_POST['user'] != "" &&
+			$_POST['pass'] != "") {
+
+			require_once('../config.php');
+			require_once('../data/messages.php');
+
+			// Connect to the database
+			$db = mysqli_connect($db_server, $db_user, $db_pass, $db_name);
+
+			// Check for database connection errors
+			if (mysqli_connect_errno()) {
+
+				echo $err_db_connection_error;
+
+			}
+
+			if (!mysqli_set_charset($db, 'utf8')) {
+
+				echo $err_db_charset_error;
+
+			}
+
+			// Form data overrides any other data
+
+			$spd['user'] = mysqli_real_escape_string($db, trim($_POST['user']));
+			$spd['pass'] = mysqli_real_escape_string($db, trim($_POST['pass']));
 
 			// Try to get data from the users database
 			$query = "select * from users where id='".$spd['user']."'";
@@ -42,14 +42,14 @@
 
 				if ($spd['user'] == $row['id'] &&
 				    hash('sha512', $db_salt.$spd['pass']) == $row['password']) {
-						
+
 					$_SESSION['user_id'] = $row['number'];
 
 					// Check-in
 					date_default_timezone_set('UTC');
 					$query = "insert into session_log values ('".$_SESSION['user_id']."','".date("Y-m-d H:i:s")."');";
 					$query_result = mysqli_query($db, $query);
-					
+
 					// Get user's permissions
 					$query = "select * from permissions where user='".$_SESSION['user_id']."'";
 					$query_result = mysqli_query($db, $query);

@@ -11,9 +11,15 @@
 		</hgroup>
 		<hr />
 	</header>
-	<p>Please, introduce the required data below to include you in our database.</p>
+	<p>Please, introduce the required data below to add your user to our database.</p>
 
-<?php require_once('../data/invitation.php'); ?>
+<?php
+
+	require_once(strstr(getcwd(), '/build', 1).'/data/form_to_db.php');
+
+	if (form_to_db('invitation_form', array('user*', 'pass*', 'pass2*'))) {
+
+?>
 
 	<form action="" method="post">
 		<fieldset>
@@ -27,9 +33,16 @@
 				<input type="password" maxlength="60" name="pass2" id="form_pass2" class="singleline" required="required" />
 			</div>
 		</fieldset>
-		<input type="hidden" name="type" value="register_form" />
+		<input type="hidden" name="type" value="invitation_form" />
 		<input type="submit" value="Register" accesskey="x" />
 	</form>
+
+<?php
+
+	}
+
+?>
+
 </article>
 <footer>
 	<p class="section_title">Invitation<p>
