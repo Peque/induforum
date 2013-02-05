@@ -68,7 +68,7 @@
 						<option value="Electric" <?php if (isset($spd['speciality'])&&$spd['speciality']=="Electric") echo 'selected="selected"'?>>Electric</option>
 						<option value="Mechanic" <?php if (isset($spd['speciality'])&&$spd['speciality']=="Mechanic") echo 'selected="selected"'?>>Mechanic - Machines</option>
 						<option value="Electronic"<?php if (isset($spd['speciality'])&&$spd['speciality']=="Electronic") echo 'selected="selected"'?>>Electronic</option>
-						<option value="Construction" <?php if (isset($spd['speciality'])&&$spd['speciality']=="Building") echo 'selected="selected"'?>>Mechanic - Construction</option>
+						<option value="Construction" <?php if (isset($spd['speciality'])&&$spd['speciality']=="Construction") echo 'selected="selected"'?>>Mechanic - Construction</option>
 						<option value="Material" <?php if (isset($spd['speciality'])&&$spd['speciality']=="Material") echo 'selected="selected"'?>>Materials</option>
 						<option value="Organization"<?php if (isset($spd['speciality'])&&$spd['speciality']=="Organization") echo 'selected="selected"'?>>Industrial Organization</option>
 						<option value="Chemical" <?php if (isset($spd['speciality'])&&$spd['speciality']=="Chemical") echo 'selected="selected"'?>>Industrial Chemistry</option>

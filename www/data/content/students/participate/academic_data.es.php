@@ -70,7 +70,7 @@
 						<option value="Electric" <?php if (isset($spd['speciality'])&&$spd['speciality']=="Electric") echo 'selected="selected"'?>>Eléctrica</option>
 						<option value="Mechanic" <?php if (isset($spd['speciality'])&&$spd['speciality']=="Mechanic") echo 'selected="selected"'?>>Mecánica - Máquinas</option>
 						<option value="Electronic"<?php if (isset($spd['speciality'])&&$spd['speciality']=="Electronic") echo 'selected="selected"'?>>Electrónica - Automática</option>
-						<option value="Construction" <?php if (isset($spd['speciality'])&&$spd['speciality']=="Building") echo 'selected="selected"'?>>Mecánica - Construcción</option>
+						<option value="Construction" <?php if (isset($spd['speciality'])&&$spd['speciality']=="Construction") echo 'selected="selected"'?>>Mecánica - Construcción</option>
 						<option value="Material" <?php if (isset($spd['speciality'])&&$spd['speciality']=="Material") echo 'selected="selected"'?>>Materiales</option>
 						<option value="Organization"<?php if (isset($spd['speciality'])&&$spd['speciality']=="Organization") echo 'selected="selected"'?>>Organización Industrial</option>
 						<option value="Chemical" <?php if (isset($spd['speciality'])&&$spd['speciality']=="Chemical") echo 'selected="selected"'?>>Química Industrial y Medio Ambiente</option>
