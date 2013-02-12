@@ -118,7 +118,7 @@
 				$spd['presentations'] = $row['presentations'];
 				$spd['word_processors'] = $row['word_processors'];
 				$spd['programming_languages'] = $row['programming_languages'];
-				$spd['simulation'] = $row['phone'];
+				$spd['simulation'] = $row['simulation'];
 				$spd['communications_networks'] = $row['communications_networks'];
 
 			}
