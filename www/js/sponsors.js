@@ -71,5 +71,5 @@ chosen[3] = new_chosen_one();
 
 
 for (var i = 0; i < chosen.length; i++) {
-	document.write('<p style="text-align:center;"><a href="' + sponsors[chosen[i]].website + '" title="' + sponsors[chosen[i]].company + '"><img src="/images/sponsors/' + sponsors[chosen[i]].image + '" alt="' + sponsors[chosen[i]].company + '_logo" /></a></p>');
+	document.write('<p style="text-align:center;"><a target="_blank" href="' + sponsors[chosen[i]].website + '" title="' + sponsors[chosen[i]].company + '"><img src="/images/sponsors/' + sponsors[chosen[i]].image + '" alt="' + sponsors[chosen[i]].company + '_logo" /></a></p>');
 }
