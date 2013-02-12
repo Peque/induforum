@@ -21,13 +21,23 @@
 		<ul>
 			<li><a href="/en/account_settings/session/">Session</a></li>
 			<li class="current">Password</li>
-			<li><a href="/en/account_settings/invite/">Invite</a></li>
+<?php
+	if (isset($_SESSION['user_can_invite']) && $_SESSION['user_can_invite']) {
+		echo '<li><a href="/en/account_settings/invite/">Invite</a></li>';
+	}
+?>
 		</ul>
 	</nav>
 	<div class="tabs_nav_div"></div>
 	<p>For security reasons, we recommend you to change the default password.</p>
 
-<?php require_once('../../data/change_password.php'); ?>
+<?php
+
+	require_once(strstr(getcwd(), '/build', 1).'/data/form_to_db.php');
+
+	if (form_to_db('password_change', array('old_pass*', 'new_pass*', 'new_pass_verif*'))) {
+
+?>
 
 	<form action="" method="post">
 		<fieldset>
@@ -42,6 +52,12 @@
 		<input  type="hidden" name="type" value="password_change" />
 		<input type="submit" value="Save" accesskey="x" />
 	</form>
+
+<?php
+
+	}
+
+?>
 
 </article>
 <footer>

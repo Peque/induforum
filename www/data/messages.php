@@ -9,6 +9,7 @@
 	$err_not_invited='<p class="error"><strong>Error: </strong> the invitation you are trying to use does not exist. Please, ask for a new one.</p>';
 	$err_invitation_used='<p class="error"><strong>Error: </strong> the invitation has already been used. Please, ask for a new one.</p>';
 	$err_invitation_expired='<p class="error"><strong>Error: </strong> the invitation already expired. Please, ask for a new one.</p>';
+	$err_wrong_form_type='<p class="error"><strong>Error: </strong> wrong form type. Please, contact the administrator.</p>';
 
 	// Warning messages
 	$warn_incomplete_form='<p class="warning">Please, fill all the required fields in the form!</p>';

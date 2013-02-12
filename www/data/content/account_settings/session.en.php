@@ -21,7 +21,11 @@
 		<ul>
 			<li class="current">Session</li>
 			<li><a href="/en/account_settings/password/">Password</a></li>
-			<li><a href="/en/account_settings/invite/">Invite</a></li>
+<?php
+	if (isset($_SESSION['user_can_invite']) && $_SESSION['user_can_invite']) {
+		echo '<li><a href="/en/account_settings/invite/">Invite</a></li>';
+	}
+?>
 		</ul>
 	</nav>
 	<div class="tabs_nav_div"></div>

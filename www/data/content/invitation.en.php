@@ -33,11 +33,15 @@
 				<input type="password" maxlength="60" name="pass2" id="form_pass2" class="singleline" required="required" />
 			</div>
 		</fieldset>
-		<input type="hidden" name="type" value="invitation_form" />
+		<input type="hidden" name="type" value="invitation" />
 		<input type="submit" value="Register" accesskey="x" />
 	</form>
 
 <?php
+
+	} else {
+
+		echo '<p class="info">Your user was successfully added to our database! You can now <a href="/en/login/">go to the login page</a>.</p>';
 
 	}
 

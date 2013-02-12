@@ -58,11 +58,9 @@ create table permissions(
 	admin bool default 0,
 	company bool default 0,
 	student bool default 0,
-	organization bool default 0,
-	marketing bool default 0,
-	sales bool default 0,
-	resources bool default 0,
-	technology bool default 0
+	invitations bool default 0,
+	statistics bool default 0,
+	banners bool default 0
 );
 
 create table students_personal_data(

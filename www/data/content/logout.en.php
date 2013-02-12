@@ -20,7 +20,6 @@
 		</hgroup>
 		<hr />
 	</header>
-	<p class="centered extra_margin"><img src="/images/marx-brothers.jpg" alt="happy_face.svg" /></p>
 	<p>See you soon!</p>
 </article>
 <footer>

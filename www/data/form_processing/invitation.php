@@ -43,6 +43,7 @@
 			if (mysqli_num_rows($result)) {
 
 				echo $err_user_exist;
+				$processing_error = 1;
 				unset($sd['user']);
 				mysqli_free_result($result);
 
@@ -61,8 +62,6 @@
 						$query = "update invitations set used_by='".$sd['user']."' where invitation_key='".$invitation_key."'";
 						$result = mysqli_query($db, $query);
 						unset($sd['user']);
-
-						echo $info_user_added;
 
 					} else {
 

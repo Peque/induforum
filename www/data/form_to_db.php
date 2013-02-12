@@ -10,6 +10,9 @@
  * (further data validation should be done in the processing file).
  * After that, it will include the corresponding form processing file.
  *
+ * Sanitized fields will be available in the $sd vector as
+ * $sd['variable'].
+ *
  * Example:
  *
  *   form_to_db('invitation_form', array('user*', 'pass*', 'pass2*'))
@@ -32,12 +35,19 @@
 function form_to_db($form_type, $form_fields) {
 
 	// Check if post data exists to be processed
-	if (!isset($_POST['type']) || $_POST['type'] != $form_type) {
+	if (!isset($_POST['type'])) {
 		return 1;
 	}
 
-	include_once('../config.php');
-	include_once('../data/messages.php');
+	require_once(strstr(getcwd(), '/build', 1).'/data/messages.php');
+
+	// Check if the form type is the correct one
+	if ($_POST['type'] != $form_type) {
+		echo $err_wrong_form_type;
+		return 1;
+	}
+
+	require_once(strstr(getcwd(), '/build', 1).'/config.php');
 
 	// Initialization
 	unset($input_error);
