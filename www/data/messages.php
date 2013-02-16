@@ -10,6 +10,7 @@
 	$err_invitation_used='<p class="error"><strong>Error: </strong> the invitation has already been used. Please, ask for a new one.</p>';
 	$err_invitation_expired='<p class="error"><strong>Error: </strong> the invitation already expired. Please, ask for a new one.</p>';
 	$err_wrong_form_type='<p class="error"><strong>Error: </strong> wrong form type. Please, contact the administrator.</p>';
+	$err_sending_mail='<p class="error"><strong>Error: </strong> could not send the email. Please, share the link provided bellow with your friend.</p>';
 
 	// Warning messages
 	$warn_incomplete_form='<p class="warning">Please, fill all the required fields in the form!</p>';
