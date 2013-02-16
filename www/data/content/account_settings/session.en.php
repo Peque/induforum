@@ -13,7 +13,7 @@
 <section id="content">
 <header>
 	<hgroup>
-		<h1>Configuración de cuenta</h1>
+		<h1>Account settings</h1>
 	</hgroup>
 </header>
 <article>
@@ -41,6 +41,6 @@
 	</form>
 </article>
 <footer>
-	<p class="section_title">Configuración de cuenta</p>
+	<p class="section_title">Account settings</p>
 </footer>
 </section>
