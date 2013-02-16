@@ -58,6 +58,7 @@
 				$_SESSION['user_can_invite'] = $row['invitations'];
 				$_SESSION['user_can_view_statistics'] = $row['statistics'];
 				$_SESSION['user_can_edit_banners'] = $row['banners'];
+				$_SESSION['user_can_share_permissions'] = $row['permissions'];
 
 			} else {
 

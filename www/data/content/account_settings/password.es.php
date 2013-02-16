@@ -13,7 +13,7 @@
 <section id="content">
 <header>
 	<hgroup>
-		<h1>Account settings</h1>
+		<h1>Configuración de cuenta</h1>
 	</hgroup>
 </header>
 <article>
@@ -24,6 +24,12 @@
 <?php
 	if (isset($_SESSION['user_can_invite']) && $_SESSION['user_can_invite']) {
 		echo '<li><a href="/en/account_settings/invite/">Invitar</a></li>';
+	}
+	if (isset($_SESSION['user_can_share_permissions']) && $_SESSION['user_can_share_permissions']) {
+		echo '<li><a href="/es/account_settings/permissions/">Permisos</a></li>';
+	}
+	if (isset($_SESSION['user_can_view_statistics']) && $_SESSION['user_can_view_statistics']) {
+		echo '<li><a href="/es/account_settings/statistics/">Estadísticas</a></li>';
 	}
 ?>
 		</ul>
@@ -61,6 +67,6 @@
 
 </article>
 <footer>
-	<p class="section_title">Account settings</p>
+	<p class="section_title">Configuración de cuenta</p>
 </footer>
 </section>

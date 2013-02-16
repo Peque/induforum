@@ -8,18 +8,24 @@
 		exit;
 	}
 
+	// Check permissions
+	if (!isset($_SESSION['user_can_view_statistics']) || !$_SESSION['user_can_view_statistics']) {
+		header('Location: /en/restricted_area/');
+		exit;
+	}
+
 ?>
 
 <section id="content">
 <header>
 	<hgroup>
-		<h1>Configuración de cuenta</h1>
+		<h1>Account settings</h1>
 	</hgroup>
 </header>
 <article>
 	<nav class="tabs_nav">
 		<ul>
-			<li class="current">Session</li>
+			<li><a href="/en/account_settings/session/">Session</a></li>
 			<li><a href="/en/account_settings/password/">Password</a></li>
 <?php
 	if (isset($_SESSION['user_can_invite']) && $_SESSION['user_can_invite']) {
@@ -29,18 +35,34 @@
 		echo '<li><a href="/en/account_settings/permissions/">Permissions</a></li>';
 	}
 	if (isset($_SESSION['user_can_view_statistics']) && $_SESSION['user_can_view_statistics']) {
-		echo '<li><a href="/en/account_settings/statistics/">Statistics</a></li>';
+		echo '<li class="current">Statistics</li>';
 	}
 ?>
 		</ul>
 	</nav>
 	<div class="tabs_nav_div"></div>
-	<p>To log out, click the button bellow:</p>
-	<form action="/en/logout/" method="post">
-		<input type="submit" value="Log out" accesskey="x" />
-	</form>
+
+	<p>Some statistics about the database:</p>
+
+<?php
+
+	require_once(strstr(getcwd(), '/build', 1).'/config.php');
+
+	$db = mysqli_connect($db_server, $db_user, $db_pass, $db_name);
+	mysqli_set_charset($db, 'utf8');
+
+	$query = "select user from students_personal_data";
+	$result = mysqli_query($db, $query);
+
+	echo "<ul><li>Number of students as for now: <strong>".mysqli_num_rows($result)."</strong></li></ul>";
+
+	mysqli_free_result($result);
+	mysqli_close($db);
+
+?>
+
 </article>
 <footer>
-	<p class="section_title">Configuración de cuenta</p>
+	<p class="section_title">Account settings</p>
 </footer>
 </section>

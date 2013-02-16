@@ -9,7 +9,7 @@
 	}
 
 	// Check permissions
-	if (!isset($_SESSION['user_can_invite']) || !$_SESSION['user_can_invite']) {
+	if (!isset($_SESSION['user_can_share_permissions']) || !$_SESSION['user_can_share_permissions']) {
 		header('Location: /en/restricted_area/');
 		exit;
 	}
@@ -29,10 +29,10 @@
 			<li><a href="/en/account_settings/password/">Password</a></li>
 <?php
 	if (isset($_SESSION['user_can_invite']) && $_SESSION['user_can_invite']) {
-		echo '<li class="current">Invite</li>';
+		echo '<li><a href="/en/account_settings/invite/">Invite</a></li>';
 	}
 	if (isset($_SESSION['user_can_share_permissions']) && $_SESSION['user_can_share_permissions']) {
-		echo '<li><a href="/en/account_settings/permissions/">Permissions</a></li>';
+		echo '<li class="current">Permissions</li>';
 	}
 	if (isset($_SESSION['user_can_view_statistics']) && $_SESSION['user_can_view_statistics']) {
 		echo '<li><a href="/en/account_settings/statistics/">Statistics</a></li>';

@@ -25,6 +25,12 @@
 	if (isset($_SESSION['user_can_invite']) && $_SESSION['user_can_invite']) {
 		echo '<li><a href="/en/account_settings/invite/">Invite</a></li>';
 	}
+	if (isset($_SESSION['user_can_share_permissions']) && $_SESSION['user_can_share_permissions']) {
+		echo '<li><a href="/en/account_settings/permissions/">Permissions</a></li>';
+	}
+	if (isset($_SESSION['user_can_view_statistics']) && $_SESSION['user_can_view_statistics']) {
+		echo '<li><a href="/en/account_settings/statistics/">Statistics</a></li>';
+	}
 ?>
 		</ul>
 	</nav>
