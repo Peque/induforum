@@ -56,6 +56,31 @@
 
 	echo "<ul><li>Número de estudiantes por ahora: <strong>".mysqli_num_rows($result)."</strong></li></ul>";
 
+	$query = "select * from session_log group by user";
+	$result = mysqli_query($db, $query);
+
+	$registrations[] = array();
+	$N_DAYS = 14;
+	date_default_timezone_set('UTC');
+	while(($row =  mysqli_fetch_assoc($result))) {
+		$diff = floor((strtotime(date("Y-m-d H:i:s")) - strtotime($row['date'])) / (60 * 60 * 24));
+		if ($diff > $N_DAYS) {
+			break;
+		} else {
+			if (isset($registrations[$diff])) $registrations[$diff]++;
+			else $registrations[$diff] = 1;
+		}
+	}
+
+	echo "<table><caption>Nuevos registros en los últimos ".$N_DAYS." días</caption>";
+	echo "<thead><tr><th>Hace X días</th><th>Nuevos registros</th></tr></thead><tbody>";
+	for ($i = 1; $i <= $N_DAYS; $i++) {
+		echo "<tr><td>".$i."</td>";
+		if (isset($registrations[$i])) echo "<td><strong>".$registrations[$i]."</strong></td></tr>";
+		else echo "<td>0</td></tr>";
+	}
+	echo "</tbody></table>";
+
 	mysqli_free_result($result);
 	mysqli_close($db);
 
