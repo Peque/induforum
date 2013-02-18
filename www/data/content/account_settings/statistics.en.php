@@ -56,7 +56,7 @@
 
 	echo "<ul><li>Number of students as for now: <strong>".mysqli_num_rows($result)."</strong></li></ul>";
 
-	$query = "select * from session_log group by user";
+	$query = "select * from (select * from session_log order by date asc) slog_date_asc group by user order by date desc";
 	$result = mysqli_query($db, $query);
 
 	$registrations[] = array();
@@ -64,6 +64,7 @@
 	date_default_timezone_set('UTC');
 	while(($row =  mysqli_fetch_assoc($result))) {
 		$diff = floor((strtotime(date("Y-m-d H:i:s")) - strtotime($row['date'])) / (60 * 60 * 24));
+		$diff++; // Avoid zero index
 		if ($diff > $N_DAYS) {
 			break;
 		} else {
@@ -75,7 +76,7 @@
 	echo "<table><caption>New registrations in the last ".$N_DAYS." days</caption>";
 	echo "<thead><tr><th>Days ago</th><th>New registrations</th></tr></thead><tbody>";
 	for ($i = 1; $i <= $N_DAYS; $i++) {
-		echo "<tr><td>".$i."</td>";
+		echo "<tr><td>".($i - 1)."</td>";
 		if (isset($registrations[$i])) echo "<td><strong>".$registrations[$i]."</strong></td></tr>";
 		else echo "<td>0</td></tr>";
 	}
