@@ -25,9 +25,11 @@ $C_speciality=$_POST['C_speciality'];
 
 ?>
 
+<!-- mysql> select * from students_academic_data where user in (select user from students_personal_data where name='Coloma Maria') and studies='industrialengineering';
+ -->
 
 
-mysql>select * from students_academic_data where studies='$C_studies' AND higher_course=$C_higher_course AND speciality='$C_speciality';
+<!--mysql>select * from students_academic_data where studies='$C_studies' AND higher_course=$C_higher_course AND speciality='$C_speciality';
 
 
-mysql> select * from students_academic_data where studies='industrialengineering' AND higher_course=5;
+mysql> select * from students_academic_data where studies='industrialengineering' AND higher_course=5 -->;
