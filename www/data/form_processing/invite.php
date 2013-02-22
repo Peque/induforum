@@ -25,9 +25,20 @@
 	// Create invitation
 	date_default_timezone_set('UTC');
 	$expiration_date = date("Y-m-d H:i:s", strtotime("+2 days"));
-	$invitation_key = hash('sha512', $sd['email'].$expiration_date);
+	$invitation_key = hash('sha512', $sd['email'].$expiration_date.$db_salt.rand());
 
-	$query = "insert into invitations (user,invitation_key,expiration) values ('".$_SESSION['user_id']."','".$invitation_key."','".$expiration_date."')";
+	$i = 0;
+	$permissions = '';
+	// Check the user has the permissions that will be shared
+	foreach (array('admin', 'company', 'student', 'invitations', 'statistics', 'permissions', 'banners') as $p) {
+		if (isset($sd[$p]) && $sd[$p] == 1 && isset($_SESSION[$p.'_permissions']) && $_SESSION[$p.'_permissions'] == 1) {
+			if ($i > 0) $permissions .= ',';
+			$permissions .= $p;
+			$i++;
+		}
+	}
+
+	$query = "insert into invitations (user,invitation_key,expiration,permissions) values ('".$_SESSION['user_id']."','".$invitation_key."','".$expiration_date."','".$permissions."')";
 	$result = mysqli_query($db, $query);
 
 	if ($result) {

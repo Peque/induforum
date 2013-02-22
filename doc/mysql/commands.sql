@@ -41,12 +41,15 @@ create table session_log(
 --
 -- The invitation table contains all the invitations, with the
 -- expiration date, the invitation key and a boolean variable that will
--- be set to '1' once the invitation has been used.
+-- be set to '1' once the invitation has been used. It also contains
+-- the permissions that will be given to the new user, separated by
+-- commas.
 --
 create table invitations(
 	user int unsigned not null,
 	invitation_key char(128) not null,
 	expiration datetime not null,
+	permissions text(500),
 	used_by char(20)
 );
 

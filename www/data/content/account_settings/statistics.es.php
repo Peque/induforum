@@ -9,7 +9,7 @@
 	}
 
 	// Check permissions
-	if (!isset($_SESSION['user_can_view_statistics']) || !$_SESSION['user_can_view_statistics']) {
+	if (!isset($_SESSION['statistics_permissions']) || !$_SESSION['statistics_permissions']) {
 		header('Location: /es/restricted_area/');
 		exit;
 	}
@@ -28,13 +28,13 @@
 			<li><a href="/es/account_settings/session/">Sesión</a></li>
 			<li><a href="/es/account_settings/password/">Contraseña</a></li>
 <?php
-	if (isset($_SESSION['user_can_invite']) && $_SESSION['user_can_invite']) {
+	if (isset($_SESSION['invitations_permissions']) && $_SESSION['invitations_permissions']) {
 		echo '<li><a href="/es/account_settings/invite/">Invitar</a></li>';
 	}
-	if (isset($_SESSION['user_can_share_permissions']) && $_SESSION['user_can_share_permissions']) {
+	if (isset($_SESSION['permissions_permissions']) && $_SESSION['permissions_permissions']) {
 		echo '<li><a href="/es/account_settings/permissions/">Permisos</a></li>';
 	}
-	if (isset($_SESSION['user_can_view_statistics']) && $_SESSION['user_can_view_statistics']) {
+	if (isset($_SESSION['statistics_permissions']) && $_SESSION['statistics_permissions']) {
 		echo '<li class="current">Estadísticas</li>';
 	}
 ?>

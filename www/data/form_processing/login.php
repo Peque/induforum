@@ -52,13 +52,13 @@
 
 				$row = mysqli_fetch_assoc($query_result);
 
-				$_SESSION['user_is_admin'] = $row['admin'];
-				$_SESSION['user_is_company'] = $row['company'];
-				$_SESSION['user_is_student'] = $row['student'];
-				$_SESSION['user_can_invite'] = $row['invitations'];
-				$_SESSION['user_can_view_statistics'] = $row['statistics'];
-				$_SESSION['user_can_edit_banners'] = $row['banners'];
-				$_SESSION['user_can_share_permissions'] = $row['permissions'];
+				$_SESSION['admin_permissions'] = $row['admin'];
+				$_SESSION['company_permissions'] = $row['company'];
+				$_SESSION['student_permissions'] = $row['student'];
+				$_SESSION['invitations_permissions'] = $row['invitations'];
+				$_SESSION['statistics_permissions'] = $row['statistics'];
+				$_SESSION['banners_permissions'] = $row['banners'];
+				$_SESSION['permissions_permissions'] = $row['permissions'];
 
 			} else {
 

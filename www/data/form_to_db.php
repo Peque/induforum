@@ -11,7 +11,9 @@
  * After that, it will include the corresponding form processing file.
  *
  * Sanitized fields will be available in the $sd vector as
- * $sd['variable'].
+ * $sd['variable']. Being 'variable' the name defined in $form_fields
+ * parameter, which should be the same as the name in the form's input
+ * field.
  *
  * Example:
  *
@@ -94,7 +96,8 @@ function form_to_db($form_type, $form_fields) {
 
 	// Sanitize data
 	foreach ($real_form_fields as $v) {
-		$sd[$v] = mysqli_real_escape_string($db, trim($_POST[$v]));
+		// No need to sanitize fields which are not defined (ex.: checkboxes not cheked)
+		if (isset($_POST[$v])) $sd[$v] = mysqli_real_escape_string($db, trim($_POST[$v]));
 	}
 
 	// Include the corresponding form processing file

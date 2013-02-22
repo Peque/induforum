@@ -719,6 +719,16 @@ time.news_pubdate {
 #content form select.singleline {
 	width: auto;
 }
+#content form input[type="checkbox"] {
+	margin: .5em 0 .5em 15%;
+	clear: left;
+	float: left;
+}
+#content form label.checkbox_label {
+	margin: 0;
+	padding: .5em 1em;
+	float: left;
+}
 #content form p.title {
 	margin: 1em 0;
 	float: left;

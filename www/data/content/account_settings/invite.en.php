@@ -9,7 +9,7 @@
 	}
 
 	// Check permissions
-	if (!isset($_SESSION['user_can_invite']) || !$_SESSION['user_can_invite']) {
+	if (!isset($_SESSION['invitations_permissions']) || !$_SESSION['invitations_permissions']) {
 		header('Location: /en/restricted_area/');
 		exit;
 	}
@@ -28,13 +28,13 @@
 			<li><a href="/en/account_settings/session/">Session</a></li>
 			<li><a href="/en/account_settings/password/">Password</a></li>
 <?php
-	if (isset($_SESSION['user_can_invite']) && $_SESSION['user_can_invite']) {
+	if (isset($_SESSION['invitations_permissions']) && $_SESSION['invitations_permissions']) {
 		echo '<li class="current">Invite</li>';
 	}
-	if (isset($_SESSION['user_can_share_permissions']) && $_SESSION['user_can_share_permissions']) {
+	if (isset($_SESSION['permissions_permissions']) && $_SESSION['permissions_permissions']) {
 		echo '<li><a href="/en/account_settings/permissions/">Permissions</a></li>';
 	}
-	if (isset($_SESSION['user_can_view_statistics']) && $_SESSION['user_can_view_statistics']) {
+	if (isset($_SESSION['statistics_permissions']) && $_SESSION['statistics_permissions']) {
 		echo '<li><a href="/en/account_settings/statistics/">Statistics</a></li>';
 	}
 ?>
@@ -42,21 +42,105 @@
 	</nav>
 	<div class="tabs_nav_div"></div>
 	<p>You can invite other people to join us. Notice that all this actions will be registered and associated with your user for security reasons, so try to invite only people you trust.</p>
-	<p>After inviting somebody, notice the user wont have any permissions. Once the user is registered, you can give him/her at most your own permissions.</p>
 
 <?php
 
 	require_once(strstr(getcwd(), '/build', 1).'/data/form_to_db.php');
 
-	if (form_to_db('invite', array('email*'))) {
+	if (form_to_db('invite', array('email*', 'admin', 'company', 'student', 'invitations', 'statistics', 'permissions', 'banners'))) {
 
 ?>
 
 	<form action="" method="post">
 		<fieldset>
 			<legend>Invitation form:</legend>
-			<label for="form_email" class="singleline">Your friend's email: <span class="form_required" title="This field is required">*</span></label>
-			<input type="email" maxlength="60" name="email" id="form_email" class="singleline" required="required" />
+			<p class="info">Please, select which permissions you want to share with the new user. You can share, at most, your own permissions (those which are listed bellow):</p>
+			<div class="form_wrapper">
+
+<?php
+
+	if (isset($_SESSION['admin_permissions']) && $_SESSION['admin_permissions'] == 1) {
+
+?>
+
+				<input name="admin" id="form_admin" value="1" type="checkbox" />
+				<label for="form_admin" class="checkbox_label">The user is an administrator</label>
+
+<?php
+
+	}
+
+	if (isset($_SESSION['company_permissions']) && $_SESSION['company_permissions'] == 1) {
+
+?>
+
+				<input name="company" id="form_company" value="1" type="checkbox" />
+				<label for="form_company" class="checkbox_label">The user is a company</label>
+
+<?php
+
+	}
+
+	if (isset($_SESSION['student_permissions']) && $_SESSION['student_permissions'] == 1) {
+
+?>
+
+				<input name="student" id="form_student" value="1" type="checkbox" />
+				<label for="form_student" class="checkbox_label">The user is a student</label>
+
+<?php
+
+	}
+
+	if (isset($_SESSION['invitations_permissions']) && $_SESSION['invitations_permissions'] == 1) {
+
+?>
+
+				<input name="invitations" id="form_invitations" value="1" type="checkbox" />
+				<label for="form_invitations" class="checkbox_label">The user can create invitations</label>
+
+<?php
+
+	}
+
+	if (isset($_SESSION['statistics_permissions']) && $_SESSION['statistics_permissions'] == 1) {
+
+?>
+
+				<input name="statistics" id="form_statistics" value="1" type="checkbox" />
+				<label for="form_statistics" class="checkbox_label">The user can see statistics about the database</label>
+
+<?php
+
+	}
+
+	if (isset($_SESSION['permissions_permissions']) && $_SESSION['permissions_permissions'] == 1) {
+
+?>
+
+				<input name="permissions" id="form_permissions" value="1" type="checkbox" />
+				<label for="form_permissions" class="checkbox_label">The user can share permissions</label>
+
+<?php
+
+	}
+
+	if (isset($_SESSION['banners_permissions']) && $_SESSION['banners_permissions'] == 1) {
+
+?>
+
+				<input name="banners" id="form_banners" value="1" type="checkbox" />
+				<label for="form_banners" class="checkbox_label">The user can edit website's banners</label>
+<?php
+
+	}
+
+?>
+			</div>
+			<div class="form_wrapper">
+				<label for="form_email" class="singleline">Your friend's email: <span class="form_required" title="This field is required">*</span></label>
+				<input type="email" maxlength="60" name="email" id="form_email" class="singleline" required="required" />
+			</div>
 		</fieldset>
 		<input  type="hidden" name="type" value="invite" />
 		<input type="submit" value="Invite" accesskey="x" />

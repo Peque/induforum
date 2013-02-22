@@ -54,13 +54,13 @@
 	} else {
 
 		if (!isset($_SESSION['user_do_not_have_permissions'])) {
-			if ($_SESSION['user_is_admin']) {
+			if ($_SESSION['admin_permissions']) {
 				header('Location: /en/account_settings/');
 				exit;
-			} else if ($_SESSION['user_is_student']) {
+			} else if ($_SESSION['student_permissions']) {
 				header('Location: /en/students/participate/');
 				exit;
-			} else if ($_SESSION['user_is_company']) {
+			} else if ($_SESSION['company_permissions']) {
 				header('Location: /en/companies/database/');
 				exit;
 			} else {

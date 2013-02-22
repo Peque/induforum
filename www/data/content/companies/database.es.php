@@ -9,7 +9,7 @@
 	}
 
 	// Check user privileges
-	if (!$_SESSION['user_is_company']) {
+	if (!$_SESSION['company_permissions']) {
 		header('Location: /es/restricted_area/');
 		exit;
 	}
