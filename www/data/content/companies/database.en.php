@@ -15,7 +15,6 @@
 	}
 
 ?>
-
 <section id="content">
 <header>
 	<hgroup>
@@ -68,42 +67,56 @@
 
 				<label for="english" class="checkbox">English:</label>
 				<input type="checkbox" name="english" value="english" id="english">
-				<label for="french" class="checkbox">french:</label>
+				<label for="french" class="checkbox">French:</label>
 				<input type="checkbox" name="french" value="french" id="french">
-				<label for="german" class="checkbox">german:</label>
+				<label for="german" class="checkbox">German:</label>
 				<input type="checkbox" name="german" value="german" id="german">
-				<label for="italian" class="checkbox">italian:</label>
+				<label for="italian" class="checkbox">Italian:</label>
 				<input type="checkbox" name="italian" value="italian" id="italian">
-				<label for="portuguese" class="checkbox">portuguese:</label>
+				<label for="portuguese" class="checkbox">Portuguese:</label>
 				<input type="checkbox" name="portuguese" value="portuguese" id="portuguese">
-				<label for="russian" class="checkbox">russian:</label>
+				<label for="russian" class="checkbox">Russian:</label>
 				<input type="checkbox" name="russian" value="russian" id="russian">
-				<label for="swedish" class="checkbox">swedish:</label>
+				<label for="swedish" class="checkbox">Swedish:</label>
 				<input type="checkbox" name="swedish" value="swedish" id="swedish">
-				<label for="dutch" class="checkbox">dutch:</label>
+				<label for="dutch" class="checkbox">Dutch:</label>
 				<input type="checkbox" name="dutch" value="dutch" id="dutch">
-				<label for="chinese" class="checkbox">chinese:</label>
+				<label for="chinese" class="checkbox">Chinese:</label>
 				<input type="checkbox" name="chinese" value="chinese" id="chinese">
 
 
 
 
 
-			    <label for="languages" class="checkbox">Languages:</label>
+			    <label for="SO_Windows" class="checkbox">SO Windows:</label>
 				<input type="checkbox" name="SO Windows" value="SO Windows" id="SO_Windows">
+				<label for="SO_Mac" class="checkbox">SO Mac:</label>
 				<input type="checkbox" name="SO Mac" value="SO Mac" id="SO_Mac">
+				<label for="SO_Linux" class="checkbox">SO Linux:</label>
 				<input type="checkbox" name="SO Linux" value="SO Linux" id="SO_Linux">
+				<label for="Data_bases" class="checkbox">Data bases:</label>
 				<input type="checkbox" name="Data bases" value="Data bases" id="Data_bases">
+				<label for="Accounting/Finances" class="checkbox">Accounting/Finances:</label>
 				<input type="checkbox" name="ccounting/Finances" value="Accounting/Finances" id="Accounting/Finances">
+				<label for="Computer-aided_desig" class="checkbox">Computer-aided desig:</label>
 				<input type="checkbox" name="omputer-aided design" value="Computer-aided design" id="Computer-aided_design">
+				<label for="Graphic_Design" class="checkbox">Graphic design:</label>
 				<input type="checkbox" name="Graphic Design" value="Graphic Design" id="Graphic_Design">
+				<label for="Spreadsheet" class="checkbox">Spreadsheet:</label>
 				<input type="checkbox" name="Spreadsheet" value="Spreadsheet" id="Spreadsheet">
+				<label for="Email" class="checkbox">Email:</label>
 				<input type="checkbox" name="Email" value="Email" id="Email">
+				<label for="Mathematics/Statistics" class="checkbox">Mathematics/Statistics:</label>
 				<input type="checkbox" name="Mathematics/Statistics" value="Mathematics/Statistics" id="Mathematics/Statistics">
+				<label for="Presentations" class="checkbox">Presentations</label>
 				<input type="checkbox" name="Presentations" value="Presentations" id="Presentations">
+				<label for="Word_processors" class="checkbox">Word processors:</label>
 				<input type="checkbox" name="Word processors" value="Word processors" id="Word_processors">
+				<label for="Programation" class="checkbox">Programation:</label>
 				<input type="checkbox" name="Programation" value="Programation" id="Programation">
+				<label for="Simulation" class="checkbox">Simulation:</label>
 				<input type="checkbox" name="Simulation" value="Simulation" id="Simulation">
+				<label for="Communications_and_networks" class="checkbox">Communications and networks:</label>
 				<input type="checkbox" name="Communications and networks" value="Communications and networks" id="Communications_and_networks">
 
 
