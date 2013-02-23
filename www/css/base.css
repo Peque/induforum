@@ -726,6 +726,17 @@ time.news_pubdate {
 	font-weight: bold;
 }
 
+#content form input[type="checkbox"] {
+	margin: .5em 0 .5em 15%;
+	clear: left;
+	float: left;
+}
+#content form label.checkbox_label {
+	margin: 0;
+	padding: .5em 1em;
+	float: left;
+}
+
 
 /************************************ Footer ***********************************/
 #w_footer {
