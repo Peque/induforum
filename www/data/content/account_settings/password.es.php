@@ -23,7 +23,7 @@
 			<li class="current">Contraseña</li>
 <?php
 	if (isset($_SESSION['invitations_permissions']) && $_SESSION['invitations_permissions']) {
-		echo '<li><a href="/en/account_settings/invite/">Invitar</a></li>';
+		echo '<li><a href="/es/account_settings/invite/">Invitar</a></li>';
 	}
 	if (isset($_SESSION['permissions_permissions']) && $_SESSION['permissions_permissions']) {
 		echo '<li><a href="/es/account_settings/permissions/">Permisos</a></li>';
