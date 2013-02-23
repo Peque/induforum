@@ -56,7 +56,7 @@
 		$mail->Password = $email_pass;
 		$mail->SetFrom($email_from_mail, $email_from_name);
 		$mail->Subject = "NO REPLY";
-		$mail->Body = "You have been invited to Reset! Use the link bellow to register:\n\nhttp://".$_SERVER['HTTP_HOST']."/invitation/?key=".$invitation_key;
+		$mail->Body = "You have been invited to Induforum! Use the link bellow to register:\n\nhttp://".$_SERVER['HTTP_HOST']."/invitation/?key=".$invitation_key;
 		$mail->AddAddress($sd['email']);
 
 		if ($mail->Send()) {
