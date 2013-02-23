@@ -67,7 +67,8 @@
 						$result = mysqli_query($db, $query);
 
 						// Set the user key
-						$user_key = mysqli_fetch_assoc($result)['number'];
+						$row = mysqli_fetch_assoc($result);
+						$user_key = $row['number'];
 
 						// Set permissions for the user
 						foreach (explode(',', $invitation['permissions']) as $p) {
