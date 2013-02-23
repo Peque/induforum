@@ -11,6 +11,7 @@
 	$err_invitation_expired='<p class="error"><strong>Error: </strong> the invitation already expired. Please, ask for a new one.</p>';
 	$err_wrong_form_type='<p class="error"><strong>Error: </strong> wrong form type. Please, contact the administrator.</p>';
 	$err_sending_mail='<p class="error"><strong>Error: </strong> could not send the email. Please, share the link provided bellow with your friend.</p>';
+	$err_setting_permissions='<p class="error"><strong>Error: </strong> could not set the permissions for the user. Please, ask another user to share permissions with you.</p>';
 
 	// Warning messages
 	$warn_incomplete_form='<p class="warning">Please, fill all the required fields in the form!</p>';

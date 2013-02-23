@@ -11,7 +11,6 @@
 		</hgroup>
 		<hr />
 	</header>
-	<p>Please, introduce the required data below to add your user to our database.</p>
 
 <?php
 
@@ -21,6 +20,7 @@
 
 ?>
 
+	<p>Please, introduce the required data below to add your user to our database.</p>
 	<form action="" method="post">
 		<fieldset>
 			<legend>User information:</legend>

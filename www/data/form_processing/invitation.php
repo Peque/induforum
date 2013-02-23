@@ -29,12 +29,12 @@
 	// Check the invitation exists
 	if (mysqli_num_rows($result)) {
 
-		$row = mysqli_fetch_assoc($result);
+		$invitation = mysqli_fetch_assoc($result);
 
 		date_default_timezone_set('UTC');
 
 		// Check the invitation can still be used
-		if (!$row['used_by'] && strtotime($row['expiration']) > strtotime(date("Y-m-d H:i:s"))) {
+		if (!$invitation['used_by'] && strtotime($invitation['expiration']) > strtotime(date("Y-m-d H:i:s"))) {
 
 			$query = "select * from users where id='".$sd['user']."'";
 			$result = mysqli_query($db, $query);
@@ -61,7 +61,20 @@
 						// Close the invitation
 						$query = "update invitations set used_by='".$sd['user']."' where invitation_key='".$invitation_key."'";
 						$result = mysqli_query($db, $query);
-						unset($sd['user']);
+
+						// Search for user key
+						$query = "select number from users where id='".$sd['user']."'";
+						$result = mysqli_query($db, $query);
+
+						// Set the user key
+						$user_key = mysqli_fetch_assoc($result)['number'];
+
+						// Set permissions for the user
+						foreach (explode(',', $invitation['permissions']) as $p) {
+							$query = "insert into permissions (user,".$p.") values (".$user_key.",'1') on duplicate key update ".$p."='1'";
+							$result = mysqli_query($db, $query);
+							if (!$result) echo $err_setting_permissions;
+						}
 
 					} else {
 
