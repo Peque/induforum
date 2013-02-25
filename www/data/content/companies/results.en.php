@@ -24,7 +24,7 @@
 	</hgroup>
 </header>
 <article>
-
+<?php require_once('../../../data/results.php'); ?>
 <table>
 <tr>
 <td>Name</td>
