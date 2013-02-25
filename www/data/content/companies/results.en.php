@@ -23,7 +23,7 @@
 	</hgroup>
 </header>
 <article>
-<!--<?php require_once('../../../data/results.php'); ?>-->
+
 <table>
 <tr>
 <td>row 1, cell 1</td>
