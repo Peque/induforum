@@ -1,35 +1,41 @@
 <?php
 
-// Connect to the database
-	$db = mysqli_connect($db_server, $db_user, $db_pass, $db_name);
+	session_start();
 
-	// Check for database connection errors
-	if (mysqli_connect_errno()) {
-
-		echo $err_db_connection_error;
-
+	// Check user logged in
+	if (!isset($_SESSION['user_id'])) {
+		header('Location: /en/login/');
+		exit;
 	}
 
-	if (!mysqli_set_charset($db, 'utf8')) {
-
-		echo $err_db_charset_error;
-
+	// Check user privileges
+	if (!$_SESSION['user_is_company']) {
+		header('Location: /en/restricted_area/');
+		exit;
 	}
-// create variables
-
-$C_studies=$_POST['C_stuedies'];
-$C_higher_course=$_POST['C_higher_course'];
-$C_speciality=$_POST['C_speciality'];
-
-
 
 ?>
 
-<!-- mysql> select * from students_academic_data where user in (select user from students_personal_data where name='Coloma Maria') and studies='industrialengineering';
- -->
-
-
-<!--mysql>select * from students_academic_data where studies='$C_studies' AND higher_course=$C_higher_course AND speciality='$C_speciality';
-
-
-mysql> select * from students_academic_data where studies='industrialengineering' AND higher_course=5 -->;
+<section id="content">
+<header>
+	<hgroup>
+		<h1>Results</h1>
+	</hgroup>
+</header>
+<article>
+<!--<?php require_once('../../../data/results.php'); ?>-->
+<table>
+<tr>
+<td>row 1, cell 1</td>
+<td>row 1, cell 2</td>
+</tr>
+<tr>
+<td>row 2, cell 1</td>
+<td>row 2, cell 2</td>
+</tr>
+</table> 
+</article>
+<footer>
+	<p class="section_title">Participation</p>
+</footer>
+</section>
