@@ -15,6 +15,7 @@
 	}
 
 ?>
+<!-- Coloma mola mucho -->
 
 <section id="content">
 <header>
@@ -33,7 +34,7 @@
 <td>row 2, cell 1</td>
 <td>row 2, cell 2</td>
 </tr>
-</table> 
+</table>
 </article>
 <footer>
 	<p class="section_title">Participation</p>
