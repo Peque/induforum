@@ -15,6 +15,7 @@
 	}
 
 ?>
+<!-- Coloma mola mucho -->
 
 <section id="content">
 <header>
@@ -31,7 +32,7 @@
 <td>Studies</td>
 <td>C.V.</td>
 </tr>
-</table> 
+</table>
 </article>
 <footer>
 	<p class="section_title">Participation</p>
