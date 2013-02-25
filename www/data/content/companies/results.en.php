@@ -26,12 +26,10 @@
 
 <table>
 <tr>
-<td>row 1, cell 1</td>
-<td>row 1, cell 2</td>
-</tr>
-<tr>
-<td>row 2, cell 1</td>
-<td>row 2, cell 2</td>
+<td>Name</td>
+<td>Surname</td>
+<td>Studies</td>
+<td>C.V.</td>
 </tr>
 </table> 
 </article>
