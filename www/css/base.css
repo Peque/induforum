@@ -16,7 +16,7 @@ caption,canvas,details,figcaption,figure,summary,time,mark,audio,video {
     font-size: 100%;
     font-weight: normal;
 	font-style: normal;
-	font-family: Helvetica, Arial, Sans-Serif;
+	font-family: Pontano Sans, Arial, Sans-Serif;
 /* font-family: "Helvetica Neue",Helvetica,Arial,Verdana,Geneva,sans-serif; */
 	vertical-align: baseline;
 	text-align: left;
@@ -75,7 +75,7 @@ a:hover {
 body {
 	width: 100%;
 	color: #585858;
-	background-image: url("/images/back.jpg"), url("/images/gradient.jpg");
+	background-image: url("/images/back2.jpg"), url("/images/gradient2.jpg");
 	background-repeat: no-repeat, repeat;
 	background-size: 100%;
 }
