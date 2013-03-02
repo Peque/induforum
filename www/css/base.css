@@ -203,10 +203,11 @@ time.news_pubdate {
 #main_nav a.nav_section {
 	padding: .5em 1em .5em 1em;
 	font-weight: bold;
-	color: #ffffff;
+	color: red;
 }
 #main_nav ul ul.block {
 	padding: .5em 1em .5em 1em;
+	color: red;
 }
 #main_nav ul ul li a,
 #main_nav ul ul li a:visited {
@@ -559,6 +560,7 @@ time.news_pubdate {
 #content table td {
 	border: 1px solid black;
 	text-align: center;
+	vertical-align:middle;
 }
 #content table tr:nth-child(odd) {
 	background-color: #ffffe6;

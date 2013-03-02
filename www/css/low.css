@@ -20,7 +20,7 @@
 	padding: 1em 0em;
 }
 #w_header hgroup {
-	padding: 2em 0em;
+	padding: 0em 0em;
 	background: url('/images/banner.jpg') no-repeat scroll center left;
 	background-size: cover;
 }
