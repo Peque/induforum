@@ -12,11 +12,17 @@
 }
 
 /******************************* Website's Header ******************************/
+
 #w_header hgroup {
+	padding: 2em 0em;
+	background: url('/images/banner.jpg') no-repeat scroll center left;
+	background-size: cover;
+}
+/*#w_header hgroup {
 	padding: 2em 0em;
 	background: url('/images/logo.png') no-repeat scroll center left;
 	background-size: 16em auto;
-}
+}*/
 #w_header h1,
 #w_header h2 {
 	margin: 0 18%;

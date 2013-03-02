@@ -15,7 +15,7 @@
 	}
 
 ?>
-<!-- Coloma mola mucho -->
+
 
 <section id="content">
 <header>

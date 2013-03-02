@@ -13,10 +13,16 @@
 	display: none;
 }
 
+
 /******************************* Website's Header ******************************/
 #w_header hgroup {
 	margin-left: 2%;
 	padding: 1em 0em;
+}
+#w_header hgroup {
+	padding: 2em 0em;
+	background: url('/images/banner.jpg') no-repeat scroll center left;
+	background-size: cover;
 }
 
 /*********************************** Main Nav **********************************/

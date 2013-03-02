@@ -22,7 +22,7 @@
 	}
 // create variables
 
-$studies=$_POST['C_stuedies'];
+$studies=$_POST['C_studies'];
 $higher_course=$_POST['C_higher_course'];
 $speciality=$_POST['C_speciality'];
 $english=$_POST['english'];
@@ -50,6 +50,9 @@ $simulation=$_POST['Simulation'];
 $communications=$_POST['Communications'];
 $mathematics=$_POST['Mathematics'];
 $worktime=$_POST['C_work_time']
+
+$query = "select * from students_academic_data where user='".$user_number."'";
+$result = mysqli_query($db, $query);
 
 ?>
 <!-- mysql> select * from students_academic_data where user in (select user from students_personal_data where name='Coloma Maria') and studies='industrialengineering';
