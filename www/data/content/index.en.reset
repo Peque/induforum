@@ -15,76 +15,7 @@ The event is organised by the students in order to offer a direct encounter betw
 <table>
 
 
-		<tr>
-		<td><img  src="/images/sponsors/logocompanies/abb.jpg" alt="abb"  class="logo_abb"/></td>
-		<td><img  src="/images/sponsors/logocompanies/accenture.jpg" alt="accenture"  class="logo_accenture"/></td>
-		<td><img  src="/images/sponsors/logocompanies/acciona.jpg" alt="abb"  class="logo_acciona"/></td>
-		<td><img  src="/images/sponsors/logocompanies/alstom.jpg" alt="alstom"  class="logo_alstom"/></td>
-		<td><img  src="/images/sponsors/logocompanies/atexis.jpg" alt="atexis"  class="logo_atexis"/></td>
-		</tr>
-
-
-        <tr>
-		<td><img src="/images/sponsors/logocompanies/bbva.png" alt="bbva"  class="logo_bbva"/></td>
-		<td><img src="/images/sponsors/logocompanies/bsh.jpg" alt="bsh"  class="logo_bsh"/></td>
-		<td><img src="/images/sponsors/logocompanies/cepade.jpg" alt="cepade"  class="logo_cepade"/></td>
-		<td><img src="/images/sponsors/logocompanies/cepsa.jpg" alt="cepsa"  class="logo_cepsa"/></td>
-		<td><img src="/images/sponsors/logocompanies/clh.jpg" alt="clh"  class="logo_clh"/></td>
-		</tr>
-
-
-        <tr>
-		<td><img src="/images/sponsors/logocompanies/dalkia.jpg" alt="dalkia"  class="logo_dalkia"/></td>
-		<td><img src="/images/sponsors/logocompanies/deloitte.jpg" alt="deloitte"  class="logo_deloitte"/></td>
-		<td><img src="/images/sponsors/logocompanies/eads.png" alt="eads"  class="logo_eads"/></td>
-		<td><img src="/images/sponsors/logocompanies/elecnor.jpg" alt="elecnor"  class="logo_elecnor"/></td>
-		<td><img src="/images/sponsors/logocompanies/eoi.jpg" alt="eoi"  class="logo_eoi"/></td>
-		</tr>
-
-
-        <tr>
-		<td><img src="/images/sponsors/logocompanies/everis.jpg" alt="everis"  class="logo_everis"/></td>
-		<td><img src="/images/sponsors/logocompanies/fcc.jpg" alt="fcc"  class="logo_fcc"/></td>
-		<td><img src="/images/sponsors/logocompanies/ferroser.jpg" alt="ferroser"  class="logo_ferroser"/></td>
-		<td><img src="/images/sponsors/logocompanies/fluor.jpg" alt="fluor"  class="logo_fluor"/></td>
-		<td><img src="/images/sponsors/logocompanies/foster_wheeler.jpg" alt="foster_wheeler"  class="logo_foster_wheeler"/></td>
-		</tr>
-
-
-        <tr>
-		<td><img src="/images/sponsors/logocompanies/gas_natural.jpg" alt="gas_natural"  class="logo_gas_natural"/></td>
-		<td><img src="/images/sponsors/logocompanies/hp.jpg" alt="hp"  class="logo_hp"/></td>
-		<td><img src="/images/sponsors/logocompanies/idom.jpg" alt="idom"  class="logo_idom"/></td>
-		<td><img src="/images/sponsors/logocompanies/ing.jpg" alt="ing"  class="logo_ing"/></td>
-		<td><img src="/images/sponsors/logocompanies/isolux_corsan.jpg" alt="isolux_corsan"  class="logo_isolux_corsan"/></td>
-		</tr>
-
-
-        <tr>
-		<td><img src="/images/sponsors/logocompanies/leitat.jpg" alt="leitat"  class="logo_leitat"/></td>
-		<td><img src="/images/sponsors/logocompanies/lidl.jpg" alt="lidl"  class="logo_lidl"/></td>
-		<td><img src="/images/sponsors/logocompanies/loreal.jpg" alt="loreal"  class="logo_loreal"/></td>
-		<td><img src="/images/sponsors/logocompanies/netapp.jpg" alt="netapp"  class="logo_netapp"/></td>
-		<td><img src="/images/sponsors/logocompanies/page_personnel.jpg" alt="page_personnel"  class="logo_page_personnel"/></td>
-		</tr>
-
-
-        <tr>
-		<td><img src="/images/sponsors/logocompanies/pwc.jpg" alt="pwc"  class="logo_pwc"/></td>
-		<td><img src="/images/sponsors/logocompanies/quest.jpg" alt="quest"  class="logo_quest"/></td>
-		<td><img src="/images/sponsors/logocompanies/recruit_iberica.jpg" alt="recruit_iberica"  class="logo_recruit_iberica"/></td>
-		<td><img src="/images/sponsors/logocompanies/repsol.jpg" alt="repsol"  class="logo_repsol"/></td>
-		<td><img src="/images/sponsors/logocompanies/seat.jpg" alt="seat"  class="logo_seat"/></td>
-		</tr>
-
-
-        <tr>
-		<td><img src="/images/sponsors/logocompanies/siemens.jpg" alt="siemens"  class="logo_siemens"/></td>
-        <td><img src="/images/sponsors/logocompanies/tecnicas_reunidas.jpg" alt="tecnicas_reunidas"  class="logo_tecnicas_reunidas"/></td>
-        <td><img src="/images/sponsors/logocompanies/tetra_pak.jpg" alt="tetra_pak"  class="logo_tetra_pak"/></td>
-		<td><img src="/images/sponsors/logocompanies/top_employers.png" alt="top_employers"  class="logo_top_employers"/></td>
-		<td><img src="/images/sponsors/logocompanies/upmracing.jpg" alt="upmracing"  class="logo_upmracing"/></td>
-		</tr>
+		<script src="/js/sponsors2.js"></script>
 
 
 </table>
