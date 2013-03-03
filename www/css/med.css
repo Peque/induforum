@@ -13,11 +13,7 @@
 
 /******************************* Website's Header ******************************/
 
-#w_header hgroup {
-	padding: 0em 0em;
-	background: url('/images/banner.jpg') no-repeat scroll center left;
-	background-size: cover;
-}
+
 /*#w_header hgroup {
 	padding: 2em 0em;
 	background: url('/images/logo.png') no-repeat scroll center left;
