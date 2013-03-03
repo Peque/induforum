@@ -190,12 +190,14 @@ time.news_pubdate {
 
 /*********************************** Main Nav **********************************/
 #main_nav {
-	background: rgba(0, 0, 0, 0.3);
-	border-radius: 0 0em 0em 0;
-	box-shadow: 0 0 1em 0em #F0F0F0;
+	background: rgba(0, 0, 0, 0);
+	border-radius: 0 0em 0em 0em;
+	box-shadow: 0em 0em 0em 0em ;
+
+
 }
 #main_nav a {
-	color: #006699;
+	color: #F0F0F0; /*#006699;*/
 }
 #main_nav a:visited {
 	color: #b80047;
@@ -203,7 +205,10 @@ time.news_pubdate {
 #main_nav a.nav_section {
 	padding: .5em 1em .5em 1em;
 	font-weight: bold;
-	color: red;
+	color:#FFFFFF;
+	background-color: #3896Ce;
+	border-radius:0.2em 0.2em 0.2em 0.2em;
+
 }
 #main_nav ul ul.block {
 	padding: .5em 1em .5em 1em;
@@ -213,12 +218,12 @@ time.news_pubdate {
 #main_nav ul ul li a:visited {
 	padding: .5em .5em;
 	font-weight: bold;
-	color: white;
+	color: #3896Ce;
 	display: block;
 }
 #main_nav ul ul li a:hover {
 	text-decoration: none;
-	background: rgba(0, 220, 255, .5);
+	background: #C2C0C0; /*rgba(0, 220, 255, .5);*/
 	border-radius: .5em;
 }
 
