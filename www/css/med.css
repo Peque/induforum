@@ -43,6 +43,7 @@
 	border-left: none;
 	margin: 0 0 1em 0;
 	width: 18%;
+	background-color: #ffffff;
 }
 /*
  * For higher resolutions (higher than 1200px), we don't display the
@@ -60,7 +61,8 @@
 	font-size: 1.1em;
 	text-align: center;
 	display: block;
-	color: #3896Ce;;
+	color: #FFFFFF;
+	background-color: #3896Ce;
 }
 #main_nav a.nav_section:hover {
 	text-decoration: none;
