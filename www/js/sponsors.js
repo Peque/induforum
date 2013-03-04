@@ -3,46 +3,26 @@
 var sponsors = [
 
 	{
-		company: "Accenture",
-		website: "http://www.accenture.com/",
-		image: "accenture"
+		company: "FCC",
+		website: "http://www.fcc.es/",
+		image: "fcc"
 	},
 
-	{
-		company: "BBVA",
-		website: "http://www.bbva.com/",
-		image: "bbva"
-	},
 
-	{
-		company: "IBM",
-		website: "http://www.ibm.com/",
-		image: "ibm"
-	},
+
+
 
 	{
 		company: "L'Oréal",
 		website: "http://www.loreal.com/",
 		image: "loreal"
-	},
-
-	{
-		company: "OSRAM",
-		website: "http://www.osram.com/",
-		image: "osram"
-	},
-
-	{
-		company: "SEAT",
-		website: "http://www.seat.com/",
-		image: "seat"
-	},
-
-	{
-		company: "Siemens",
-		website: "http://www.siemens.com/",
-		image: "siemens"
 	}
+
+
+
+
+
+
 
 ];
 
@@ -66,8 +46,8 @@ var chosen = new Array();
 
 chosen[0] = new_chosen_one();
 chosen[1] = new_chosen_one();
-chosen[2] = new_chosen_one();
-chosen[3] = new_chosen_one();
+/* chosen[2] = new_chosen_one();
+chosen[3] = new_chosen_one(); */
 
 
 for (var i = 0; i < chosen.length; i++) {
