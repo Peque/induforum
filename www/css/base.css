@@ -721,7 +721,8 @@ time.news_pubdate {
 	width: auto;
 }
 #content form input[type="checkbox"] {
-	margin: .5em 0 .5em 35%;
+	width: 1em;
+	margin: .5em 0 .5em 25%;
 	clear: left;
 	float: left;
 }
