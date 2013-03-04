@@ -31,9 +31,6 @@
 	if (isset($_SESSION['invitations_permissions']) && $_SESSION['invitations_permissions']) {
 		echo '<li class="current">Invite</li>';
 	}
-	if (isset($_SESSION['permissions_permissions']) && $_SESSION['permissions_permissions']) {
-		echo '<li><a href="/en/account_settings/permissions/">Permissions</a></li>';
-	}
 	if (isset($_SESSION['statistics_permissions']) && $_SESSION['statistics_permissions']) {
 		echo '<li><a href="/en/account_settings/statistics/">Statistics</a></li>';
 	}
@@ -41,7 +38,7 @@
 		</ul>
 	</nav>
 	<div class="tabs_nav_div"></div>
-	<p>You can invite other people to join us. Notice that all this actions will be registered and associated with your user for security reasons, so try to invite only people you trust.</p>
+	<p>You can invite other people to join us or share permissions with other users. Notice that all this actions will be registered and associated with your user for security reasons, so try to create invitations only for people you trust or reduce their permissions to the minimum required.</p>
 
 <?php
 
@@ -54,7 +51,7 @@
 	<form action="" method="post">
 		<fieldset>
 			<legend>Invitation form:</legend>
-			<p class="info">Please, select which permissions you want to share with the new user. You can share, at most, your own permissions (those which are listed bellow):</p>
+			<p class="info">Please, select which permissions you want to share with the user. You can share, at most, your own permissions (those which are listed bellow):</p>
 			<div class="form_wrapper">
 
 <?php
@@ -109,17 +106,6 @@
 
 				<input name="statistics" id="form_statistics" value="1" type="checkbox" />
 				<label for="form_statistics" class="checkbox_label">The user can see statistics about the database</label>
-
-<?php
-
-	}
-
-	if (isset($_SESSION['permissions_permissions']) && $_SESSION['permissions_permissions'] == 1) {
-
-?>
-
-				<input name="permissions" id="form_permissions" value="1" type="checkbox" />
-				<label for="form_permissions" class="checkbox_label">The user can share permissions</label>
 
 <?php
 

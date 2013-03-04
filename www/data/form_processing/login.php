@@ -58,7 +58,6 @@
 				$_SESSION['invitations_permissions'] = $row['invitations'];
 				$_SESSION['statistics_permissions'] = $row['statistics'];
 				$_SESSION['banners_permissions'] = $row['banners'];
-				$_SESSION['permissions_permissions'] = $row['permissions'];
 
 			} else {
 

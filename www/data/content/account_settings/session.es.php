@@ -25,9 +25,6 @@
 	if (isset($_SESSION['invitations_permissions']) && $_SESSION['invitations_permissions']) {
 		echo '<li><a href="/es/account_settings/invite/">Invitar</a></li>';
 	}
-	if (isset($_SESSION['permissions_permissions']) && $_SESSION['permissions_permissions']) {
-		echo '<li><a href="/es/account_settings/permissions/">Permisos</a></li>';
-	}
 	if (isset($_SESSION['statistics_permissions']) && $_SESSION['statistics_permissions']) {
 		echo '<li><a href="/es/account_settings/statistics/">Estadísticas</a></li>';
 	}

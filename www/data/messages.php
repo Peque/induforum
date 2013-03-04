@@ -5,7 +5,7 @@
 	$err_db_charset_error='<p class="error"><strong>Error: </strong>could not set charset to UTF8. Please, try again later.</p>';
 	$err_wrong_username_or_password='<p class="error"><strong>Error: </strong>Wrong user name or password. Please, try again.</p>';
 	$err_writing_to_db='<p class="error"><strong>Error: </strong>could not write to the database. Please, try again later.</p>';
-	$err_user_exist='<p class="error"><strong>Error: </strong> the username is already in use, please, select a different one.</p>';
+	$err_user_exist='<p class="error"><strong>Error: </strong> the username is already in use, please, select a different one or provide the correct password.</p>';
 	$err_not_invited='<p class="error"><strong>Error: </strong> the invitation you are trying to use does not exist. Please, ask for a new one.</p>';
 	$err_invitation_used='<p class="error"><strong>Error: </strong> the invitation has already been used. Please, ask for a new one.</p>';
 	$err_invitation_expired='<p class="error"><strong>Error: </strong> the invitation already expired. Please, ask for a new one.</p>';

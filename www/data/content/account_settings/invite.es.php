@@ -31,9 +31,6 @@
 	if (isset($_SESSION['invitations_permissions']) && $_SESSION['invitations_permissions']) {
 		echo '<li class="current">Invitar</li>';
 	}
-	if (isset($_SESSION['permissions_permissions']) && $_SESSION['permissions_permissions']) {
-		echo '<li><a href="/es/account_settings/permissions/">Permisos</a></li>';
-	}
 	if (isset($_SESSION['statistics_permissions']) && $_SESSION['statistics_permissions']) {
 		echo '<li><a href="/es/account_settings/statistics/">Estadísticas</a></li>';
 	}
@@ -41,7 +38,7 @@
 		</ul>
 	</nav>
 	<div class="tabs_nav_div"></div>
-	<p>Puedes invitar a otras personas a unirse a nosotros. Ten en cuenta que todas estas acciones serán registradas y asociadas a tu usuario por razones de seguridad, así que intenta invitar sólo a personas en quien confíes.</p>
+	<p>Puedes invitar a otras personas a unirse a nosotros o compartir permisos con otros usuarios. Ten en cuenta que todas estas acciones serán registradas y asociadas a tu usuario por razones de seguridad, así que intenta crear invitaciones sólo para personas en quien confíes o reduce sus permisos a los mínimos necesarios.</p>
 
 <?php
 
@@ -54,7 +51,7 @@
 	<form action="" method="post">
 		<fieldset>
 			<legend>Formulario de invitación:</legend>
-			<p class="info">Por favor, selecciona los permisos que quieras compartir con el nuevo usuario. Puedes compartir, como máximo, tus propios permisos (aquellos que se listan a continuación):</p>
+			<p class="info">Por favor, selecciona los permisos que quieras compartir con el usuario. Puedes compartir, como máximo, tus propios permisos (aquellos que se listan a continuación):</p>
 			<div class="form_wrapper">
 <?php
 
@@ -108,17 +105,6 @@
 
 				<input name="statistics" id="form_statistics" value="1" type="checkbox" />
 				<label for="form_statistics" class="checkbox_label">El usuario puede ver estadísticas de la página web</label>
-
-<?php
-
-	}
-
-	if (isset($_SESSION['permissions_permissions']) && $_SESSION['permissions_permissions'] == 1) {
-
-?>
-
-				<input name="permissions" id="form_permissions" value="1" type="checkbox" />
-				<label for="form_permissions" class="checkbox_label">El usuario puede compartir permisos</label>
 
 <?php
 

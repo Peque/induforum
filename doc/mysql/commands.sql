@@ -63,7 +63,6 @@ create table permissions(
 	student bool default 0,
 	invitations bool default 0,
 	statistics bool default 0,
-	permissions bool default 0,
 	banners bool default 0
 );
 

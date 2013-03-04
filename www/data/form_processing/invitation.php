@@ -42,14 +42,36 @@
 			// Check the user name is not already in use
 			if (mysqli_num_rows($result)) {
 
-				echo $err_user_exist;
-				$processing_error = 1;
-				unset($sd['user']);
-				mysqli_free_result($result);
+				$row = mysqli_fetch_assoc($result);
+
+				// Check the user has provided the correct password
+				if (hash('sha512', $db_salt.$sd['pass']) == $row['password']) {
+
+					// Close the invitation
+					$query = "update invitations set used_by='".$sd['user']."' where invitation_key='".$invitation_key."'";
+					$result = mysqli_query($db, $query);
+
+					// Set the user key
+					$user_key = $row['number'];
+
+					// Set permissions for the user
+					foreach (explode(',', $invitation['permissions']) as $p) {
+						$query = "insert into permissions (user,".$p.") values (".$user_key.",'1') on duplicate key update ".$p."='1'";
+						$result = mysqli_query($db, $query);
+						if (!$result) echo $err_setting_permissions;
+					}
+
+				} else {
+
+					echo $err_user_exist;
+					$processing_error = 1;
+					mysqli_free_result($result);
+
+				}
 
 			} else {
 
-				// Check passwords match
+				// Check if passwords match
 				if ($sd['pass'] == $sd['pass2']) {
 
 					// Create the new user

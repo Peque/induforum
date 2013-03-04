@@ -16,7 +16,7 @@
 
 	require_once(strstr(getcwd(), '/build', 1).'/data/form_to_db.php');
 
-	if (form_to_db('invitation', array('user*', 'pass*', 'pass2*'))) {
+	if (form_to_db('invitation', array('user*', 'pass*', 'pass2'))) {
 
 ?>
 
@@ -29,8 +29,8 @@
 				<input type="text" maxlength="30" name="user" id="form_user" class="singleline" required="required" value="<?php if (isset($sd['user'])) echo $sd['user']; ?>" />
 				<label for="form_pass" class="singleline">Password: <span class="form_required" title="This field is required">*</span></label>
 				<input type="password" maxlength="60" name="pass" id="form_pass" class="singleline" required="required" />
-				<label for="form_pass2" class="singleline">Password (again): <span class="form_required" title="This field is required">*</span></label>
-				<input type="password" maxlength="60" name="pass2" id="form_pass2" class="singleline" required="required" />
+				<label for="form_pass2" class="singleline">Password (again, for new users):</label>
+				<input type="password" maxlength="60" name="pass2" id="form_pass2" class="singleline" />
 			</div>
 		</fieldset>
 		<input type="hidden" name="type" value="invitation" />
@@ -41,7 +41,7 @@
 
 	} else {
 
-		echo '<p class="info">Your user was successfully added to our database! You can now <a href="/en/login/">go to the login page</a>.</p>';
+		echo '<p class="info">Your user has been updated in our database! You can now <a href="/en/login/">go to the login page</a>.</p>';
 
 	}
 
