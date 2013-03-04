@@ -1,0 +1,24 @@
+% TITLE=Induforma-e
+%SUBTITLE=
+% DESCRIPTION=
+% KEYWORDS=
+
+
+=Induforma-e=
+----
+
+<table>
+    <thead>
+        <tr>
+        		<th>Foto</th>
+            <th>Name</th>
+            <th>email</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr><td><img src="/images/logo_photo.png" alt="profile_foto" /></td><td>Urbano Villaescusa, Pablo</td><td>pablo.urbano.villaescusa<span class="display-none">@anti-spam</span>@gmail.com</td></tr>
+        <tr><td><img src="/images/logo_photo.png" alt="profile_foto" /></td><td>Velasco Ortega, Ana </td><td>ana_velasco<span class="display-none">@anti-spam</span>@live.com</td></tr>
+        <tr><td><img src="/images/logo_photo.png" alt="profile_foto" /></td><td>Dominguez Marsal, Miguel</td><td>migueldominguezmarsal<span class="display-none">@anti-spam</span>@gmail.com</td></tr>
+        <tr><td><img src="/images/logo_photo.png" alt="profile_foto" /></td><td>Morán Pelaez, Beatriz</td><td>mbmp_7<span class="display-none">@anti-spam</span>@hotmail.com</td></tr>
+    </tbody>
+</table>
