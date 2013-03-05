@@ -52,7 +52,7 @@
 	
 	$worktime=$_POST['C_work_time'];
 	
-	$query = "select * from students_personal_data where user='".$user_number."'";
+	$query = "select * from students_academic_data where studies='".$studies."'and speciality='".$speciality."'";
 	$result = mysqli_query($db, $query); 	
 		if ($result) {
 
@@ -65,17 +65,15 @@
 				$query = "select * from students_personal_data where user='".$user."'";
 				$result2=mysqli_query($db, $query);
 				$personal=mysqli_fetch_row($result2);
-				echo $personal[1];
+				$query = "select * from students_academic_data where user='".$user."'";
+				$result2=mysqli_query($db, $query);
+				$academic=mysqli_fetch_row($result2);
+				echo "<tr><td>$personal[1]</td><td>$personal[2]</td><td>$academic[2]</td><td>$academic[1]</td><td>CV</td></tr>";
+				
 			}
 
 		}
-		echo "<tr>
-<td>Name</td>
-<td>Surname</td>
-<td>Course</td>
-<td>Degree</td>
-<td>CV</td>
-</tr>"
+		
 			
 	?>
 <!-- mysql> select * from students_academic_data where user in (select user from students_personal_data where name='Coloma Maria') and studies='industrialengineering';
