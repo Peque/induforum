@@ -50,7 +50,27 @@ $simulation=$_POST['Simulation'];
 $communications=$_POST['Communications'];
 $mathematics=$_POST['Mathematics'];
 $worktime=$_POST['C_work_time']
-
+$num_resutls=2;
+for ($i=0;$i<$num_results;$i++){
+	echo <tr>
+			<td>
+			nombre
+			</td>
+			<td>
+			nombre
+			</td>
+			<td>
+			nombre
+			</td>
+			<td>
+			nombre
+			</td>
+			<td>
+			nombre
+			</td>
+			</tr>;
+}
+			
 ?>
 <!-- mysql> select * from students_academic_data where user in (select user from students_personal_data where name='Coloma Maria') and studies='industrialengineering';
  -->

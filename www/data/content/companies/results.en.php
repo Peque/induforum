@@ -9,7 +9,7 @@
 	}
 
 	// Check user privileges
-	if (!$_SESSION['user_is_company']) {
+	if (!$_SESSION['company_permissions']) {
 		header('Location: /en/restricted_area/');
 		exit;
 	}
@@ -34,6 +34,7 @@
 </tr>
 <!--<?php require_once('../../../data/results.php'); ?>-->
 </table> 
+
 </article>
 <footer>
 	<p class="section_title">CV Data Base</p>
