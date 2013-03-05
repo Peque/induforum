@@ -78,6 +78,11 @@
 				<label for="form_startingyear" class="singleline">Starting year:<span class="form_required" title="This field is required">*</span></label>
 						<select name="begin_year" id="form_startingyear"  required="required" class="singleline">
 							<option value=""></option>
+							<option value="2000" <?php if (isset($spd['begin_year'])&&$spd['begin_year']=="2005") echo 'selected="selected"'?>>2000</option>
+							<option value="2001" <?php if (isset($spd['begin_year'])&&$spd['begin_year']=="2006") echo 'selected="selected"'?>>2001</option>
+							<option value="2002" <?php if (isset($spd['begin_year'])&&$spd['begin_year']=="2007") echo 'selected="selected"'?>>2002</option>
+							<option value="2003" <?php if (isset($spd['begin_year'])&&$spd['begin_year']=="2008") echo 'selected="selected"'?>>2003</option>
+							<option value="2004" <?php if (isset($spd['begin_year'])&&$spd['begin_year']=="2009") echo 'selected="selected"'?>>2004</option>
 							<option value="2005" <?php if (isset($spd['begin_year'])&&$spd['begin_year']=="2005") echo 'selected="selected"'?>>2005</option>
 							<option value="2006" <?php if (isset($spd['begin_year'])&&$spd['begin_year']=="2006") echo 'selected="selected"'?>>2006</option>
 							<option value="2007" <?php if (isset($spd['begin_year'])&&$spd['begin_year']=="2007") echo 'selected="selected"'?>>2007</option>
