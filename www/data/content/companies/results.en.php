@@ -23,19 +23,19 @@
 	</hgroup>
 </header>
 <article>
-<!--<?php require_once('../../../data/results.php'); ?>-->
+
 <table>
 <tr>
-<td>row 1, cell 1</td>
-<td>row 1, cell 2</td>
+<td>Name</td>
+<td>Surname</td>
+<td>Course</td>
+<td>Degree</td>
+<td>CV</td>
 </tr>
-<tr>
-<td>row 2, cell 1</td>
-<td>row 2, cell 2</td>
-</tr>
+<!--<?php require_once('../../../data/results.php'); ?>-->
 </table> 
 </article>
 <footer>
-	<p class="section_title">Participation</p>
+	<p class="section_title">CV Data Base</p>
 </footer>
 </section>

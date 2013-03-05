@@ -22,7 +22,7 @@
 	}
 // create variables
 
-$studies=$_POST['C_stuedies'];
+$studies=$_POST['C_studies'];
 $higher_course=$_POST['C_higher_course'];
 $speciality=$_POST['C_speciality'];
 $english=$_POST['english'];
