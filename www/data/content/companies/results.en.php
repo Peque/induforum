@@ -16,6 +16,8 @@
 
 ?>
 
+
+
 <section id="content">
 <header>
 	<hgroup>
@@ -32,7 +34,10 @@
 <td>Degree</td>
 <td>CV</td>
 </tr>
-<!--<?php require_once('../../../data/results.php'); ?>-->
+
+
+<?php require_once('../../data/results.php');?>
+
 </table> 
 
 </article>
