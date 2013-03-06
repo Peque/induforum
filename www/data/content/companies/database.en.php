@@ -24,7 +24,7 @@
 <article>
 
 	<form action="/en/companies/results" method="post">
-	
+
 			<legend>CV Filter<legend>
 			<fieldset>
 			<legend>Academic</legend>
@@ -46,7 +46,7 @@
 				</select>
 
 
-		
+
 
 				<label for="course" class="singleline">Higher course:</label>
 				<select name="C_higher_course" id="course" class="singleline">
@@ -76,7 +76,7 @@
 			<fieldset>
 
 				<legend>Languages</legend>
-				
+
 				<div class="form_checkbox">
 				<input name="english" id="english" value="english" type="checkbox"/>
 				<label for="english" class="checkbox">English</label> <br>
@@ -112,52 +112,52 @@
 			<fieldset>
 
 				<legend>Computing</legend>
-			
+
 				<div class="form_checkbox">
-				<input type="checkbox" name="Windows" value="SO Windows" id="SO_Windows"/>
+				<input type="checkbox" name="Windows" value="2 id="SO_Windows"/>
 			    <label for="SO_Windows" class="checkbox">SO Windows:</label> <br>
 
-				<input type="checkbox" name="Mac" value="SO Mac" id="SO_Mac"/>
+				<input type="checkbox" name="Mac" value="2" id="SO_Mac"/>
      			<label for="SO_Mac" class="checkbox">SO Mac</label> <br>
 
-				<input type="checkbox" name="Linux" value="SO Linux" id="SO_Linux"/>
+				<input type="checkbox" name="Linux" value="2" id="SO_Linux"/>
 				<label for="SO_Linux" class="checkbox">SO Linux</label> <br>
 
 
-				<input type="checkbox" name="Databases" value="Data bases" id="Data_bases"/>
+				<input type="checkbox" name="Databases" value="2" id="Data_bases"/>
 
-				<input type="checkbox" name="accounting/" value="Accounting/Finances" id="Accounting/Finances"/>
+				<input type="checkbox" name="accounting/" value="2" id="Accounting/Finances"/>
 				<label for="Accounting/Finances" class="checkbox">Accounting/Finances</label> <br>
 
-				<input type="checkbox" name="cad" value="Computer-aided design" id="Computer-aided_design"/>
+				<input type="checkbox" name="cad" value="2" id="Computer-aided_design"/>
 				<label for="Computer-aided_desig" class="checkbox">Computer-aided desig</label> <br>
 
 
-				<input type="checkbox" name="Graphic" value="Graphic Design" id="Graphic_Design"/>
+				<input type="checkbox" name="Graphic" value="2" id="Graphic_Design"/>
 				<label for="Graphic_Design" class="checkbox">Graphic design</label> <br>
 
-				<input type="checkbox" name="Spreadsheet" value="Spreadsheet" id="Spreadsheet"/>
+				<input type="checkbox" name="Spreadsheet" value="2" id="Spreadsheet"/>
 
-				<input type="checkbox" name="Email" value="Email" id="Email">
+				<input type="checkbox" name="Email" value="2" id="Email">
 				<label for="Email" class="checkbox">Email</label> <br>
 
 
-				<input type="checkbox" name="Mathematics" value="Mathematics/Statistics" id="Mathematics/Statistics"/>
+				<input type="checkbox" name="Mathematics" value="2" id="Mathematics/Statistics"/>
 				<label for="Mathematics/Statistics" class="checkbox">Mathematics/Statistics</label> <br>
 
-				<input type="checkbox" name="Presentations" value="Presentations" id="Presentations"/>
+				<input type="checkbox" name="Presentations" value="2" id="Presentations"/>
 				<label for="Presentations" class="checkbox">Presentations</label> <br>
 
-				<input type="checkbox" name="Wordprocessors" value="Word processors" id="Word_processors"/>
+				<input type="checkbox" name="Wordprocessors" value="2" id="Word_processors"/>
 				<label for="Word_processors" class="checkbox">Word processors</label> <br>
 
 
-				<input type="checkbox" name="Programation" value="Programation" id="Programation"/>
+				<input type="checkbox" name="Programation" value="2" id="Programation"/>
 				<label for="Programation" class="checkbox">Programation</label> <br>
 
-				<input type="checkbox" name="Simulation" value="Simulation" id="Simulation"/>
+				<input type="checkbox" name="Simulation" value="2" id="Simulation"/>
 
-				<input type="checkbox" name="Communications" value="Communications and networks" id="Communications_and_networks"/>
+				<input type="checkbox" name="Communications" value="2" id="Communications_and_networks"/>
 				<label for="Communications_and_networks" class="checkbox">Communications and networks</label> <br>
 
 			</div>
@@ -175,14 +175,14 @@
 					<option value="2" >6 months or less</option>
 					<option value="3" >1 year or less</option>
 					<option value="4" >2 year or less</option>
-					<option value="3" >More than 2 years</option>
+					<option value="5" >More than 2 years</option>
 				</select>
 				</div>
 			</fieldset>
 			<input type="submit" value="Search" accesskey="x" />
 
-			
-			
+
+
 
 		<!--		<fieldset>
 				<legend>Driver license</legend>
@@ -193,9 +193,9 @@
 				</div>
 				</fieldset>
 
-			
+
 			<input type="submit" value="Search" accesskey="x"  /> -->
-			
+
 
 	</form>
 </article>

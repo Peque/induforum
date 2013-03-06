@@ -55,6 +55,36 @@
 	$worktime=$_POST['C_work_time'];
 
 
+
+	function finduser($db,$query) {
+	$var = mysqli_query($db, $query);
+
+
+		if ($var) {
+			$array=array();
+			$num_results = mysqli_num_rows($var);
+
+			for ($i=0; $i<$num_results; $i++) {
+
+				$row = mysqli_fetch_row($var);
+				$user=$row[0];
+				$array2=array_intersect($array,(array)$user);
+				if (empty($array2)) {
+				$array=array_merge($array,(array)$user);
+
+                }
+	        }
+
+
+	    }
+		if(!empty($array)) {
+			$array=implode(',',$array);
+			return $array;
+	    }
+
+    }
+
+
 // Resolving:
 
 	$query = "select * from students_academic_data";
@@ -64,25 +94,174 @@
 
 	if ($speciality!="" and ($studies!="" or $higher_course!="")) {$query.= " and speciality='".$speciality."'"; } elseif ($speciality!="") {$query.= " where speciality='".$speciality."'"; }
 
-	$var = mysqli_query($db, $query);
 
-		//show results:
-		if ($var) {
+	$array=finduser($db,$query);
+	$query = "select * from students_languages where user in (".$array.")";
 
-			$num_results = mysqli_num_rows($var);
+		if ($english!="") {
+		$query.= " and language='".$english."'";
+		$array=finduser($db,$query);
+		}
 
-			for ($i=0; $i<$num_results; $i++) {
 
-				$row = mysqli_fetch_row($var);
-				$user=$row[0];
-				$array=array($user);
+	$query = "select * from students_languages where user in (".$array.")";
 
-			}
 
+		if ($french!="") {
+		$query.= " and language='".$french."'";
+		$array=finduser($db,$query);
+
+	}
+
+
+	$query = "select * from students_languages where user in (".$array.")";
+
+		if ($italian!="") {
+		$query.= " and language='".$italian."'";
+		$array=finduser($db,$query);}
+
+	$query = "select * from students_languages where user in (".$array.")";
+
+		if ($german!="") {
+		$query.= " and language='".$german."'";
+		$array=finduser($db,$query);}
+
+	$query = "select * from students_languages where user in (".$array.")";
+
+		if ($portuguese!="") {
+		$query.= " and language='".$portuguese."'";
+		$array=finduser($db,$query);
+		}
+
+	$query = "select * from students_languages where user in (".$array.")";
+
+		if ($russian!="") {
+		$query.= " and language='".$russian."'";
+		$array=finduser($db,$query);
+		}
+
+
+	$query = "select * from students_languages where user in (".$array.")";
+
+		if ($swedish!="") {
+		$query.= " and language='".$swedish."'";
+		$array=finduser($db,$query);
+		}
+
+
+	$query = "select * from students_languages where user in (".$array.")";
+
+		if ($dutch!="") {
+		$query.= " and language='".$dutch."'";
+		$array=finduser($db,$query);
+		}
+
+
+	$query = "select * from students_languages where user in (".$array.")";
+
+
+		if ($chinese!="") {
+		$query.= " and language='".$chinese."'";
+		$array=finduser($db,$query);
 		}
 
 
 
+	$query= "select * from students_computing_experience where user in (".$array.")";
+
+		if ($windows!="") {
+		$query.= " and windows>=2 ";
+		$array=finduser($db,$query);
+
+	}
+
+		if ($mac!="") {
+		$query.= " and mac>=2 ";
+		$array=finduser($db,$query);
+
+	}
+
+		if ($linux!="") {
+		$query.= " and linux>=2 ";
+		$array=finduser($db,$query);
+
+	}
+
+		if ($databases!="") {
+		$query.= " and databases>=2 ";
+		$array=finduser($db,$query);
+
+	}
+
+		if ($accounting!="") {
+		$query.= " and accounting>=2 ";
+		$array=finduser($db,$query);
+
+	}
+
+		if ($cad!="") {
+		$query.= " and cad>=2 ";
+		$array=finduser($db,$query);
+
+	}
+
+		if ($graphic!="") {
+		$query.= " and graphic>=2 ";
+		$array=finduser($db,$query);
+
+	}
+
+		if ($spreadsheet!="") {
+		$query.= " and spreadsheet>=2 ";
+		$array=finduser($db,$query);
+
+	}
+
+		if ($email!="") {
+		$query.= " and email>=2 ";
+		$array=finduser($db,$query);
+
+	}
+
+		if ($presentations!="") {
+		$query.= " and presentations>=2 ";
+		$array=finduser($db,$query);
+
+	}
+
+		if ($word!="") {
+		$query.= " and word>=2 ";
+		$array=finduser($db,$query);
+
+	}
+
+		if ($programation!="") {
+		$query.= " and programation>=2 ";
+		$array=finduser($db,$query);
+
+	}
+
+		if ($simulation!="") {
+		$query.= " and simulation>=2 ";
+		$array=finduser($db,$query);
+
+	}
+
+		if ($communications!="") {
+		$query.= " and communications>=2 ";
+		$array=finduser($db,$query);
+
+	}
+
+		if ($mathematics!="") {
+		$query.= " and mathematics>=2 ";
+		$array=finduser($db,$query);
+
+	}
+
+		//if ($worktime!="") {
+		//$query = "select * from students_work_experience where user in (".$array.") and         ";
+		//$array=finduser($db,$query);
 
 
 
@@ -90,6 +269,7 @@
 
 
 
+	$query = "select * from students_personal_data where user in (".$array.")";
 	$result = mysqli_query($db, $query);
 
 		//show results:
@@ -112,6 +292,9 @@
 			}
 
 		}
+
+
+
 
 
 	?>
