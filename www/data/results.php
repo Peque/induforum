@@ -52,7 +52,8 @@
 	
 	$worktime=$_POST['C_work_time'];
 	
-	$query = "select * from students_academic_data where studies='".$studies."'and speciality='".$speciality."'";
+	$query = "select * from students_academic_data";
+	if ($studies!=""){$query.= " where studies='".$studies."'";}
 	$result = mysqli_query($db, $query); 	
 		if ($result) {
 
