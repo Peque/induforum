@@ -1,10 +1,10 @@
 <?php
- 
+
 	$user_number = $_SESSION['user_id'];
-	
+
 	require_once('../../config.php');
 	require_once('../../data/messages.php');
-	
+
 	// Connect to the database
 	$db = mysqli_connect($db_server, $db_user, $db_pass, $db_name);
 	// Check for database connection errors
@@ -13,17 +13,19 @@
 		echo $err_db_connection_error;
 
 	}
-	
+
 	if (!mysqli_set_charset($db, 'utf8')) {
 
 		echo $err_db_charset_error;
 
 	}
 
+// Define var:
+
 	$studies=$_POST['C_studies'];
 	$higher_course=$_POST['C_higher_course'];
 	$speciality=$_POST['C_speciality'];
-	
+
 	$english=$_POST['english'];
 	$french=$_POST['french'];
 	$italian=$_POST['italian'];
@@ -33,7 +35,7 @@
 	$swedish=$_POST['swedish'];
 	$dutch=$_POST['dutch'];
 	$chinese=$_POST['chinese'];
-	
+
 	$windows=$_POST['Windows'];
 	$mac=$_POST['Mac'];
 	$linux=$_POST['Linux'];
@@ -49,17 +51,53 @@
 	$simulation=$_POST['Simulation'];
 	$communications=$_POST['Communications'];
 	$mathematics=$_POST['Mathematics'];
-	
+
 	$worktime=$_POST['C_work_time'];
-	
+
+
+// Resolving:
+
 	$query = "select * from students_academic_data";
 	if ($studies!=""){$query.= " where studies='".$studies."'";}
-	$result = mysqli_query($db, $query); 	
+
+	if ($higher_course!="" and $studies!="") {$query.= " and higher_course='".$higher_course."'"; } elseif ($higher_course!="") {$query.= " where higher_course='".$higher_course."'"; }
+
+	if ($speciality!="" and ($studies!="" or $higher_course!="")) {$query.= " and speciality='".$speciality."'"; } elseif ($speciality!="") {$query.= " where speciality='".$speciality."'"; }
+
+	$var = mysqli_query($db, $query);
+
+		//show results:
+		if ($var) {
+
+			$num_results = mysqli_num_rows($var);
+
+			for ($i=0; $i<$num_results; $i++) {
+
+				$row = mysqli_fetch_row($var);
+				$user=$row[0];
+				$array=array($user);
+
+			}
+
+		}
+
+
+
+
+
+
+
+
+
+
+	$result = mysqli_query($db, $query);
+
+		//show results:
 		if ($result) {
 
 			$num_results = mysqli_num_rows($result);
-			
-			for ($i=0; $i<$num_results; $i++) { // $num_results should be 1 in this case
+
+			for ($i=0; $i<$num_results; $i++) {
 
 				$row = mysqli_fetch_row($result);
 				$user=$row[0];
@@ -70,12 +108,12 @@
 				$result2=mysqli_query($db, $query);
 				$academic=mysqli_fetch_row($result2);
 				echo "<tr><td>$personal[1]</td><td>$personal[2]</td><td>$academic[2]</td><td>$academic[1]</td><td>CV</td></tr>";
-				
+
 			}
 
 		}
-		
-			
+
+
 	?>
 <!-- mysql> select * from students_academic_data where user in (select user from students_personal_data where name='Coloma Maria') and studies='industrialengineering';
  -->
