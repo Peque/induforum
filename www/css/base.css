@@ -130,8 +130,7 @@ time.news_pubdate {
 	position: relative;
 	color: #ffffff;
 	border-bottom: 1px solid #F0F0F0;
-	background: none repeat scroll 0 0 rgba(0, 0, 0, 0.3);
-	box-shadow: 0 0 1em 0 #F0F0F0;
+	background: #181818;
 }
 #top form {
 	display: inline;
@@ -190,34 +189,44 @@ time.news_pubdate {
 
 /*********************************** Main Nav **********************************/
 #main_nav {
-	background: rgba(0, 0, 0, 0.3);
 	border-radius: 0 0em 0em 0;
 	box-shadow: 0 0 1em 0em #F0F0F0;
 }
+#main_nav ul li {
+	background: white;
+	margin-bottom: 1em;
+	border-radius: .5em .5em 0 0;
+	box-shadow: .2em .2em .5em #999999;
+}
 #main_nav a {
-	color: #006699;
+	color: #ffffff;
 }
 #main_nav a:visited {
-	color: #b80047;
+	color: #ffffff;
 }
 #main_nav a.nav_section {
 	padding: .5em 1em .5em 1em;
 	font-weight: bold;
 	color: #ffffff;
+	background: #3896Ce;
+	border-radius: .5em .5em 0 0;
 }
 #main_nav ul ul.block {
 	padding: .5em 1em .5em 1em;
 }
+#main_nav ul ul li {
+	box-shadow: none;
+}
 #main_nav ul ul li a,
 #main_nav ul ul li a:visited {
-	padding: .5em .5em;
+	padding: 0 .5em;
 	font-weight: bold;
-	color: white;
+	color: #3896Ce;
 	display: block;
 }
 #main_nav ul ul li a:hover {
 	text-decoration: none;
-	background: rgba(0, 220, 255, .5);
+	color: #006699;
 	border-radius: .5em;
 }
 
@@ -308,13 +317,13 @@ time.news_pubdate {
 	background: #FFFFFF;
 }
 #content > header {
-	background: #F0F0F0;
+	background: #181818;
 }
 #content > header hgroup {
 	padding: 1em;
 }
 #content > header h1 {
-	color: #000000;
+	color: #ffffff;
 	font-size: 200%;
 	font-weight: bold;
 }
@@ -360,14 +369,14 @@ time.news_pubdate {
 }
 #content > footer {
 	clear: both;
-	background: #F0F0F0;
+	background: #181818;
 }
 #content > footer p.section_title {
 	padding: .5em 1.5em .5em 1.5em;
 	font-size: 120%;
 	text-align: right;
 	font-weight: bold;
-	color: #383838;
+	color: #ffffff;
 }
 
 /*********************************** Article ***********************************/
@@ -567,6 +576,15 @@ time.news_pubdate {
 #content table tr:nth-child(even) {
 	background-color: #ffffff;
 }
+#content  table.no_style,
+#content  table.no_style th,
+#content  table.no_style td {
+	border: 0;
+}
+#content  table.no_style tr:nth-child(odd),
+#content  table.no_style tr:nth-child(even) {
+	background: none;
+}
 
 /************************************ Media ************************************/
 #content figure {
@@ -751,6 +769,5 @@ time.news_pubdate {
 	text-align: center;
 	color: #FFFFFF;
 	border-top: 1px solid #F0F0F0;
-	background: rgba(0, 20, 5, 0.3);
-	box-shadow: 0 0 1em 0 #F0F0F0;
+	background: #181818;
 }
