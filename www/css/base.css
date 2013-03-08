@@ -75,7 +75,7 @@ a:hover {
 body {
 	width: 100%;
 	color: #585858;
-	background-image: url("/images/back.jpg"), url("/images/gradient.jpg");
+	background-image: url("/images/back2.jpg"), url("/images/gradient2.jpg");
 	background-repeat: no-repeat, repeat;
 	background-size: 100%;
 }
