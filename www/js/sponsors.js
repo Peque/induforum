@@ -20,10 +20,6 @@ var sponsors = [
 
 
 
-
-
-
-
 ];
 
 function new_chosen_one() {

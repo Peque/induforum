@@ -1,3 +1,9 @@
+// DREAMPEAKS
+document.write('<p style="text-align:center;"><a target="_blank" href="http://www.dreampeaks.org/" title="Dreampeaks"><img src="/images/other_topics/dreampeaks.jpg" alt="dreampeaks_logo" /></a></p>');
+
+// SIERRA-CAZORLA
+document.write('<p style="text-align:center;"><a target="_blank" href="http://www.aguasierracazorla.com/" title="Sierra Cazorla"><img src="/images/other_topics/cazorla.png" alt="cazorla_logo" /></a></p>');
+
 // ETSII-UPM
 document.write('<p style="text-align:center;"><a target="_blank" href="http://www.etsii.upm.es/" title="Escuela Técnica Superior de Ingenieros Industriales"><img src="/images/other_topics/etsii_upm.png" alt="etsii_logo" /></a></p>');
 
