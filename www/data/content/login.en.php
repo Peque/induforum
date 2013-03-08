@@ -79,7 +79,10 @@
 
 ?>
 
+
+<p><em>Remember that it is required 50% of credits passed</em></p>
 </article>
+
 <footer>
 	<p class="section_title">Log in</p>
 
