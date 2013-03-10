@@ -36,7 +36,14 @@ var sponsors = [
 		company: "SpasMadrid",
 		website: "http://www.spasmadrid.es/",
 		image: "spamadrid"
+	},
+
+	{
+		company: "Maxam",
+		website: "http://www.maxam.net/",
+		image: "maxam"
 	}
+
 
 
 
@@ -66,6 +73,7 @@ chosen[2] = new_chosen_one();
 chosen[3] = new_chosen_one();
 chosen[4] = new_chosen_one();
 chosen[5] = new_chosen_one();
+chosen[6] = new_chosen_one();
 
 var j=0;
 for (var i = 0; i < chosen.length; i++) {

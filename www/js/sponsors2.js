@@ -159,9 +159,9 @@ var sponsors = [
 	},
 
 	{
-		company: "Nestlé",
-		website: "http://www.nestle.es/",
-		image: "nestle"
+		company: "BCG",
+		website: "http://www.bcg.com/",
+		image: "bcg"
 	},
 
 	{
@@ -258,6 +258,12 @@ var sponsors = [
 		company: "IEN",
 		website: "http://www.ienpolitecnica.es/",
 		image: "ien"
+	},
+
+		{
+		company: "Atos",
+		website: "http://es.atos.net/es-es/",
+		image: "atos"
 	}
 
 
@@ -324,6 +330,7 @@ chosen[39] = new_chosen_one();
 chosen[40] = new_chosen_one();
 chosen[41] = new_chosen_one();
 chosen[42] = new_chosen_one();
+chosen[43] = new_chosen_one();
 
 var j=0;
 
