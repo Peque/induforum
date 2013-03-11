@@ -42,6 +42,12 @@ var sponsors = [
 		company: "Maxam",
 		website: "http://www.maxam.net/",
 		image: "maxam"
+	},
+
+	{
+		company: "Paintball ActionLive",
+		website: "http://www.actionlive.es/?gclid=CJWustai9bUCFYfJtAodtjQA6Q",
+		image: "actionlive"
 	}
 
 
@@ -74,6 +80,8 @@ chosen[3] = new_chosen_one();
 chosen[4] = new_chosen_one();
 chosen[5] = new_chosen_one();
 chosen[6] = new_chosen_one();
+chosen[7] = new_chosen_one();
+
 
 var j=0;
 for (var i = 0; i < chosen.length; i++) {
