@@ -79,7 +79,6 @@
 
 ?>
 
-<p><em>Recuerda que es necesario tener el 50% de créditos superados</em></p>
 </article>
 <footer>
 	<p class="section_title">Iniciar sesión</p>
