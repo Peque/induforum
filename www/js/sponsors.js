@@ -16,8 +16,14 @@ var sponsors = [
 		company: "L'Oréal",
 		website: "http://www.loreal.com/",
 		image: "loreal"
-	}
+	},
 
+
+	{
+		company: "Everis",
+		website: "http://www.everis.com/spain/es-ES/inicio/Paginas/inicio.aspx",
+		image: "everis"
+	}
 
 
 ];
@@ -42,8 +48,8 @@ var chosen = new Array();
 
 chosen[0] = new_chosen_one();
 chosen[1] = new_chosen_one();
-/* chosen[2] = new_chosen_one();
-chosen[3] = new_chosen_one(); */
+chosen[2] = new_chosen_one();
+/* chosen[3] = new_chosen_one(); */
 
 
 for (var i = 0; i < chosen.length; i++) {
