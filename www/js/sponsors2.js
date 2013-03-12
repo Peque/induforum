@@ -190,7 +190,7 @@ var sponsors = [
 
 	{
 		company: "Quest",
-		website: "http://www.quest.com/",
+		website: "http://engineering.quest-global.com/",
 		image: "quest"
 	},
 
