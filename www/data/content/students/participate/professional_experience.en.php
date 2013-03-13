@@ -30,6 +30,7 @@
 			<li><a href="/en/students/participate/languages/">Languages</a></li>
 			<li class="current">Professional</li>
 			<li><a href="/en/students/participate/computer_science/">Computing</a></li>
+			<li><a href="/en/students/participate/pdf/">PDF</a></li>
 		</ul>
 	</nav>
 	<div class="tabs_nav_div"></div>

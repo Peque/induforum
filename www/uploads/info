@@ -1,0 +1,2 @@
+This folder with keep all file uploads and will not be tracked by Git
+It should be owned by the apache user.
