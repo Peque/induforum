@@ -48,6 +48,8 @@ Append the following lines:
 		AcceptPathInfo On
 		RewriteEngine on
 		RewriteCond %{QUERY_STRING} ^lang=(en|es)$
+		RewriteCond %{REQUEST_URI} !^(.*)/$
+		RewriteRule ^(.*)$ $1/ [R=301]
 		RewriteRule ^(?:/(?:en|es))?(/.*)$ /%1$1? [R=301]
 		AliasMatch ^(?:/(?:en|es))(/.*)?$ /var/www/html/induforum/www/build/$1
 		DocumentRoot /var/www/html/induforum/www/build

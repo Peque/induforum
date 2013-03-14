@@ -57,6 +57,8 @@ Go to 'Virtual Hosts' section and add the following lines:
 		RewriteEngine on
 		RewriteCond %{QUERY_STRING} ^lang=(en|es)$
 		RewriteRule ^(?:/(?:en|es))?(/.*)$ /%1$1? [R=301]
+		RewriteCond %{REQUEST_URI} !^(.*)/$
+		RewriteRule ^(.*)$ $1/ [R=301]
 		AliasMatch ^(?:/(?:en|es))(/.*)?$ /var/www/induforum/www/build/$1
 		DocumentRoot /var/www/induforum/www/build
 		ServerName local.induforum.es
