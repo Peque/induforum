@@ -2,6 +2,8 @@
 
 	session_start();
 
+	ob_start();
+
 	// Check user logged in
 	if (isset($_SESSION['user_id'])) {
 		header('Location: /es/account_settings/');
@@ -58,7 +60,7 @@
 
 		if (!isset($_SESSION['user_do_not_have_permissions'])) {
 			if ($_SESSION['admin_permissions']) {
-				header('Location: /es/account_settings/');
+				header('Location: /account_settings/?lang=es');
 				exit;
 			} else if ($_SESSION['student_permissions']) {
 				header('Location: /es/students/participate/');
@@ -79,7 +81,9 @@
 
 ?>
 
+
 </article>
+
 <footer>
 	<p class="section_title">Iniciar sesión</p>
 
