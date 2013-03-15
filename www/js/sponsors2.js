@@ -338,7 +338,7 @@ for (var i = 0; i < chosen.length; i++) {
 	if (j==0) {
 	document.write('<tr>');
 	}
-	document.write('<td><a target="_blank" href="' + sponsors[chosen[i]].website + '" title="' + sponsors[chosen[i]].company + '"><img src="/images/sponsors/logocompanies/' + sponsors[chosen[i]].image + '" alt="' + sponsors[chosen[i]].company + '_logo" /></a></td>');
+	document.write('<td><a target="_blank" href="' + sponsors[chosen[i]].website + '" title="' + sponsors[chosen[i]].company + '"><img style="width: 100%;" src="/images/sponsors/logocompanies/' + sponsors[chosen[i]].image + '" alt="' + sponsors[chosen[i]].company + '_logo" /></a></td>');
 	if (j==4||j==9||j==14||j==19||j==24||j==29||j==34 ||j==39){
 	document.write('</tr><tr>');
 	}
