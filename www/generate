@@ -97,11 +97,10 @@ content_dir="$(dirname $0)/data/content/"
 templates_dir="$(dirname $0)/data/templates/"
 build_dir="$(dirname $0)/build/"
 
-rm -rf build
-mkdir build
-cp -r $(dirname $0)/css build
-cp -r $(dirname $0)/files build
-cp -r $(dirname $0)/images build
-cp -r $(dirname $0)/js build
+mkdir -p $(dirname $0)/build
+cp -r $(dirname $0)/css $(dirname $0)/build
+cp -r $(dirname $0)/files $(dirname $0)/build
+cp -r $(dirname $0)/images $(dirname $0)/build
+cp -r $(dirname $0)/js $(dirname $0)/build
 
 find $content_dir -type f | sed "s@^$content_dir@@" | build_file
