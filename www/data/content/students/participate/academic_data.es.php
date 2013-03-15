@@ -29,7 +29,7 @@
 			<li class="current">Académico</li>
 			<li><a href="/es/students/participate/languages/">Idiomas</a></li>
 			<li><a href="/es/students/participate/professional_experience/">Profesional</a></li>
-			<li><a href="/es/students/participate/computer_science/">Infomática</a></li>
+			<li><a href="/es/students/participate/computer_science/">Informática</a></li>
 			<li><a href="/es/students/participate/pdf/">PDF</a></li>
 		</ul>
 	</nav>
