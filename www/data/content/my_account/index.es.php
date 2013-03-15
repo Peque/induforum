@@ -4,10 +4,10 @@
 
 	// Check user logged in
 	if (!isset($_SESSION['user_id'])) {
-		header('Location: /en/login/');
+		header('Location: /es/login/');
 		exit;
 	}
 
-	header('Location: /en/account_settings/session/');
+	header('Location: /es/my_account/session/');
 
 ?>

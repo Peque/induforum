@@ -4,13 +4,13 @@
 
 	// Check user logged in
 	if (!isset($_SESSION['user_id'])) {
-		header('Location: /en/login/');
+		header('Location: /es/login/');
 		exit;
 	}
 
 	// Check permissions
 	if (!isset($_SESSION['invitations_permissions']) || !$_SESSION['invitations_permissions']) {
-		header('Location: /en/restricted_area/');
+		header('Location: /es/restricted_area/');
 		exit;
 	}
 
@@ -19,26 +19,29 @@
 <section id="content">
 <header>
 	<hgroup>
-		<h1>Account settings</h1>
+		<h1>Mi cuenta</h1>
 	</hgroup>
 </header>
 <article>
 	<nav class="tabs_nav">
 		<ul>
-			<li><a href="/en/account_settings/session/">Session</a></li>
-			<li><a href="/en/account_settings/password/">Password</a></li>
+			<li><a href="/es/my_account/session/">Sesión</a></li>
+			<li><a href="/es/my_account/password/">Contraseña</a></li>
 <?php
 	if (isset($_SESSION['invitations_permissions']) && $_SESSION['invitations_permissions']) {
-		echo '<li class="current">Invite</li>';
+		echo '<li class="current">Invitar</li>';
 	}
 	if (isset($_SESSION['statistics_permissions']) && $_SESSION['statistics_permissions']) {
-		echo '<li><a href="/en/account_settings/statistics/">Statistics</a></li>';
+		echo '<li><a href="/es/my_account/statistics/">Estadísticas</a></li>';
+	}
+	if (isset($_SESSION['admin_permissions']) && $_SESSION['admin_permissions']) {
+		echo '<li><a href="/es/my_account/administration/">Administración</a></li>';
 	}
 ?>
 		</ul>
 	</nav>
 	<div class="tabs_nav_div"></div>
-	<p>You can invite other people to join us or share permissions with other users. Notice that all this actions will be registered and associated with your user for security reasons, so try to create invitations only for people you trust or reduce their permissions to the minimum required.</p>
+	<p>Puedes invitar a otras personas a unirse a nosotros o compartir permisos con otros usuarios. Ten en cuenta que todas estas acciones serán registradas y asociadas a tu usuario por razones de seguridad, así que intenta crear invitaciones sólo para personas en quien confíes o reduce sus permisos a los mínimos necesarios.</p>
 
 <?php
 
@@ -50,10 +53,9 @@
 
 	<form action="" method="post">
 		<fieldset>
-			<legend>Invitation form:</legend>
-			<p class="info">Please, select which permissions you want to share with the user. You can share, at most, your own permissions (those which are listed bellow):</p>
+			<legend>Formulario de invitación:</legend>
+			<p class="info">Por favor, selecciona los permisos que quieras compartir con el usuario. Puedes compartir, como máximo, tus propios permisos (aquellos que se listan a continuación):</p>
 			<div class="form_wrapper">
-
 <?php
 
 	if (isset($_SESSION['admin_permissions']) && $_SESSION['admin_permissions'] == 1) {
@@ -61,7 +63,7 @@
 ?>
 
 				<input name="admin" id="form_admin" value="1" type="checkbox" />
-				<label for="form_admin" class="checkbox_label">The user is an administrator</label>
+				<label for="form_admin" class="checkbox_label">El usuario es administrador</label>
 
 <?php
 
@@ -72,7 +74,7 @@
 ?>
 
 				<input name="company" id="form_company" value="1" type="checkbox" />
-				<label for="form_company" class="checkbox_label">The user is a company</label>
+				<label for="form_company" class="checkbox_label">El usuario es una compañía</label>
 
 <?php
 
@@ -83,7 +85,7 @@
 ?>
 
 				<input name="student" id="form_student" value="1" type="checkbox" />
-				<label for="form_student" class="checkbox_label">The user is a student</label>
+				<label for="form_student" class="checkbox_label">El usuario es un estudiante</label>
 
 <?php
 
@@ -94,7 +96,7 @@
 ?>
 
 				<input name="invitations" id="form_invitations" value="1" type="checkbox" />
-				<label for="form_invitations" class="checkbox_label">The user can create invitations</label>
+				<label for="form_invitations" class="checkbox_label">El usuario puede crear invitaciones</label>
 
 <?php
 
@@ -105,7 +107,7 @@
 ?>
 
 				<input name="statistics" id="form_statistics" value="1" type="checkbox" />
-				<label for="form_statistics" class="checkbox_label">The user can see statistics about the database</label>
+				<label for="form_statistics" class="checkbox_label">El usuario puede ver estadísticas de la página web</label>
 
 <?php
 
@@ -116,7 +118,7 @@
 ?>
 
 				<input name="banners" id="form_banners" value="1" type="checkbox" />
-				<label for="form_banners" class="checkbox_label">The user can edit website's banners</label>
+				<label for="form_banners" class="checkbox_label">El usuario puede editar los anuncios de la web</label>
 <?php
 
 	}
@@ -124,12 +126,12 @@
 ?>
 			</div>
 			<div class="form_wrapper">
-				<label for="form_email" class="singleline">Your friend's email: <span class="form_required" title="This field is required">*</span></label>
+				<label for="form_email" class="singleline">Correo electrónico de tu amig@: <span class="form_required" title="This field is required">*</span></label>
 				<input type="email" maxlength="60" name="email" id="form_email" class="singleline" required="required" />
 			</div>
 		</fieldset>
 		<input  type="hidden" name="type" value="invite" />
-		<input type="submit" value="Invite" accesskey="x" />
+		<input type="submit" value="Invitar" accesskey="x" />
 	</form>
 
 <?php
@@ -140,6 +142,6 @@
 
 </article>
 <footer>
-	<p class="section_title">Account settings</p>
+	<p class="section_title">Mi cuenta</p>
 </footer>
 </section>

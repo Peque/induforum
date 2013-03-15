@@ -78,7 +78,7 @@ function build_file {
 		# Parse content
 		if [ "$extension" == "reset" ]; then
 			echo "<section id=\"content\"><header><hgroup><h1>${file_data_array[0]}</h1><h2>${file_data_array[1]}</h2></hgroup></header>" >> $gen_file
-			echo "$(cat $content_dir$pipe_line | node ./gen/parse_file.js)" >> $gen_file
+			echo "$(cat $content_dir$pipe_line | node $(dirname $0)/gen/parse_file.js)" >> $gen_file
 			echo "<footer><p class=\"section_title\">${file_data_array[0]}</p></footer></section>" >> $gen_file
 		else
 			cat $content_dir$pipe_line >> $gen_file
@@ -93,15 +93,15 @@ function build_file {
 }
 
 
-content_dir="data/content/"
-templates_dir="data/templates/"
-build_dir="build/"
+content_dir="$(dirname $0)/data/content/"
+templates_dir="$(dirname $0)/data/templates/"
+build_dir="$(dirname $0)/build/"
 
 rm -rf build
 mkdir build
-cp -r css build
-cp -r files build
-cp -r images build
-cp -r js build
+cp -r $(dirname $0)/css build
+cp -r $(dirname $0)/files build
+cp -r $(dirname $0)/images build
+cp -r $(dirname $0)/js build
 
 find $content_dir -type f | sed "s@^$content_dir@@" | build_file

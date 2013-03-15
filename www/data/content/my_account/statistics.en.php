@@ -4,13 +4,13 @@
 
 	// Check user logged in
 	if (!isset($_SESSION['user_id'])) {
-		header('Location: /es/login/');
+		header('Location: /en/login/');
 		exit;
 	}
 
 	// Check permissions
 	if (!isset($_SESSION['statistics_permissions']) || !$_SESSION['statistics_permissions']) {
-		header('Location: /es/restricted_area/');
+		header('Location: /en/restricted_area/');
 		exit;
 	}
 
@@ -19,27 +19,30 @@
 <section id="content">
 <header>
 	<hgroup>
-		<h1>Configuración de cuenta</h1>
+		<h1>My account</h1>
 	</hgroup>
 </header>
 <article>
 	<nav class="tabs_nav">
 		<ul>
-			<li><a href="/es/account_settings/session/">Sesión</a></li>
-			<li><a href="/es/account_settings/password/">Contraseña</a></li>
+			<li><a href="/en/my_account/session/">Session</a></li>
+			<li><a href="/en/my_account/password/">Password</a></li>
 <?php
 	if (isset($_SESSION['invitations_permissions']) && $_SESSION['invitations_permissions']) {
-		echo '<li><a href="/es/account_settings/invite/">Invitar</a></li>';
+		echo '<li><a href="/en/my_account/invite/">Invite</a></li>';
 	}
 	if (isset($_SESSION['statistics_permissions']) && $_SESSION['statistics_permissions']) {
-		echo '<li class="current">Estadísticas</li>';
+		echo '<li class="current">Statistics</li>';
+	}
+	if (isset($_SESSION['admin_permissions']) && $_SESSION['admin_permissions']) {
+		echo '<li><a href="/en/my_account/administration/">Administration</a></li>';
 	}
 ?>
 		</ul>
 	</nav>
 	<div class="tabs_nav_div"></div>
 
-	<p>Algunas estadísticas de la base de datos:</p>
+	<p>Some statistics about the database:</p>
 
 <?php
 
@@ -51,7 +54,7 @@
 	$query = "select user from students_personal_data";
 	$result = mysqli_query($db, $query);
 
-	echo "<ul><li>Número de CVs por ahora: <strong>".mysqli_num_rows($result)."</strong></li></ul>";
+	echo "<ul><li>Number of resumes as for now: <strong>".mysqli_num_rows($result)."</strong></li></ul>";
 
 	$query = "select * from (select * from session_log order by date asc) slog_date_asc group by user order by date desc";
 	$result = mysqli_query($db, $query);
@@ -70,8 +73,8 @@
 		}
 	}
 
-	echo "<table><caption>Nuevos registros en los últimos ".$N_DAYS." días</caption>";
-	echo "<thead><tr><th>Fecha</th><th>Nuevos registros</th></tr></thead><tbody>";
+	echo "<table><caption>New registrations in the last ".$N_DAYS." days</caption>";
+	echo "<thead><tr><th>Date</th><th>New registrations</th></tr></thead><tbody>";
 	for ($i = 1; $i <= $N_DAYS; $i++) {
 		echo "<tr><td>".date("Y-m-d", strtotime(date("Y-m-d")."-".($i - 1)." day"))."</td>";
 		if (isset($registrations[$i])) echo "<td><strong>".$registrations[$i]."</strong></td></tr>";
@@ -86,6 +89,6 @@
 
 </article>
 <footer>
-	<p class="section_title">Configuración de cuenta</p>
+	<p class="section_title">My account</p>
 </footer>
 </section>

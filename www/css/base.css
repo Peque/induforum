@@ -124,6 +124,18 @@ time.news_pubdate {
 	height: 800px;        /* This should be redimendioned to the frame's height using JS */
 	margin-left: -1.4em;  /* Compensate the +4% width */
 }
+.float_left {
+	float: left;
+}
+.float_right {
+	float: right;
+}
+.float_none {
+	float: none;
+}
+.clear_both {
+	clear: both;
+}
 
 /********************************** Aside-Top **********************************/
 #top {

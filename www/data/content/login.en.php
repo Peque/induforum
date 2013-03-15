@@ -6,7 +6,7 @@
 
 	// Check user logged in
 	if (isset($_SESSION['user_id'])) {
-		header('Location: /en/account_settings/');
+		header('Location: /en/my_account/');
 		exit;
 	}
 
@@ -60,7 +60,7 @@
 
 		if (!isset($_SESSION['user_do_not_have_permissions'])) {
 			if ($_SESSION['admin_permissions']) {
-				header('Location: /en/account_settings/');
+				header('Location: /en/my_account/');
 				exit;
 			} else if ($_SESSION['student_permissions']) {
 				header('Location: /en/students/participate/');
@@ -69,7 +69,7 @@
 				header('Location: /en/companies/database/');
 				exit;
 			} else {
-				header('Location: /en/account_settings/');
+				header('Location: /en/my_account/');
 				exit;
 			}
 		} else {

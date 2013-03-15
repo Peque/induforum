@@ -13,20 +13,23 @@
 <section id="content">
 <header>
 	<hgroup>
-		<h1>Configuración de cuenta</h1>
+		<h1>Mi cuenta</h1>
 	</hgroup>
 </header>
 <article>
 	<nav class="tabs_nav">
 		<ul>
 			<li class="current">Sesión</li>
-			<li><a href="/es/account_settings/password/">Contraseña</a></li>
+			<li><a href="/es/my_account/password/">Contraseña</a></li>
 <?php
 	if (isset($_SESSION['invitations_permissions']) && $_SESSION['invitations_permissions']) {
-		echo '<li><a href="/es/account_settings/invite/">Invitar</a></li>';
+		echo '<li><a href="/es/my_account/invite/">Invitar</a></li>';
 	}
 	if (isset($_SESSION['statistics_permissions']) && $_SESSION['statistics_permissions']) {
-		echo '<li><a href="/es/account_settings/statistics/">Estadísticas</a></li>';
+		echo '<li><a href="/es/my_account/statistics/">Estadísticas</a></li>';
+	}
+	if (isset($_SESSION['admin_permissions']) && $_SESSION['admin_permissions']) {
+		echo '<li><a href="/es/my_account/administration/">Administración</a></li>';
 	}
 ?>
 		</ul>
@@ -38,6 +41,6 @@
 	</form>
 </article>
 <footer>
-	<p class="section_title">Configuración de cuenta</p>
+	<p class="section_title">Mi cuenta</p>
 </footer>
 </section>
