@@ -109,3 +109,5 @@ cp -r $(dirname $0)/images $(dirname $0)/build
 cp -r $(dirname $0)/js $(dirname $0)/build
 
 find $content_dir -type f | sed "s@^$content_dir@@" | build_file
+
+echo "Generation complete!"
