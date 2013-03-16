@@ -48,6 +48,18 @@ var sponsors = [
 		company: "Paintball ActionLive",
 		website: "http://www.actionlive.es/?gclid=CJWustai9bUCFYfJtAodtjQA6Q",
 		image: "actionlive"
+	},
+
+	{
+		company: "Aula Inglés",
+		website: "http://www.aulaingles.es/",
+		image: "aulaingles"
+	},
+
+	{
+		company: "UPM creación empresas",
+		website: "http://www.upm.es/actuaupm",
+		image: "actuaupm"
 	}
 
 
@@ -81,6 +93,8 @@ chosen[4] = new_chosen_one();
 chosen[5] = new_chosen_one();
 chosen[6] = new_chosen_one();
 chosen[7] = new_chosen_one();
+chosen[8] = new_chosen_one();
+chosen[9] = new_chosen_one();
 
 
 var j=0;
