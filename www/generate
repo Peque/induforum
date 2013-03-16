@@ -41,6 +41,8 @@ function parse_parameters {
 
 function build_file {
 
+	last_template_modification=$(stat -c %Y ${templates_dir}* | sort -n | tail -n 1)
+
 	while read pipe_line; do
 
 		# Variable reset
@@ -58,8 +60,11 @@ function build_file {
 		fi
 
 		if [[ -f $gen_file ]]; then
-			if [[ $(stat -c %Y $content_dir$pipe_line) < $(stat -c %Y $gen_file) ]]; then
-				continue
+			last_build_modification=$(stat -c %Y $gen_file)
+			if [[ $last_template_modification < $last_build_modification ]]; then
+				if [[ $(stat -c %Y $content_dir$pipe_line) < $last_build_modification ]]; then
+					continue
+				fi
 			fi
 		fi
 
