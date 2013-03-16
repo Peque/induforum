@@ -57,8 +57,10 @@ function build_file {
 			gen_file=$build_dir$dirname/$filename.$language.$extension
 		fi
 
-		if [[ $(stat -c %Y $content_dir$pipe_line) < $(stat -c %Y $gen_file) ]]; then
-			continue
+		if [[ -f $gen_file ]]; then
+			if [[ $(stat -c %Y $content_dir$pipe_line) < $(stat -c %Y $gen_file) ]]; then
+				continue
+			fi
 		fi
 
 		echo Generating $gen_file
