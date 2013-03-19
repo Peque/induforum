@@ -27,14 +27,14 @@
 		file_put_contents($file_en, '% SUBTITLE='.$_POST['subtitle_en']."\n", FILE_APPEND);
 		file_put_contents($file_en, '% DESCRIPTION='.$_POST['description_en']."\n", FILE_APPEND);
 		file_put_contents($file_en, '% KEYWORDS='.$_POST['keywords_en']."\n", FILE_APPEND);
-		file_put_contents($file_en, preg_replace('/[\r]/', '', $_POST['wiki_content_en']), FILE_APPEND);
+		file_put_contents($file_en, preg_replace('/(\r\n)|(\r)/', "\n", $_POST['wiki_content_en']), FILE_APPEND);
 
 		// Write Spanish wiki file
 		file_put_contents($file_es, '% TITLE='.$_POST['title_es']."\n");
 		file_put_contents($file_es, '% SUBTITLE='.$_POST['subtitle_es']."\n", FILE_APPEND);
 		file_put_contents($file_es, '% DESCRIPTION='.$_POST['description_es']."\n", FILE_APPEND);
 		file_put_contents($file_es, '% KEYWORDS='.$_POST['keywords_es']."\n", FILE_APPEND);
-		file_put_contents($file_es, preg_replace('/[\r]/', '', $_POST['wiki_content_es']), FILE_APPEND);
+		file_put_contents($file_es, preg_replace('/(\r\n)|(\r)/', "\n", $_POST['wiki_content_es']), FILE_APPEND);
 
 		// Generate those files in the build directory
 		$command = strstr(getcwd(), '/build', 1)."/generate ".$page.'.en.reset 2>&1';
