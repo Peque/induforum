@@ -22,23 +22,6 @@
 #
 
 
-function parse_parameters {
-	while read file_data_line; do
-		token=$(echo $file_data_line | sed 's/=.*//')
-		value=$(echo $file_data_line | sed 's/.*=//')
-		case $token in
-			"TITLE") local file_title=$value;;
-			"SUBTITLE") local file_subtitle=$value;;
-			"DESCRIPTION") local file_description=$value;;
-			"KEYWORDS") local file_keywords=$value;;
-		esac
-	done
-	echo "$file_title"
-	echo "$file_subtitle"
-	echo "$file_description"
-	echo "$file_keywords"
-}
-
 function build_file {
 
 	last_template_modification=$(stat -c %Y ${templates_dir}* | sort -n | tail -n 1)
@@ -61,8 +44,8 @@ function build_file {
 
 		if [[ -f $gen_file ]]; then
 			last_build_modification=$(stat -c %Y $gen_file)
-			if [[ $last_template_modification < $last_build_modification ]]; then
-				if [[ $(stat -c %Y $content_dir$pipe_line) < $last_build_modification ]]; then
+			if [[ $last_template_modification -le $last_build_modification ]]; then
+				if [[ $(stat -c %Y $content_dir$pipe_line) -le $last_build_modification ]]; then
 					continue
 				fi
 			fi
@@ -72,26 +55,25 @@ function build_file {
 		mkdir -p $build_dir$dirname
 
 		# Get content information
-		file_data=$(cat $content_dir$pipe_line | grep -e "^%[[:space:]]*[A-Z]*=.*$" | sed 's/%\s*//g' | parse_parameters)
-		IFS=$'\n'
-		i=0
-		for parsed_data in ${file_data[@]}; do
-			file_data_array[$i]=$parsed_data
-			((i++))
-		done
+		file_data=$(cat $content_dir$pipe_line | grep -e "^%[[:space:]]*[A-Z]*=.*$")
+
+		file_data_title=$(echo "$file_data" | grep "% TITLE=" | sed -e "s/% TITLE=\(.*\)/\1/")
+		file_data_subtitle=$(echo "$file_data" | grep "% SUBTITLE=" | sed -e "s/% SUBTITLE=\(.*\)/\1/")
+		file_data_description=$(echo "$file_data" | grep "% DESCRIPTION=" | sed -e "s/% DESCRIPTION=\(.*\)/\1/")
+		file_data_keywords=$(echo "$file_data" | grep "% KEYWORDS=" | sed -e "s/% KEYWORDS=\(.*\)/\1/")
 
 		# Add header and navigation sections
 		cat ${templates_dir}header.$language.html           | \
-			sed "s/%%title%%/${file_data_array[0]}/g"       | \
-			sed "s/%%keywords%%/${file_data_array[3]}/g"    | \
-			sed "s/%%description%%/${file_data_array[2]}/g" >  $gen_file
+			sed "s/%%title%%/${file_data_title}/g"       | \
+			sed "s/%%keywords%%/${file_data_keywords}/g"    | \
+			sed "s/%%description%%/${file_data_description}/g" >  $gen_file
 		cat ${templates_dir}nav.$language.html              >> $gen_file
 
 		# Parse content
 		if [ "$extension" == "reset" ]; then
-			echo "<section id=\"content\"><header><hgroup><h1>${file_data_array[0]}</h1><h2>${file_data_array[1]}</h2></hgroup></header>" >> $gen_file
+			echo "<section id=\"content\"><header><hgroup><h1>${file_data_title}</h1><h2>${file_data_subtitle}</h2></hgroup></header>" >> $gen_file
 			echo "$(cat $content_dir$pipe_line | node $(dirname $0)/gen/parse_file.js)" >> $gen_file
-			echo "<footer><p class=\"section_title\">${file_data_array[0]}</p></footer></section>" >> $gen_file
+			echo "<footer><p class=\"section_title\">${file_data_title}</p></footer></section>" >> $gen_file
 		else
 			cat $content_dir$pipe_line >> $gen_file
 		fi
@@ -108,6 +90,12 @@ function build_file {
 content_dir="$(dirname $0)/data/content/"
 templates_dir="$(dirname $0)/data/templates/"
 build_dir="$(dirname $0)/build/"
+
+if [[ $# == 1 ]]; then
+	echo $1 | build_file
+	echo "Generation complete!"
+	exit
+fi
 
 mkdir -p $(dirname $0)/build
 cp -r $(dirname $0)/css $(dirname $0)/build
