@@ -651,6 +651,31 @@ time.news_pubdate {
 	margin: 0 1em 0 0;
 	float: right;
 }
+#content form.wiki_edit hr {
+	margin: 0 0 1em 0;
+	width: 90%;
+}
+#content form.wiki_edit #left_column {
+	float: left;
+	width: 50%;
+}
+#content form.wiki_edit #right_column {
+	float: right;
+	width: 50%;
+}
+#content form.wiki_edit label {
+	clear: both;
+}
+#content form.wiki_edit input {
+	float: left;
+	width: 80%;
+}
+#content form.wiki_edit textarea {
+	float: left;
+	margin: 1em 0 2em 0;
+	width: 95%;
+	height: 30em;
+}
 #content form.edit fieldset {
 	padding: 0;
 	border: none;

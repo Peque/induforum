@@ -114,6 +114,17 @@
 
 	}
 
+	if (isset($_SESSION['wiki_permissions']) && $_SESSION['wiki_permissions'] == 1) {
+
+?>
+
+				<input name="wiki" id="form_wiki" value="1" type="checkbox" />
+				<label for="form_wiki" class="checkbox_label">The user can edit contents</label>
+
+<?php
+
+	}
+
 	if (isset($_SESSION['banners_permissions']) && $_SESSION['banners_permissions'] == 1) {
 
 ?>
