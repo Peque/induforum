@@ -19,6 +19,8 @@
 	$file_en = strstr(getcwd(), '/build', 1).'/data/content/'.$page.'.en.reset';
 	$file_es = strstr(getcwd(), '/build', 1).'/data/content/'.$page.'.es.reset';
 
+	unset($cmd_output);
+
 	if (isset($_POST['type']) && $_POST['type'] == 'wiki_form') {
 		// Write English wiki file
 		file_put_contents($file_en, '% TITLE='.$_POST['title_en']."\n");
@@ -33,6 +35,12 @@
 		file_put_contents($file_es, '% DESCRIPTION='.$_POST['description_es']."\n", FILE_APPEND);
 		file_put_contents($file_es, '% KEYWORDS='.$_POST['keywords_es']."\n", FILE_APPEND);
 		file_put_contents($file_es, preg_replace('/[\r]/', '', $_POST['wiki_content_es']), FILE_APPEND);
+
+		// Generate those files in the build directory
+		$command = strstr(getcwd(), '/build', 1)."/generate ".$page.'.en.reset 2>&1';
+		exec($command, $cmd_output);
+		$command = strstr(getcwd(), '/build', 1)."/generate ".$page.'.es.reset 2>&1';
+		exec($command, $cmd_output);
 	}
 
 	$file_content_en = file($file_en);
@@ -73,6 +81,23 @@
 	</hgroup>
 </header>
 <article>
+
+<?php
+
+	if (isset($cmd_output)) {
+
+?>
+
+<form class="wiki_edit_cmd">
+	<textarea><?php foreach ($cmd_output as $line) echo "$line\n"; ?></textarea>
+</form>
+
+<?php
+
+	}
+
+?>
+
 <form action="" method="post" class="wiki_edit">
 	<div id="left_column">
 		<h1>English</h1>

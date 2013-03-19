@@ -651,6 +651,15 @@ time.news_pubdate {
 	margin: 0 1em 0 0;
 	float: right;
 }
+#content form.wiki_edit_cmd textarea,
+#content form.wiki_edit_cmd textarea:hover,
+#content form.wiki_edit_cmd textarea:focus {
+	height: 6em;
+	border: 1px solid #2d832d;
+	color: #2d832d;
+	background-color: #e1ffe1;
+	border-radius: .5em;
+}
 #content form.wiki_edit hr {
 	margin: 0 0 1em 0;
 	width: 90%;
