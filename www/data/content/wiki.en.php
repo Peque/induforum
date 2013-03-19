@@ -16,7 +16,26 @@
 
 	$page = preg_replace('@^(/)?(.*)/$@', '\2', $_GET['page']);
 
-	$file_content_en = file(strstr(getcwd(), '/build', 1).'/data/content/'.$page.'.en.reset');
+	$file_en = strstr(getcwd(), '/build', 1).'/data/content/'.$page.'.en.reset';
+	$file_es = strstr(getcwd(), '/build', 1).'/data/content/'.$page.'.es.reset';
+
+	if (isset($_POST['type']) && $_POST['type'] == 'wiki_form') {
+		// Write English wiki file
+		file_put_contents($file_en, '% TITLE='.$_POST['title_en']."\n");
+		file_put_contents($file_en, '% SUBTITLE='.$_POST['subtitle_en']."\n", FILE_APPEND);
+		file_put_contents($file_en, '% DESCRIPTION='.$_POST['description_en']."\n", FILE_APPEND);
+		file_put_contents($file_en, '% KEYWORDS='.$_POST['keywords_en']."\n", FILE_APPEND);
+		file_put_contents($file_en, preg_replace('/[\r]/', '', $_POST['wiki_content_en']), FILE_APPEND);
+
+		// Write Spanish wiki file
+		file_put_contents($file_es, '% TITLE='.$_POST['title_es']."\n");
+		file_put_contents($file_es, '% SUBTITLE='.$_POST['subtitle_es']."\n", FILE_APPEND);
+		file_put_contents($file_es, '% DESCRIPTION='.$_POST['description_es']."\n", FILE_APPEND);
+		file_put_contents($file_es, '% KEYWORDS='.$_POST['keywords_es']."\n", FILE_APPEND);
+		file_put_contents($file_es, preg_replace('/[\r]/', '', $_POST['wiki_content_es']), FILE_APPEND);
+	}
+
+	$file_content_en = file($file_en);
 	$file_comments_en = preg_grep('/^[%].*/', $file_content_en);
 	$file_data_en = array();
 
@@ -30,7 +49,7 @@
 		$i++;
 	}
 
-	$file_content_es = file(strstr(getcwd(), '/build', 1).'/data/content/'.$page.'.es.reset');
+	$file_content_es = file($file_es);
 	$file_comments_es = preg_grep('/^[%].*/', $file_content_es);
 	$file_data_es = array();
 
@@ -54,7 +73,7 @@
 	</hgroup>
 </header>
 <article>
-<form class="wiki_edit">
+<form action="" method="post" class="wiki_edit">
 	<div id="left_column">
 		<h1>English</h1>
 		<hr />
@@ -66,7 +85,7 @@
 		<input name="description_en" id="form_description_en" type="text" required="required" value="<?php if (isset($file_data_en[2])) echo $file_data_en[2]; ?>" />
 		<label for="form_keywords_en">Keywords: <span class="form_required" title="This field is required">*</span></label>
 		<input name="keywords_en" id="form_keywords_en" type="text" required="required" value="<?php if (isset($file_data_en[3])) echo $file_data_en[3]; ?>" />
-		<textarea><?php echo implode($file_content_en); ?></textarea>
+		<textarea name="wiki_content_en"><?php echo implode($file_content_en); ?></textarea>
 	</div>
 	<div id="right_column">
 		<h1>Español</h1>
@@ -79,8 +98,10 @@
 		<input name="description_es" id="form_description_es" type="text" required="required" value="<?php if (isset($file_data_es[2])) echo $file_data_es[2]; ?>" />
 		<label for="form_keywords_es">Palabras clave: <span class="form_required" title="This field is required">*</span></label>
 		<input name="keywords_es" id="form_keywords_es" type="text" required="required" value="<?php if (isset($file_data_es[3])) echo $file_data_es[3]; ?>" />
-		<textarea><?php echo implode($file_content_es); ?></textarea>
+		<textarea name="wiki_content_es"><?php echo implode($file_content_es); ?></textarea>
 	</div>
+	<input  type="hidden" name="type" value="wiki_form" />
+	<input type="submit" value="Save" accesskey="x" />
 </form>
 </article>
 <footer>
