@@ -54,16 +54,13 @@
 
 	$worktime=$_POST['C_work_time'];
 
-
-
 	function finduser($db,$query) {
-	$var = mysqli_query($db, $query);
+		$var = mysqli_query($db, $query);
 
 
 		if ($var) {
 			$array=array();
 			$num_results = mysqli_num_rows($var);
-
 			for ($i=0; $i<$num_results; $i++) {
 
 				$row = mysqli_fetch_row($var);
@@ -83,6 +80,59 @@
 	    }
 
     }
+    
+    function worktime($db,$query,$time) {
+		$var = mysqli_query($db,$query);
+
+
+		if ($var) {
+			$array=array();
+			$num_results = mysqli_num_rows($var);
+			$user="";
+			$totalmonths=0;
+			for ($i=0; $i<$num_results; $i++) {
+
+				$row = mysqli_fetch_row($var);
+				$antuser=$user;
+				$user=$row[0];
+				$initialdate=explode('-',$row[1]);
+				$initialyear=$initialdate[0];
+				$initialmonth=$initialdate[1];
+				$finaldate=explode('-',$row[2]);
+				$finalyear=$finaldate[0];
+				$finalmonth=$finaldate[1];
+				$months=($finalyear-$initialyear)*12+($finalmonth-$initialmonth);
+				if ($user==$antuser){
+					$totalmonths+=$months;
+					if ($totalmonths>=$time){	  
+					$array2=array_intersect($array,(array)$user);
+					if (empty($array2)) {
+					$array=array_merge($array,(array)$user);
+					
+               }
+	        	}
+				}
+				else { 
+				$totalmonths=$months;
+				if ($totalmonths>=$time){	  
+					$array2=array_intersect($array,(array)$user);
+					if (empty($array2)) {
+					$array=array_merge($array,(array)$user);
+					
+               }
+	        	}
+				
+				}
+				
+			}
+
+	   }
+		if(!empty($array)) {
+			$array=implode(',',$array);
+			return $array;
+	    }
+
+    }
 
 
 // Resolving:
@@ -96,6 +146,7 @@
 
 
 	$array=finduser($db,$query);
+	//Languages
 	$query = "select * from students_languages where user in (".$array.")";
 
 		if ($english!="") {
@@ -166,7 +217,7 @@
 		}
 
 
-
+	//Computing experience
 	$query= "select * from students_computing_experience where user in (".$array.")";
 
 		if ($windows!="") {
@@ -258,17 +309,11 @@
 		$array=finduser($db,$query);
 
 	}
-
-		//if ($worktime!="") {
-		//$query = "select * from students_work_experience where user in (".$array.") and         ";
-		//$array=finduser($db,$query);
-
-
-
-
-
-
-
+	//Work time
+	if ($worktime!=0){
+	$query = "select * from students_work_experience where user in (".$array.")";
+	$array=worktime($db,$query,$worktime);
+	}
 	$query = "select * from students_personal_data where user in (".$array.")";
 	$result = mysqli_query($db, $query);
 
@@ -276,7 +321,6 @@
 		if ($result) {
 
 			$num_results = mysqli_num_rows($result);
-
 			for ($i=0; $i<$num_results; $i++) {
 
 				$row = mysqli_fetch_row($result);
@@ -284,10 +328,7 @@
 				$query = "select * from students_personal_data where user='".$user."'";
 				$result2=mysqli_query($db, $query);
 				$personal=mysqli_fetch_row($result2);
-				$query = "select * from students_academic_data where user='".$user."'";
-				$result2=mysqli_query($db, $query);
-				$academic=mysqli_fetch_row($result2);
-				echo "<tr><td>$personal[1]</td><td>$personal[2]</td><td>$academic[2]</td><td>$academic[1]</td><td>CV</td></tr>";
+				echo "<tr><td>$personal[1]</td><td>$personal[2]</td><td>CV</td></tr>";
 
 			}
 
@@ -298,11 +339,5 @@
 
 
 	?>
-<!-- mysql> select * from students_academic_data where user in (select user from students_personal_data where name='Coloma Maria') and studies='industrialengineering';
- -->
 
-
-<!--mysql>select * from students_academic_data where studies='$C_studies' AND higher_course=$C_higher_course AND speciality='$C_speciality';
-
-
-mysql> select * from students_academic_data where studies='industrialengineering' AND higher_course=5 -->
+ 

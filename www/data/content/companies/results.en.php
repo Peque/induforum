@@ -30,8 +30,6 @@
 <tr>
 <td>Name</td>
 <td>Surname</td>
-<td>Course</td>
-<td>Degree</td>
 <td>CV</td>
 </tr>
 

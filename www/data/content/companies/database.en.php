@@ -115,17 +115,18 @@
 
 				<div class="form_checkbox">
 				<input type="checkbox" name="Windows" value="2 id="SO_Windows"/>
-			    <label for="SO_Windows" class="checkbox">SO Windows:</label> <br>
+			    <label for="SO_Windows" class="checkbox">Windows OS:</label> <br>
 
 				<input type="checkbox" name="Mac" value="2" id="SO_Mac"/>
-     			<label for="SO_Mac" class="checkbox">SO Mac</label> <br>
+     			<label for="SO_Mac" class="checkbox">Mac OS</label> <br>
 
 				<input type="checkbox" name="Linux" value="2" id="SO_Linux"/>
-				<label for="SO_Linux" class="checkbox">SO Linux</label> <br>
+				<label for="SO_Linux" class="checkbox">Linux OS</label> <br>
 
 
 				<input type="checkbox" name="Databases" value="2" id="Data_bases"/>
-
+				<label for="Data_bases" class="checkbox">Data Bases</label> <br>
+				
 				<input type="checkbox" name="accounting/" value="2" id="Accounting/Finances"/>
 				<label for="Accounting/Finances" class="checkbox">Accounting/Finances</label> <br>
 
@@ -137,6 +138,7 @@
 				<label for="Graphic_Design" class="checkbox">Graphic design</label> <br>
 
 				<input type="checkbox" name="Spreadsheet" value="2" id="Spreadsheet"/>
+				<label for="Spreadsheet" class="checkbox">Spreadsheet</label> <br>
 
 				<input type="checkbox" name="Email" value="2" id="Email">
 				<label for="Email" class="checkbox">Email</label> <br>
@@ -156,6 +158,7 @@
 				<label for="Programation" class="checkbox">Programation</label> <br>
 
 				<input type="checkbox" name="Simulation" value="2" id="Simulation"/>
+				<label for="Simulation" class="checkbox">Simulation</label> <br>
 
 				<input type="checkbox" name="Communications" value="2" id="Communications_and_networks"/>
 				<label for="Communications_and_networks" class="checkbox">Communications and networks</label> <br>
@@ -170,12 +173,11 @@
 
 				<label for="work_time" class="singleline">Work activity:</label>
 				<select name="C_work_time" id="work_time" class="singleline">
-					<option value="">Default: Any</option>
-					<option value="1" >3 months or less</option>
-					<option value="2" >6 months or less</option>
-					<option value="3" >1 year or less</option>
-					<option value="4" >2 year or less</option>
-					<option value="5" >More than 2 years</option>
+					<option value="0">Default: Any</option>
+					<option value="3" >At least 3 months</option>
+					<option value="6" >At least 6 months</option>
+					<option value="12" >At least 1 year</option>
+					<option value="24" >At least 2 year</option>
 				</select>
 				</div>
 			</fieldset>
@@ -184,17 +186,7 @@
 
 
 
-		<!--		<fieldset>
-				<legend>Driver license</legend>
-				<div class="form_wrapper">
-				<label for="driver_license" class="singleline">Driver license:</label>
-				<input type="radio" name="driver_license" value="Yes" />
-				<input type="radio" name="driver_license" value="No" />
-				</div>
-				</fieldset>
-
-
-			<input type="submit" value="Search" accesskey="x"  /> -->
+	
 
 
 	</form>
