@@ -328,7 +328,7 @@
 				$query = "select * from students_personal_data where user='".$user."'";
 				$result2=mysqli_query($db, $query);
 				$personal=mysqli_fetch_row($result2);
-				echo "<tr><td>$personal[1]</td><td>$personal[2]</td><td>CV</td></tr>";
+				echo "<tr><td>$user</td><td>CV</td></tr>";
 
 			}
 

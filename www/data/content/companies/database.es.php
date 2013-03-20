@@ -24,7 +24,7 @@
 </header>
 <article>
 
-	<form action="/en/companies/results" method="post">
+	<form action="/en/companies/results.es.php" method="post">
 
 			<legend>Filtro de CV<legend>
 			<fieldset>

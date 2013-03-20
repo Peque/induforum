@@ -23,7 +23,7 @@
 </header>
 <article>
 
-	<form action="/en/companies/results" method="post">
+	<form action="/en/companies/results.en.php" method="post">
 
 			<legend>CV Filter<legend>
 			<fieldset>

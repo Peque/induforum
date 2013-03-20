@@ -28,8 +28,7 @@
 
 <table>
 <tr>
-<td>Name</td>
-<td>Surname</td>
+<td>ID</td>
 <td>CV</td>
 </tr>
 

@@ -28,13 +28,14 @@
 
 <table>
 <tr>
-<td>Nombre</td>
-<td>Apellidos</td>
+<td>ID</td>
 <td>CV</td>
 </tr>
 
 
-<?php require_once('../../data/results.php');?>
+
+<?php require_once('../../data/results.php');
+?>
 
 </table> 
 
