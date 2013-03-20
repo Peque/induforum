@@ -20,27 +20,36 @@
 	$file_es = strstr(getcwd(), '/build', 1).'/data/content/'.$page.'.es.reset';
 
 	unset($cmd_output);
+	unset($protected_file);
 
-	if (isset($_POST['type']) && $_POST['type'] == 'wiki_form') {
-		// Write English wiki file
-		file_put_contents($file_en, '% TITLE='.$_POST['title_en']."\n");
-		file_put_contents($file_en, '% SUBTITLE='.$_POST['subtitle_en']."\n", FILE_APPEND);
-		file_put_contents($file_en, '% DESCRIPTION='.$_POST['description_en']."\n", FILE_APPEND);
-		file_put_contents($file_en, '% KEYWORDS='.$_POST['keywords_en']."\n", FILE_APPEND);
-		file_put_contents($file_en, preg_replace('/(\r\n)|(\r)/', "\n", $_POST['wiki_content_en']), FILE_APPEND);
+	if (!file_exists(strstr(getcwd(), '/build', 1).'/data/content/'.$page.'.en.php') && !file_exists(strstr(getcwd(), '/build', 1).'/data/content/'.$page.'.es.php')) {
 
-		// Write Spanish wiki file
-		file_put_contents($file_es, '% TITLE='.$_POST['title_es']."\n");
-		file_put_contents($file_es, '% SUBTITLE='.$_POST['subtitle_es']."\n", FILE_APPEND);
-		file_put_contents($file_es, '% DESCRIPTION='.$_POST['description_es']."\n", FILE_APPEND);
-		file_put_contents($file_es, '% KEYWORDS='.$_POST['keywords_es']."\n", FILE_APPEND);
-		file_put_contents($file_es, preg_replace('/(\r\n)|(\r)/', "\n", $_POST['wiki_content_es']), FILE_APPEND);
+		if (isset($_POST['type']) && $_POST['type'] == 'wiki_form') {
+			// Write English wiki file
+			file_put_contents($file_en, '% TITLE='.$_POST['title_en']."\n");
+			file_put_contents($file_en, '% SUBTITLE='.$_POST['subtitle_en']."\n", FILE_APPEND);
+			file_put_contents($file_en, '% DESCRIPTION='.$_POST['description_en']."\n", FILE_APPEND);
+			file_put_contents($file_en, '% KEYWORDS='.$_POST['keywords_en']."\n", FILE_APPEND);
+			file_put_contents($file_en, preg_replace('/(\r\n)|(\r)/', "\n", $_POST['wiki_content_en']), FILE_APPEND);
 
-		// Generate those files in the build directory
-		$command = strstr(getcwd(), '/build', 1)."/generate ".$page.'.en.reset 2>&1';
-		exec($command, $cmd_output);
-		$command = strstr(getcwd(), '/build', 1)."/generate ".$page.'.es.reset 2>&1';
-		exec($command, $cmd_output);
+			// Write Spanish wiki file
+			file_put_contents($file_es, '% TITLE='.$_POST['title_es']."\n");
+			file_put_contents($file_es, '% SUBTITLE='.$_POST['subtitle_es']."\n", FILE_APPEND);
+			file_put_contents($file_es, '% DESCRIPTION='.$_POST['description_es']."\n", FILE_APPEND);
+			file_put_contents($file_es, '% KEYWORDS='.$_POST['keywords_es']."\n", FILE_APPEND);
+			file_put_contents($file_es, preg_replace('/(\r\n)|(\r)/', "\n", $_POST['wiki_content_es']), FILE_APPEND);
+
+			// Generate those files in the build directory
+			$command = strstr(getcwd(), '/build', 1)."/generate ".$page.'.en.reset 2>&1';
+			exec($command, $cmd_output);
+			$command = strstr(getcwd(), '/build', 1)."/generate ".$page.'.es.reset 2>&1';
+			exec($command, $cmd_output);
+		}
+
+	} else {
+
+		$protected_file = 1;
+
 	}
 
 	$file_content_en = file($file_en);
@@ -84,7 +93,19 @@
 
 <?php
 
-	if (isset($cmd_output)) {
+	if (isset($protected_file)) {
+
+?>
+
+<p class="error">Sorry, you can not edit this file.</p>
+<p>It may be a system file. Remember users can only edit wiki files. Please, select a different one.</p>
+<p>If you think this file should be edited, contact a developer or join the project and help us developing this website!</p>
+
+<?php
+
+	} else {
+
+		if (isset($cmd_output)) {
 
 ?>
 
@@ -94,7 +115,7 @@
 
 <?php
 
-	}
+		}
 
 ?>
 
@@ -128,6 +149,13 @@
 	<input  type="hidden" name="type" value="wiki_form" />
 	<input type="submit" value="Save" accesskey="x" />
 </form>
+
+<?php
+
+	}
+
+?>
+
 </article>
 <footer>
 	<p class="section_title">Edit</p>
