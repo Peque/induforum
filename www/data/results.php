@@ -328,7 +328,11 @@
 				$query = "select * from students_personal_data where user='".$user."'";
 				$result2=mysqli_query($db, $query);
 				$personal=mysqli_fetch_row($result2);
-				echo "<tr><td>$user</td><td>CV</td></tr>";
+				
+				echo "<tr><td>$user</td>
+				<td>" ;
+				echo '<a href="/download.php?user='.$user.'"> CV</a>';
+				echo "</td></tr>";
 
 			}
 
