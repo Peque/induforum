@@ -20,12 +20,6 @@ var sponsors = [
 	},
 
 	{
-		company: "Alstom",
-		website: "http://www.alstom.com/",
-		image: "alstom"
-	},
-
-	{
 		company: "Atexis",
 		website: "http://www.atexis.eu/",
 		image: "atexis"
@@ -344,7 +338,7 @@ chosen[41] = new_chosen_one();
 chosen[42] = new_chosen_one();
 chosen[43] = new_chosen_one();
 chosen[44] = new_chosen_one();
-chosen[45] = new_chosen_one();
+
 var j=0;
 
 for (var i = 0; i < chosen.length; i++) {
@@ -352,7 +346,7 @@ for (var i = 0; i < chosen.length; i++) {
 	document.write('<tr>');
 	}
 	document.write('<td><a target="_blank" href="' + sponsors[chosen[i]].website + '" title="' + sponsors[chosen[i]].company + '"><img style="width: 100%;" src="/images/sponsors/logocompanies/' + sponsors[chosen[i]].image + '" alt="' + sponsors[chosen[i]].company + '_logo" /></a></td>');
-	if (j==4||j==9||j==14||j==19||j==24||j==29||j==34 ||j==39 ||j==44){
+	if (j==4||j==9||j==14||j==19||j==24||j==29||j==34 ||j==39){
 	document.write('</tr><tr>');
 	}
 	j++;
