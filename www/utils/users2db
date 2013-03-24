@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #
-#  update_all_users_permissions
+#  users2db
 #
 #  Copyright 2012 Miguel Sánchez de León Peque <msdeleonpeque@gmail.com>
 #
@@ -25,11 +25,11 @@ MYSQL_USER=$(cat $(dirname ${BASH_SOURCE[0]})/../config.php | grep -e db_user | 
 MYSQL_DB=$(cat $(dirname ${BASH_SOURCE[0]})/../config.php | grep -e db_name | tr "\t" "_" | tr "'" "\t" | cut -f2)
 MYSQL_PASS=$(cat $(dirname ${BASH_SOURCE[0]})/../config.php | grep -e db_pass | tr "\t" "_" | tr "'" "\t" | cut -f2)
 
-permission="student"
-value="1"
+while read pipe_line; do
 
-users=$(mysql -h localhost -u $MYSQL_USER -p$MYSQL_PASS -D $MYSQL_DB -s -e "select number from users;")
+	reg_num=$(echo $pipe_line | awk '{ print $1 }')
+	pass=$(echo $pipe_line | awk '{ print $2 }')
 
-for number in $users; do
-	mysql -h localhost -u $MYSQL_USER -p$MYSQL_PASS -D $MYSQL_DB -s -e "insert into permissions (user,$permission) values ($number,$value) on duplicate key update $permission=values($permission);"
+	mysql -h localhost -u $MYSQL_USER -p$MYSQL_PASS -D $MYSQL_DB -s -e "insert ignore into users (id,password) values ('$reg_num','$pass');"
+
 done
