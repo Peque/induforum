@@ -20,12 +20,6 @@ var sponsors = [
 	},
 
 	{
-		company: "Alstom",
-		website: "http://www.alstom.com/",
-		image: "alstom"
-	},
-
-	{
 		company: "Atexis",
 		website: "http://www.atexis.eu/",
 		image: "atexis"
@@ -264,6 +258,18 @@ var sponsors = [
 		company: "Atos",
 		website: "http://es.atos.net/es-es/",
 		image: "atos"
+	},
+
+	{
+		company: "ESCP Europe",
+		website: "http://www.escpeurope.eu/es/",
+		image: "escp"
+	},
+
+	{
+		company: "Bertrandt",
+		website: "http://www.bertrandt.com/en.html",
+		image: "bertrandt"
 	}
 
 
@@ -331,6 +337,7 @@ chosen[40] = new_chosen_one();
 chosen[41] = new_chosen_one();
 chosen[42] = new_chosen_one();
 chosen[43] = new_chosen_one();
+chosen[44] = new_chosen_one();
 
 var j=0;
 

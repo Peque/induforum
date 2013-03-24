@@ -7,6 +7,9 @@ document.write('<p style="text-align:center;"><a target="_blank" href="http://ww
 // CREACIÓN DE EMPRESAS
 document.write('<p style="text-align:center;"><a target="_blank" href="http://www.upm.es/actuaupm" title="Creación empresas"><img src="/images/other_topics/actuaupm.png" alt="actuaupm_logo" /></a></p>');
 
+// GONWAY
+document.write('<p style="text-align:center;"><a target="_blank" href="https://www.gonway.com/" title="Gonway"><img src="/images/other_topics/gonway.jpg" alt="agonway_logo" /></a></p>');
+
 // ETSII-UPM
 document.write('<p style="text-align:center;"><a target="_blank" href="http://www.etsii.upm.es/" title="Escuela Técnica Superior de Ingenieros Industriales"><img src="/images/other_topics/etsii_upm.png" alt="etsii_logo" /></a></p>');
 
