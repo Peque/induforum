@@ -1,6 +1,7 @@
 www/build/
 www/forum/
-www/uploads/*
+www/uploads/
+www/wiki/
 *~
 *-access_log
 *-error_log
