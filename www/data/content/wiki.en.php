@@ -70,9 +70,9 @@
 			file_put_contents($wiki_file_es, preg_replace('/(\r\n)|(\r)/', "\n", $_POST['wiki_content_es']), FILE_APPEND);
 
 			// Generate those files in the build directory
-			$command = strstr(getcwd(), '/build', 1)."/wiki_create ".$page.'.en.reset 2>&1';
+			$command = strstr(getcwd(), '/build', 1)."/wiki_create /".$page.'.en.reset 2>&1';
 			exec($command, $cmd_output);
-			$command = strstr(getcwd(), '/build', 1)."/wiki_create ".$page.'.es.reset 2>&1';
+			$command = strstr(getcwd(), '/build', 1)."/wiki_create /".$page.'.es.reset 2>&1';
 			exec($command, $cmd_output);
 
 		}
