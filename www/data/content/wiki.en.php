@@ -70,11 +70,16 @@
 			file_put_contents($wiki_file_es, preg_replace('/(\r\n)|(\r)/', "\n", $_POST['wiki_content_es']), FILE_APPEND);
 
 			// Generate those files in the build directory
-			$command = strstr(getcwd(), '/build', 1)."/wiki_create /".$page.'.en.reset 2>&1';
+			$wiki_create_script = strstr(getcwd(), '/build', 1).'/wiki_create';
+			$wiki_dir = strstr(getcwd(), '/build', 1).'/wiki/';
+			$command = $wiki_create_script.' /'.$page.'.en.reset 2>&1';
 			exec($command, $cmd_output);
-			$command = strstr(getcwd(), '/build', 1)."/wiki_create /".$page.'.es.reset 2>&1';
+			$command = $wiki_create_script.' /'.$page.'.es.reset 2>&1';
 			exec($command, $cmd_output);
-
+			$command = 'git --git-dir='.$wiki_dir.'.git --work-tree='.$wiki_dir.' commit -m "'.$_SESSION['user_id'].'" '.$page.'.en.reset '.$page.'.es.reset 2>&1';
+			exec($command, $cmd_output);
+			$command = 'git --git-dir='.$wiki_dir.'.git --work-tree='.$wiki_dir.' push origin master 2>&1';
+			exec($command, $cmd_output);
 		}
 
 		if (file_exists($wiki_file_en)) {
