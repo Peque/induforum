@@ -31,14 +31,17 @@
 <td>ID</td>
 <td>CV</td>
 </tr>
-
-
-
 <?php require_once('../../data/results.php');
 ?>
-
 </table> 
-
+<?php
+function array_envia($array) {
+    $tmp = serialize($array);
+    $tmp = urlencode($tmp);
+    return $tmp;
+}
+$array=array_envia($array);
+echo '<a href="/zip.php?array=$array">Descargar todos los resultados</a>';?>
 </article>
 <footer>
 	<p class="section_title">Base de datos de CV</p>

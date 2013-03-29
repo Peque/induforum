@@ -331,7 +331,7 @@
 				
 				echo "<tr><td>$user</td>
 				<td>" ;
-				echo '<a href="/download.php?user='.$user.'"> CV</a>';
+				echo '<a href="/download.php?user='.$user.'">CV</a>';
 				echo "</td></tr>";
 
 			}

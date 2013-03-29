@@ -36,7 +36,14 @@
 <?php require_once('../../data/results.php');?>
 
 </table> 
-
+<?php
+function array_envia($array) {
+    $tmp = serialize($array);
+    $tmp = urlencode($tmp);
+    return $tmp;
+}
+$array=array_envia($array);
+echo '<a href="/zip.php?array=$array">Downloads all results</a>';?>
 </article>
 <footer>
 	<p class="section_title">CV Data Base</p>
