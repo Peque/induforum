@@ -37,13 +37,15 @@
 
 </table> 
 <?php
-function array_envia($array) {
-    $tmp = serialize($array);
-    $tmp = urlencode($tmp);
-    return $tmp;
-}
-$array=array_envia($array);
-echo '<a href="/zip.php?array=$array">Downloads all results</a>';?>
+$array=explode(",",$array);
+$array=serialize($array);
+echo '
+<form action="/zip.php" method="POST">
+    <input name="array" type="hidden" value='.$array.'>
+    <input name="enviar" type="submit" value="Download">
+</form>' 
+?>
+
 </article>
 <footer>
 	<p class="section_title">CV Data Base</p>

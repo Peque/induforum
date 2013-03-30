@@ -35,13 +35,14 @@
 ?>
 </table> 
 <?php
-function array_envia($array) {
-    $tmp = serialize($array);
-    $tmp = urlencode($tmp);
-    return $tmp;
-}
-$array=array_envia($array);
-echo '<a href="/zip.php?array=$array">Descargar todos los resultados</a>';?>
+$array=explode(",",$array);
+$array=serialize($array);
+echo '
+<form action="/zip.php" method="POST">
+    <input name="array" type="hidden" value='.$array.'>
+    <input name="enviar" type="submit" value="Descargar">
+</form>' 
+?>
 </article>
 <footer>
 	<p class="section_title">Base de datos de CV</p>
