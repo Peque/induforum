@@ -24,8 +24,7 @@ $zip->addFile($str,$array[$i].'.pdf');
 }
 }
 if($zip->close()!==true){
-print_r("failed");
-exit();
+exit("Descarga fallida");
 }
 header("Content-Type: application/zip"); 
 header("Content-Disposition: attachment; filename=CV.zip"); 
