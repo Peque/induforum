@@ -39,9 +39,9 @@
 <?php
 $array=explode(",",$array);
 $array=serialize($array);
-echo '
-<form action="/zip.php" method="POST">
-    <input name="array" type="hidden" value='.$array.'>
+echo 
+'<form action="/zip/" method="post">
+    <input name="array" type="hidden" value="'.str_replace('"','$',$array).'">
     <input name="enviar" type="submit" value="Download">
 </form>' 
 ?>
