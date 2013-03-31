@@ -12,6 +12,9 @@
 	$err_wrong_form_type='<p class="error"><strong>Error: </strong> wrong form type. Please, contact the administrator.</p>';
 	$err_sending_mail='<p class="error"><strong>Error: </strong> could not send the email. Please, share the link provided bellow with your friend.</p>';
 	$err_setting_permissions='<p class="error"><strong>Error: </strong> could not set the permissions for the user. Please, ask another user to share permissions with you.</p>';
+	$error_uploading_file='<p class="error"><strong>Error: </strong> could not upload the file to the server. Please, try again.</p>';
+	$error_file_too_large='<p class="error"><strong>Error: </strong> the file you are trying to upload is too large!</p>';
+	$error_wrong_file_type='<p class="error"><strong>Error: </strong> the file you provided has a wrong type!</p>';
 
 	// Warning messages
 	$warn_incomplete_form='<p class="warning">Please, fill all the required fields in the form!</p>';

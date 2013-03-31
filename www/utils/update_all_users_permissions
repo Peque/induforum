@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #
-#  db_backup
+#  update_all_users_permissions
 #
 #  Copyright 2012 Miguel Sánchez de León Peque <msdeleonpeque@gmail.com>
 #
@@ -21,9 +21,9 @@
 #  MA 02110-1301, USA.
 #
 
-MYSQL_USER="user"
-MYSQL_DB="database"
-MYSQL_PASS="password"
+MYSQL_USER=$(cat $(dirname ${BASH_SOURCE[0]})/../config.php | grep -e db_user | tr "\t" "_" | tr "'" "\t" | cut -f2)
+MYSQL_DB=$(cat $(dirname ${BASH_SOURCE[0]})/../config.php | grep -e db_name | tr "\t" "_" | tr "'" "\t" | cut -f2)
+MYSQL_PASS=$(cat $(dirname ${BASH_SOURCE[0]})/../config.php | grep -e db_pass | tr "\t" "_" | tr "'" "\t" | cut -f2)
 
 permission="student"
 value="1"

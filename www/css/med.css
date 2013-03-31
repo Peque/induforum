@@ -58,7 +58,7 @@
 	font-size: 1.1em;
 	text-align: center;
 	display: block;
-	color: #F3FA2A;
+	color: #ffffff;
 }
 #main_nav a.nav_section:hover {
 	text-decoration: none;
@@ -87,17 +87,21 @@
 	float: right;
 	margin: 0 0 1em 0;
 	width: 18%;
-	background: rgba(0, 0, 0, 0.3);
-	border-right: none;
-	border-radius: 0;
-	box-shadow: 0em 0em 1em 0em #F0F0F0;
+}
+#r_aside section {
+	background: white;
+	margin-bottom: 1em;
+	border-radius: .5em .5em 0 0;
+	box-shadow: -.2em .2em .5em #999999;
 }
 #r_aside h3 {
 	padding: .5em 1em .5em 1em;
 	font-size: 1.1em;
 	font-weight: bold;
 	text-align: center;
-	color: #F3FA2A;
+	color: #ffffff;
+	background: #3896Ce;
+	border-radius: .5em .5em 0 0;
 }
 #r_aside div.block {
 	padding: .8em;

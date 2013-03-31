@@ -26,6 +26,7 @@
 	width: 98%;
 	margin: 0 0 1em 1%;
 	border-radius: .5em;
+	box-shadow: none;
 }
 #main_nav a.nav_section { float: left; }
 #main_nav ul ul li a { display: block; }
@@ -34,7 +35,7 @@
 	position: absolute;
 }
 #main_nav ul ul {
-	background: rgba(0, 0, 0, 0.8);
+	background: #ffffff;
 	border: 1px solid #707070;
 	border-top: none;
 	border-radius: 0 0 1em 1em;

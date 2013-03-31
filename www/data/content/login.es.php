@@ -2,9 +2,11 @@
 
 	session_start();
 
+	ob_start();
+
 	// Check user logged in
 	if (isset($_SESSION['user_id'])) {
-		header('Location: /es/account_settings/');
+		header('Location: /es/my_account/');
 		exit;
 	}
 
@@ -25,6 +27,9 @@
 	</header>
 	<p>
 		Si eres estudiante, utiliza tu <strong>número de matrícula</strong> como <em>Usuario</em> y tu <strong>DNI</strong> como <em>Contraseña</em> (incluyendo ceros y excluyendo la letra de verificación).
+		<p>
+		Si no puedes acceder envía un correo a: <em>alta@induforum.es</em>
+		</p>
 	</p>
 
 <?php
@@ -55,7 +60,7 @@
 
 		if (!isset($_SESSION['user_do_not_have_permissions'])) {
 			if ($_SESSION['admin_permissions']) {
-				header('Location: /es/account_settings/');
+				header('Location: /my_account/?lang=es');
 				exit;
 			} else if ($_SESSION['student_permissions']) {
 				header('Location: /es/students/participate/');
@@ -64,7 +69,7 @@
 				header('Location: /es/companies/database/');
 				exit;
 			} else {
-				header('Location: /es/account_settings/');
+				header('Location: /es/my_account/');
 				exit;
 			}
 		} else {
@@ -76,7 +81,9 @@
 
 ?>
 
+
 </article>
+
 <footer>
 	<p class="section_title">Iniciar sesión</p>
 

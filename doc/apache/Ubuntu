@@ -10,11 +10,10 @@
     $ sudo chown -R <username> /var/www/
     $ cd /var/www
     $ git clone git@github.com:Peque/induforum.git induforum
+    $ sudo chown -R www-data:www-data induforum/www/uploads
     $ cd /etc/apache2/mods-available/
     $ sudo a2enmod expires
     $ sudo a2enmod rewrite
-    $ sudo a2enmod proxy
-    $ sudo a2enmod proxy_http
     $ sudo /etc/init.d/apache2 restart
 
 ##########################################################
@@ -36,7 +35,7 @@ $ sudo gedit /etc/apache2/sites-available/default
 Go to 'Virtual Hosts' section and add the following lines:
 (write the first line only if it is not written or uncommented yet)
 
-	<VirtualHost local.induforum.es:80>
+	<VirtualHost *:80>
 		<Directory "/var/www/induforum/www/build">
 			Options Indexes FollowSymLinks MultiViews
 			SetEnvIf Request_URI ^/en/ prefer-language=en
@@ -45,7 +44,8 @@ Go to 'Virtual Hosts' section and add the following lines:
 			Order allow,deny
 			Allow from all
 		</Directory>
-		Alias /errorpages /var/www/html/induforum/www/build/error
+		AddType application/x-httpd-php .php
+		Alias /errorpages /var/www/induforum/www/build/error
 		ErrorDocument 404 /errorpages/404/
 		DirectoryIndex index
 		AddLanguage en .en
@@ -53,9 +53,12 @@ Go to 'Virtual Hosts' section and add the following lines:
 		LanguagePriority en
 		ForceLanguagePriority Prefer Fallback
 		AddDefaultCharset utf-8
+		AcceptPathInfo On
 		RewriteEngine on
 		RewriteCond %{QUERY_STRING} ^lang=(en|es)$
 		RewriteRule ^(?:/(?:en|es))?(/.*)$ /%1$1? [R=301]
+		RewriteCond %{REQUEST_URI} !^(.*)/$
+		RewriteRule ^(.*)$ $1/ [R=301]
 		AliasMatch ^(?:/(?:en|es))(/.*)?$ /var/www/induforum/www/build/$1
 		DocumentRoot /var/www/induforum/www/build
 		ServerName local.induforum.es

@@ -12,19 +12,13 @@ var sponsors = [
 		website: "http://www.accenture.com/",
 		image: "accenture"
 	},
-	
+
 	{
 		company: "Acciona",
 		website: "http://www.acciona.com/",
 		image: "acciona"
 	},
 
-	{
-		company: "Alstom",
-		website: "http://www.alstom.com/",
-		image: "alstom"
-	},
-	
 	{
 		company: "Atexis",
 		website: "http://www.atexis.eu/",
@@ -36,139 +30,134 @@ var sponsors = [
 		website: "http://www.bbva.com/",
 		image: "bbva"
 	},
-	
+
 	{
 		company: "BSH",
 		website: "http://www.bsh-group.com/",
 		image: "bsh"
 	},
-	
+
 	{
 		company: "Cepade",
 		website: "http://www.cepade.com/",
 		image: "cepade"
 	},
-	
+
 	{
 		company: "Cepsa",
 		website: "http://www.cepsa.com/",
 		image: "cepsa"
 	},
-	
+
 	{
 		company: "CLH",
 		website: "http://www.clh.com/",
 		image: "clh"
 	},
-	
+
 	{
 		company: "Dalkia",
 		website: "http://www.dalkia.com/",
 		image: "dalkia"
 	},
-	
+
 	{
 		company: "Deloitte",
 		website: "http://www.deloitte.com/",
 		image: "deloitte"
 	},
-	
+
 	{
 		company: "Eads",
 		website: "http://www.eads.com/",
 		image: "eads"
 	},
-	
+
 	{
 		company: "Elecnor",
 		website: "http://www.elecnor.com/",
 		image: "elecnor"
 	},
-	
+
 	{
 		company: "EOI",
 		website: "http://www.eoi.es/",
 		image: "eoi"
 	},
-	
-	{
-		company: "EOI",
-		website: "http://www.eoi.es/",
-		image: "eoi"
-	}, 
-	
+
+
 	{
 		company: "Everis",
 		website: "http://www.everis.com/",
 		image: "everis"
 	},
-	
+
 	{
 		company: "FCC",
 		website: "http://www.fcc.es/",
 		image: "fcc"
 	},
-	
+
 	{
 		company: "Ferroser",
 		website: "http://www.ferroser.com/",
 		image: "ferroser"
 	},
-	
+
 	{
 		company: "Fluor",
 		website: "http://www.fluor.com/",
 		image: "fluor"
 	},
-	
+
 	{
 		company: "Foster Wheeler",
 		website: "http://www.fosterwheeler.com/",
 		image: "foster_wheeler"
 	},
-	
+
 	{
 		company: "Gas Natural",
 		website: "http://www.gasnaturalfenosa.com/",
 		image: "gas_natural"
 	},
-	
+
 	{
 		company: "HP",
 		website: "http://www.hp.com/",
 		image: "hp"
 	},
-	
+
 	{
 		company: "IDOM",
 		website: "http://www.idom.com/",
 		image: "idom"
 	},
-	
+
 	{
 		company: "ING",
 		website: "http://www.ing.com/",
 		image: "ing"
 	},
-	
+
 	{
 		company: "Isolux Corsan",
 		website: "http://www.isoluxcorsan.com/",
 		image: "isolux_corsan"
 	},
-	
+
 	{
 		company: "Leitat",
 		website: "http://www.leitat.org/",
 		image: "leitat"
 	},
-	
+
 	{
-		company: "Lidl",
-		website: "http://www.lidl.es/",
-		image: "lidl"
+		company: "BCG",
+		website: "http://www.bcg.com/",
+		image: "bcg"
 	},
-	
+
 	{
 		company: "L'Oréal",
 		website: "http://www.loreal.com/",
@@ -176,41 +165,41 @@ var sponsors = [
 	},
 
 	{
-		company: "NetApp",
-		website: "http://www.netapp.com/",
-		image: "netapp"
+		company: "Sacyr Vallehermoso",
+		website: "http://www.gruposyv.com/syv/Door.do?OPERATION=portalGrupo&FUNCTION=8&locale=es",
+		image: "sacyr"
 	},
-	
+
 	{
 		company: "PagePersonnel",
 		website: "http://www.pagepersonnel.com/",
 		image: "page_personnel"
 	},
-	
+
 	{
 		company: "PWC",
 		website: "http://www.pwc.com/",
 		image: "pwc"
 	},
-	
+
 	{
 		company: "Quest",
-		website: "http://www.quest.com/",
+		website: "http://engineering.quest-global.com/",
 		image: "quest"
 	},
-	
+
 	{
 		company: "Recruit Iberica",
 		website: "http://www.recruitiberica.eu/",
 		image: "recruit_iberica"
 	},
-	
+
 	{
 		company: "Repsol",
 		website: "http://www.repsol.com/",
 		image: "repsol"
 	},
-	
+
 	{
 		company: "SEAT",
 		website: "http://www.seat.com/",
@@ -222,32 +211,67 @@ var sponsors = [
 		website: "http://www.siemens.com/",
 		image: "siemens"
 	},
-	
+
 	{
 		company: "Técnicas Reunidas",
 		website: "http://www.tecnicasreunidas.es/",
 		image: "tecnicas_reunidas"
 	},
-	
+
 	{
 		company: "Tetra Pak",
 		website: "http://www.tetrapak.com/",
 		image: "tetra_pak"
 	},
-	
+
 	{
 		company: "Top Employers",
 		website: "http://topemployers.com/",
 		image: "top_employers"
 	},
-	
+
 	{
 		company: "Upm Racing",
 		website: "http://www.upmracing.es/",
 		image: "upmracing"
+	},
+
+	{
+		company: "Axa",
+		website: "http://www.axa.es",
+		image: "axa"
+	},
+
+	{
+		company: "Altran",
+		website: "http://www.altran.es/",
+		image: "altran"
+	},
+
+	{
+		company: "IEN",
+		website: "http://www.ienpolitecnica.es/",
+		image: "ien"
+	},
+
+		{
+		company: "Atos",
+		website: "http://es.atos.net/es-es/",
+		image: "atos"
+	},
+
+	{
+		company: "ESCP Europe",
+		website: "http://www.escpeurope.eu/es/",
+		image: "escp"
+	},
+
+	{
+		company: "Bertrandt",
+		website: "http://www.bertrandt.com/en.html",
+		image: "bertrandt"
 	}
-	
-	
+
 
 ];
 
@@ -309,13 +333,20 @@ chosen[36] = new_chosen_one();
 chosen[37] = new_chosen_one();
 chosen[38] = new_chosen_one();
 chosen[39] = new_chosen_one();
+chosen[40] = new_chosen_one();
+chosen[41] = new_chosen_one();
+chosen[42] = new_chosen_one();
+chosen[43] = new_chosen_one();
+chosen[44] = new_chosen_one();
+
 var j=0;
+
 for (var i = 0; i < chosen.length; i++) {
 	if (j==0) {
 	document.write('<tr>');
 	}
-	document.write('<td><a href="' + sponsors[chosen[i]].website + '" title="' + sponsors[chosen[i]].company + '"><img src="/images/sponsors/logocompanies/' + sponsors[chosen[i]].image + '" alt="' + sponsors[chosen[i]].company + '_logo" /></a></td>');
-	if (j==4||j==9||j==14||j==19||j==24||j==29||j==34){
+	document.write('<td><a target="_blank" href="' + sponsors[chosen[i]].website + '" title="' + sponsors[chosen[i]].company + '"><img style="width: 100%;" src="/images/sponsors/logocompanies/' + sponsors[chosen[i]].image + '" alt="' + sponsors[chosen[i]].company + '_logo" /></a></td>');
+	if (j==4||j==9||j==14||j==19||j==24||j==29||j==34 ||j==39){
 	document.write('</tr><tr>');
 	}
 	j++;

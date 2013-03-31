@@ -75,7 +75,7 @@ a:hover {
 body {
 	width: 100%;
 	color: #585858;
-	background-image: url("/images/back.jpg"), url("/images/gradient.jpg");
+	background-image: url("/images/back2.jpg"), url("/images/gradient2.jpg");
 	background-repeat: no-repeat, repeat;
 	background-size: 100%;
 }
@@ -124,14 +124,25 @@ time.news_pubdate {
 	height: 800px;        /* This should be redimendioned to the frame's height using JS */
 	margin-left: -1.4em;  /* Compensate the +4% width */
 }
+.float_left {
+	float: left;
+}
+.float_right {
+	float: right;
+}
+.float_none {
+	float: none;
+}
+.clear_both {
+	clear: both;
+}
 
 /********************************** Aside-Top **********************************/
 #top {
 	position: relative;
 	color: #ffffff;
 	border-bottom: 1px solid #F0F0F0;
-	background: none repeat scroll 0 0 rgba(0, 0, 0, 0.3);
-	box-shadow: 0 0 1em 0 #F0F0F0;
+	background: #181818;
 }
 #top form {
 	display: inline;
@@ -190,34 +201,44 @@ time.news_pubdate {
 
 /*********************************** Main Nav **********************************/
 #main_nav {
-	background: rgba(0, 0, 0, 0.3);
 	border-radius: 0 0em 0em 0;
 	box-shadow: 0 0 1em 0em #F0F0F0;
 }
+#main_nav ul li {
+	background: white;
+	margin-bottom: 1em;
+	border-radius: .5em .5em 0 0;
+	box-shadow: .2em .2em .5em #999999;
+}
 #main_nav a {
-	color: #006699;
+	color: #ffffff;
 }
 #main_nav a:visited {
-	color: #b80047;
+	color: #ffffff;
 }
 #main_nav a.nav_section {
 	padding: .5em 1em .5em 1em;
 	font-weight: bold;
 	color: #ffffff;
+	background: #3896Ce;
+	border-radius: .5em .5em 0 0;
 }
 #main_nav ul ul.block {
 	padding: .5em 1em .5em 1em;
 }
+#main_nav ul ul li {
+	box-shadow: none;
+}
 #main_nav ul ul li a,
 #main_nav ul ul li a:visited {
-	padding: .5em .5em;
+	padding: 0 .5em;
 	font-weight: bold;
-	color: white;
+	color: #3896Ce;
 	display: block;
 }
 #main_nav ul ul li a:hover {
 	text-decoration: none;
-	background: rgba(0, 220, 255, .5);
+	color: #006699;
 	border-radius: .5em;
 }
 
@@ -308,18 +329,18 @@ time.news_pubdate {
 	background: #FFFFFF;
 }
 #content > header {
-	background: #F0F0F0;
+	background: #181818;
 }
 #content > header hgroup {
 	padding: 1em;
 }
 #content > header h1 {
-	color: #000000;
+	color: #ffffff;
 	font-size: 200%;
 	font-weight: bold;
 }
 #content > header h2 {
-	color: #383838;
+	color: #ffffff;
 	font-size: 150%;
 	font-weight: bold;
 }
@@ -360,14 +381,14 @@ time.news_pubdate {
 }
 #content > footer {
 	clear: both;
-	background: #F0F0F0;
+	background: #181818;
 }
 #content > footer p.section_title {
 	padding: .5em 1.5em .5em 1.5em;
 	font-size: 120%;
 	text-align: right;
 	font-weight: bold;
-	color: #383838;
+	color: #ffffff;
 }
 
 /*********************************** Article ***********************************/
@@ -567,6 +588,15 @@ time.news_pubdate {
 #content table tr:nth-child(even) {
 	background-color: #ffffff;
 }
+#content  table.no_style,
+#content  table.no_style th,
+#content  table.no_style td {
+	border: 0;
+}
+#content  table.no_style tr:nth-child(odd),
+#content  table.no_style tr:nth-child(even) {
+	background: none;
+}
 
 /************************************ Media ************************************/
 #content figure {
@@ -620,6 +650,40 @@ time.news_pubdate {
 #content form.edit {
 	margin: 0 1em 0 0;
 	float: right;
+}
+#content form.wiki_edit_cmd textarea,
+#content form.wiki_edit_cmd textarea:hover,
+#content form.wiki_edit_cmd textarea:focus {
+	height: 6em;
+	border: 1px solid #2d832d;
+	color: #2d832d;
+	background-color: #e1ffe1;
+	border-radius: .5em;
+}
+#content form.wiki_edit hr {
+	margin: 0 0 1em 0;
+	width: 90%;
+}
+#content form.wiki_edit #left_column {
+	float: left;
+	width: 50%;
+}
+#content form.wiki_edit #right_column {
+	float: right;
+	width: 50%;
+}
+#content form.wiki_edit label {
+	clear: both;
+}
+#content form.wiki_edit input {
+	float: left;
+	width: 80%;
+}
+#content form.wiki_edit textarea {
+	float: left;
+	margin: 1em 0 2em 0;
+	width: 95%;
+	height: 30em;
 }
 #content form.edit fieldset {
 	padding: 0;
@@ -751,6 +815,5 @@ time.news_pubdate {
 	text-align: center;
 	color: #FFFFFF;
 	border-top: 1px solid #F0F0F0;
-	background: rgba(0, 20, 5, 0.3);
-	box-shadow: 0 0 1em 0 #F0F0F0;
+	background: #181818;
 }

@@ -29,7 +29,8 @@
 			<li><a href="/es/students/participate/academic_data/">Académico</a></li>
 			<li><a href="/es/students/participate/languages/">Idiomas</a></li>
 			<li><a href="/es/students/participate/professional_experience/">Profesional</a></li>
-			<li class="current">Infomática</li>
+			<li class="current">Informática</li>
+			<li><a href="/es/students/participate/pdf/">PDF</a></li>
 		</ul>
 	</nav>
 	<div class="tabs_nav_div"></div>
