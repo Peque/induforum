@@ -17,7 +17,7 @@ session_start();
 
 
 $array=$_POST['array'];
-$array=str_replace('$','"',$array)
+$array=str_replace('$','"',$array);
 $array=stripslashes($array);
 $array=unserialize($array);
 $i=0;
