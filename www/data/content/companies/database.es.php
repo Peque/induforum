@@ -24,7 +24,7 @@
 </header>
 <article>
 
-	<form action="/en/companies/results.es.php" method="post">
+	<form action="/es/companies/results/" method="post">
 
 			<legend>Filtro de CV<legend>
 			<fieldset>
@@ -115,7 +115,7 @@
 				<legend>Informática</legend>
 
 				<div class="form_checkbox">
-				<input type="checkbox" name="Windows" value="2 id="SO_Windows"/>
+				<input type="checkbox" name="Windows" value="2" id="SO_Windows"/>
 			    <label for="SO_Windows" class="checkbox">Windows</label> <br>
 
 				<input type="checkbox" name="Mac" value="2" id="SO_Mac"/>
@@ -132,7 +132,7 @@
 				<label for="Accounting/Finances" class="checkbox">Contabilidad/Finanzas</label> <br>
 
 				<input type="checkbox" name="cad" value="2" id="Computer-aided_design"/>
-				<label for="Computer-aided_desig" class="checkbox">Diseño asistido por ordenador</label> <br>
+				<label for="Computer-aided_design" class="checkbox">Diseño asistido por ordenador</label> <br>
 
 
 				<input type="checkbox" name="Graphic" value="2" id="Graphic_Design"/>

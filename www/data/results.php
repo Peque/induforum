@@ -22,37 +22,37 @@
 
 // Define var:
 
-	$studies=$_POST['C_studies'];
-	$higher_course=$_POST['C_higher_course'];
-	$speciality=$_POST['C_speciality'];
+	$studies=mysqli_real_escape_string($db, trim($_POST['studies']));
+	$higher_course=mysqli_real_escape_string($db, trim($_POST['higher_course']));
+	$speciality=mysqli_real_escape_string($db, trim($_POST['speciality']));
 
-	$english=$_POST['english'];
-	$french=$_POST['french'];
-	$italian=$_POST['italian'];
-	$german=$_POST['german'];
-	$portuguese=$_POST['portuguese'];
-	$russian=$_POST['russian'];
-	$swedish=$_POST['swedish'];
-	$dutch=$_POST['dutch'];
-	$chinese=$_POST['chinese'];
+	$english=mysqli_real_escape_string($db, trim($_POST['english']));
+	$french=mysqli_real_escape_string($db, trim($_POST['french']));
+	$italian=mysqli_real_escape_string($db, trim($_POST['italian']));
+	$german=mysqli_real_escape_string($db, trim($_POST['german']));
+	$portuguese=mysqli_real_escape_string($db, trim($_POST['portuguese']));
+	$russian=mysqli_real_escape_string($db, trim($_POST['russian']));
+	$swedish=mysqli_real_escape_string($db, trim($_POST['swedish']));
+	$dutch=mysqli_real_escape_string($db, trim($_POST['dutch']));
+	$chinese=mysqli_real_escape_string($db, trim($_POST['chinese']));
 
-	$windows=$_POST['Windows'];
-	$mac=$_POST['Mac'];
-	$linux=$_POST['Linux'];
-	$databases=$_POST['Databases'];
-	$accounting=$_POST['accounting'];
-	$cad=$_POST['cad'];
-	$graphic=$_POST['Graphic'];
-	$spreadsheet=$_POST['Spreadsheet'];
-	$email=$_POST['Email'];
-	$presentations=$_POST['Presentations'];
-	$word=$_POST['Wordprocessors'];
-	$programation=$_POST['Programation'];
-	$simulation=$_POST['Simulation'];
-	$communications=$_POST['Communications'];
-	$mathematics=$_POST['Mathematics'];
+	$windows=mysqli_real_escape_string($db, trim($_POST['Windows']));
+	$mac=mysqli_real_escape_string($db, trim($_POST['Mac']));
+	$linux=mysqli_real_escape_string($db, trim($_POST['Linux']));
+	$databases=mysqli_real_escape_string($db, trim($_POST['Databases']));
+	$accounting=mysqli_real_escape_string($db, trim($_POST['accounting']));
+	$cad=mysqli_real_escape_string($db, trim($_POST['cad']));
+	$graphic=mysqli_real_escape_string($db, trim($_POST['Graphic']));
+	$spreadsheet=mysqli_real_escape_string($db, trim($_POST['Spreadsheet']));
+	$email=mysqli_real_escape_string($db, trim($_POST['Email']));
+	$presentations=mysqli_real_escape_string($db, trim($_POST['Presentations']));
+	$word=mysqli_real_escape_string($db, trim($_POST['Wordprocessors']));
+	$programation=mysqli_real_escape_string($db, trim($_POST['Programation']));
+	$simulation=mysqli_real_escape_string($db, trim($_POST['Simulation']));
+	$communications=mysqli_real_escape_string($db, trim($_POST['Communications']));
+	$mathematics=mysqli_real_escape_string($db, trim($_POST['Mathematics']));
 
-	$worktime=$_POST['C_work_time'];
+	$worktime=mysqli_real_escape_string($db, trim($_POST['C_work_time']));
 
 	function finduser($db,$query) {
 		$var = mysqli_query($db, $query);
@@ -331,7 +331,7 @@
 				
 				echo "<tr><td>$user</td>
 				<td>" ;
-				echo '<a href="/download.php?user='.$user.'">CV</a>';
+				echo '<a href="../../download.php?user='.$user.'">CV</a>';
 				echo "</td></tr>";
 
 			}
