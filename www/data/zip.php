@@ -23,20 +23,37 @@ $array=unserialize($array);
 $i=0;
 $filename=strstr(getcwd(), '/build', 1).'/uploads/CV.zip';
 unlink($filename);
+$number_results=count($array);
+for ($i=0;$i<$number_results;$i++){
+	$path=strstr(getcwd(), '/build', 1).'/uploads/'.$array[$i];
+	if(!(file_exists($path))){
+		$user=$array[$i];
+		require_once(strstr(getcwd(), '/build', 1).'/data/pdf.php');
+		$pdf->Output($path.'.pdf','F');
+	}
+}
 $zip = new ZipArchive();
-$num_results=count($array);
+
 if ($zip->open($filename, ZIPARCHIVE::CREATE)!==TRUE) {
     exit("Descarga fallida");
 }
-for ($i=0;$i<$num_results;$i++){
-$str=strstr(getcwd(), '/build', 1).'/uploads/'.$array[$i];
-if(file_exists($str)){
-$zip->addFile($str,$array[$i].'.pdf');
+for ($i=0;$i<$number_results;$i++){
+	$str=strstr(getcwd(), '/build', 1).'/uploads/'.$array[$i];
+	if(file_exists($str)){
+		$zip->addFile($str,$array[$i].'.pdf');
 
-}
+	}elseif(file_exists($path.'.pdf')){
+		$zip->addFile($path.'.pdf',$array[$i].'.pdf');
+	}
 }
 if($zip->close()!==true){
 exit("Descarga fallida");
+}
+for ($i=0;$i<$number_results;$i++){
+	$path=strstr(getcwd(), '/build', 1).'/uploads/'.$array[$i];
+	if(file_exists($path.'.pdf')){
+		unlink($path.'.pdf');
+	}
 }
 header("Content-Type: application/zip"); 
 header("Content-Disposition: attachment; filename=CV.zip"); 

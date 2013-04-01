@@ -6,4 +6,6 @@ header('Content-Disposition: attachment; filename="' . $user . '.pdf"');readfile
 }
 else {
 require_once(strstr(getcwd(), '/build', 1).'/data/pdf.php');
+$pdf->Output($user.'.pdf','D');
+
 }?>
