@@ -596,7 +596,42 @@ time.news_pubdate {
 #content  table.no_style tr:nth-child(odd),
 #content  table.no_style tr:nth-child(even) {
 	background: none;
+
 }
+
+
+
+#content  table.co_style,
+
+#content  table.co_style th {
+	padding: .5em 1.5em;
+	font-weight: bold;
+	background: #FFFFFF;
+	border: 0;
+
+}
+#content  table.co_style td {
+	padding: .5em 1.5em;
+	background: #FFFFFF;
+	border: 0;
+	width:100px;
+	height:133px;
+}
+#content  table.co_style tr:nth-child(odd) {
+    background: #FFFFFF;
+    padding: .5em 1.5em;
+	border: 0;
+	width:100px;
+	height:133px;
+}
+#content  table.co_style tr:nth-child(even) {
+	background: #FFFFFF;
+    padding: .5em 1.5em;
+	border: 0;
+	width:100px;
+	height:133px;
+}
+
 
 /************************************ Media ************************************/
 #content figure {
