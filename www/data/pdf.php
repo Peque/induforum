@@ -106,7 +106,7 @@ switch ($speciality) {
     case "Manufacturing":
     	  $speciality=utf8_decode("Fabricación");
         break;
-        
+
 }
 $query = "select * from students_languages where user=$user";
 $var = mysqli_query($db, $query);
@@ -147,7 +147,7 @@ switch ($language[$i]) {
     case "chinese":
     	  $language[$i]=utf8_decode("Chino");
         break;
-        
+
 }
 }
 }
@@ -174,16 +174,16 @@ $communication=$row[14];
 function valor($program){
 	switch ($program) {
     case 2:
-        return Bajo;
+        return 'Bajo';
         break;
     case 3:
-        return Medio;
+        return 'Medio';
         break;
     case 4:
-        return Alto;
+        return 'Alto';
         break;
     case 5:
-    	  return Experto;
+    	  return 'Experto';
         break;
 }
 }
@@ -464,4 +464,4 @@ $pdf->Cell(50,10,$str,0,1,'L');
 
 $pdf->Output();
 
-?> 
+?>
