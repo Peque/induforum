@@ -22,10 +22,9 @@
 
 // Define var:
 
-	$studies=mysqli_real_escape_string($db, trim($_POST['studies']));
-	$higher_course=mysqli_real_escape_string($db, trim($_POST['higher_course']));
-	$speciality=mysqli_real_escape_string($db, trim($_POST['speciality']));
-
+	$studies=mysqli_real_escape_string($db, trim($_POST['C_studies']));
+	$higher_course=mysqli_real_escape_string($db, trim($_POST['C_higher_course']));
+	$speciality=mysqli_real_escape_string($db, trim($_POST['C_speciality']));
 	$english=mysqli_real_escape_string($db, trim($_POST['english']));
 	$french=mysqli_real_escape_string($db, trim($_POST['french']));
 	$italian=mysqli_real_escape_string($db, trim($_POST['italian']));
@@ -222,93 +221,64 @@
 
 		if ($windows!="") {
 		$query.= " and windows>=2 ";
-		$array=finduser($db,$query);
-
 	}
 
 		if ($mac!="") {
 		$query.= " and mac>=2 ";
-		$array=finduser($db,$query);
-
 	}
 
 		if ($linux!="") {
 		$query.= " and linux>=2 ";
-		$array=finduser($db,$query);
-
 	}
 
 		if ($databases!="") {
-		$query.= " and databases>=2 ";
-		$array=finduser($db,$query);
-
+		$query.= " and data_bases>=2 ";
 	}
 
 		if ($accounting!="") {
-		$query.= " and accounting>=2 ";
-		$array=finduser($db,$query);
-
+		$query.= " and finances_accounting>=2 ";
 	}
 
 		if ($cad!="") {
 		$query.= " and cad>=2 ";
-		$array=finduser($db,$query);
-
 	}
 
 		if ($graphic!="") {
-		$query.= " and graphic>=2 ";
-		$array=finduser($db,$query);
-
+		$query.= " and graphic_design>=2 ";
 	}
 
 		if ($spreadsheet!="") {
 		$query.= " and spreadsheet>=2 ";
-		$array=finduser($db,$query);
-
 	}
 
 		if ($email!="") {
 		$query.= " and email>=2 ";
-		$array=finduser($db,$query);
-
 	}
 
 		if ($presentations!="") {
 		$query.= " and presentations>=2 ";
-		$array=finduser($db,$query);
-
 	}
 
 		if ($word!="") {
-		$query.= " and word>=2 ";
-		$array=finduser($db,$query);
-
+		$query.= " and word_processors>=2 ";
 	}
 
 		if ($programation!="") {
-		$query.= " and programation>=2 ";
-		$array=finduser($db,$query);
-
+		$query.= " and programming_languages>=2 ";
 	}
 
 		if ($simulation!="") {
 		$query.= " and simulation>=2 ";
-		$array=finduser($db,$query);
-
 	}
 
 		if ($communications!="") {
-		$query.= " and communications>=2 ";
-		$array=finduser($db,$query);
-
+		$query.= " and communications_networks>=2 ";
 	}
 
 		if ($mathematics!="") {
-		$query.= " and mathematics>=2 ";
-		$array=finduser($db,$query);
-
+		$query.= " and maths_statistics>=2 ";
 	}
+	$array=finduser($db,$query);
 	//Work time
 	if ($worktime!=0){
 	$query = "select * from students_work_experience where user in (".$array.")";

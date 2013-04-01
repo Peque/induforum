@@ -114,11 +114,11 @@ if ($var) {
 $num_results = mysqli_num_rows($var);
 for ($i=0; $i<$num_results; $i++) {
 	$row = mysqli_fetch_row($var);
-	$language[$i]=utf8_decode($row[1]);
-	$listening[$i]=utf8_decode($row[2]);
+	$language[$i]=$row[1];
+	$listening[$i]=$row[2];
 	$reading[$i]=$row[3];
-	$spoken_production[$i]=utf8_decode($row[5]);
-	$writing[$i]=utf8_decode($row[6]);
+	$spoken_production[$i]=$row[5];
+	$writing[$i]=$row[6];
 switch ($language[$i]) {
     case "english":
         $language[$i]=utf8_decode("Inglés");
@@ -190,8 +190,8 @@ function valor($program){
 $query = "select * from students_work_experience where user=$user";
 $var = mysqli_query($db, $query);
 if ($var) {
-$num_results = mysqli_num_rows($var);
-for ($i=0; $i<$num_results; $i++) {
+$num_results1 = mysqli_num_rows($var);
+for ($i=0; $i<$num_results1; $i++) {
 	$row = mysqli_fetch_row($var);
 	$initialdate[$i]=explode("-",utf8_decode($row[1]));
 	$finaldate[$i]=explode("-",utf8_decode($row[2]));
@@ -258,7 +258,7 @@ $pdf->SetFont('Helvetica','B',12);
 $str=utf8_decode('Titulación');
 $pdf->Cell(30,10,$str,0,0,'L');
 $pdf->SetFont('Helvetica','',12);
-$pdf->Cell(80,10,$studies,0,0,'L');
+$pdf->Cell(100,10,$studies,0,0,'L');
 $pdf->SetFont('Helvetica','B',12);
 $str=utf8_decode('Año de inicio');
 $pdf->Cell(30,10,$str,0,0,'L');
@@ -268,7 +268,7 @@ $pdf->SetFont('Helvetica','B',12);
 $str=utf8_decode('Especialidad');
 $pdf->Cell(30,10,$str,0,0,'L');
 $pdf->SetFont('Helvetica','',12);
-$pdf->Cell(80,10,$speciality,0,0,'L');
+$pdf->Cell(100,10,$speciality,0,0,'L');
 $pdf->SetFont('Helvetica','B',12);
 $str=utf8_decode('Curso');
 $pdf->Cell(30,10,$str,0,0,'L');
@@ -444,16 +444,18 @@ $str=utf8_decode('Fecha Fin');
 $pdf->Cell(30,10,$str,0,0,'L');
 $pdf->SetFont('Helvetica','B',12);
 $str=utf8_decode('Empresa');
-$pdf->Cell(50,10,$str,0,0,'L');
+$pdf->Cell(70,10,$str,0,0,'L');
 $pdf->SetFont('Helvetica','B',12);
 $str=utf8_decode('Puesto');
 $pdf->Cell(50,10,$str,0,1,'L');
-for ($j=0;$j<$num_results; $j++) {
+for ($j=0;$j<$num_results1; $j++) {
 $pdf->SetFont('Helvetica','',12);
 $pdf->Cell(30,10,$initialdate[$j][0]."-".$initialdate[$j][1],0,0,'L');
 $pdf->Cell(30,10,$finaldate[$j][0]."-".$finaldate[$j][1],0,0,'L');
-$pdf->Cell(50,10,$company[$j],0,0,'L');
-$pdf->Cell(50,10,$job[$j],0,1,'L');
+$str=utf8_decode($company[$j]);
+$pdf->Cell(70,10,$str,0,0,'L');
+$str=utf8_decode($job[$j]);
+$pdf->Cell(50,10,$str,0,1,'L');
 }
 
 

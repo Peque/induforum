@@ -114,7 +114,7 @@
 				<legend>Computing</legend>
 
 				<div class="form_checkbox">
-				<input type="checkbox" name="Windows" value="2 id="SO_Windows"/>
+				<input type="checkbox" name="Windows" value="2" id="SO_Windows"/>
 			    <label for="SO_Windows" class="checkbox">Windows OS:</label> <br>
 
 				<input type="checkbox" name="Mac" value="2" id="SO_Mac"/>
@@ -131,7 +131,7 @@
 				<label for="Accounting/Finances" class="checkbox">Accounting/Finances</label> <br>
 
 				<input type="checkbox" name="cad" value="2" id="Computer-aided_design"/>
-				<label for="Computer-aided_desig" class="checkbox">Computer-aided desig</label> <br>
+				<label for="Computer-aided_design" class="checkbox">Computer-aided desig</label> <br>
 
 
 				<input type="checkbox" name="Graphic" value="2" id="Graphic_Design"/>

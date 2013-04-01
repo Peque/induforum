@@ -34,7 +34,6 @@
 
 
 <?php require_once('../../data/results.php');?>
-
 </table> 
 <?php
 $array=explode(",",$array);
