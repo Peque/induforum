@@ -34,8 +34,8 @@ for ($i=0;$i<$number_results;$i++){
 	if(file_exists($str)){
 		$zip->addFile($str,$array2[$i].'.pdf');
 
-	}elseif(file_exists($path.'.pdf')){
-		$zip->addFile($path.'.pdf',$array2[$i].'.pdf');
+	}elseif(file_exists($str.'.pdf')){
+		$zip->addFile($str.'.pdf',$array2[$i].'.pdf');
 	}
 }
 if($zip->close()!==true){
