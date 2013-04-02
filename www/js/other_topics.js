@@ -1,5 +1,4 @@
-// DREAMPEAKS
-document.write('<p style="text-align:center;"><a target="_blank" href="http://www.upm.es/institucional/UPM/ConsejoSocial" title="Consejo Social"><img src="/images/other_topics/consejo_social.jpg" alt="consejo_social_logo" /></a></p>');
+
 
 // SIERRA-CAZORLA
 document.write('<p style="text-align:center;"><a target="_blank" href="http://www.aguasierracazorla.com/" title="Sierra Cazorla"><img src="/images/other_topics/cazorla.png" alt="cazorla_logo" /></a></p>');
