@@ -1,8 +1,5 @@
 <?php
 
-
-session_start();
-
 	// Check user logged in
 	if (!isset($_SESSION['user_id'])) {
 		header('Location: /en/login/');
@@ -50,7 +47,7 @@ for ($i=0;$i<$number_results;$i++){
 		unlink($path.'.pdf');
 	}
 }
-header("Content-Type: application/zip"); 
-header("Content-Disposition: attachment; filename=CV.zip"); 
-readfile($filename); 
+header("Content-Type: application/zip");
+header("Content-Disposition: attachment; filename=CV.zip");
+readfile($filename);
 ?>
