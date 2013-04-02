@@ -49,7 +49,7 @@
 
 ?>
 
-	<p class="warning">You have already uploaded a PDF. If you upload a new one, it will be overwritten. <a href="/en/download_resume/">Check your current upload</a>.</p>
+	<p class="warning">You have already uploaded a PDF. If you upload a new one, it will be overwritten.</p>
 
 <?php
 

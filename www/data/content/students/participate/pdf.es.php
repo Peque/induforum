@@ -49,7 +49,7 @@
 
 ?>
 
-	<p class="warning">Ya has subido un PDF. Si subes uno nuevo, el antiguo será sobrescrito. <a href="/es/download_resume/">Verifica tu archivo actual</a>.</p>
+	<p class="warning">Ya has subido un PDF. Si subes uno nuevo, el antiguo será sobrescrito.</p>
 
 <?php
 
