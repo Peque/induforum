@@ -52,6 +52,11 @@
 		<input type="submit" value="Make" accesskey="x" />
 	</form>
 
+	<form class="float_left" action="" method="post">
+		<input  type="hidden" name="type" value="wikiregen" />
+		<input type="submit" value="Wikiregen" accesskey="x" />
+	</form>
+
 	<form class="clear_both">
 		<textarea rows="20" cols="20">
 <?php
@@ -71,6 +76,15 @@
 	if (isset($_POST['type']) && $_POST['type'] == 'make') {
 
 		exec("../../generate 2>&1", $output);
+		foreach ($output as $line) {
+			echo "$line\n";
+		}
+
+	}
+
+	if (isset($_POST['type']) && $_POST['type'] == 'wikiregen') {
+
+		exec("../../wiki_recreate_all 2>&1", $output);
 		foreach ($output as $line) {
 			echo "$line\n";
 		}
