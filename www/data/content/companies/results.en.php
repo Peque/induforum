@@ -26,24 +26,21 @@
 </header>
 <article>
 
-<table>
-<tr>
-<td>ID</td>
-<td>CV</td>
-</tr>
-
-
-<?php require_once('../../data/results.php');?>
-</table> 
+<?php require_once('../../data/results.php');?> 
 <?php
-$array=explode(",",$array);
-$array=serialize($array);
-echo 
-'<form action="/zip/" method="post">
-    <input name="array" type="hidden" value="'.str_replace('"','$',$array).'">
-    <input name="enviar" type="submit" value="Download">
-</form>' 
+if (isset($_POST['type']) && $_POST['type'] == 'create_zip') {
+        require_once('../../data/zip.php');
+}
 ?>
+<p>
+	Number of results: <?php echo ($num_results+1);
+	$_SESSION['array2'] =$array;?>
+</p>
+
+<form action="./" method="post">
+    <input name="type" type="hidden" value="create_zip">
+    <input name="enviar" type="submit" value="Download">
+</form>
 
 </article>
 <footer>

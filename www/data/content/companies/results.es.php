@@ -26,23 +26,22 @@
 </header>
 <article>
 
-<table>
-<tr>
-<td>ID</td>
-<td>CV</td>
-</tr>
-<?php require_once('../../data/results.php');
-?>
-</table> 
+<?php require_once('../../data/results.php');?> 
 <?php
-$array=explode(",",$array);
-$array=serialize($array);
-echo '
-<form action="/zip.php" method="post">
-    <input name="array" type="hidden" value="'.str_replace('"','$',$array).'">
-    <input name="enviar" type="submit" value="Descargar">
-</form>' 
+if (isset($_POST['type']) && $_POST['type'] == 'create_zip') {
+        require_once('../../data/zip.php');
+}
 ?>
+<p>
+	Número de resultados: <?php echo ($num_results+1);
+	$_SESSION['array2'] =$array;?>
+</p>
+
+<form action="./" method="post">
+    <input name="type" type="hidden" value="create_zip">
+    <input name="enviar" type="submit" value="Download">
+</form>
+
 </article>
 <footer>
 	<p class="section_title">Base de datos de CV</p>

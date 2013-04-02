@@ -15,19 +15,14 @@ session_start();
 		exit;
 	}
 
-
-$array=$_POST['array'];
-$array=str_replace('$','"',$array);
-$array=stripslashes($array);
-$array=unserialize($array);
-$i=0;
 $filename=strstr(getcwd(), '/build', 1).'/uploads/CV.zip';
 unlink($filename);
-$number_results=count($array);
+$array2=$_SESSION['array2'];
+$number_results=count($array2);
 for ($i=0;$i<$number_results;$i++){
-	$path=strstr(getcwd(), '/build', 1).'/uploads/'.$array[$i];
+	$path=strstr(getcwd(), '/build', 1).'/uploads/'.$array2[$i];
 	if(!(file_exists($path))){
-		$user=$array[$i];
+		$user=$array2[$i];
 		require_once(strstr(getcwd(), '/build', 1).'/data/pdf.php');
 		$pdf->Output($path.'.pdf','F');
 	}
@@ -38,19 +33,19 @@ if ($zip->open($filename, ZIPARCHIVE::CREATE)!==TRUE) {
     exit("Descarga fallida");
 }
 for ($i=0;$i<$number_results;$i++){
-	$str=strstr(getcwd(), '/build', 1).'/uploads/'.$array[$i];
+	$str=strstr(getcwd(), '/build', 1).'/uploads/'.$array2[$i];
 	if(file_exists($str)){
-		$zip->addFile($str,$array[$i].'.pdf');
+		$zip->addFile($str,$array2[$i].'.pdf');
 
 	}elseif(file_exists($path.'.pdf')){
-		$zip->addFile($path.'.pdf',$array[$i].'.pdf');
+		$zip->addFile($path.'.pdf',$array2[$i].'.pdf');
 	}
 }
 if($zip->close()!==true){
 exit("Descarga fallida");
 }
 for ($i=0;$i<$number_results;$i++){
-	$path=strstr(getcwd(), '/build', 1).'/uploads/'.$array[$i];
+	$path=strstr(getcwd(), '/build', 1).'/uploads/'.$array2[$i];
 	if(file_exists($path.'.pdf')){
 		unlink($path.'.pdf');
 	}
