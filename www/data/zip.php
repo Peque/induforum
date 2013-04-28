@@ -502,6 +502,7 @@ for ($i=0;$i<$number_results;$i++){
 		$zip->addFile($str.'.pdf',$array2[$i].'.pdf');
 	}
 }
+
 if($zip->close()!==true){
 exit("Descarga fallida");
 }
@@ -513,5 +514,6 @@ for ($i=0;$i<$number_results;$i++){
 }
 header("Content-Type: application/zip");
 header("Content-Disposition: attachment; filename=CV.zip");
+ob_end_clean();
 readfile($filename);
 ?>
